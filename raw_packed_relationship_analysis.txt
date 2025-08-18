@@ -1,0 +1,1483 @@
+RAW TO PACKED FILE RELATIONSHIP ANALYSIS
+================================================================================
+
+Total raw files: 85278
+Total packed files: 76147
+Unique (symbol, strike, opt_type) in raw: 2196
+Unique (symbol, expiry, strike, opt_type) in packed: 76147
+
+
+MISSING STRIKES (not in packed files):
+============================================================
+BANKNIFTY	13100	CE	(1 raw files)
+  - banknifty20mar13100ce.parquet
+BANKNIFTY	13100	PE	(1 raw files)
+  - banknifty20mar13100pe.parquet
+BANKNIFTY	13200	CE	(1 raw files)
+  - banknifty20mar13200ce.parquet
+BANKNIFTY	13200	PE	(1 raw files)
+  - banknifty20mar13200pe.parquet
+BANKNIFTY	13300	CE	(1 raw files)
+  - banknifty20mar13300ce.parquet
+BANKNIFTY	13300	PE	(1 raw files)
+  - banknifty20mar13300pe.parquet
+BANKNIFTY	13400	CE	(1 raw files)
+  - banknifty20mar13400ce.parquet
+BANKNIFTY	13400	PE	(1 raw files)
+  - banknifty20mar13400pe.parquet
+BANKNIFTY	13500	CE	(1 raw files)
+  - banknifty20mar13500ce.parquet
+BANKNIFTY	13500	PE	(1 raw files)
+  - banknifty20mar13500pe.parquet
+BANKNIFTY	13600	CE	(1 raw files)
+  - banknifty20mar13600ce.parquet
+BANKNIFTY	13600	PE	(1 raw files)
+  - banknifty20mar13600pe.parquet
+BANKNIFTY	13700	CE	(1 raw files)
+  - banknifty20mar13700ce.parquet
+BANKNIFTY	13700	PE	(1 raw files)
+  - banknifty20mar13700pe.parquet
+BANKNIFTY	13800	CE	(1 raw files)
+  - banknifty20mar13800ce.parquet
+BANKNIFTY	13800	PE	(1 raw files)
+  - banknifty20mar13800pe.parquet
+BANKNIFTY	57600	CE	(4 raw files)
+  - banknifty25jul57600ce.parquet
+  - banknifty25may57600ce.parquet
+  - banknifty25apr57600ce.parquet
+  - banknifty25jun57600ce.parquet
+BANKNIFTY	57600	PE	(4 raw files)
+  - banknifty25may57600pe.parquet
+  - banknifty25apr57600pe.parquet
+  - banknifty25jun57600pe.parquet
+  - banknifty25jul57600pe.parquet
+BANKNIFTY	57700	CE	(4 raw files)
+  - banknifty25jul57700ce.parquet
+  - banknifty25jun57700ce.parquet
+  - banknifty25apr57700ce.parquet
+  - banknifty25may57700ce.parquet
+BANKNIFTY	57700	PE	(4 raw files)
+  - banknifty25jun57700pe.parquet
+  - banknifty25apr57700pe.parquet
+  - banknifty25may57700pe.parquet
+  - banknifty25jul57700pe.parquet
+BANKNIFTY	57800	CE	(4 raw files)
+  - banknifty25apr57800ce.parquet
+  - banknifty25jun57800ce.parquet
+  - banknifty25may57800ce.parquet
+  - banknifty25jul57800ce.parquet
+BANKNIFTY	57800	PE	(4 raw files)
+  - banknifty25jul57800pe.parquet
+  - banknifty25apr57800pe.parquet
+  - banknifty25jun57800pe.parquet
+  - banknifty25may57800pe.parquet
+BANKNIFTY	57900	CE	(4 raw files)
+  - banknifty25may57900ce.parquet
+  - banknifty25jun57900ce.parquet
+  - banknifty25apr57900ce.parquet
+  - banknifty25jul57900ce.parquet
+BANKNIFTY	57900	PE	(4 raw files)
+  - banknifty25jul57900pe.parquet
+  - banknifty25may57900pe.parquet
+  - banknifty25jun57900pe.parquet
+  - banknifty25apr57900pe.parquet
+BANKNIFTY	58100	CE	(4 raw files)
+  - banknifty25apr58100ce.parquet
+  - banknifty25jun58100ce.parquet
+  - banknifty25may58100ce.parquet
+  - banknifty25jul58100ce.parquet
+BANKNIFTY	58100	PE	(4 raw files)
+  - banknifty25jul58100pe.parquet
+  - banknifty25apr58100pe.parquet
+  - banknifty25jun58100pe.parquet
+  - banknifty25may58100pe.parquet
+BANKNIFTY	58200	CE	(4 raw files)
+  - banknifty25jul58200ce.parquet
+  - banknifty25may58200ce.parquet
+  - banknifty25jun58200ce.parquet
+  - banknifty25apr58200ce.parquet
+BANKNIFTY	58200	PE	(4 raw files)
+  - banknifty25may58200pe.parquet
+  - banknifty25jun58200pe.parquet
+  - banknifty25apr58200pe.parquet
+  - banknifty25jul58200pe.parquet
+BANKNIFTY	58300	CE	(4 raw files)
+  - banknifty25jul58300ce.parquet
+  - banknifty25apr58300ce.parquet
+  - banknifty25jun58300ce.parquet
+  - banknifty25may58300ce.parquet
+BANKNIFTY	58300	PE	(4 raw files)
+  - banknifty25apr58300pe.parquet
+  - banknifty25jun58300pe.parquet
+  - banknifty25may58300pe.parquet
+  - banknifty25jul58300pe.parquet
+BANKNIFTY	58400	CE	(4 raw files)
+  - banknifty25may58400ce.parquet
+  - banknifty25jun58400ce.parquet
+  - banknifty25apr58400ce.parquet
+  - banknifty25jul58400ce.parquet
+BANKNIFTY	58400	PE	(4 raw files)
+  - banknifty25jul58400pe.parquet
+  - banknifty25may58400pe.parquet
+  - banknifty25jun58400pe.parquet
+  - banknifty25apr58400pe.parquet
+BANKNIFTY	58600	CE	(4 raw files)
+  - banknifty25jul58600ce.parquet
+  - banknifty25may58600ce.parquet
+  - banknifty25jun58600ce.parquet
+  - banknifty25apr58600ce.parquet
+BANKNIFTY	58600	PE	(4 raw files)
+  - banknifty25may58600pe.parquet
+  - banknifty25jun58600pe.parquet
+  - banknifty25apr58600pe.parquet
+  - banknifty25jul58600pe.parquet
+BANKNIFTY	58700	CE	(4 raw files)
+  - banknifty25jul58700ce.parquet
+  - banknifty25apr58700ce.parquet
+  - banknifty25jun58700ce.parquet
+  - banknifty25may58700ce.parquet
+BANKNIFTY	58700	PE	(4 raw files)
+  - banknifty25apr58700pe.parquet
+  - banknifty25jun58700pe.parquet
+  - banknifty25may58700pe.parquet
+  - banknifty25jul58700pe.parquet
+BANKNIFTY	58800	CE	(4 raw files)
+  - banknifty25jun58800ce.parquet
+  - banknifty25apr58800ce.parquet
+  - banknifty25may58800ce.parquet
+  - banknifty25jul58800ce.parquet
+BANKNIFTY	58800	PE	(4 raw files)
+  - banknifty25jul58800pe.parquet
+  - banknifty25jun58800pe.parquet
+  - banknifty25apr58800pe.parquet
+  - banknifty25may58800pe.parquet
+BANKNIFTY	58900	CE	(4 raw files)
+  - banknifty25may58900ce.parquet
+  - banknifty25apr58900ce.parquet
+  - banknifty25jun58900ce.parquet
+  - banknifty25jul58900ce.parquet
+BANKNIFTY	58900	PE	(4 raw files)
+  - banknifty25jul58900pe.parquet
+  - banknifty25may58900pe.parquet
+  - banknifty25apr58900pe.parquet
+  - banknifty25jun58900pe.parquet
+BANKNIFTY	59100	CE	(4 raw files)
+  - banknifty25may59100ce.parquet
+  - banknifty25apr59100ce.parquet
+  - banknifty25jun59100ce.parquet
+  - banknifty25jul59100ce.parquet
+BANKNIFTY	59100	PE	(4 raw files)
+  - banknifty25jul59100pe.parquet
+  - banknifty25may59100pe.parquet
+  - banknifty25apr59100pe.parquet
+  - banknifty25jun59100pe.parquet
+BANKNIFTY	59200	CE	(4 raw files)
+  - banknifty25jul59200ce.parquet
+  - banknifty25jun59200ce.parquet
+  - banknifty25apr59200ce.parquet
+  - banknifty25may59200ce.parquet
+BANKNIFTY	59200	PE	(4 raw files)
+  - banknifty25jun59200pe.parquet
+  - banknifty25apr59200pe.parquet
+  - banknifty25may59200pe.parquet
+  - banknifty25jul59200pe.parquet
+BANKNIFTY	59300	CE	(4 raw files)
+  - banknifty25jul59300ce.parquet
+  - banknifty25may59300ce.parquet
+  - banknifty25apr59300ce.parquet
+  - banknifty25jun59300ce.parquet
+BANKNIFTY	59300	PE	(4 raw files)
+  - banknifty25may59300pe.parquet
+  - banknifty25apr59300pe.parquet
+  - banknifty25jun59300pe.parquet
+  - banknifty25jul59300pe.parquet
+BANKNIFTY	59400	CE	(4 raw files)
+  - banknifty25jun59400ce.parquet
+  - banknifty25apr59400ce.parquet
+  - banknifty25may59400ce.parquet
+  - banknifty25jul59400ce.parquet
+BANKNIFTY	59400	PE	(4 raw files)
+  - banknifty25jul59400pe.parquet
+  - banknifty25jun59400pe.parquet
+  - banknifty25apr59400pe.parquet
+  - banknifty25may59400pe.parquet
+BANKNIFTY	59600	CE	(4 raw files)
+  - banknifty25jul59600ce.parquet
+  - banknifty25jun59600ce.parquet
+  - banknifty25apr59600ce.parquet
+  - banknifty25may59600ce.parquet
+BANKNIFTY	59600	PE	(4 raw files)
+  - banknifty25jun59600pe.parquet
+  - banknifty25apr59600pe.parquet
+  - banknifty25may59600pe.parquet
+  - banknifty25jul59600pe.parquet
+BANKNIFTY	59700	CE	(4 raw files)
+  - banknifty25jul59700ce.parquet
+  - banknifty25may59700ce.parquet
+  - banknifty25apr59700ce.parquet
+  - banknifty25jun59700ce.parquet
+BANKNIFTY	59700	PE	(4 raw files)
+  - banknifty25may59700pe.parquet
+  - banknifty25apr59700pe.parquet
+  - banknifty25jun59700pe.parquet
+  - banknifty25jul59700pe.parquet
+BANKNIFTY	59800	CE	(4 raw files)
+  - banknifty25may59800ce.parquet
+  - banknifty25jun59800ce.parquet
+  - banknifty25apr59800ce.parquet
+  - banknifty25jul59800ce.parquet
+BANKNIFTY	59800	PE	(4 raw files)
+  - banknifty25jul59800pe.parquet
+  - banknifty25may59800pe.parquet
+  - banknifty25jun59800pe.parquet
+  - banknifty25apr59800pe.parquet
+BANKNIFTY	59900	CE	(4 raw files)
+  - banknifty25apr59900ce.parquet
+  - banknifty25jun59900ce.parquet
+  - banknifty25may59900ce.parquet
+  - banknifty25jul59900ce.parquet
+BANKNIFTY	59900	PE	(4 raw files)
+  - banknifty25jul59900pe.parquet
+  - banknifty25apr59900pe.parquet
+  - banknifty25jun59900pe.parquet
+  - banknifty25may59900pe.parquet
+BANKNIFTY	60100	CE	(4 raw files)
+  - banknifty25may60100ce.parquet
+  - banknifty25apr60100ce.parquet
+  - banknifty25jun60100ce.parquet
+  - banknifty25jul60100ce.parquet
+BANKNIFTY	60100	PE	(4 raw files)
+  - banknifty25jul60100pe.parquet
+  - banknifty25may60100pe.parquet
+  - banknifty25apr60100pe.parquet
+  - banknifty25jun60100pe.parquet
+BANKNIFTY	60200	CE	(4 raw files)
+  - banknifty25jul60200ce.parquet
+  - banknifty25jun60200ce.parquet
+  - banknifty25apr60200ce.parquet
+  - banknifty25may60200ce.parquet
+BANKNIFTY	60200	PE	(4 raw files)
+  - banknifty25jun60200pe.parquet
+  - banknifty25apr60200pe.parquet
+  - banknifty25may60200pe.parquet
+  - banknifty25jul60200pe.parquet
+BANKNIFTY	60300	CE	(4 raw files)
+  - banknifty25jul60300ce.parquet
+  - banknifty25may60300ce.parquet
+  - banknifty25apr60300ce.parquet
+  - banknifty25jun60300ce.parquet
+BANKNIFTY	60300	PE	(4 raw files)
+  - banknifty25may60300pe.parquet
+  - banknifty25apr60300pe.parquet
+  - banknifty25jun60300pe.parquet
+  - banknifty25jul60300pe.parquet
+BANKNIFTY	60400	CE	(4 raw files)
+  - banknifty25jun60400ce.parquet
+  - banknifty25apr60400ce.parquet
+  - banknifty25may60400ce.parquet
+  - banknifty25jul60400ce.parquet
+BANKNIFTY	60400	PE	(4 raw files)
+  - banknifty25jul60400pe.parquet
+  - banknifty25jun60400pe.parquet
+  - banknifty25apr60400pe.parquet
+  - banknifty25may60400pe.parquet
+BANKNIFTY	60600	CE	(4 raw files)
+  - banknifty25jul60600ce.parquet
+  - banknifty25jun60600ce.parquet
+  - banknifty25apr60600ce.parquet
+  - banknifty25may60600ce.parquet
+BANKNIFTY	60600	PE	(4 raw files)
+  - banknifty25jun60600pe.parquet
+  - banknifty25apr60600pe.parquet
+  - banknifty25may60600pe.parquet
+  - banknifty25jul60600pe.parquet
+BANKNIFTY	60700	CE	(2 raw files)
+  - banknifty25jul60700ce.parquet
+  - banknifty25jun60700ce.parquet
+BANKNIFTY	60700	PE	(2 raw files)
+  - banknifty25jun60700pe.parquet
+  - banknifty25jul60700pe.parquet
+BANKNIFTY	60800	CE	(2 raw files)
+  - banknifty25jun60800ce.parquet
+  - banknifty25jul60800ce.parquet
+BANKNIFTY	60800	PE	(2 raw files)
+  - banknifty25jul60800pe.parquet
+  - banknifty25jun60800pe.parquet
+BANKNIFTY	60900	CE	(2 raw files)
+  - banknifty25jun60900ce.parquet
+  - banknifty25jul60900ce.parquet
+BANKNIFTY	60900	PE	(2 raw files)
+  - banknifty25jul60900pe.parquet
+  - banknifty25jun60900pe.parquet
+BANKNIFTY	61100	CE	(2 raw files)
+  - banknifty25jun61100ce.parquet
+  - banknifty25jul61100ce.parquet
+BANKNIFTY	61100	PE	(2 raw files)
+  - banknifty25jul61100pe.parquet
+  - banknifty25jun61100pe.parquet
+BANKNIFTY	61200	CE	(2 raw files)
+  - banknifty25jul61200ce.parquet
+  - banknifty25jun61200ce.parquet
+BANKNIFTY	61200	PE	(2 raw files)
+  - banknifty25jun61200pe.parquet
+  - banknifty25jul61200pe.parquet
+BANKNIFTY	61300	CE	(2 raw files)
+  - banknifty25jul61300ce.parquet
+  - banknifty25jun61300ce.parquet
+BANKNIFTY	61300	PE	(2 raw files)
+  - banknifty25jun61300pe.parquet
+  - banknifty25jul61300pe.parquet
+BANKNIFTY	61400	CE	(2 raw files)
+  - banknifty25jun61400ce.parquet
+  - banknifty25jul61400ce.parquet
+BANKNIFTY	61400	PE	(2 raw files)
+  - banknifty25jul61400pe.parquet
+  - banknifty25jun61400pe.parquet
+BANKNIFTY	61600	CE	(2 raw files)
+  - banknifty25jul61600ce.parquet
+  - banknifty25jun61600ce.parquet
+BANKNIFTY	61600	PE	(2 raw files)
+  - banknifty25jun61600pe.parquet
+  - banknifty25jul61600pe.parquet
+BANKNIFTY	61700	CE	(2 raw files)
+  - banknifty25jul61700ce.parquet
+  - banknifty25jun61700ce.parquet
+BANKNIFTY	61700	PE	(2 raw files)
+  - banknifty25jun61700pe.parquet
+  - banknifty25jul61700pe.parquet
+BANKNIFTY	61800	CE	(2 raw files)
+  - banknifty25jun61800ce.parquet
+  - banknifty25jul61800ce.parquet
+BANKNIFTY	61800	PE	(2 raw files)
+  - banknifty25jul61800pe.parquet
+  - banknifty25jun61800pe.parquet
+BANKNIFTY	61900	CE	(1 raw files)
+  - banknifty25jul61900ce.parquet
+BANKNIFTY	61900	PE	(1 raw files)
+  - banknifty25jul61900pe.parquet
+BANKNIFTY	62100	CE	(1 raw files)
+  - banknifty25jul62100ce.parquet
+BANKNIFTY	62100	PE	(1 raw files)
+  - banknifty25jul62100pe.parquet
+BANKNIFTY	62200	CE	(1 raw files)
+  - banknifty25jul62200ce.parquet
+BANKNIFTY	62200	PE	(1 raw files)
+  - banknifty25jul62200pe.parquet
+BANKNIFTY	62300	CE	(1 raw files)
+  - banknifty25jul62300ce.parquet
+BANKNIFTY	62300	PE	(1 raw files)
+  - banknifty25jul62300pe.parquet
+BANKNIFTY	62400	CE	(1 raw files)
+  - banknifty25jul62400ce.parquet
+BANKNIFTY	62400	PE	(1 raw files)
+  - banknifty25jul62400pe.parquet
+BANKNIFTY	62500	CE	(4 raw files)
+  - banknifty25jul62500ce.parquet
+  - banknifty25apr62500ce.parquet
+  - banknifty25jun62500ce.parquet
+  - banknifty25may62500ce.parquet
+BANKNIFTY	62500	PE	(4 raw files)
+  - banknifty25apr62500pe.parquet
+  - banknifty25jun62500pe.parquet
+  - banknifty25may62500pe.parquet
+  - banknifty25jul62500pe.parquet
+BANKNIFTY	63000	CE	(4 raw files)
+  - banknifty25jul63000ce.parquet
+  - banknifty25jun63000ce.parquet
+  - banknifty25apr63000ce.parquet
+  - banknifty25may63000ce.parquet
+BANKNIFTY	63000	PE	(4 raw files)
+  - banknifty25jun63000pe.parquet
+  - banknifty25apr63000pe.parquet
+  - banknifty25may63000pe.parquet
+  - banknifty25jul63000pe.parquet
+BANKNIFTY	63500	CE	(2 raw files)
+  - banknifty25jul63500ce.parquet
+  - banknifty25jun63500ce.parquet
+BANKNIFTY	63500	PE	(2 raw files)
+  - banknifty25jun63500pe.parquet
+  - banknifty25jul63500pe.parquet
+BANKNIFTY	64000	CE	(2 raw files)
+  - banknifty25jul64000ce.parquet
+  - banknifty25jun64000ce.parquet
+BANKNIFTY	64000	PE	(2 raw files)
+  - banknifty25jun64000pe.parquet
+  - banknifty25jul64000pe.parquet
+BANKNIFTY	64500	CE	(2 raw files)
+  - banknifty25jul64500ce.parquet
+  - banknifty25jun64500ce.parquet
+BANKNIFTY	64500	PE	(2 raw files)
+  - banknifty25jun64500pe.parquet
+  - banknifty25jul64500pe.parquet
+BANKNIFTY	65000	CE	(1 raw files)
+  - banknifty25jul65000ce.parquet
+BANKNIFTY	65000	PE	(1 raw files)
+  - banknifty25jul65000pe.parquet
+NIFTY	4500	CE	(1 raw files)
+  - nifty20mar4500ce.parquet
+NIFTY	4500	PE	(1 raw files)
+  - nifty20mar4500pe.parquet
+NIFTY	4600	CE	(1 raw files)
+  - nifty20mar4600ce.parquet
+NIFTY	4600	PE	(1 raw files)
+  - nifty20mar4600pe.parquet
+NIFTY	4700	CE	(1 raw files)
+  - nifty20mar4700ce.parquet
+NIFTY	4700	PE	(1 raw files)
+  - nifty20mar4700pe.parquet
+NIFTY	4800	CE	(1 raw files)
+  - nifty20mar4800ce.parquet
+NIFTY	4800	PE	(1 raw files)
+  - nifty20mar4800pe.parquet
+NIFTY	4900	CE	(1 raw files)
+  - nifty20mar4900ce.parquet
+NIFTY	4900	PE	(1 raw files)
+  - nifty20mar4900pe.parquet
+NIFTY	5000	CE	(1 raw files)
+  - nifty20mar5000ce.parquet
+NIFTY	5000	PE	(1 raw files)
+  - nifty20mar5000pe.parquet
+NIFTY	5100	CE	(1 raw files)
+  - nifty20mar5100ce.parquet
+NIFTY	5100	PE	(1 raw files)
+  - nifty20mar5100pe.parquet
+NIFTY	5200	CE	(1 raw files)
+  - nifty20mar5200ce.parquet
+NIFTY	5200	PE	(1 raw files)
+  - nifty20mar5200pe.parquet
+NIFTY	5300	CE	(1 raw files)
+  - nifty20mar5300ce.parquet
+NIFTY	5300	PE	(1 raw files)
+  - nifty20mar5300pe.parquet
+NIFTY	5400	CE	(1 raw files)
+  - nifty20mar5400ce.parquet
+NIFTY	5400	PE	(1 raw files)
+  - nifty20mar5400pe.parquet
+NIFTY	5500	CE	(1 raw files)
+  - nifty20mar5500ce.parquet
+NIFTY	5500	PE	(1 raw files)
+  - nifty20mar5500pe.parquet
+NIFTY	5600	CE	(1 raw files)
+  - nifty20mar5600ce.parquet
+NIFTY	5600	PE	(1 raw files)
+  - nifty20mar5600pe.parquet
+NIFTY	5700	CE	(1 raw files)
+  - nifty20mar5700ce.parquet
+NIFTY	5700	PE	(1 raw files)
+  - nifty20mar5700pe.parquet
+NIFTY	5800	CE	(1 raw files)
+  - nifty20mar5800ce.parquet
+NIFTY	5800	PE	(1 raw files)
+  - nifty20mar5800pe.parquet
+NIFTY	5900	CE	(1 raw files)
+  - nifty20mar5900ce.parquet
+NIFTY	5900	PE	(1 raw files)
+  - nifty20mar5900pe.parquet
+NIFTY	6000	CE	(2 raw files)
+  - nifty20mar6000ce.parquet
+  - nifty20may6000ce.parquet
+NIFTY	6000	PE	(2 raw files)
+  - nifty20mar6000pe.parquet
+  - nifty20may6000pe.parquet
+NIFTY	35900	CE	(1 raw files)
+  - nifty204235900ce.parquet
+NIFTY	35900	PE	(1 raw files)
+  - nifty204235900pe.parquet
+NIFTY	36000	CE	(1 raw files)
+  - nifty204236000ce.parquet
+NIFTY	36000	PE	(1 raw files)
+  - nifty204236000pe.parquet
+NIFTY	58900	CE	(1 raw files)
+  - nifty20o158900ce.parquet
+NIFTY	58900	PE	(1 raw files)
+  - nifty20o158900pe.parquet
+NIFTY	59000	CE	(2 raw files)
+  - nifty20o159000ce.parquet
+  - nifty20n059000ce.parquet
+NIFTY	59000	PE	(2 raw files)
+  - nifty20n059000pe.parquet
+  - nifty20o159000pe.parquet
+NIFTY	59100	CE	(2 raw files)
+  - nifty20o159100ce.parquet
+  - nifty20n059100ce.parquet
+NIFTY	59100	PE	(2 raw files)
+  - nifty20n059100pe.parquet
+  - nifty20o159100pe.parquet
+NIFTY	59200	CE	(2 raw files)
+  - nifty20n059200ce.parquet
+  - nifty20o159200ce.parquet
+NIFTY	59200	PE	(2 raw files)
+  - nifty20o159200pe.parquet
+  - nifty20n059200pe.parquet
+NIFTY	59300	CE	(2 raw files)
+  - nifty20n059300ce.parquet
+  - nifty20o159300ce.parquet
+NIFTY	59300	PE	(2 raw files)
+  - nifty20o159300pe.parquet
+  - nifty20n059300pe.parquet
+NIFTY	59400	CE	(2 raw files)
+  - nifty20o159400ce.parquet
+  - nifty20n059400ce.parquet
+NIFTY	59400	PE	(2 raw files)
+  - nifty20n059400pe.parquet
+  - nifty20o159400pe.parquet
+NIFTY	59500	CE	(2 raw files)
+  - nifty20o159500ce.parquet
+  - nifty20n059500ce.parquet
+NIFTY	59500	PE	(2 raw files)
+  - nifty20n059500pe.parquet
+  - nifty20o159500pe.parquet
+NIFTY	59600	CE	(2 raw files)
+  - nifty20n059600ce.parquet
+  - nifty20o159600ce.parquet
+NIFTY	59600	PE	(2 raw files)
+  - nifty20o159600pe.parquet
+  - nifty20n059600pe.parquet
+NIFTY	59700	CE	(2 raw files)
+  - nifty20n059700ce.parquet
+  - nifty20o159700ce.parquet
+NIFTY	59700	PE	(2 raw files)
+  - nifty20o159700pe.parquet
+  - nifty20n059700pe.parquet
+NIFTY	59800	CE	(2 raw files)
+  - nifty20o159800ce.parquet
+  - nifty20n059800ce.parquet
+NIFTY	59800	PE	(2 raw files)
+  - nifty20n059800pe.parquet
+  - nifty20o159800pe.parquet
+NIFTY	59900	CE	(3 raw files)
+  - nifty20o159900ce.parquet
+  - nifty199059900ce.parquet
+  - nifty20n059900ce.parquet
+NIFTY	59900	PE	(3 raw files)
+  - nifty199059900pe.parquet
+  - nifty20n059900pe.parquet
+  - nifty20o159900pe.parquet
+NIFTY	65800	CE	(1 raw files)
+  - nifty204165800ce.parquet
+NIFTY	65800	PE	(1 raw files)
+  - nifty204165800pe.parquet
+NIFTY	65900	CE	(1 raw files)
+  - nifty204165900ce.parquet
+NIFTY	65900	PE	(1 raw files)
+  - nifty204165900pe.parquet
+NIFTY	66000	CE	(1 raw files)
+  - nifty204166000ce.parquet
+NIFTY	66000	PE	(1 raw files)
+  - nifty204166000pe.parquet
+NIFTY	66100	CE	(1 raw files)
+  - nifty204166100ce.parquet
+NIFTY	66100	PE	(1 raw files)
+  - nifty204166100pe.parquet
+NIFTY	66200	CE	(1 raw files)
+  - nifty204166200ce.parquet
+NIFTY	66200	PE	(1 raw files)
+  - nifty204166200pe.parquet
+NIFTY	66300	CE	(1 raw files)
+  - nifty204166300ce.parquet
+NIFTY	66300	PE	(1 raw files)
+  - nifty204166300pe.parquet
+NIFTY	66400	CE	(1 raw files)
+  - nifty204166400ce.parquet
+NIFTY	66400	PE	(1 raw files)
+  - nifty204166400pe.parquet
+NIFTY	66500	CE	(1 raw files)
+  - nifty204166500ce.parquet
+NIFTY	66500	PE	(1 raw files)
+  - nifty204166500pe.parquet
+NIFTY	66600	CE	(1 raw files)
+  - nifty204166600ce.parquet
+NIFTY	66600	PE	(1 raw files)
+  - nifty204166600pe.parquet
+NIFTY	66700	CE	(1 raw files)
+  - nifty204166700ce.parquet
+NIFTY	66700	PE	(1 raw files)
+  - nifty204166700pe.parquet
+NIFTY	66800	CE	(1 raw files)
+  - nifty204166800ce.parquet
+NIFTY	66800	PE	(1 raw files)
+  - nifty204166800pe.parquet
+NIFTY	66900	CE	(1 raw files)
+  - nifty204166900ce.parquet
+NIFTY	66900	PE	(1 raw files)
+  - nifty204166900pe.parquet
+NIFTY	67000	CE	(1 raw files)
+  - nifty204167000ce.parquet
+NIFTY	67000	PE	(1 raw files)
+  - nifty204167000pe.parquet
+NIFTY	67100	CE	(1 raw files)
+  - nifty204167100ce.parquet
+NIFTY	67100	PE	(1 raw files)
+  - nifty204167100pe.parquet
+NIFTY	67200	CE	(1 raw files)
+  - nifty204167200ce.parquet
+NIFTY	67200	PE	(1 raw files)
+  - nifty204167200pe.parquet
+NIFTY	67300	CE	(1 raw files)
+  - nifty204167300ce.parquet
+NIFTY	67300	PE	(1 raw files)
+  - nifty204167300pe.parquet
+NIFTY	67400	CE	(1 raw files)
+  - nifty204167400ce.parquet
+NIFTY	67400	PE	(1 raw files)
+  - nifty204167400pe.parquet
+NIFTY	67500	CE	(1 raw files)
+  - nifty204167500ce.parquet
+NIFTY	67500	PE	(1 raw files)
+  - nifty204167500pe.parquet
+NIFTY	67600	CE	(1 raw files)
+  - nifty204167600ce.parquet
+NIFTY	67600	PE	(1 raw files)
+  - nifty204167600pe.parquet
+NIFTY	67700	CE	(1 raw files)
+  - nifty204167700ce.parquet
+NIFTY	67700	PE	(1 raw files)
+  - nifty204167700pe.parquet
+NIFTY	67800	CE	(1 raw files)
+  - nifty204167800ce.parquet
+NIFTY	67800	PE	(1 raw files)
+  - nifty204167800pe.parquet
+NIFTY	67900	CE	(1 raw files)
+  - nifty204167900ce.parquet
+NIFTY	67900	PE	(1 raw files)
+  - nifty204167900pe.parquet
+NIFTY	68000	CE	(1 raw files)
+  - nifty204168000ce.parquet
+NIFTY	68000	PE	(1 raw files)
+  - nifty204168000pe.parquet
+NIFTY	68100	CE	(2 raw files)
+  - nifty204168100ce.parquet
+  - nifty207168100ce.parquet
+NIFTY	68100	PE	(2 raw files)
+  - nifty204168100pe.parquet
+  - nifty207168100pe.parquet
+NIFTY	68200	CE	(2 raw files)
+  - nifty204168200ce.parquet
+  - nifty207168200ce.parquet
+NIFTY	68200	PE	(2 raw files)
+  - nifty204168200pe.parquet
+  - nifty207168200pe.parquet
+NIFTY	68300	CE	(2 raw files)
+  - nifty207168300ce.parquet
+  - nifty204168300ce.parquet
+NIFTY	68300	PE	(2 raw files)
+  - nifty207168300pe.parquet
+  - nifty204168300pe.parquet
+NIFTY	68400	CE	(3 raw files)
+  - nifty204168400ce.parquet
+  - nifty208068400ce.parquet
+  - nifty207168400ce.parquet
+NIFTY	68400	PE	(3 raw files)
+  - nifty204168400pe.parquet
+  - nifty208068400pe.parquet
+  - nifty207168400pe.parquet
+NIFTY	68500	CE	(3 raw files)
+  - nifty207168500ce.parquet
+  - nifty208068500ce.parquet
+  - nifty204168500ce.parquet
+NIFTY	68500	PE	(3 raw files)
+  - nifty207168500pe.parquet
+  - nifty208068500pe.parquet
+  - nifty204168500pe.parquet
+NIFTY	68600	CE	(3 raw files)
+  - nifty208068600ce.parquet
+  - nifty207168600ce.parquet
+  - nifty204168600ce.parquet
+NIFTY	68600	PE	(3 raw files)
+  - nifty208068600pe.parquet
+  - nifty207168600pe.parquet
+  - nifty204168600pe.parquet
+NIFTY	68700	CE	(3 raw files)
+  - nifty204168700ce.parquet
+  - nifty207168700ce.parquet
+  - nifty208068700ce.parquet
+NIFTY	68700	PE	(3 raw files)
+  - nifty204168700pe.parquet
+  - nifty207168700pe.parquet
+  - nifty208068700pe.parquet
+NIFTY	68800	CE	(3 raw files)
+  - nifty204168800ce.parquet
+  - nifty207168800ce.parquet
+  - nifty208068800ce.parquet
+NIFTY	68800	PE	(3 raw files)
+  - nifty204168800pe.parquet
+  - nifty207168800pe.parquet
+  - nifty208068800pe.parquet
+NIFTY	68900	CE	(3 raw files)
+  - nifty208068900ce.parquet
+  - nifty207168900ce.parquet
+  - nifty204168900ce.parquet
+NIFTY	68900	PE	(3 raw files)
+  - nifty208068900pe.parquet
+  - nifty207168900pe.parquet
+  - nifty204168900pe.parquet
+NIFTY	69000	CE	(3 raw files)
+  - nifty207169000ce.parquet
+  - nifty208069000ce.parquet
+  - nifty204169000ce.parquet
+NIFTY	69000	PE	(3 raw files)
+  - nifty207169000pe.parquet
+  - nifty208069000pe.parquet
+  - nifty204169000pe.parquet
+NIFTY	69100	CE	(3 raw files)
+  - nifty204169100ce.parquet
+  - nifty208069100ce.parquet
+  - nifty207169100ce.parquet
+NIFTY	69100	PE	(3 raw files)
+  - nifty204169100pe.parquet
+  - nifty208069100pe.parquet
+  - nifty207169100pe.parquet
+NIFTY	69200	CE	(3 raw files)
+  - nifty204169200ce.parquet
+  - nifty207169200ce.parquet
+  - nifty208069200ce.parquet
+NIFTY	69200	PE	(3 raw files)
+  - nifty204169200pe.parquet
+  - nifty207169200pe.parquet
+  - nifty208069200pe.parquet
+NIFTY	69300	CE	(3 raw files)
+  - nifty208069300ce.parquet
+  - nifty207169300ce.parquet
+  - nifty204169300ce.parquet
+NIFTY	69300	PE	(3 raw files)
+  - nifty208069300pe.parquet
+  - nifty207169300pe.parquet
+  - nifty204169300pe.parquet
+NIFTY	69400	CE	(3 raw files)
+  - nifty204169400ce.parquet
+  - nifty207169400ce.parquet
+  - nifty208069400ce.parquet
+NIFTY	69400	PE	(3 raw files)
+  - nifty204169400pe.parquet
+  - nifty207169400pe.parquet
+  - nifty208069400pe.parquet
+NIFTY	69500	CE	(3 raw files)
+  - nifty208069500ce.parquet
+  - nifty207169500ce.parquet
+  - nifty204169500ce.parquet
+NIFTY	69500	PE	(3 raw files)
+  - nifty208069500pe.parquet
+  - nifty207169500pe.parquet
+  - nifty204169500pe.parquet
+NIFTY	69600	CE	(3 raw files)
+  - nifty207169600ce.parquet
+  - nifty208069600ce.parquet
+  - nifty204169600ce.parquet
+NIFTY	69600	PE	(3 raw files)
+  - nifty207169600pe.parquet
+  - nifty208069600pe.parquet
+  - nifty204169600pe.parquet
+NIFTY	69700	CE	(3 raw files)
+  - nifty204169700ce.parquet
+  - nifty208069700ce.parquet
+  - nifty207169700ce.parquet
+NIFTY	69700	PE	(3 raw files)
+  - nifty204169700pe.parquet
+  - nifty208069700pe.parquet
+  - nifty207169700pe.parquet
+NIFTY	69800	CE	(3 raw files)
+  - nifty204169800ce.parquet
+  - nifty208069800ce.parquet
+  - nifty207169800ce.parquet
+NIFTY	69800	PE	(3 raw files)
+  - nifty204169800pe.parquet
+  - nifty208069800pe.parquet
+  - nifty207169800pe.parquet
+NIFTY	69900	CE	(3 raw files)
+  - nifty207169900ce.parquet
+  - nifty208069900ce.parquet
+  - nifty204169900ce.parquet
+NIFTY	69900	PE	(3 raw files)
+  - nifty207169900pe.parquet
+  - nifty208069900pe.parquet
+  - nifty204169900pe.parquet
+NIFTY	76100	CE	(1 raw files)
+  - nifty205076100ce.parquet
+NIFTY	76100	PE	(1 raw files)
+  - nifty205076100pe.parquet
+NIFTY	76200	CE	(1 raw files)
+  - nifty205076200ce.parquet
+NIFTY	76200	PE	(1 raw files)
+  - nifty205076200pe.parquet
+NIFTY	76300	CE	(1 raw files)
+  - nifty205076300ce.parquet
+NIFTY	76300	PE	(1 raw files)
+  - nifty205076300pe.parquet
+NIFTY	76400	CE	(1 raw files)
+  - nifty205076400ce.parquet
+NIFTY	76400	PE	(1 raw files)
+  - nifty205076400pe.parquet
+NIFTY	76500	CE	(1 raw files)
+  - nifty205076500ce.parquet
+NIFTY	76500	PE	(1 raw files)
+  - nifty205076500pe.parquet
+NIFTY	76600	CE	(1 raw files)
+  - nifty205076600ce.parquet
+NIFTY	76600	PE	(1 raw files)
+  - nifty205076600pe.parquet
+NIFTY	76700	CE	(1 raw files)
+  - nifty205076700ce.parquet
+NIFTY	76700	PE	(1 raw files)
+  - nifty205076700pe.parquet
+NIFTY	76800	CE	(1 raw files)
+  - nifty205076800ce.parquet
+NIFTY	76800	PE	(1 raw files)
+  - nifty205076800pe.parquet
+NIFTY	76900	CE	(1 raw files)
+  - nifty205076900ce.parquet
+NIFTY	76900	PE	(1 raw files)
+  - nifty205076900pe.parquet
+NIFTY	77000	CE	(1 raw files)
+  - nifty205077000ce.parquet
+NIFTY	77000	PE	(1 raw files)
+  - nifty205077000pe.parquet
+NIFTY	77100	CE	(1 raw files)
+  - nifty205077100ce.parquet
+NIFTY	77100	PE	(1 raw files)
+  - nifty205077100pe.parquet
+NIFTY	77200	CE	(1 raw files)
+  - nifty205077200ce.parquet
+NIFTY	77200	PE	(1 raw files)
+  - nifty205077200pe.parquet
+NIFTY	77300	CE	(1 raw files)
+  - nifty205077300ce.parquet
+NIFTY	77300	PE	(1 raw files)
+  - nifty205077300pe.parquet
+NIFTY	77400	CE	(1 raw files)
+  - nifty205077400ce.parquet
+NIFTY	77400	PE	(1 raw files)
+  - nifty205077400pe.parquet
+NIFTY	77500	CE	(1 raw files)
+  - nifty205077500ce.parquet
+NIFTY	77500	PE	(1 raw files)
+  - nifty205077500pe.parquet
+NIFTY	77600	CE	(1 raw files)
+  - nifty205077600ce.parquet
+NIFTY	77600	PE	(1 raw files)
+  - nifty205077600pe.parquet
+NIFTY	77700	CE	(1 raw files)
+  - nifty205077700ce.parquet
+NIFTY	77700	PE	(1 raw files)
+  - nifty205077700pe.parquet
+NIFTY	77800	CE	(1 raw files)
+  - nifty205077800ce.parquet
+NIFTY	77800	PE	(1 raw files)
+  - nifty205077800pe.parquet
+NIFTY	77900	CE	(1 raw files)
+  - nifty205077900ce.parquet
+NIFTY	77900	PE	(1 raw files)
+  - nifty205077900pe.parquet
+NIFTY	78000	CE	(1 raw files)
+  - nifty205078000ce.parquet
+NIFTY	78000	PE	(1 raw files)
+  - nifty205078000pe.parquet
+NIFTY	78100	CE	(1 raw files)
+  - nifty205078100ce.parquet
+NIFTY	78100	PE	(1 raw files)
+  - nifty205078100pe.parquet
+NIFTY	78200	CE	(1 raw files)
+  - nifty205078200ce.parquet
+NIFTY	78200	PE	(1 raw files)
+  - nifty205078200pe.parquet
+NIFTY	78300	CE	(1 raw files)
+  - nifty205078300ce.parquet
+NIFTY	78300	PE	(1 raw files)
+  - nifty205078300pe.parquet
+NIFTY	78400	CE	(1 raw files)
+  - nifty205078400ce.parquet
+NIFTY	78400	PE	(1 raw files)
+  - nifty205078400pe.parquet
+NIFTY	78500	CE	(1 raw files)
+  - nifty205078500ce.parquet
+NIFTY	78500	PE	(1 raw files)
+  - nifty205078500pe.parquet
+NIFTY	78600	CE	(1 raw files)
+  - nifty205078600ce.parquet
+NIFTY	78600	PE	(1 raw files)
+  - nifty205078600pe.parquet
+NIFTY	78700	CE	(2 raw files)
+  - nifty209178700ce.parquet
+  - nifty205078700ce.parquet
+NIFTY	78700	PE	(2 raw files)
+  - nifty209178700pe.parquet
+  - nifty205078700pe.parquet
+NIFTY	78800	CE	(2 raw files)
+  - nifty209178800ce.parquet
+  - nifty205078800ce.parquet
+NIFTY	78800	PE	(2 raw files)
+  - nifty209178800pe.parquet
+  - nifty205078800pe.parquet
+NIFTY	78900	CE	(2 raw files)
+  - nifty205078900ce.parquet
+  - nifty209178900ce.parquet
+NIFTY	78900	PE	(2 raw files)
+  - nifty205078900pe.parquet
+  - nifty209178900pe.parquet
+NIFTY	79000	CE	(2 raw files)
+  - nifty205079000ce.parquet
+  - nifty209179000ce.parquet
+NIFTY	79000	PE	(2 raw files)
+  - nifty205079000pe.parquet
+  - nifty209179000pe.parquet
+NIFTY	79100	CE	(2 raw files)
+  - nifty209179100ce.parquet
+  - nifty205079100ce.parquet
+NIFTY	79100	PE	(2 raw files)
+  - nifty209179100pe.parquet
+  - nifty205079100pe.parquet
+NIFTY	79200	CE	(2 raw files)
+  - nifty209179200ce.parquet
+  - nifty205079200ce.parquet
+NIFTY	79200	PE	(2 raw files)
+  - nifty209179200pe.parquet
+  - nifty205079200pe.parquet
+NIFTY	79300	CE	(2 raw files)
+  - nifty205079300ce.parquet
+  - nifty209179300ce.parquet
+NIFTY	79300	PE	(2 raw files)
+  - nifty205079300pe.parquet
+  - nifty209179300pe.parquet
+NIFTY	79400	CE	(2 raw files)
+  - nifty209179400ce.parquet
+  - nifty205079400ce.parquet
+NIFTY	79400	PE	(2 raw files)
+  - nifty209179400pe.parquet
+  - nifty205079400pe.parquet
+NIFTY	79500	CE	(2 raw files)
+  - nifty205079500ce.parquet
+  - nifty209179500ce.parquet
+NIFTY	79500	PE	(2 raw files)
+  - nifty205079500pe.parquet
+  - nifty209179500pe.parquet
+NIFTY	79600	CE	(2 raw files)
+  - nifty205079600ce.parquet
+  - nifty209179600ce.parquet
+NIFTY	79600	PE	(2 raw files)
+  - nifty205079600pe.parquet
+  - nifty209179600pe.parquet
+NIFTY	79700	CE	(2 raw files)
+  - nifty209179700ce.parquet
+  - nifty205079700ce.parquet
+NIFTY	79700	PE	(2 raw files)
+  - nifty209179700pe.parquet
+  - nifty205079700pe.parquet
+NIFTY	79800	CE	(2 raw files)
+  - nifty209179800ce.parquet
+  - nifty205079800ce.parquet
+NIFTY	79800	PE	(2 raw files)
+  - nifty209179800pe.parquet
+  - nifty205079800pe.parquet
+NIFTY	79900	CE	(2 raw files)
+  - nifty205079900ce.parquet
+  - nifty209179900ce.parquet
+NIFTY	79900	PE	(2 raw files)
+  - nifty205079900pe.parquet
+  - nifty209179900pe.parquet
+NIFTY	86400	CE	(1 raw files)
+  - nifty206186400ce.parquet
+NIFTY	86400	PE	(1 raw files)
+  - nifty206186400pe.parquet
+NIFTY	86500	CE	(1 raw files)
+  - nifty206186500ce.parquet
+NIFTY	86500	PE	(1 raw files)
+  - nifty206186500pe.parquet
+NIFTY	86600	CE	(1 raw files)
+  - nifty206186600ce.parquet
+NIFTY	86600	PE	(1 raw files)
+  - nifty206186600pe.parquet
+NIFTY	86700	CE	(1 raw files)
+  - nifty206186700ce.parquet
+NIFTY	86700	PE	(1 raw files)
+  - nifty206186700pe.parquet
+NIFTY	86800	CE	(1 raw files)
+  - nifty206186800ce.parquet
+NIFTY	86800	PE	(1 raw files)
+  - nifty206186800pe.parquet
+NIFTY	86900	CE	(1 raw files)
+  - nifty206186900ce.parquet
+NIFTY	86900	PE	(1 raw files)
+  - nifty206186900pe.parquet
+NIFTY	87000	CE	(1 raw files)
+  - nifty206187000ce.parquet
+NIFTY	87000	PE	(1 raw files)
+  - nifty206187000pe.parquet
+NIFTY	87100	CE	(1 raw files)
+  - nifty206187100ce.parquet
+NIFTY	87100	PE	(1 raw files)
+  - nifty206187100pe.parquet
+NIFTY	87200	CE	(1 raw files)
+  - nifty206187200ce.parquet
+NIFTY	87200	PE	(1 raw files)
+  - nifty206187200pe.parquet
+NIFTY	87300	CE	(1 raw files)
+  - nifty206187300ce.parquet
+NIFTY	87300	PE	(1 raw files)
+  - nifty206187300pe.parquet
+NIFTY	87400	CE	(1 raw files)
+  - nifty206187400ce.parquet
+NIFTY	87400	PE	(1 raw files)
+  - nifty206187400pe.parquet
+NIFTY	87500	CE	(1 raw files)
+  - nifty206187500ce.parquet
+NIFTY	87500	PE	(1 raw files)
+  - nifty206187500pe.parquet
+NIFTY	87600	CE	(1 raw files)
+  - nifty206187600ce.parquet
+NIFTY	87600	PE	(1 raw files)
+  - nifty206187600pe.parquet
+NIFTY	87700	CE	(1 raw files)
+  - nifty206187700ce.parquet
+NIFTY	87700	PE	(1 raw files)
+  - nifty206187700pe.parquet
+NIFTY	87800	CE	(1 raw files)
+  - nifty206187800ce.parquet
+NIFTY	87800	PE	(1 raw files)
+  - nifty206187800pe.parquet
+NIFTY	87900	CE	(1 raw files)
+  - nifty206187900ce.parquet
+NIFTY	87900	PE	(1 raw files)
+  - nifty206187900pe.parquet
+NIFTY	88000	CE	(1 raw files)
+  - nifty206188000ce.parquet
+NIFTY	88000	PE	(1 raw files)
+  - nifty206188000pe.parquet
+NIFTY	88100	CE	(1 raw files)
+  - nifty206188100ce.parquet
+NIFTY	88100	PE	(1 raw files)
+  - nifty206188100pe.parquet
+NIFTY	88200	CE	(1 raw files)
+  - nifty206188200ce.parquet
+NIFTY	88200	PE	(1 raw files)
+  - nifty206188200pe.parquet
+NIFTY	88300	CE	(1 raw files)
+  - nifty206188300ce.parquet
+NIFTY	88300	PE	(1 raw files)
+  - nifty206188300pe.parquet
+NIFTY	88400	CE	(2 raw files)
+  - nifty20o088400ce.parquet
+  - nifty206188400ce.parquet
+NIFTY	88400	PE	(2 raw files)
+  - nifty20o088400pe.parquet
+  - nifty206188400pe.parquet
+NIFTY	88500	CE	(2 raw files)
+  - nifty206188500ce.parquet
+  - nifty20o088500ce.parquet
+NIFTY	88500	PE	(2 raw files)
+  - nifty206188500pe.parquet
+  - nifty20o088500pe.parquet
+NIFTY	88600	CE	(2 raw files)
+  - nifty206188600ce.parquet
+  - nifty20o088600ce.parquet
+NIFTY	88600	PE	(2 raw files)
+  - nifty206188600pe.parquet
+  - nifty20o088600pe.parquet
+NIFTY	88700	CE	(2 raw files)
+  - nifty20o088700ce.parquet
+  - nifty206188700ce.parquet
+NIFTY	88700	PE	(2 raw files)
+  - nifty20o088700pe.parquet
+  - nifty206188700pe.parquet
+NIFTY	88800	CE	(2 raw files)
+  - nifty20o088800ce.parquet
+  - nifty206188800ce.parquet
+NIFTY	88800	PE	(2 raw files)
+  - nifty20o088800pe.parquet
+  - nifty206188800pe.parquet
+NIFTY	88900	CE	(2 raw files)
+  - nifty206188900ce.parquet
+  - nifty20o088900ce.parquet
+NIFTY	88900	PE	(2 raw files)
+  - nifty206188900pe.parquet
+  - nifty20o088900pe.parquet
+NIFTY	89000	CE	(2 raw files)
+  - nifty206189000ce.parquet
+  - nifty20o089000ce.parquet
+NIFTY	89000	PE	(2 raw files)
+  - nifty206189000pe.parquet
+  - nifty20o089000pe.parquet
+NIFTY	89100	CE	(2 raw files)
+  - nifty20o089100ce.parquet
+  - nifty206189100ce.parquet
+NIFTY	89100	PE	(2 raw files)
+  - nifty20o089100pe.parquet
+  - nifty206189100pe.parquet
+NIFTY	89200	CE	(2 raw files)
+  - nifty20o089200ce.parquet
+  - nifty206189200ce.parquet
+NIFTY	89200	PE	(2 raw files)
+  - nifty20o089200pe.parquet
+  - nifty206189200pe.parquet
+NIFTY	89300	CE	(2 raw files)
+  - nifty206189300ce.parquet
+  - nifty20o089300ce.parquet
+NIFTY	89300	PE	(2 raw files)
+  - nifty206189300pe.parquet
+  - nifty20o089300pe.parquet
+NIFTY	89400	CE	(2 raw files)
+  - nifty20o089400ce.parquet
+  - nifty206189400ce.parquet
+NIFTY	89400	PE	(2 raw files)
+  - nifty20o089400pe.parquet
+  - nifty206189400pe.parquet
+NIFTY	89500	CE	(2 raw files)
+  - nifty206189500ce.parquet
+  - nifty20o089500ce.parquet
+NIFTY	89500	PE	(2 raw files)
+  - nifty206189500pe.parquet
+  - nifty20o089500pe.parquet
+NIFTY	89600	CE	(2 raw files)
+  - nifty206189600ce.parquet
+  - nifty20o089600ce.parquet
+NIFTY	89600	PE	(2 raw files)
+  - nifty206189600pe.parquet
+  - nifty20o089600pe.parquet
+NIFTY	89700	CE	(2 raw files)
+  - nifty20o089700ce.parquet
+  - nifty206189700ce.parquet
+NIFTY	89700	PE	(2 raw files)
+  - nifty20o089700pe.parquet
+  - nifty206189700pe.parquet
+NIFTY	89800	CE	(3 raw files)
+  - nifty20o089800ce.parquet
+  - nifty198089800ce.parquet
+  - nifty206189800ce.parquet
+NIFTY	89800	PE	(3 raw files)
+  - nifty20o089800pe.parquet
+  - nifty198089800pe.parquet
+  - nifty206189800pe.parquet
+NIFTY	89900	CE	(3 raw files)
+  - nifty206189900ce.parquet
+  - nifty198089900ce.parquet
+  - nifty20o089900ce.parquet
+NIFTY	89900	PE	(3 raw files)
+  - nifty206189900pe.parquet
+  - nifty198089900pe.parquet
+  - nifty20o089900pe.parquet
+NIFTY	95100	CE	(1 raw files)
+  - nifty204095100ce.parquet
+NIFTY	95100	PE	(1 raw files)
+  - nifty204095100pe.parquet
+NIFTY	95200	CE	(1 raw files)
+  - nifty204095200ce.parquet
+NIFTY	95200	PE	(1 raw files)
+  - nifty204095200pe.parquet
+NIFTY	95300	CE	(1 raw files)
+  - nifty204095300ce.parquet
+NIFTY	95300	PE	(1 raw files)
+  - nifty204095300pe.parquet
+NIFTY	95400	CE	(1 raw files)
+  - nifty204095400ce.parquet
+NIFTY	95400	PE	(1 raw files)
+  - nifty204095400pe.parquet
+NIFTY	95500	CE	(1 raw files)
+  - nifty204095500ce.parquet
+NIFTY	95500	PE	(1 raw files)
+  - nifty204095500pe.parquet
+NIFTY	95600	CE	(1 raw files)
+  - nifty204095600ce.parquet
+NIFTY	95600	PE	(1 raw files)
+  - nifty204095600pe.parquet
+NIFTY	95700	CE	(1 raw files)
+  - nifty204095700ce.parquet
+NIFTY	95700	PE	(1 raw files)
+  - nifty204095700pe.parquet
+NIFTY	95800	CE	(1 raw files)
+  - nifty204095800ce.parquet
+NIFTY	95800	PE	(1 raw files)
+  - nifty204095800pe.parquet
+NIFTY	95900	CE	(1 raw files)
+  - nifty204095900ce.parquet
+NIFTY	95900	PE	(1 raw files)
+  - nifty204095900pe.parquet
+NIFTY	96000	CE	(1 raw files)
+  - nifty204096000ce.parquet
+NIFTY	96000	PE	(1 raw files)
+  - nifty204096000pe.parquet
+NIFTY	96100	CE	(1 raw files)
+  - nifty204096100ce.parquet
+NIFTY	96100	PE	(1 raw files)
+  - nifty204096100pe.parquet
+NIFTY	96200	CE	(1 raw files)
+  - nifty204096200ce.parquet
+NIFTY	96200	PE	(1 raw files)
+  - nifty204096200pe.parquet
+NIFTY	96300	CE	(1 raw files)
+  - nifty204096300ce.parquet
+NIFTY	96300	PE	(1 raw files)
+  - nifty204096300pe.parquet
+NIFTY	96400	CE	(2 raw files)
+  - nifty204096400ce.parquet
+  - nifty203196400ce.parquet
+NIFTY	96400	PE	(2 raw files)
+  - nifty203196400pe.parquet
+  - nifty204096400pe.parquet
+NIFTY	96500	CE	(2 raw files)
+  - nifty204096500ce.parquet
+  - nifty203196500ce.parquet
+NIFTY	96500	PE	(2 raw files)
+  - nifty203196500pe.parquet
+  - nifty204096500pe.parquet
+NIFTY	96600	CE	(2 raw files)
+  - nifty203196600ce.parquet
+  - nifty204096600ce.parquet
+NIFTY	96600	PE	(2 raw files)
+  - nifty204096600pe.parquet
+  - nifty203196600pe.parquet
+NIFTY	96700	CE	(2 raw files)
+  - nifty203196700ce.parquet
+  - nifty204096700ce.parquet
+NIFTY	96700	PE	(2 raw files)
+  - nifty204096700pe.parquet
+  - nifty203196700pe.parquet
+NIFTY	96800	CE	(2 raw files)
+  - nifty203196800ce.parquet
+  - nifty204096800ce.parquet
+NIFTY	96800	PE	(2 raw files)
+  - nifty204096800pe.parquet
+  - nifty203196800pe.parquet
+NIFTY	96900	CE	(2 raw files)
+  - nifty203196900ce.parquet
+  - nifty204096900ce.parquet
+NIFTY	96900	PE	(2 raw files)
+  - nifty204096900pe.parquet
+  - nifty203196900pe.parquet
+NIFTY	97000	CE	(2 raw files)
+  - nifty203197000ce.parquet
+  - nifty204097000ce.parquet
+NIFTY	97000	PE	(2 raw files)
+  - nifty204097000pe.parquet
+  - nifty203197000pe.parquet
+NIFTY	97100	CE	(2 raw files)
+  - nifty203197100ce.parquet
+  - nifty204097100ce.parquet
+NIFTY	97100	PE	(2 raw files)
+  - nifty204097100pe.parquet
+  - nifty203197100pe.parquet
+NIFTY	97200	CE	(2 raw files)
+  - nifty204097200ce.parquet
+  - nifty203197200ce.parquet
+NIFTY	97200	PE	(2 raw files)
+  - nifty203197200pe.parquet
+  - nifty204097200pe.parquet
+NIFTY	97300	CE	(2 raw files)
+  - nifty204097300ce.parquet
+  - nifty203197300ce.parquet
+NIFTY	97300	PE	(2 raw files)
+  - nifty203197300pe.parquet
+  - nifty204097300pe.parquet
+NIFTY	97400	CE	(2 raw files)
+  - nifty204097400ce.parquet
+  - nifty203197400ce.parquet
+NIFTY	97400	PE	(2 raw files)
+  - nifty203197400pe.parquet
+  - nifty204097400pe.parquet
+NIFTY	97500	CE	(2 raw files)
+  - nifty204097500ce.parquet
+  - nifty203197500ce.parquet
+NIFTY	97500	PE	(2 raw files)
+  - nifty203197500pe.parquet
+  - nifty204097500pe.parquet
+NIFTY	97600	CE	(2 raw files)
+  - nifty203197600ce.parquet
+  - nifty204097600ce.parquet
+NIFTY	97600	PE	(2 raw files)
+  - nifty204097600pe.parquet
+  - nifty203197600pe.parquet
+NIFTY	97700	CE	(3 raw files)
+  - nifty203197700ce.parquet
+  - nifty204097700ce.parquet
+  - nifty207097700ce.parquet
+NIFTY	97700	PE	(3 raw files)
+  - nifty204097700pe.parquet
+  - nifty203197700pe.parquet
+  - nifty207097700pe.parquet
+NIFTY	97800	CE	(3 raw files)
+  - nifty203197800ce.parquet
+  - nifty204097800ce.parquet
+  - nifty207097800ce.parquet
+NIFTY	97800	PE	(3 raw files)
+  - nifty204097800pe.parquet
+  - nifty203197800pe.parquet
+  - nifty207097800pe.parquet
+NIFTY	97900	CE	(3 raw files)
+  - nifty207097900ce.parquet
+  - nifty203197900ce.parquet
+  - nifty204097900ce.parquet
+NIFTY	97900	PE	(3 raw files)
+  - nifty207097900pe.parquet
+  - nifty204097900pe.parquet
+  - nifty203197900pe.parquet
+NIFTY	98000	CE	(3 raw files)
+  - nifty204098000ce.parquet
+  - nifty203198000ce.parquet
+  - nifty207098000ce.parquet
+NIFTY	98000	PE	(3 raw files)
+  - nifty203198000pe.parquet
+  - nifty204098000pe.parquet
+  - nifty207098000pe.parquet
+NIFTY	98100	CE	(3 raw files)
+  - nifty207098100ce.parquet
+  - nifty204098100ce.parquet
+  - nifty203198100ce.parquet
+NIFTY	98100	PE	(3 raw files)
+  - nifty207098100pe.parquet
+  - nifty203198100pe.parquet
+  - nifty204098100pe.parquet
+NIFTY	98200	CE	(3 raw files)
+  - nifty207098200ce.parquet
+  - nifty203198200ce.parquet
+  - nifty204098200ce.parquet
+NIFTY	98200	PE	(3 raw files)
+  - nifty207098200pe.parquet
+  - nifty204098200pe.parquet
+  - nifty203198200pe.parquet
+NIFTY	98300	CE	(3 raw files)
+  - nifty203198300ce.parquet
+  - nifty204098300ce.parquet
+  - nifty207098300ce.parquet
+NIFTY	98300	PE	(3 raw files)
+  - nifty204098300pe.parquet
+  - nifty203198300pe.parquet
+  - nifty207098300pe.parquet
+NIFTY	98400	CE	(3 raw files)
+  - nifty207098400ce.parquet
+  - nifty203198400ce.parquet
+  - nifty204098400ce.parquet
+NIFTY	98400	PE	(3 raw files)
+  - nifty207098400pe.parquet
+  - nifty204098400pe.parquet
+  - nifty203198400pe.parquet
+NIFTY	98500	CE	(3 raw files)
+  - nifty203198500ce.parquet
+  - nifty204098500ce.parquet
+  - nifty207098500ce.parquet
+NIFTY	98500	PE	(3 raw files)
+  - nifty204098500pe.parquet
+  - nifty203198500pe.parquet
+  - nifty207098500pe.parquet
+NIFTY	98600	CE	(3 raw files)
+  - nifty204098600ce.parquet
+  - nifty203198600ce.parquet
+  - nifty207098600ce.parquet
+NIFTY	98600	PE	(3 raw files)
+  - nifty203198600pe.parquet
+  - nifty204098600pe.parquet
+  - nifty207098600pe.parquet
+NIFTY	98700	CE	(3 raw files)
+  - nifty207098700ce.parquet
+  - nifty204098700ce.parquet
+  - nifty203198700ce.parquet
+NIFTY	98700	PE	(3 raw files)
+  - nifty207098700pe.parquet
+  - nifty203198700pe.parquet
+  - nifty204098700pe.parquet
+NIFTY	98800	CE	(3 raw files)
+  - nifty207098800ce.parquet
+  - nifty204098800ce.parquet
+  - nifty203198800ce.parquet
+NIFTY	98800	PE	(3 raw files)
+  - nifty207098800pe.parquet
+  - nifty203198800pe.parquet
+  - nifty204098800pe.parquet
+NIFTY	98900	CE	(3 raw files)
+  - nifty204098900ce.parquet
+  - nifty203198900ce.parquet
+  - nifty207098900ce.parquet
+NIFTY	98900	PE	(3 raw files)
+  - nifty203198900pe.parquet
+  - nifty204098900pe.parquet
+  - nifty207098900pe.parquet
+NIFTY	99000	CE	(3 raw files)
+  - nifty204099000ce.parquet
+  - nifty203199000ce.parquet
+  - nifty207099000ce.parquet
+NIFTY	99000	PE	(3 raw files)
+  - nifty203199000pe.parquet
+  - nifty204099000pe.parquet
+  - nifty207099000pe.parquet
+NIFTY	99100	CE	(3 raw files)
+  - nifty207099100ce.parquet
+  - nifty204099100ce.parquet
+  - nifty203199100ce.parquet
+NIFTY	99100	PE	(3 raw files)
+  - nifty207099100pe.parquet
+  - nifty203199100pe.parquet
+  - nifty204099100pe.parquet
+NIFTY	99200	CE	(3 raw files)
+  - nifty207099200ce.parquet
+  - nifty203199200ce.parquet
+  - nifty204099200ce.parquet
+NIFTY	99200	PE	(3 raw files)
+  - nifty207099200pe.parquet
+  - nifty204099200pe.parquet
+  - nifty203199200pe.parquet
+NIFTY	99300	CE	(3 raw files)
+  - nifty203199300ce.parquet
+  - nifty204099300ce.parquet
+  - nifty207099300ce.parquet
+NIFTY	99300	PE	(3 raw files)
+  - nifty204099300pe.parquet
+  - nifty203199300pe.parquet
+  - nifty207099300pe.parquet
+NIFTY	99400	CE	(3 raw files)
+  - nifty207099400ce.parquet
+  - nifty203199400ce.parquet
+  - nifty204099400ce.parquet
+NIFTY	99400	PE	(3 raw files)
+  - nifty207099400pe.parquet
+  - nifty204099400pe.parquet
+  - nifty203199400pe.parquet
+NIFTY	99500	CE	(3 raw files)
+  - nifty203199500ce.parquet
+  - nifty204099500ce.parquet
+  - nifty207099500ce.parquet
+NIFTY	99500	PE	(3 raw files)
+  - nifty204099500pe.parquet
+  - nifty203199500pe.parquet
+  - nifty207099500pe.parquet
+NIFTY	99600	CE	(4 raw files)
+  - nifty204099600ce.parquet
+  - nifty203199600ce.parquet
+  - nifty20n199600ce.parquet
+  - nifty207099600ce.parquet
+NIFTY	99600	PE	(4 raw files)
+  - nifty203199600pe.parquet
+  - nifty204099600pe.parquet
+  - nifty20n199600pe.parquet
+  - nifty207099600pe.parquet
+NIFTY	99700	CE	(5 raw files)
+  - nifty207099700ce.parquet
+  - nifty20n199700ce.parquet
+  - nifty199199700ce.parquet
+  - nifty204099700ce.parquet
+  - nifty203199700ce.parquet
+NIFTY	99700	PE	(5 raw files)
+  - nifty207099700pe.parquet
+  - nifty20n199700pe.parquet
+  - nifty203199700pe.parquet
+  - nifty199199700pe.parquet
+  - nifty204099700pe.parquet
+NIFTY	99800	CE	(5 raw files)
+  - nifty207099800ce.parquet
+  - nifty204099800ce.parquet
+  - nifty199199800ce.parquet
+  - nifty203199800ce.parquet
+  - nifty20n199800ce.parquet
+NIFTY	99800	PE	(5 raw files)
+  - nifty207099800pe.parquet
+  - nifty203199800pe.parquet
+  - nifty204099800pe.parquet
+  - nifty199199800pe.parquet
+  - nifty20n199800pe.parquet
+NIFTY	99900	CE	(5 raw files)
+  - nifty20n199900ce.parquet
+  - nifty199199900ce.parquet
+  - nifty204099900ce.parquet
+  - nifty203199900ce.parquet
+  - nifty207099900ce.parquet
+NIFTY	99900	PE	(5 raw files)
+  - nifty20n199900pe.parquet
+  - nifty203199900pe.parquet
+  - nifty199199900pe.parquet
+  - nifty204099900pe.parquet
+  - nifty207099900pe.parquet

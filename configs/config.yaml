@@ -1,0 +1,13 @@
+engine:
+  duckdb_db: ./data/cache/nfo.duckdb
+
+defaults:
+  tz: Asia/Kolkata
+  market_open: "09:15:00"
+  market_close: "15:30:00"
+  drop_pre_open: true
+  zstd_level: 3
+  row_group_mb: 128
+  features:
+    windows_s: [15, 30]
+    ema_spans_s: [15, 30]

@@ -1,0 +1,2 @@
+#!DIRECT_RUN
+hi

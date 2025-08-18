@@ -1,0 +1,8 @@
+raw_options: ./data/raw/options
+packed_options: ./data/packed/options
+features: ./data/features
+futures_file_banknifty: ./data/raw/futures/banknifty_futures.parquet
+futures_file_nifty: ./data/raw/futures/nifty_futures.parquet
+spot_glob_banknifty: ./data/raw/spot/banknifty_spot_part_*.parquet
+spot_glob_nifty: ./data/raw/spot/nifty_spot_part_*.parquet
+calendar_csv: ./meta/expiry_calendar.csv

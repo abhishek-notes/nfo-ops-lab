@@ -1,0 +1,92 @@
+# Data directory - contains ~236GB of processed data
+/data/
+
+# Log files
+*.log
+*.LOG
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environment
+.venv/
+venv/
+ENV/
+env/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# Results and output directories that might contain large files
+/results/
+/analysis_results/sample_bars/
+
+# Any backup files
+*.bak
+*.backup
+
+# Large parquet files that might be examples or samples
+*.parquet
+
+# Any symbolic links that might cause issues
+var
+private
+
+# Exclude parent directory (seems like test/duplicate files)
+/parent/
+
+# Exclude files that start with = (seem like temporary/test files)
+=*
+
+# Claude metadata
+.claude-metadata/
+
+# Large analysis output files
+comprehensive_analysis_output.log
