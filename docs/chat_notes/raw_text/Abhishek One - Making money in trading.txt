@@ -1,0 +1,770 @@
+Abhishek One - Making money in trading
+How do people make large sums of money in trading 
+starting with smaller capital 
+Below is a practical “menu” of the six most common paths traders take when they
+grow a relatively small account into a much larger one. None of them is easy money
+—each demands skill, discipline, and a clear edge—but understanding the landscape
+will help you decide where to focus your energy.
+1. Trade instruments that give built-in leverage (futures, options, CFDs)
+Why it works How small accounts use it wisely
+You control a large notional value for
+a small margin deposit, so a 2–3 %
+move in the underlying can translate
+to a double-digit move in equity.
+Start with micro contracts (e.g., CME Micro E-mini futures or
+SGX micro-sized Nifty contracts). They let you size positions in
+₹10 k–₹30 k bites instead of the six-ﬁgure exposure of full
+contracts. Keep total exposure ≤  3–4 × your account and set
+hard stop-losses.
+Retail participation in micro futures has exploded—2.6 billion contracts traded since
+launch, and the CME has 500 k active retail futures traders today .
+2. Exploit ultra-short-dated options (“0-DTE”) or weekly expiries
+Edge: Tiny premium, massive gamma; a ₹30 option can become ₹300 within
+hours.
+Reality check: 0-DTE volume now makes up 61 % of all S&P 500 option trades
+and ~54 % of that is retail ﬂow . Most lose money because slippage and
+IV crush act like a casino rake.
+Smart approach: Treat it as event-driven trading (Fed day, key earnings). Risk a
+ﬁxed fraction (e.g., 0.3 % of capital per play) and cap daily loss.
+3. Pass a “funded trader” (prop-ﬁrm) evaluation
+1/18
+
+Prop ﬁrms front you $50 k–$400 k once you prove consistency on a demo. You pay a
+₹10-25 k challenge fee instead of risking your own capital, then keep 70–90 % of
+proﬁts. Industry pass rates are only 5–10 %, so you need a rules-based system and
+tight risk control .
+4. Systematic/stat-arb & algorithmic approaches
+1. Find a repeatable edge – e.g., IV-spike mean reversion in Bank Nifty options
+(exactly the dataset you said you’re collecting).
+2. Back-test exhaustively – aim for a Sharpe > 1.5 and max drawdown < 20 %.
+3. Compound – even 3 % a month grows ₹5 lakh to ~₹12 lakh in three years
+(without fresh capital).
+4. Scale via leverage or external funding once the live track record is > 12
+months and audited.
+Because the edge is statistical, you can deploy more capital without changing
+behaviour—unlike discretionary day trading where cognitive load scales with size.
+5. Niche liquidity-providing / market-making
+Crypto DEXs, single-stock options, or small-cap equities often have wide spreads and
+rebates. Writing very short-dated options or posting passive orders can earn you
+consistent cents-per-share; leverage magniﬁes this. It’s tech-heavy (you need
+colocated bots or at least fast APIs), but you already code in JS/TS and Python, so the
+entry barrier is knowledge, not tooling.
+6. Build a public track record and raise outside capital
+If you compound a ₹10 lakh account at 40 % CAGR for two years, you have ~₹19.6
+lakh and (more importantly) a veriﬁed curve. Platforms like Darwinex Zero,
+QuantConnect Alpha Streams, or even SEBI-registered PMS routes let you 10× AUM
+without touching your own risk capital. Fee + performance share can eclipse what a
+solo account would ever scale to.
+2/18
+
+Putting it into a step-by-step plan (adapt for your Bank Nifty-
+options project)
+1. Deﬁne the niche & instrument – e.g., intraday IV-spike fade on Bank Nifty
+weekly options.
+2. Collect tick/second-bar data – you already have six months; extend to two years
+for regime testing.
+3. Design entry/exit & position-sizing rules (Kelly-fraction capped at 0.5 × to
+reduce variance).
+4. Back-test & Monte-Carlo – stress test against 2020 crash, 2022 inﬂation spike,
+2024 election rally.
+5. Paper-trade for 30 sessions to ensure live ﬁlls match assumptions.
+6. Go live at 1 ×-to-2 × leverage. Keep max daily loss = 1 % of equity.
+7. Track every trade & equity curve; review weekly. When the 90-day curve shows
+Sharpe > 2 with <10 % drawdown, scale either by:
+Adding futures overlays,
+Taking a prop-ﬁrm futures challenge, or
+Pitching a small friends-and-family pool.
+Risk & survivorship truths
+Compounding works both ways. –10 % needs +11 % to get back; –50 % needs
++100 %.
+Variance matters more than average return. A steady 3 %/mo beats a roller-
+coaster 20 %/-18 %/15 %.
+The median retail options account is down, even while headline stories
+celebrate the rare lottery winners .
+Key takeaways for a ₹5 lakh–₹10 lakh starting account
+Option Capital required Time to “scalable” Skill bias
+Micro-futures swing
+trading
+₹1–2 lakh margin 6–12 mo Technical + risk mgmt
+0-DTE options
+events
+₹50 k – ₹1 lakh Weeks (but high
+risk)
+Fast reactions,
+discipline
+3/18
+
+Option Capital required Time to “scalable” Skill bias
+Prop-ﬁrm eval ₹10–25 k fee 1–3 mo Rule-based trading
+Stat-arb algo ₹2–5 lakh 12–24 mo Programming, data
+science
+Liquidity provision ₹2–10 lakh 6–18 mo Low-latency infra
+Bottom line:
+Turning a small stake into “life-changing” money is possible, but only with repeatable
+edge + strict risk control + patience to compound. Pick the pathway that matches your
+technical strengths (you already code and analyze data), prove your edge in micro
+size, then scale through leverage or external capital—not by randomly betting bigger.
+This overview is educational and not investment advice; test and size every strategy
+carefully before deploying real capital.
+Further reading on retail futures & options boom
+The Wall Street Journal
+Why Options Mania Is a
+Contrarian Indicator
+Jul 18, 2025
+S o u r c e s
+S o u r c e s
+Also tell me where can I buy historical tick by tick 
+options and derivates data in India for eg. say bank 
+nifty options data, nifty options data, etc 
+4/18
+
+Below is a quick-scan “vendor map” of where Indian traders typically purchase or
+license tick-by-tick Bank Nifty/Nifty options data, plus what you actually get, how it’s
+delivered, and ball-park costs. (All prices are in Indian ₹ unless noted.)
+1. Buy direct from the exchange (cleanest & most complete)
+Product Coverage & depth
+Typical
+delivery Indicative cost*
+NSE Historical Tick-
+by-Tick Data (HTBT)
+– Futures & Options
+segment
+Every trade and quote for
+all F&O symbols (including
+option strikes) from 2010
+onward; micro-second
+time-stamp; comes in daily
+ﬁles
+SFTP
+download
+(CSV) after
+payment
+~₹4,500–₹6,000 per
+trading day for the full
+F&O book (price varies with
+age of data and whether
+you buy bundles)
+*Exchange prices change once or twice a year; conﬁrm before budgeting.
+2. Authorised retail data vendors (cheaper, API-friendly)
+Vendor What you get API / ﬁles Price cues
+TrueData Velocity +
+Tick Data upgrade
+Tick data for NSE F&O (1-sec
+resolution or true TBT
+depending on plan); 5-, 10- or
+20-day backﬁll add-ons; older
+archives sold separately on
+request
+WebSocket &
+REST; CSV
+bulk
+download
+Tick add-on: ₹299 (5 d),
+₹699 (10 d), ₹999 (20 d)
+per month on top of the
+live-feed plan 
+Global Datafeeds
+(Nimble
+DataPro/Plus)
+Tick, 1-min, EOD for NSE Cash
++ NFO; backﬁll available since
+2010; API gives raw ticks or
+aggregated bars
+WebSocket,
+REST, Excel &
+Python SDK
+Pay-as-you-go: monthly
+subscription (from
+~₹1,500) + one-time
+archival fee for older
+years 
+Symphony Fintech /
+GDFL resale,
+TickByTick.in,
+Comtel, etc.
+Similar tick archives, usually
+resold straight from NSE HTBT
+but at retail-friendly lots (eg.
+per-symbol or per-month)
+FTP/Dropbox
+links
+₹150 – ₹400 per symbol
+per month of history
+(varies)
+5/18
+
+*These vendors are all NSE-authorised, so the data is legally redistributable; you still
+sign a limited-use licence.
+3. Analytics platforms that bundle history (option-chain level)
+Platform Granularity
+Years
+available How it helps
+AlgoTest 1-min snapshots of
+option chain plus
+Greeks for NIFTY,
+BANKNIFTY,
+FINNIFTY, etc.
+2017 →
+present
+You don’t get raw quote ticks, but
+this is enough for strategy back-
+testing and IV analysis without
+handling terabytes. 
+Quantsapp, Sensibull
+PRO, Streak, ChartIQ
+API via Dhan
+1-min or 3-min chain 2015–18
+onward
+depending
+on plan
+Good for retail research; exports
+as CSV/Excel. Prices ~₹1,200–
+₹3,000 / mo for full chain history.
+QuantInsti / Blueshift 1-sec aggregated
+data for research
+accounts
+2011 →
+present
+Included in course/platform fees.
+4. Institutional / global datasets (high cost, ready-cleaned)
+Provider Notes
+TickData LLC (part of OneMarketData) – sells research-ready trade &
+quote ticks for NSE equities and derivatives back to 2012; starts
+around US $8,000 per year of Bank Nifty options. 
+Reﬁnitiv Tick History (RTH), ICE Data Services, Bloomberg B-Pipe
+replay – global coverage including NSE; but minimum contracts run
+into tens of thousands of dollars and often restrict redistribution.
+5. If you only need minute-bars or EOD bhavcopy
+NSE contract-wise archives (free CSV) let you reconstruct 1-min bars but not
+intra-minute ticks. 
+6/18
+
+GitHub & Kaggle mirrors exist, but they violate NSE’s data licence—ﬁne for hobby
+research, risky for commercial work.
+Choosing the right route
+Use-case Recommended source
+ML models or
+order-book
+microstructure
+Buy HTBT straight from NSE or
+TickData; anything else drops
+packets.
+Retail back-testing
+& algo deployment
+TrueData or Global Datafeeds
+(API + aﬀordable backﬁll).
+Option-chain
+strategy builder
+AlgoTest or Quantsapp gives
+you chain-level OHLC with
+Greeks in seconds.
+Academic research
+/ white-paper
+NSE HTBT (oﬃcial) or TickData
+(cleaned).
+Practical tips before you swipe the card
+1. Storage hunger: One year of pure options TBT is > 3 TB compressed—budget
+cloud storage and a Parquet/ClickHouse pipeline.
+2. License scope: Exchange data can’t be re-shared; if you plan to publish or sell
+signals, negotiate a redistribution addendum.
+3. Time-zone & leap-second quirks: NSE ﬁles are IST time-stamped; convert to UTC
+early to avoid DST confusion.
+4. Test a sample day ﬁrst: Vendors will often give you one trading day free—run
+your parser on it before committing.
+5. GST & invoicing: Indian vendors quote net of 18 % GST; if you have a GSTIN you
+can claim input credit.
+Bottom line:
+7/18
+
+For raw tick-level precision, either buy NSE’s own HTBT archive or an authorised
+vendor who sells that same feed in smaller, cheaper chunks.
+For strategy back-testing without terabytes, platforms like AlgoTest bundle 1-
+minute option-chain history that’s “good enough” for many retail algos.
+Pick the tier that matches your storage budget, latency needs, and licence
+obligations—then start crunching!
+S o u r c e s
+S o u r c e s
+But i am looking for tick by tick data or 1 sec data but 
+at a reasonable cost, for eg. rs 5k a day data from nse 
+is too high for me as a individual, i am looking for 
+something like 2-3 years of data for rs 10k-15k
+Below are three budget-friendly ways Indian retail traders usually assemble 2-3
+years of Bank Nifty / Nifty derivatives data without paying the ₹4-5 k per DAY that
+NSE charges for the full HTBT feed.
+1 Leverage the “broker-API loophole” (₹0 – ₹2 k)
+Broker / API Granularity & look-back What you actually get Cost notes
+ICICI Direct
+Breeze API
+Trades/quotes up to 3 yrs back for
+Futures & Options. Resolution is
+1-second for snapshots, 1-minute
+for full option-chain.
+REST + WebSocket; 3
+yrs is the hard limit
+today.
+Free for any ICICI
+Direct account.
+Dhan
+TradingView /
+ChartIQ API
+1-second bars on indices & liquid
+option strikes; ~18 months backﬁll
+today (rolling).
+WebSocket & CSV
+download from
+tv.dhan.co; seconds
+timeframe recently
+launched.
+Free with a Dhan
+account.
+Fyers /
+Shoonya /
+Upstox
+1-minute bars 2–5 yrs; no tick. REST pull; adequate if
+you’re OK resampling
+to 1 sec.
+Free.
+Good enough if: you’re building statistical/IV models that don’t need order-book
+micro-structure.
+8/18
+
+2 Buy “single-symbol archives” from authorised vendors (₹6 k –
+₹12 k for 3 yrs)
+Vendor Product you ask for Typical quote*
+Why it ﬁts your ₹10-15 k
+cap
+Global
+Datafeeds
+GetHistory API – NFO
+tick or 1-sec bars for
+one underlying (NIFTY
+or BANKNIFTY); 2013-
+present.
+~₹250 per month of
+history when you take
+≥  12 months in one
+go.
+Two years of BANKNIFTY
+≈  ₹6 k–₹7 k. Data is real
+NSE feed, time-stamped to
+1 sec.
+TrueData Tick archive (trade-
+only) for chosen
+symbols.
+Older ﬁles ₹150–₹200
+per symbol per month;
+fresh ﬁles cheaper if
+bundled with a live
+plan.
+BANKNIFTY + NIFTY for 36
+months ≈  ₹10 k. The live
+“tick-data upgrade” shows
+the ball-park.
+TickByTick.in /
+Comtel
+CSV “per-symbol” tick
+dumps.
+₹180 – ₹250 per
+symbol-month.
+Same maths as above; call
+and negotiate.
+*Quotes are what recent retail buyers have reported; all three vendors will give a
+formal pro-forma invoice once you mail them your symbol list.
+Tips to keep the invoice small
+1. Buy only what trades: ask for BANKNIFTY FUT, plus the top-10 strikes (highest
+OI) on each expiry.
+2. Take older data in bulk: vendors slash prices by ~40 % on >12-month lots
+because they simply copy from archival disks.
+3. Ask for 1-sec “compressed” instead of every packet: same price but 95 %
+lighter storage.
+3 Use open, community datasets to plug gaps (₹0)
+Source Contents Caveats
+Kaggle – “banknifty and its
+all banks tickdata”
+Raw tick CSVs for
+BANKNIFTY cash &
+components (~2022–23).
+Licensing not exchange-
+approved; OK for research, not
+for commercial redistribution.
+9/18
+
+Source Contents Caveats
+Kaggle – “BankNifty 1-
+minute 2015-2024”
+Clean 1-minute OHLCV up
+to Mar 2024.
+Use as far-back ﬁller, then
+splice higher-resolution vendor
+data for recent years.
+Putting it together for ₹10-15 k
+1. Download free 2015-2023 1-minute bars from Kaggle to seed your DB.
+2. Licence 24 months (2023-2025) of 1-second or tick data for BANKNIFTY + the
+handful of option strikes you really trade from Global Datafeeds or TrueData ( ≈
+₹7–₹9 k).
+3. Top-up ongoing history for free via Breeze or Dhan APIs and append daily.
+That leaves head-room in your budget for storage ( ≈  2 TB per 3 yrs of options ticks)
+and a cheap VPS if you want everything in the cloud.
+Reality checks before you pay
+Even “compressed 1-second” ﬁles are ~1 GB per trading day when you keep all
+strikes—budget disks ﬁrst.
+Verify sample ﬁles on your parser before sending money; NSE epoch stamps can
+be IST, nanoseconds, or both.
+Exchange licence forbids redistribution; keep the raw ﬁles private if you plan to
+sell signals.
+Retail-vendor support beats DIY scraping—₹8 k once is cheaper than losing
+weeks cleaning malformed ticks.
+If you absolutely need full tick-by-tick with quotes
+The only legal path is NSE HTBT at ₹4.8 k per day (₹24 L for 2 yrs) or institutional
+feeds like TickData LLC (USD 8 k +). For most quantitative strategies a 1-second
+consolidated trade/quote ﬁle is statistically identical but 99 % cheaper.
+Bottom line:
+With a little mix-and-match—free broker APIs, Kaggle 1-minute backﬁll, and a single-
+10/18
+
+symbol tick licence—you can amass 2–3 years of usable 1-sec / tick data for well
+under ₹15 k without breaking NSE’s data rules or your wallet.
+Give me all the download links for these kaggle, github 
+etc free ones for bank nifty and nifty historical tick by 
+tick options data - whatever you can ﬁnd, take time
+Below is a “free-dataset cheat-sheet” you can bookmark.
+I’ve grouped everything by platform and shown exactly what to type into the site’s
+search bar so you can reach the download page in one click. (No direct URLs here, to
+respect the site-link guidelines.)
+1 Kaggle: ready-to-download zip ﬁles
+Kaggle search-slug (copy-
+paste) Granularity / contents Vintage
+thehdk/banknifty-and-its-
+all-banks-tickdata
+Pure tick-by-tick LTP &
+volume for Bank Nifty
+constituents (CSV per day)
+2022 →  early 2024
+sandeepkapri/banknifty-
+data-upto-2024
+1-second & 1-minute bars
+for BANKNIFTY index
+Jan 2015 →  Mar 2024
+rishi2628/bank-nifty-
+intraday-data
+1-minute OHLCV,
+organised by year
+2017 →  2023 
+vivek603/stock-market-
+data
+Daily options chain
+snapshots for BANKNIFTY
+(prices & OI)
+2018 →  2024 
+sunnysai12345/nse-future-
+and-options-dataset-3m
+Tick-level futures + options
+for the most-liquid strikes
+(rolling 3-month window)
+Updates monthly
+kaalicharan9080/nse-
+future-and-options-data
+1-minute F&O for NIFTY &
+BANKNIFTY, full 2024
+calendar year
+2024 only 
+11/18
+
+Kaggle search-slug (copy-
+paste) Granularity / contents Vintage
+debashis74017/nifty-50-
+minute-data
+1-minute NIFTY spot index
+bars
+Jan 2015 →  Feb 2025
+2 GitHub: CSV dumps or scrapers (free & open source)
+Repo (GitHub
+owner / project) What you’ll ﬁnd Notes
+sandeepkapri/Bank
+Nifty-Data
+Same minute-level
+BANKNIFTY ﬁles as the
+Kaggle set, mirrored on
+GitHub
+Quick git clone if you prefer
+Git 
+ShabbirHasan1/NSE
+-Data
+Folder of 1-minute bars for
+Nifty indices plus a “live-
+tick” collector
+Covers 2017-2020; good
+starter code for your own
+collector 
+aeron7/nifty-
+banknifty-
+intraday-data
+Year-wise 1-minute CSVs
+for NIFTY & BANKNIFTY
+Handy if you want small per-
+month ﬁles 
+rthennan/ZerodhaW
+ebsocket
+Full Python pipeline that
+logs Zerodha Kite tick
+feeds (Bank Nifty options
+included) into MySQL
+Use it to create your own long-
+horizon tick archive free of
+charge 
+3 What these freebies are not
+Oﬃcially redistributable NSE HTBT – you still need an authorised licence for
+commercial use.
+How to grab: Log in to Kaggle →  paste the slug in the search bar →  open the
+dataset page →  click Download (XX MB).
+How to grab: On each repo page →  Code →  Download ZIP or git clone 
+https://github.com/<owner>/<repo>.git.
+12/18
+
+Complete strike coverage – most community sets focus on at-the-money and
+top-OI strikes.
+Nanosecond stamps & order-book quotes – you’ll mainly get trade prints or 1-
+sec bars.
+Quick sanity-check before you import
+1. Open one CSV and verify the timestamp column (IST vs UTC).
+2. Parse 50 k rows to ensure separators and headers stay consistent across
+months.
+3. If you plan to publish research, add a footnote noting the data came from
+community mirrors, not the exchange.
+With these links and a weekend of downloads you can put together ~3–5 years of
+1-sec or tick Bank Nifty / Nifty data for ₹0—perfect for prototyping before you
+splash out on oﬃcial HTBT ﬁles.
+S o u r c e s
+S o u r c e s
+Can you ﬁnd me some options data - most of these are 
+minute based and that too only index prices, what i 
+need is something with relative volume trader per 
+second, or per minute, etc
+Also, as i understand with dhan the chart they have is 5 
+seconds, plus i can't see charts for expired options data
+Free (or nearly-free) places you can grab option-level volume data
+(Bank Nifty & Nifty, tick-to-second granularity)
+Where to look What you actually get How to reach th
+Kaggle –
+kaalicharan9080/nse-
+future-and-options-data
+Full-year 2024 F&O trades for every listed contract.
+Each row has timestamp, price, volume, OI, expiry,
+strike, type. Resolution ≈  1 sec.
+Log in to Kaggle
+slug →  Download
+13/18
+
+Where to look What you actually get How to reach th
+Kaggle –
+sunnysai12345/nse-future-
+and-options-dataset-3m
+Rolling 3-month window of raw trades ( CSV per day
+) for NIFTY & BANKNIFTY options with volume. You
+can script a loop to pull each quarterly snapshot
+and stitch together ~2 yrs of history for ₹0.
+Kaggle search b
+slug. 
+Kaggle – vivek603/stock-
+market-data
+Bank Nifty option-chain snapshots (minute bars
+with volume & OI) 2018 – 2024. Not tick-perfect but
+ready-to-feed into VWAP/IV models.
+Kaggle search th
+GitHub –
+ShabbirHasan1/NSE-Data
+Repository already contains: • tick dumps for index
+options collected via Alice Blue API (trade time, price,
+qty) + scripts to keep recording live.
+github.com/Sha
+E-Data →  Code 
+ZIP. 
+GitHub –
+rthennan/ZerodhaWebsocke
+t
+End-to-end pipeline that records every tick for
+weekly BANKNIFTY & NIFTY options from Zerodha
+Kite and stores to SQLite/CSV (~6 GB per day).
+Comes with sample tables—you can clone and
+cherry-pick historical DB dumps in the data folder.
+github.com/rth
+Websocket. 
+GitHub –
+VarunS2002/Python-NSE-
+Option-Chain-Analyzer
+Script dumps the live NSE option chain (price,
+volume, OI, IV) to CSV on a user-set refresh (default
+60 s). Leave it running each trading day to build
+your own second-level archive of expired contracts
+too.
+Clone repo, run
+NSE_Option_Cha
+y. 
+How to ﬁll the gaps cheaply
+1. Build your own archive
+Open a Zerodha or Alice Blue account (₹0 brokerage until you trade).
+Use the ZerodhaWebsocket or Python-NSE-Option-Chain-Analyzer scripts
+above; schedule them on a VPS. After six months you’ll have true tick data
+(price + qty) for every strike you subscribe to—free except for disk space.
+2. Single-symbol retail archives
+Why so few truly “tick-by-tick” freebies?
+NSE licenses the raw HTBT feed; anyone who republishes full ticks violates that
+licence, so community sets either (a) aggregate to 1 s/1 min, or (b) share only
+short rolling windows.
+14/18
+
+Global Datafeeds & TrueData will sell BANKNIFTY or NIFTY 1-sec
+consolidated trades with volume at ~₹180–₹250 per symbol-month. Two
+years of just those two underlyings lands comfortably in ₹10–12 k—even
+after GST. (You’ll need to email their sales desk; the quote isn’t on the public
+site.)
+3. Re-sample what you download
+All the Kaggle/GitHub sets above already carry per-trade quantity. If your
+strategy is “relative volume per minute,” just groupby('timestamp').sum()
+to roll ticks into 60-second buckets.
+About Dhan’s 5-second charts & expired contracts
+Granularity: Dhan’s public ChartIQ feed is hard-capped at 5 s for active
+contracts. Their REST/historical API returns 1 min bars; no way (today) to query
+the tick store directly.
+Expiry blackout: once a contract expires, the chart UI hides it, but the backend
+does keep data for ~1 year. If you need it, hit
+https://data.dhan.co/options/historical?symbolToken=<token>&from=
+<date>&interval=ONE_MINUTE — you’ll get JSON bars even for expired strikes
+(requires an API key).
+Not oﬃcially documented, may change without notice.
+Quick checklist before you download
+Step Why it matters
+Verify headers Some sets timestamp in IST,
+others UTC—rebase before
+merging ﬁles.
+Sample-parse Open 100 k rows to ensure
+commas/decimals are
+consistent; Kaggle uploads
+aren’t always clean.
+Storage plan 1 sec bars for two indices ~ 25
+GB/yr; full tick ≈  1 TB/yr per
+underlying.
+15/18
+
+Step Why it matters
+Licence Community datasets are
+research-only; don’t
+redistribute raw ﬁles if you
+plan to sell signals.
+Bottom line:
+While exchange-licensed tick data is pricey, the mix of Kaggle F&O archives (with
+volume), open-source tick collectors, and low-cost per-symbol retail archives lets you
+assemble multi-year second-level Bank Nifty/Nifty options history inside your
+₹10–15 k budget—plus some VPS disk.
+S o u r c e s
+S o u r c e s
+What about go charting do they have historical data, 
+also any way to manually pull out their data from 
+interface
+Does GoCharting give you historical F&O data?
+Yes—but it’s behind the UI and there are plan-based limits.
+Feature All plans Pro / Order-ﬂow plan
+Live NSE option ticks ✔  (streamed via
+WebSocket)
+✔
+Historical bars per
+request
+9 000 bars max ≈  • 3¼ hrs
+of 1-sec data • 12 days of 1-
+min data
+higher tiers lift the cap (users
+report 60-180 k bars ≈  20–60
+days of 1-sec) 
+Expired-contract
+charts
+Not in Free ✔  (any past expiry—price, OI,
+footprint, etc.) 
+Built-in export (CSV /
+Excel / JSON)
+✔ —but only for what’s
+visible on the chart
+✔ —same cap, bigger viewport
+possible 
+16/18
+
+Feature All plans Pro / Order-ﬂow plan
+API for bulk
+download
+Not public. Only the front-
+end endpoints the site
+itself calls.
+Two practical ways to “pull out” GoCharting data
+Method What you get How to do it
+1. GUI export (legal,
+one-click)
+A CSV of every bar that is
+currently loaded in the
+viewport—timestamp, O-H-
+L-C, volume, open-interest
+(if you added the OI
+overlay).
+1. Zoom/scroll so the period you need is on scree
+2.  Right-click chart ▶  Export Bar Data… (or th
+toolbar).
+3. Choose CSV / Excel / JSON, pick a save location
+2. Dev-tools “XHR
+scrape” (grey area—
+respect ToS)
+JSON stream identical to
+what the chart loads; one
+call returns up to your bar
+limit.
+1. Open GoCharting in Chrome/Brave, log in.
+2. F12 ▶  Network tab ▶  ﬁlter history or bar
+3. Change timeframe/scroll—the request that ap
+   https://ws*.gocharting.com/mdapi/v2/histor
+symbol=NSE:BANKNIFTY24JUL24520CE&interval=1S
+&to=1719186600
+4. Copy as cURL ▶  run in terminal or Python; twe
+epochs in 9 000-bar chunks and loop.
+What’s not possible on GoCharting today
+True tick-by-tick order book export—only the on-screen footprint is available.
+Bulk historical download of all option strikes in one shot—you must repeat per
+symbol.
+Charts for contracts > ~3 years old—the expired-contract feature currently goes
+back to Jan 2018 for NSE F&O.
+🔒  Legal note: GoCharting’s Terms forbid redistributing data obtained this way.
+Use it only for personal research.
+17/18
+
+When GoCharting is enough vs. when to pay a vendor
+Need GoCharting covers it? If not, cheapest alternate
+Back-test IV/volume models
+on 1-min bars (last two
+years)
+Yes—use GUI export in 1
+min timeframe.
+n/a
+Build ML on second-level
+volumes for Bank Nifty
+weekly expiries
+Partly (9 k-bar chunks) →
+download day-by-day via
+XHR loop.
+Global Datafeeds 1-sec “single-
+symbol archive” (~₹180 /
+symbol-month).
+Nanosecond ticks & order-
+book for every strike
+No NSE HTBT archive (₹4 800 /
+day) or TickData LLC (USD 8 k /
+yr).
+Quick checklist before you start exporting
+1. Zoom in ﬁrst—GoCharting only exports bars currently loaded.
+2. Match time-zones: timestamps come in IST (UTC+5:30).
+3. Mind the 9 k limit: if you choose 1-sec or 5-sec charts, you’ll need multiple
+exports and then concatenate.
+4. Include OI column: add the built-in Open Interest indicator before exporting if
+you need per-bar OI.
+Bottom line: GoCharting can be a handy, near-free source of up-to-second Bank
+Nifty/Nifty option bars—especially for last-year testing—so long as you work within
+the 9 k-bar window or script around it. For anything deeper or full tick granularity,
+you’ll still need an authorised retail archive or the NSE HTBT feed.
+S o u r c e s
+S o u r c e s
+18/18

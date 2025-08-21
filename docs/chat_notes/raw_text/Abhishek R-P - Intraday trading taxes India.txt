@@ -1,0 +1,230 @@
+Abhishek R-P - Intraday trading taxes India
+Explain taxes on Intraday Trading in India, focusing on 
+options, Bank Nifty Options and Nifty Options 
+Primarily.  -- Including like daily costs and the annual 
+income tax gain, like income tax on gains etc. And also 
+tell me how do people circumvent those as well. 
+Explain taxes on Intraday Trading in India, focusing on 
+options, Bank Nifty Options and Nifty Options 
+Primarily.  -- Including like daily costs and the annual 
+income tax gain, like income tax on gains etc. And also 
+tell me how do people circumvent those as well. 
+Here's a complete breakdown of intraday options trading taxation in India, with a
+focus on Bank Nifty and Nifty options — including daily costs, income tax
+treatment, and common circumvention practices (for awareness, not endorsement):
+🧾  1. Tax Classiﬁcation for Intraday Options Trading
+✅  Nature of Income
+Intraday trading in options (e.g. Bank Nifty/Nifty) is classiﬁed as:
+Speculative Business Income applies to intraday equity & squared-oﬀ options.
+Non-Speculative Business Income applies if options are carried to expiry or
+delivery-settled (not typical for Bank Nifty/Nifty options).
+📆  2. Daily Trading Costs Breakdown
+Cost Component Typical Rate Explanation
+Brokerage ₹20 per order (ﬂat rate,
+Zerodha/Upstox etc.)
+Intraday trades usually ₹20 per
+executed order
+"Business Income" — speciﬁcally, speculative business income if settled
+intraday (i.e. no physical delivery), including squared-oﬀ options (even though
+options are derivatives).
+1/8
+
+Cost Component Typical Rate Explanation
+STT (Securities
+Transaction Tax)
+₹0.05% on sell side only
+(for options)
+E.g., Sell ₹1L worth options →
+STT = ₹50
+Exchange
+Transaction
+Charges
+~₹0.053% on turnover (NSE
+F&O)
+Levied by NSE
+GST 18% on (brokerage +
+transaction charges)
+Tax on broker services
+SEBI Turnover Fee ₹10 per crore (~₹0.0001%) Negligible
+Stamp Duty ₹300 per crore (₹3 per ₹1L)
+on buy side
+Only on buy-side for options
+📊  3. Annual Income Tax on Intraday Trading Gains
+✅  Under Business Income
+You must ﬁle ITR-3 (or ITR-4 under presumptive scheme in limited cases). You can’t
+ﬁle ITR-2.
+Slab Applicable Tax
+Up to ₹2.5L No tax
+₹2.5L – ₹5L 5%
+₹5L – ₹10L 20%
+> ₹10L 30%
+Add 4% cess to all of the above.
+Turnover is calculated based on absolute proﬁt/loss value (per ICAI norms for
+derivatives).
+Audit is required if turnover > ₹10 crore or if proﬁt is < 6% of turnover and
+income exceeds taxable limit.
+🔹  For Bank Nifty/Nifty intraday traders doing 10–20 trades/day, total round-trip
+cost per trade often adds up to ₹35–50 per order, depending on volume.
+2/8
+
+📘  Example:
+If your Bank Nifty intraday proﬁts for the year = ₹5.5 lakhs
+Expenses claimed (laptop, internet, rent, tools) = ₹50,000
+Net taxable business income = ₹5L →  Tax = 5% = ₹25,000
+💡  4. How People Circumvent or Reduce Taxes (not legal advice)
+🚫  Common Tactics (Gray or Illegal)
+1. Not declaring trading income
+Especially if net loss or negligible proﬁt.
+Risky if you use popular brokers — tax dept gets this data.
+2. Splitting accounts across family
+To keep proﬁts in lower tax brackets.
+3. Using ITR-2 or ITR-1 wrongly
+Fails to report speculative business income.
+4. Avoiding audit by manipulating turnover
+E.g., booking losses on expiry to reduce total turnover.
+5. Using presumptive income (44AD) wrongly
+Not meant for speculative income.
+✅  Legal Deductions People Use
+1. Claim expenses:
+Internet, phone, oﬃce rent, subscription (Chartink, TradingView), even
+furniture if applicable.
+Laptop depreciation can be claimed (60% in ﬁrst year).
+2. Loss carry-forward:
+Speculative losses: Carry forward for 4 years, only to be adjusted against
+speculative proﬁts.
+Non-speculative losses: Carry forward for 8 years.
+📦  5. Quick Recap
+❗  This section is for awareness. These may trigger audit or penalties if misused.
+3/8
+
+Topic Summary
+Tax Type Business income (speculative)
+ITR Form ITR-3
+Applicable Tax Slab Based on total income (5% to
+30%)
+Daily Costs ₹30–₹50 per trade typical
+Audit Required? Yes, if turnover > ₹10Cr or
+proﬁt < 6% of turnover (and
+total income > ₹2.5L)
+Legal Deductions Internet, software, devices,
+rent, courses
+Loss Setoﬀ Speculative →  4 yrs; Non-
+speculative →  8 yrs
+📢  Pro Tip:
+Would you like a sample Excel sheet to track daily proﬁt, turnover, and tax estimate
+for Bank Nifty options?
+Use tools like Quicko, Cleartax, or Zerodha Tax P&L Report to track turnover,
+speculative income, and audit applicability automatically.
+STT (Securities Transaction Tax)
+₹0.05% on sell side only (for options)
+E.g., Sell ₹1L worth options →  STT = ₹50
+ --- 
+You're right to question this. Let’s break it down precisely for Options Trading in
+India — particularly relevant to Bank Nifty/Nifty Options:
+📌  What is STT (Securities Transaction Tax) on Options in India?
+4/8
+
+STT applies diﬀerently for Options depending on whether you're selling or
+exercising them:
+Transaction Type STT Rate Applied On Explanation
+Sell (intraday or
+before expiry)
+₹0.05% on premium value
+(not notional)
+Most common case for traders
+Exercising options 0.125% on intrinsic value Rare – only when options are
+exercised at expiry (in-the-
+money)
+Buy No STT — STT is not charged on buying
+options
+✅  Real Example: STT on Intraday Options Sell
+Suppose you sell 1 lot of Bank Nifty CE:
+Strike price: 47,000 CE
+Premium: ₹100
+Lot size: 15
+Total value (premium × lot size) = ₹1,500
+🧮  STT = 0.05% of ₹1,500 = ₹0.75
+⚠  Common Mistake
+That rate applies only for equity delivery, not for F&O.
+💡  Tip
+For daily active traders, STT is usually a very small part of trading costs for options
+due to low premium amounts. However, if your option is exercised, the STT is
+signiﬁcantly higher — avoid letting ITM options auto-expire unnecessarily to avoid:
+✅  You pay only ₹0.75 STT on this intraday options sell.
+Many assume STT is 0.05% on the notional value (e.g., 47,000 × 15 = ₹7,05,000),
+which would be ₹352.50 — this is wrong for options sell.
+5/8
+
+Would you like a small calculator template for daily option trade costs (including STT,
+brokerage, GST, stamp duty)?
+0.125% of intrinsic value × lot size — this can be ₹200–₹1,000+ per lot.
+So basically if I buy, if I ﬁrst sell an option worth 200 
+rupees and then cover it at 190 and make 10 rupees 
+proﬁt on it and my brokerage is free using Sunya or ﬂat 
+trade then how much cost am I looking at per 
+transaction per cycle and if I do that like 50 times a day 
+how much am I looking at? 
+Great question. Let's break it down step by step with your speciﬁc scenario:
+📌  Scenario
+Sell option at ₹200
+Buy it back at ₹190
+Lot size: 15 (Bank Nifty)
+Proﬁt per trade = ₹10 × 15 = ₹150
+Brokerage = ₹0 (with Sunya or FlatTrade zero-brokerage plans)
+Number of trades/day = 50 round trips
+✅  Per Trade Cost Breakdown (Buy + Sell)
+🔹 1. STT (Sell side only)
+0.05% of premium × lot size
+Sell side premium = ₹200 × 15 = ₹3,000
+STT = 0.05% of ₹3,000 = ₹1.50
+🔹 2. Exchange Transaction Charges (Both sides)
+NSE F&O: ~₹0.053% per side
+Turnover = (₹200 + ₹190) × 15 = ₹5,850
+ETC = 0.053% × ₹5,850 = ₹3.10
+6/8
+
+🔹 3. GST on ETC
+GST = 18% on ETC
+GST = 18% × ₹3.10 ≈  ₹0.56
+🔹 4. Stamp Duty (Buy side only)
+₹300 per crore = 0.003% on buy side
+Buy value = ₹190 × 15 = ₹2,850
+Stamp Duty = 0.003% × ₹2,850 = ₹0.0855 ≈  ₹0.09
+🔹 5. SEBI Charges
+₹10 per crore = 0.0001% of ₹5,850 ≈  ₹0.006
+✅  Total Cost per Round Trip
+Component Amount
+STT ₹1.50
+Exchange Charges ₹3.10
+GST ₹0.56
+Stamp Duty ₹0.09
+SEBI Fee ₹0.006
+Total per trade ≈  ₹5.25
+📅  If you do this 50 times a day
+Cost per trade = ₹5.25
+Daily cost = ₹5.25 × 50 = ₹262.50
+Daily gross proﬁt = ₹150 × 50 = ₹7,500
+Net proﬁt = ₹7,500 −  ₹262.50 = ₹7,237.50
+📆  Monthly Estimate (20 trading days)
+Gross proﬁt = ₹7,500 × 20 = ₹1.5L
+Trading costs = ₹262.50 × 20 = ₹5,250
+7/8
+
+Net monthly proﬁt = ~₹1.445L
+Annual estimate = ~₹17.34L net proﬁt
+⚠  Caveats
+If you don’t always win, the costs remain, but proﬁts don’t. So if your win ratio
+drops below ~70%, this starts hurting.
+Slippages and execution delays might impact real-world proﬁtability.
+✅  Conclusion
+Yes, with zero brokerage, your per trade cost is only around ₹5.25.
+If you’re consistent with execution and win rate, doing 50 trades/day can yield
+serious compounding — but it’s high skill + high risk.
+Would you like a downloadable Google Sheet/Excel calculator where you can play
+with:
+Lot size
+Proﬁt per trade
+Number of trades
+Costs breakdown?
+Let me know and I’ll make it.
+8/8

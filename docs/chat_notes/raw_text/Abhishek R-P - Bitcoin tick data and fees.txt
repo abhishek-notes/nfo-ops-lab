@@ -1,0 +1,327 @@
+Abhishek R-P - Bitcoin tick data and fees
+Where can I ﬁnd tick-by-tick data of Bitcoin to backtest 
+and how do I run those? Like if I were to trade how 
+much fees like burning etc can I expect? I am trying to 
+trade crypto like stocks. I would prefer to have tick-by-
+tick data as much as possible. I would prefer links.
+Below is a quick-start roadmap that most crypto quants follow when they need true
+tick-by-tick Bitcoin data plus a fee-aware back-test. I’ve grouped sources by free
+exchange dumps, professional vendors, and community datasets, then walk
+through a minimal Python pipeline and fee modelling.
+1 Where to download tick-by-tick BTC trades
+Tier Source What you get Cost
+Free
+(exchange-
+hosted)
+Binance Data Collection – daily / monthly CSVs of
+every BTC/USDT trade since 2017
+$0 1-sec-timest
+to 2025; mic
+1 Jan 2025 –
+frequency re
+BitMEX, Bybit, Kraken, etc. – each oﬀers a
+“/historicalTrades” or bulk‐download endpoint. You
+can script pulls with CCXT or the exchange’s own
+public S3 bucket.
+$0 Coverage va
+2019-presen
+Professional
+aggregators
+Tardis.dev – tick-level trades and order-book L2
+snapshots for 20+ exchanges
+Paid (starts at
+~$39/mo)
+Provides Pyt
+streams par
+straight into
+Dask 
+Kaiko “All Trades” – normalised tick feed across CEX
+& DEX
+Paid Enterprise-g
+ﬂat-ﬁle deliv
+CoinAPI Flat Files – per-day trade ﬁles (BTC-USD,
+etc.)
+Freemium/paid Simple zippe
+download; o
+1/9
+
+Tier Source What you get Cost
+updates also
+Community
+/ one-oﬀ
+snapshots
+Kaggle: “Bitcoin Historical Tick Data” – 2012-2021,
+~60 GB compressed
+Free Good for pro
+without a pa
+CryptoDataDownload – minute-level only (not true
+tick), but free
+Free Useful for ro
+strategy ide
+2 Minimal Python back-test pipeline (outline)
+Tip: If disk space is tight, convert the CSVs to Parquet once, then partition by date
+to load only the windows you need.
+python
+import pandas as pd
+import vectorbt as vbt          # pip install vectorbt
+from pathlib import Path, PurePosixPath
+# 󾠮   Read Binance daily trade dump -----------------
+root = Path("/data/binance/BTCUSDT/trades/2025-01-01.csv.gz")
+df = pd.read_csv(root, names=[
+        "trade_id","price","qty","quote_qty","timestamp",
+        "is_buyer_maker","is_best_match"
+    ])
+df["timestamp"] = pd.to_datetime(df["timestamp"], unit="us").tz_localize("UTC")
+df.set_index("timestamp", inplace=True)
+# 󾠯   Resample to 1-second mid-price for speed (optional)
+mid = df["price"].resample("1s").last().ﬃll()
+# 󾠰   Simple moving-average crossover strategy ----------
+fast = mid.vbt.rolling_mean(window=50)
+slow = mid.vbt.rolling_mean(window=200)
+entries = fast > slow
+2/9
+
+Why vectorbt? It natively handles tick-level indexes, applies per-trade or per-notional
+fees, and scales to billions of rows with Dask.
+3 Modelling fees & “burning”
+Most retail-style BTC strategies trade on-exchange, so the costs you model are:
+Exchange (spot) Maker Taker Notes
+Binance 0.10 % baseline (0 % on
+some BTC pairs; 25 %
+discount if fees paid in
+BNB) 
+Kraken 0.16 %–0.26 % (vol-tiered)
+Coinbase 0.40 % maker / 0.60 %
+taker for < $10 k monthly
+volume 
+How to plug fees into your back-test
+1. Fixed percentage per ﬁll – easiest: fee = notional * taker_rate.
+2. Maker/Taker split – tag each simulated order as passive or aggressive and apply
+the corresponding rate.
+exits   = fast < slow
+pf = vbt.Portfolio.from_signals(
+        mid, entries, exits,
+        fees = 0.001,              # 0.1 % taker fee – see section 3
+        slippage = 0.0002,         # 2 bp implicit slip
+    )
+print(pf.stats())
+“Burning” usually refers to Binance’s quarterly BNB burn, not a direct trading
+cost.
+On-chain BTC withdrawals do incur a miner fee ( ≈  20–200 sat/vB) but this is
+outside the exchange trade loop, so you normally exclude it from an intraday
+back-test and account for it only when modelling capital ﬂows.
+3/9
+
+3. Funding & perp swaps – if you trade perpetual futures, pull funding-rate time-
+series from the same provider and subtract it periodically.
+4 Putting it together
+1. Grab data from Binance dumps for a completely free, high-resolution BTC/USDT
+stream.
+2. Convert to Parquet & partition so each test loads only the necessary days.
+3. Back-test with vectorbt / Backtrader / freqtrade, adding fees= and slippage=
+parameters that reﬂect your target exchange tier.
+4. Validate by comparing simulated trade log against a real-money account
+statement for the same window; adjust fee model until P&L lines up.
+That workﬂow gets you institutional-grade tick data, realistic cost assumptions, and
+an event-driven engine you can iterate on quickly—all without shelling out ﬁve
+ﬁgures for a hedge-fund data licence.
+S o u r c e s
+S o u r c e s
+Okay, I quite like the Bitcoin, Binance, Markit data. 
+They also provide Ethereum. And I was wondering if 
+they also have some options trading data of Bitcoin 
+and if Bitcoin is currently being traded in options as I 
+heard sometime back. So, check on these two things 
+and give me in that same repo, on that same place if I 
+can also get options data for Bitcoin.
+✔  Yes—Bitcoin options are actively traded today
+BTC options clear on both regulated venues (CME, Cboe) and crypto-native platforms
+(Deribit, Binance, OKX, Bybit). Daily open-interest has grown to > $9 B notionally on
+CME alone , while Binance has rolled out European-style BTCUSDT options
+and continues to add multi-leg RFQ features for complex strategies 
+.
+1 Where the Binance “public data” repo keeps BTC options ﬁles
+4/9
+
+Binance stores all of its market archives—spot, futures and options—under the
+same S3-style bucket that you already used for trades and klines:
+The root index itself shows the option/ directory right next to spot/ and futures/
+.
+Inside that folder the structure mirrors spot/futures:
+Quick pull example
+kotlin
+https://data.binance.vision/data/
+         ├──  spot/
+         ├──  futures/
+         └──  option/          ←   this is the options root
+python
+option/
+├──  daily/
+│    └──  trades/
+│        └──  BTCUSDT/
+│            ├──  BTCUSDT-trades-2025-07-26.zip
+│            └──  ...
+├──  monthly/
+│    └──  klines/
+│        └──  BTCUSDT/
+│            ├──  1m/
+│            │    └──  BTCUSDT-1m-2025-06.zip
+│            └──  ...
+└──  ... (aggTrades, depth, etc.)
+bash
+# One day of tick-by-tick BTC-options trades
+wget \
+  "https://data.binance.vision/data/option/daily/trades/BTCUSDT/BTCUSDT-trades-2025-07-
+26.zip"
+# One month of 1-minute option klines
+wget \
+5/9
+
+CSV layouts are identical to the spot trades ﬁles (tradeId, price, qty, timestamp,
+maker ﬂag), so any code you already have for spot/futures will ingest options as-is.
+Binance also surfaces downloadable CSVs for OI, volume, IV term-structure, exercised
+history on its web dashboard—look for the “CSV Download” buttons under Options
+Data › BTCUSDT .
+2 If you need deeper greys (full order book, greeks, or non-
+Binance strikes)
+Vendor What you get Useful when… Notes
+Tardis.dev Tick-by-tick trades plus
+L2 quotes & full options
+chains for Binance,
+Deribit, OKX, Bybit
+You want bid/ask
+microstructure, greeks
+or ex-Binance strikes
+Free one-day CSV samples;
+full archive from $39 /
+month 
+Kaiko Options
+“All Trades”
+Normalised option
+trades (greeks, IV,
+delta) across major
+venues
+Cross-exchange
+modelling
+Enterprise licence 
+CME DataMine /
+Quandl
+Regulated BTC & ETH
+options on futures
+Back-testing against
+CME settlement curve
+Pay-per-ﬁle ( ≈  $0.02 per
+contract day)
+3 Running a back-test with options fees
+Binance charges 0.02 % maker / 0.05 % taker on BTC options by default and rebates
+high-volume tiers. Use the same fees= argument in vectorbt (or backtrader) that
+you used for spot:
+  "https://data.binance.vision/data/option/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2025-
+06.zip"
+ETH options live under the same path—replace BTCUSDT with ETHUSDT.
+python
+6/9
+
+Greeks, IV surfaces and funding (for perp hedges) can be merged from the additional
+CSV downloads mentioned above.
+TL;DR
+Yes, BTC options are live and liquid.
+Yes, Binance puts tick-level BTC options data in the same public bucket—just
+dive into option/ instead of spot/.
+If you ever outgrow the basic trade feed (need order book or Deribit strikes) tap
+Tardis, Kaiko, or CME datasets, which all expose ready-made Parquet/CSV feeds.
+pf = vbt.Portfolio.from_signals(
+        price_series,
+        entries, exits,
+        fees=0.0005      # 0.05 % taker as decimal
+)
+S o u r c e s
+S o u r c e s
+So you are telling me that in the data that Binance 
+provides, there is no bid, etc. kind of details of options 
+like volume, bid, ask, etc. or is it there?
+Short answer
+*The Binance public S3 bucket only publishes *tick-level trades, klines (OHLCV), and a
+few summaries (BVOL index, end-of-hour OI summaries, etc.) for its BTC & ETH options. It
+does not ship historical bid/ask or order-book “depth” ﬁles for options.
+If you need historical quotes (best-bid/best-ask or full L2 books) you have two
+choices:
+What you want Where to get it Notes
+Live quotes going
+forward
+Binance Options
+REST/WebSocket →  GET 
+/eapi/v1/depth,
+@bookTicker streams
+You record and archive the
+snapshots yourself
+7/9
+
+What you want Where to get it Notes
+Back-ﬁlled
+historical depth /
+greeks
+Third-party vendors
+(Tardis.dev, Kaiko,
+Amberdata, CoinAPI, etc.)
+Vendors replay the full book
+with nanosecond stamps;
+cheapest entry (Tardis “Lite”) ≈
+$39 / month
+The Binance devs have conﬁrmed in their public-data repo that only trades/klines are
+archived; bids & asks are out of scope for the free dump .
+What is in the Binance options dump?
+You can see the EOHSummary/ and BVOLIndex/ sub-dirs when you list
+https://data.binance.vision/data/option/daily/ .
+How to capture depth yourself (if you want it free)
+sql
+data/
+└─  option/
+   ├─  daily/
+   │    ├─  trades/BTCUSDT/…        <- every ﬁll, micro-second time-stamp
+   │    ├─  klines/BTCUSDT/1m/…     <- 1-sec to 1-month OHLCV candles
+   │    ├─  EOHSummary/…            <- end-of-hour OI/volume snapshot
+   │    └─  BVOLIndex/…             <- 30-day ATM IV index
+   └─  monthly/…                   <- same folders, zipped by month
+bash
+# 1. Subscribe to the real-time book
+wscat -c wss://eapi.binance.com/stream?streams=BTCUSDT@depth10@100ms
+# 2. Or pull snapshots every N sec
+curl "https://eapi.binance.com/eapi/v1/depth?symbol=BTCUSDT&limit=1000" \
+     -o 2025-07-27T03-00-00Z.json
+# run this on a cron job, store to S3 / Parquet
+8/9
+
+Persist the JSON →  Parquet and you’ll have a rolling L2 history that lines up with the
+tick-trade ﬁles.
+If you’d rather buy the ready-made book
+Vendor Coverage Format Typical price
+Tardis.dev Binance, Deribit, OKX, Bybit
+options
+Parquet trades + L2
+snapshots every 100 ms
+$39 / mo (Lite)
+Kaiko Normalised cross-
+exchange options book +
+greeks
+CSV / REST Custom quote
+Amberdata,
+CoinAPI
+BTC & ETH options greeks,
+IV surface, quotes
+Zip-CSV Tiered
+Bottom line
+• Binance’s free repo gives you every options trade and candle—perfect for
+volume-proﬁle or delta-hedge back-tests.*
+• It does not include historical bid/ask quotes or depth. Use the live /eapi
+endpoints to roll your own archive, or license a ready-built set from Tardis / Kaiko
+if you need past order-book states.*
+S o u r c e s
+S o u r c e s
+Can you do a quick search on the internet for these 
+ﬁles that you are suggesting from TARDIS etc if they 
+already exist somewhere on torrent or somewhere 
+where I can directly download them instead of 
+purchasing them? Like the historical data only? 
+I’m sorry, but I can’t help with that.
+9/9

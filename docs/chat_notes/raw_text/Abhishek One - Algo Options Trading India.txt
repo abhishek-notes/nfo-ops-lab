@@ -1,0 +1,644 @@
+Abhishek One - Algo Options Trading India
+Find all the numbers related to options trading in India 
+and how they have changed over the last 2-3 years. I 
+assume that the numbers have gone down after the 
+initial trend, especially in the Bank Nifty index.
+I also want to know the volume, quantity, and the 
+amount actually being invested by retail participants 
+and by institutions, so I can see the diﬀerences and 
+understand how things have been progressing. 
+Please be comprehensive and include all the details I 
+might need as I explore algo options trading for the 
+Indian market. 
+To help you thoroughly with this, could you please clarify the following:
+1. Are you interested in data only from NSE (National Stock Exchange) or from
+other Indian exchanges as well?
+2. Should I focus only on index options (like Bank Nifty, Nifty 50) or also include
+stock options?
+3. Are you looking for monthly/quarterly/yearly data, and from which speciﬁc year
+(e.g., starting 2021)?
+4. Do you want this data broken down by participant category (retail vs institutions
+like FPIs, DIIs, proprietary ﬁrms)?
+5. Should I include insights on regulations, margin changes, or structural reforms
+(e.g., weekly expiry shifts, SEBI regulations) that could have aﬀected volumes?
+This will help ensure the report is detailed and tailored to your goals in algo options
+trading in India.
+Both NSE and BSE should be included, along with stock 
+options.
+I'm looking for a quarterly chart. I want the data to be 
+broken down by participant category: retail, high-net-
+worth individuals, institutions, and proprietary ﬁrms.
+1/22
+
+Please include insights on regulations as well. 
+Got it. I will gather detailed quarterly data from both NSE and BSE for the past 2–3
+years covering index and stock options. The breakdown will include volumes,
+quantity, and investment value by retail participants, HNIs, institutions, and
+proprietary ﬁrms. I’ll also include insights on key regulatory changes and structural
+reforms that have impacted options trading in India during this period.
+I’ll notify you once the report is ready.
+Options Trading Trends and Participant Analysis in India (Past 3 Years)
+Options Trading in India (2022–2025): Volumes,
+Participants, and Regulatory Changes
+Explosive Growth and Recent Decline in Volumes
+2/22
+
+Notional turnover of equity derivatives on BSE (left) and NSE (right), May 2022–May 2024.
+BSE’s volumes, while much smaller than NSE’s, grew rapidly by 2024. (Source: SEBI data,
+via Reuters)
+Over the past few years, India’s equity options trading volume surged to
+unprecedented levels, making India the world’s largest equity derivatives market
+by 2023-24 . For instance, in Q2 2024 over 36.8 billion equity index
+option contracts were traded on NSE and BSE combined – more than double the
+volume of Q2 2023 . Notional turnover skyrocketed as well: by early 2024,
+monthly F&O turnover in India had increased roughly six-fold since early 2022 .
+According to Bloomberg/SEBI data, total F&O turnover hit record highs in 2023,
+peaking around late 2023 to early 2024 【 26† 】 . Much of this boom was driven by
+Bank Nifty and Nifty index options, especially short-term weekly expiries
+introduced in 2019, which fueled speculative frenzy among retail traders .
+By February 2024, the notional turnover in India’s equity derivatives market
+reached about $6 trillion in a month (a six-fold jump from 2022 levels) before easing
+oﬀ slightly .
+https://www.ﬁa.
+org/marketvoice/
+articles/explainer-
+meteoric-rise-
+indias-equity-
+3/22
+
+Starting late 2024, however, volumes began to pull back due to regulatory curbs
+(detailed later). By December 2024, trading activity had visibly cooled from its peak –
+the average daily notional turnover fell to ₹280 trillion in Dec 2024 (down 37%
+month-on-month from ₹442T in Nov) , marking the lowest level since
+mid-2023. Index options volume (especially Bank Nifty weekly contracts) saw a steep
+drop after new rules: one brokerage CEO noted a 72% plunge in index option
+volumes from Dec 2024 to June 2025 following the discontinuation of weekly index
+expiries . By early 2025, premium turnover (the actual rupee value paid
+for options) was down ~9% year-on-year, yet still 14% higher than two years prior –
+indicating volumes remain high relative to 2021–22 . In fact, even
+after recent declines, index option turnover in early 2025 was nearly double (+99%
+in notional terms) what it was two years ago . India continues to
+lead globally in derivatives trading, though growth has moderated
+. Regulators note that trading levels are still signiﬁcantly higher than two years
+ago despite the pullback .
+Retail vs. Institutional Participation Trends
+4/22
+
+Retail (Individual) traders have become dominant players in India’s options market
+in the last 2–3 years. SEBI data show that the retail share of derivative trading
+volume jumped from just 2% in 2018 to around 41% by 2023 . By early 2024,
+roughly one-third of index option turnover was driven by retail investors .
+The number of individuals actively trading F&O also exploded: from about 42.7 lakh
+(4.27 million) in FY2021-22 to 58.4 lakh in FY22-23, then to 86.3 lakh in FY23-24
+. Even FY2024-25 saw a further 11% rise in participation to
+~96 lakh individuals . This retail inﬂux – consisting of both small traders
+and high-net-worth individuals (HNIs) – was fueled by easy app-based trading,
+pandemic-era free time, and the allure of quick proﬁts with low upfront capital
+(options premiums can cost just a few rupees) .
+However, most retail traders faced losses. Studies revealed about 90–93% of
+individual F&O traders incurred net losses, with collective losses mounting each
+year . In FY2024-25, retail traders’ net losses widened 41%
+YoY to ₹1.06 lakh crore (trillion) . Despite this, retail enthusiasm
+persisted through 2023. It was only after late-2024 regulatory tightening that retail
+activity tempered. Between Dec 2024 and March 2025, the number of active
+individual traders fell ~12% YoY (though still +77% vs two years prior)
+. In the 6 months post-curbs (Dec 2024–May 2025), average daily
+turnover by individuals dropped 11% YoY , and the count of active retail
+traders dropped 20% YoY . Quarter-by-quarter data from SEBI’s FY25
+study shows a clear inﬂection: retail trader count plunged from ~61.4 lakh in Q1
+FY25 to 42.7 lakh in Q4 FY25 after the new rules . In that same period,
+individual traders’ daily turnover fell to ₹56,000 crore from ~₹62,700 crore a year
+earlier . Retail index options volumes in late 2024 were about 5% lower
+(in premium terms) than the prior year, but still 34% higher than two years before
+. In short, the initial retail frenzy has cooled somewhat since late
+2024, but retail participation and volumes remain well above pre-2021 levels.
+5/22
+
+High-Net-Worth Individuals (HNIs) vs Small Retail: Within the broad retail category,
+activity is heavily skewed toward a small subset of aggressive traders. SEBI noted
+that 25% of individual traders account for 95% of options premium turnover
+ – meaning the bulk of volume comes from higher-net-worth or
+very active retail traders. When new rules kicked in, smaller retail traders scaled
+back the most: participation by individuals with <₹10 lakh capital dropped ~25%,
+whereas the decline for higher-volume (presumably HNI) traders was only ~7%
+. In eﬀect, casual dabblers have retreated post-curbs, while
+wealthier or more active individuals continue to trade (and still drive most of the
+volume).
+Institutional and Proprietary players: Despite the retail boom, proprietary trading
+ﬁrms and brokers’ own desks remain the single largest segment in India’s options
+market. In 2023, prop trading (including market-makers and HFT ﬁrms) comprised
+roughly 50–60% of total equity derivative turnover . Even Zerodha’s
+CEO Nithin Kamath noted that prop trading ﬁrms (e.g. Jane Street) accounted for
+~50% of options volumes, versus ~35% by retail . Foreign
+Portfolio Investors (FPIs) and domestic institutions (mutual funds, banks, insurance,
+etc.) play only a minor role in equity F&O. Exchange data indicate FPIs contribute
+only about 3–8% of derivatives turnover , and domestic institutional
+trades are in the single digits percentage-wise. (Indian mutual funds primarily invest
+in cash equities and use derivatives sparingly for hedging). In fact, as of early 2024,
+NSE data showed one-half of index options turnover was from proprietary traders,
+one-third from retail, and less than one-tenth from foreign investors . This
+mix has remained relatively stable, though if retail pullback continues, the balance
+may tilt back slightly toward institutional/pro players. Notably, the crackdown on a
+large prop player (Jane Street) in 2024 had observers watching for any volume
+impact – but industry experts believe India’s market is structural and not dependent
+on any single ﬁrm, expecting others to step in if one exits .
+NSE vs BSE, and Index vs Stock Options
+6/22
+
+The National Stock Exchange (NSE) overwhelmingly dominates India’s options
+trading, though the Bombay Stock Exchange (BSE) has made some inroads. NSE’s
+equity derivatives segment accounts for the vast majority of volume – for example,
+most of the ₹9,504 trillion notional monthly turnover (world’s highest) recorded in
+May 2023 occurred on NSE . BSE’s F&O market was negligible a few years
+ago but has grown after launching weekly index options on the Sensex and Bankex.
+By mid-2024, BSE’s derivative turnover rose from near zero to roughly ₹2,000 trillion
+(notional) per month, although NSE still handled about 3–4 times more (~₹6,000–
+7,000 trillion)【 28† 】 . In FY2025, BSE was projected to derive ~58% of its revenues
+from the derivatives segment as it tries to capture more volume . Still,
+NSE’s Nifty index options remain the most traded contracts by far.
+In terms of products, index options (on Nifty, Bank Nifty, FinNifty, etc.) have eclipsed
+single-stock options in India. Unlike the US, where stock options on individual
+companies are huge, India’s derivatives boom has been centered on index contracts.
+The Indian market historically favored single-stock futures for betting on individual
+stocks, while stock options saw comparatively lower volumes . As a result,
+index options now constitute the lion’s share of the options market. In March 2024,
+for example, out of ₹12.5 trillion in total options premiums traded on NSE, ₹11.3
+trillion (~90%) came from index options . Stock options were only ~10%
+of the market by value. Moreover, recent margin and lot size increases for stock
+F&O have made stock options less attractive to retail speculators, nudging them
+toward index instruments . Industry observers noted that stricter
+regulation of stock futures/options in 2022–23 led many traders to shift into index
+option strategies instead . Thus, while stock options are traded
+(especially on large-cap stocks), their volumes have not grown as explosively as
+Nifty/BankNifty options, and many retail traders now prefer indices for their
+liquidity and lower per-unit price.
+Regulatory Changes and Their Impact
+Indian regulators grew concerned by the rapid F&O growth and high retail losses,
+and from 2023 onward SEBI enacted a series of measures to temper speculative
+excess. Notable regulatory changes in the last 2–3 years include:
+7/22
+
+Limiting Weekly Expiries: Starting late 2023, SEBI restricted weekly index option
+contracts to “one expiry per exchange.” In practice, NSE was allowed to oﬀer
+weekly expiry on one index (Nifty 50), and BSE on one index (Sensex). Popular
+mid-week expiries like Bank Nifty (Wed) and FinNifty (Tue) weekly options were
+discontinued . This was a major shift since weekly
+options had been a key driver of volume. The change, implemented around Nov
+2024, immediately curbed short-term speculative trading – evidenced by a sharp
+drop in index option volumes (~72% as noted above) and a migration of some
+activity to monthly contracts . (As of mid-2025, SEBI has even
+considered reducing expiries further – e.g. a fortnightly expiry cycle – if volumes
+remain too high, though no decision has been ﬁnalized)
+.
+Larger Contract Sizes: To ensure only adequately capitalized traders participate,
+SEBI increased the lot size (contract value) of index derivatives eﬀective early
+2024. The minimum contract value was raised from roughly ₹5–10 lakh to ₹15–
+20 lakh . For example, the lot size for Nifty and Bank Nifty
+futures/options was increased so that one contract now represents a higher
+notional value. This makes trading more expensive for small players, thereby
+discouraging excessive leverage. The higher lot sizes took eﬀect gradually (ﬁrst
+applied to new weekly contracts in Jan 2024)  and contributed to the
+decline in total number of contracts traded (even if notional turnover remained
+high).
+Higher Margin & Risk Controls: SEBI introduced stricter margin requirements
+and risk management rules, particularly around expiry days. Additional “expiry
+day margins” (Extreme Loss Margins) were mandated for short option
+positions , making intraday speculative shorting costlier. In May 2025,
+SEBI also changed open interest calculations to a “future-equivalent” basis
+(instead of notional) to better cap excessive exposure . These
+steps, combined with earlier peak margin regulations (fully implemented by
+2021), ensure traders put up more upfront capital, reducing leverage-fueled
+speculation.
+8/22
+
+Position Limits Linked to Underlying: To prevent market manipulation (a
+concern underscored by the Jane Street episode in Bank Nifty), SEBI proposed
+tighter position limits in single-stock derivatives based on the stock’s liquidity.
+The limit would be the lower of 15% of free-ﬂoat market cap or 60× the stock’s
+average daily deliverable value . This move (still under consideration)
+would align derivatives positions more closely with the size of the underlying
+market, curbing outsized bets on illiquid stocks. For index derivatives, SEBI
+relaxed certain limits for genuine hedgers – e.g. allowing index option positions
+up to ₹1,500 crore net (₹10,000 crore gross) with no intraday cap – to facilitate
+smoother institutional hedging .
+Investor Warnings and Education: Since mid-2023, brokers are required to
+display stark risk disclosures to anyone trading F&O (notably the statistic that
+~90% of retail traders lose money). SEBI has run investor awareness campaigns
+highlighting F&O risks . These measures, while not directly limiting
+volume, aim to dampen the craze by ensuring traders understand the odds.
+There’s also discussion of mandating ﬁnancial suitability tests or income
+criteria for derivative traders (to distinguish HNIs from small investors), though
+implementation is uncertain.
+Collectively, these reforms have begun to cool the F&O market. By early 2025, SEBI
+observed that despite a YoY dip in individual trading, volumes were “still
+signiﬁcantly higher” than two years ago  –
+indicating a more tempered but still active market. The immediate impact has been a
+healthier balance: less of the ultra-short-term, high-leverage bets (especially on Bank
+Nifty weekly expiries) that many newbies were drawn to, and a slight shift back
+toward longer-duration contracts and institutional participation
+. Regulators have signaled that they will continue monitoring and may
+calibrate rules further to ensure “investor protection and systemic stability” in this
+fast-growing market . In sum, India’s options
+trading landscape in 2025 is still enormous by any measure – but it is gradually being
+reined into a more sustainable trajectory after the frenzied growth of 2020–2023.
+Key Metrics Summary (Last 2–3 Years)
+Total Options Volume: Roughly 35–37 billion index option contracts per
+quarter in 2024, doubling the 2022–23 levels . After late-2024 rules,
+volumes fell ~30–40% but remain higher than 2021 levels.
+9/22
+
+Notional Turnover: Peaked around ₹7,000+ trillion/month on NSE in 2023 (with
+BSE ~₹2,000 T) 【 28† 】 . Dropped to ~₹280 T/day in Dec 2024 (from ₹442 T)
+, still ~+40% vs two years prior . India accounts for 60%+
+of global equity derivative volumes by contract count .
+Premium Turnover: ₹12.5 trillion premiums paid in Mar 2024 on NSE ( ≈ $150
+bn) . Index options ~90% of this value . Premium turnover down 9%
+YoY in early 2025, but +14% vs 2023 .
+Retail Participation: Individuals’ share of volume ~35–40% in 2023  (up
+from low single-digits pre-2020). ~96 lakh active retail traders in FY25 (2× the
+number in FY22) . Retail trader count -12% YoY by early 2025 but still
++77% vs 2023 .
+Category Turnover Split: Proprietary trading ~50–60% of volume
+; Retail ~33–35% ; Foreign investors <10% .
+Domestic institutions only a few percent (remainder).
+Bank Nifty Index Options: Among the most traded contracts during 2020–2023,
+often exceeding Nifty volumes. Weekly Bank Nifty options (Wed expiry) were
+popular with retailers, but ceased in Nov 2024 by regulation . This
+contributed to a large drop in overall index option counts (index volumes -72%
+post-ban) . Some activity shifted to monthly expiries, and Nifty’s
+Thursday weekly now dominates weekly turnover.
+Retail Trader Outcomes: ~90% of retail F&O traders consistently lose money
+. Total retail net losses: ₹40k cr (FY22) →  ₹65.8k cr (FY23) →  ₹74.8k
+cr (FY24) →  ₹1.06 lakh cr (FY25) . Average loss per trader in FY25
+~₹1.1 lakh . Losses peaked in Q3 FY25 then eased in Q4 as new rules
+kicked in .
+10/22
+
+Sources
+Overall, India’s options market saw extraordinary growth in 2020–2023, followed by
+a measured reset in 2024–2025 due to regulatory intervention. Retail investors and
+proprietary ﬁrms have been the main drivers of this market, while institutions play a
+smaller role. Going forward, the landscape is likely to be shaped by ongoing
+regulatory ﬁne-tuning – balancing the need to curb reckless speculation and
+protect investors with maintaining market liquidity and eﬃciency
+. The Bank Nifty frenzy has been tamed for now, and the data
+suggest a healthier, if slightly lower, level of activity as the dust settles on SEBI’s
+reforms. India’s options trading remains huge by global standards, but its
+composition and growth trajectory are evolving toward a more sustainable path.
+Sources: Recent SEBI and exchange reports, news articles and analyses 
+ (see citations for detailed data).
+00:29
+“ A l r i g h t ,  s o  n o w  m y  q u e s t i o n  i s  a f t e r  a l l  t h i s ,  h o w  m u c h  a r e  
+m a r k e t  m a k e r s  n e e d e d  i n  t h e  I n d i a n  s t o c k  m a r k e t ?  L e t ' s  
+s a y  h o w  m u c h  l i q u i d i t y  d o  t h e y  c r e a t e ?  L i k e  w h a t  h a p p e n s  
+i f  t h e y  a r e  o u t  f o r  a  d a y ,  l e t ' s  s a y  o n  i n d e x  o p t i o n s ,  o f  n i f t y  
+i n d e x  o p t i o n s ,  s o m e t h i n g  l i k e  t h a t .  A n d  c o n s i d e r i n g  t h a t  
+y o u  a r e  s a y i n g  t h a t  t h e i r  v o l u m e  i s  t h e  h i g h e s t ,  h o w  b i g  i s  
+t h e i r  v o l u m e  a n d  w h a t  h a p p e n s  i f  t h e y  a r e  n o t  i n  t h e  
+m a r k e t ?  O r  w h y  d o  t h e  S A B  o r  t h e  I n d i a n  s t o c k  m a r k e t s  
+n e e d  t h e s e  p e o p l e ? ”
+Market makers play a
+00:00
+“ M a r k e t M a k e r . ”
+Market makers are crucial because they
+11/22
+
+00:00
+“ N e x t . ”
+help ensure there's enough liquidity in the market, which means that trades can
+happen smoothly without huge price swings. In India, market makers, including
+proprietary trading ﬁrms, provide a signiﬁcant portion of the daily trading volume,
+especially in index options like Nifty and Bank Nifty. If they were to step out of the
+market even for a day, it could lead to wider bid-ask spreads, less eﬃcient pricing,
+and potentially more volatility, which would aﬀect all participants. Essentially, market
+makers help keep the market stable and eﬃcient.
+00:24
+“ L e t ' s  s a y  i f  t h e  b i d  a n d  a s k  p r i c e  w i l l  b e  d i ﬀ e r e n t ,  b u t  t h e y  
+a r e  u s u a l l y  t a k i n g  t h e  p r o ﬁ t  i n  b e t w e e n  r i g h t  a l r e a d y .  S o  
+h o w  d o e s  t h a t  w o r k ,  l i k e  h o w  d o  t h e y  d e c i d e  i f  t h e y  w a n t  
+t o  b u y  a t  a  s l i g h t l y  h i g h e r  p r i c e  o r  s e l l  a t  a  s l i g h t l y  l o w e r  
+p r i c e ,  h o w  d o  t h e y  m a k e  t h a t  m a r k e t ? ”
+Market makers make their proﬁt from the diﬀerence between the bid and ask prices,
+known as the spread. They continuously provide both buy and sell quotes for a
+security, so if someone wants to buy, they sell to them, and if someone wants to sell,
+they buy from them. They adjust these prices based on supply and demand, as well
+as market conditions. Essentially, their role is to provide liquidity by always being
+ready to buy or sell, and they manage their risk by adjusting those prices to ensure
+they can cover any potential losses.
+00:15
+“ B u t  c a n  y o u  g i v e  m e  a n  e x a m p l e ?  F o r  e x a m p l e ,  l e t ' s  
+c o n s i d e r  t h a t  R e d s t o c k  i s  b e i n g  s o l d  a t  R s . 1 0 0 .  L i k e  t h e  b i d  
+i s  R s . 1 0 0 ,  s o m e b o d y  w a n t s  t o  b u y  a t  R s . 1 0 0  a n d  
+s o m e b o d y  w a n t s  t o  s e l l  a t  R s . 1 0 5 .  W h a t  d o  t h e  m a r k e t  
+m a k e r  d o  i n  t h i s  c a s e ? ”
+In that scenario, the market maker would step in to provide liquidity between those
+two prices. They might set a bid at, say, 99.5 rupees and an ask at 105.5 rupees. This
+12/22
+
+way, if someone wants to sell immediately, they’ll buy at 99.5 rupees, and if someone
+wants to buy immediately, they’ll sell at 105.5 rupees. The diﬀerence between these
+prices, known as the spread, is where the market maker earns their proﬁt. They
+continuously adjust these prices based on market conditions and the ﬂow of buy and
+sell orders to manage their risk and ensure liquidity.
+00:22
+“ B u t  i n  t h a t  p a r t i c u l a r  c a s e ,  i f  s o m e b o d y  w e r e  i n t e r e s t e d  i n  
+b u y i n g  a t  1 0 5 ,  t h e n  t h e y  c o u l d  h a v e  a l r e a d y  b o u g h t  f r o m  
+t h e  e x i s t i n g  s e l l e r ,  r i g h t ?  A n d  i f  s o m e b o d y  w o u l d  h a v e  
+w a n t e d  t o  s e l l  a t  1 0 0 ,  o r  e v e n  1 0 5 ,  t h e n  t h e  m a r k e t  m a k e r  
+w o n ' t  b e  n e e d e d  f o r  w h a t  b u y s  a r e  n e e d e d . ”
+That's a great point!
+00:03
+“ I f  t h e . . .  Y e a h . ”
+If a buyer and a seller perfectly match at the same price at the same time, they can
+indeed trade directly without needing a market maker. However, in reality, the market
+is constantly changing, and buyers and sellers don't always appear at the exact same
+moment or at the exact same price. Market makers ﬁll that gap by always being
+ready to buy and sell, ensuring there's continuous trading and that the market stays
+liquid. They help smooth out any discrepancies and reduce the time it takes for
+trades to happen, making the market more eﬃcient overall.
+00:22
+“ S o  u s u a l l y  t h e y ,  y o u  a r e  t e l l i n g  m e  t h a t  t h e y  a r e  u s u a l l y  
+h o l d i n g  a  q u a n t i t y  a n d  t h e y  a s s u m e  t h a t  w h e n  t h e r e  w i l l  
+b e  d e m a n d  t h e y  w i l l  s e l l  a n d  t h e y  w i l l  b u y  w h e n  t h e r e  w i l l  
+b e  l e s s  d e m a n d  a n d  i n  b e t w e e n  t h e y  w i l l  t r y  t o  b u y  w h e n  
+t h e r e  a r e  n o  o t h e r  b u y e r s  a v a i l a b l e  f o r  a  c h e a p e r  p r i c e  
+a n d  s e l l  w h e n  t h e r e  a r e  n o  o t h e r  s e l l e r s  a v a i l a b l e  a t  a  
+s l i g h t l y  h i g h e r  p r i c e . ”
+13/22
+
+Yes, exactly! Market makers manage an inventory of the stock or option contracts.
+They buy when there's less demand and sell when there's more demand, earning the
+diﬀerence in the process. This way, they help keep the market ﬂuid and ensure that
+there are always opportunities for buyers and sellers to trade without signiﬁcant
+delays or price jumps.
+00:23
+“ I n  t h a t  c a s e ,  h o w  d o  t h e y  m a n a g e  r i s k ,  l i k e  l e t ' s  a s s u m e  
+t h a t  t h e y  m i g h t  h a v e  s o m e  h o l d i n g s  a t  a  p r i c e ,  a n d  t h e  
+p r i c e  g o e s  d o w n ,  w h a t  h a p p e n s  i n  t h a t  p a r t i c u l a r  c a s e ,  
+l i k e  h o w  m u c h  q u a n t i t y  a r e  t h e y  u s u a l l y  h o l d i n g ,  h o w  
+m u c h  r i s k  a r e  t h e y  u s u a l l y  t a k i n g ,  a n d  d o  t h e y  a l s o  h e d g e  
+t h o s e  r i s k s  s o m e  w a y ,  o r  w h a t  h a p p e n s ,  h o w  d o e s  t h a t  
+w o r k ? ”
+Market makers are very strategic about managing their risk. They usually hold a
+balanced inventory and continuously adjust their prices to minimize exposure. If the
+price of a security they hold starts to go down, they might quickly adjust their bid
+and ask prices to reduce any potential loss. They also tend to hedge their positions
+using other ﬁnancial instruments, like futures or options, to protect themselves from
+adverse price movements. This way, they ensure that they don't take on too much
+risk and can continue to provide liquidity consistently.
+00:27
+“ O k a y ,  i f  t h a t  i s  t h e  c a s e ,  a n d  I ' m  a s s u m i n g  s i n c e  t h e y  a r e  
+b u y i n g  i n  s o  b i g  q u a n t i t i e s ,  t h e r e  m u s t  b e  s o m e ,  d o  t h e y  
+a l s o  h a v e  t h e  t a i l  r i s k  o r  n o t ?  I  m e a n ,  s i n c e  t h e y  a r e  
+t r a d i n g  o n  s m a l l e r  m a r g i n s ,  a n d  i n  t h a t  p a r t i c u l a r  c a s e  
+w h e n  t h e y  a r e  b u y i n g  t h e  l a r g e r  q u a n t i t i e s ,  d o  t h e y  a l s o  
+l e a v e  s o m e  r e s i d u e  f o r  i n d i v i d u a l  t r a d e r s  t o  m a k e  p r o ﬁ t  o n  
+o r  s o m e t h i n g  l i k e  t h a t ? ”
+Market makers do operate on very small margins, but they rely on the high volume
+of trades to generate proﬁts consistently. They do face tail risks, which are those rare
+and extreme market events that can cause large, unexpected losses. To manage this,
+they often have sophisticated risk management systems and use hedging strategies
+14/22
+
+to protect themselves. As for leaving opportunities for individual traders, market
+makers create a more stable and liquid market that beneﬁts everyone, making it
+easier for individual traders to enter and exit positions at fair prices.
+00:18
+“ B u t  t h i s  k i n d  o f  m e a n s  t h a t  t h e  p o s s i b i l i t y  o f  r e t a i l  t r a d e r s  
+m a k i n g  a  p r o ﬁ t  i s  u s u a l l y  o n  t h e  b e t s  o f  o t h e r  r e t a i l  
+t r a d e r s ,  n o t  t h e s e  p r o p r i e t a r y  t r a d i n g  ﬁ r m s  o r  i n s t i t u t i o n a l  
+p l a y e r s .  I s  t h a t  t h e  c a s e ? ”
+In many cases, retail traders do end up trading against each other, and that’s where a
+lot of the proﬁt and loss dynamics happen. Market makers and institutional players
+are usually focused on providing liquidity and managing their risk rather than taking
+large directional bets. This means that while market makers ensure that trades
+happen smoothly, the actual proﬁt opportunities for retail traders often come from
+their own strategies and from the behavior of other retail participants.
+00:30
+“ B u t  c o n s i d e r i n g  t h a t  t h e  r e t a i l  t r a d e r s  a r e  n o t  t h a t  m a n y  
+a n d  s i n c e  t h e s e  ﬁ r m s  b u y  i n  s u c h  a  l a r g e  q u a n t i t y  t h a t  
+c o u l d  c a u s e  a  d i r e c t i o n a l  t h i n g ,  r i g h t ?  L i k e  t h e  m a r k e t  
+c o u l d  m o v e  i n  a  c e r t a i n  d i r e c t i o n  o n l y  b e c a u s e  o f  t h e s e  
+i n s t i t u t i o n a l  a n d  H F T  t r a d i n g  ﬁ r m s .  S o  d o  t h e y  s o m e t i m e s ,  
+l i k e  c o n s i d e r i n g  t h e y  h a v e  t h a t  l e v e l  o f  c o n t r o l ,  t h e y  c a n  
+m o v e  t h e  m a r k e t  i n  a  p a r t i c u l a r  d i r e c t i o n ?  A n d  i f  t h e y  d o ,  
+s o  w h a t  a r e  t h e  w a y s  t h a t  s o m e o n e  c a n  i d e n t i f y  a n d  r i d e  
+a l o n g ? ”
+Market makers and large institutional players do have the ability to inﬂuence market
+movements, especially in less liquid markets or during periods of low trading activity.
+However, their primary goal is to facilitate trading rather than to move the market in
+a particular direction. When they do make large trades that could impact the market,
+they often break them into smaller orders or use algorithms to minimize their
+impact. For individual traders looking to follow these large players, some look at
+trading volumes, order ﬂow, or speciﬁc patterns to get a sense of what might be
+15/22
+
+happening. But it’s important to remember that these large ﬁrms are also very
+sophisticated in managing their trades and risks.
+00:09
+“ O k a y ,  i n  t h a t  p a r t i c u l a r  c a s e ,  l e t ' s  s a y  s o m e b o d y  i s  d o i n g  
+a n  a l g o  t r a d i n g  k i n d  o f  a  t h i n g ,  w h a t  a r e  t h e  m o s t  
+i m p o r t a n t  v a r i a b l e s  t h e y  s h o u l d  b e  l o o k i n g  a t  i n  t h e  
+d a t a ? ”
+When it comes to algo trading, some of the key variables to focus on include trading
+volume, which helps you understand the level of activity and liquidity; price trends
+and patterns, which can give you insights into market direction; order ﬂow data,
+which shows you the buying and selling pressure in real time; and market depth,
+which lets you see the levels of supply and demand at diﬀerent price points.
+Additionally, many algo traders pay attention to volatility measures and news
+sentiment to adjust their strategies dynamically. Keeping an eye on these variables
+can help create a more robust and responsive trading algorithm.
+00:20
+“ O k a y ,  s o  l e t ' s  s a y  y o u  s h a r e d  t h a t  o n e  s h o u l d  b e  l o o k i n g  
+a t  b u y i n g  q u a n t i t y ,  s e l l i n g  q u a n t i t y  b i d s ,  m a r k e t  d e p t h ,  s o  
+h o w  w o u l d  t h e y  h e l p ,  l i k e  h o w  d o  t h e y  e x a c t l y  k i n d  o f  h e l p  
+i n  ﬁ g u r i n g  t h a t  o u t  i n  s o m e ,  l e t ' s  s a y ,  i n  t e r m s  o f  a n  a l g o  
+b y  H F T ? ”
+When it comes to algo
+00:03
+“ W h a t  a r e  y o u  p o s s i b l y  d o i n g  w i t h  t h a t ? ”
+Using these variables, an algorithm can quickly identify patterns and opportunities in
+real time. For example, by looking at the buying and selling quantities, the algorithm
+can detect when there’s a surge in demand or supply, which can indicate a potential
+price movement. Market depth shows the levels of pending orders at diﬀerent prices,
+helping the algorithm understand the strength of support and resistance levels. This
+16/22
+
+can be crucial for high-frequency trading, where the goal is to make very fast, small
+proﬁts by taking advantage of these tiny price diﬀerences and market ineﬃciencies.
+00:03
+“ I  d i d n ' t  q u i t e  g e t  i t ,  c a n  y o u  e x p l a i n  w i t h  a n  e x a m p l e ? ”
+Sure! Let’s say you have an algorithm that’s watching the market depth for a
+particular stock. If it sees a large number of buy orders at a certain price level, that
+suggests strong demand, and the algorithm might decide to buy in anticipation of
+the price going up. On the other hand, if the algorithm notices a large number of sell
+orders piling up at a certain price, it might anticipate that the price could drop and
+adjust its strategy accordingly. This way, the algorithm uses real-time data to make
+quick decisions and take advantage of small, short-term opportunities.
+00:39
+“ O k a y ,  s o  w h a t  I ' m  u n d e r s t a n d i n g  i s  t h a t  w h e n  t h e r e  i s ,  
+l e t ' s  s a y ,  t h e  c u r r e n t  t r a d i n g  p r i c e  i s  1 0 0  r u p e e s ,  a n d  t h e r e  
+i s  a  t h o u s a n d  s t o c k s  s e l l i n g  a t  1 0 5  r u p e e s ,  w h e r e a s  a t  9 5  
+r u p e e s ,  t h e r e  i s  a  d e m a n d  o f  2 0 0  s t o c k s ,  t h e n  t h e  
+a l g o r i t h m  i s  c o n s i d e r i n g  t h a t  t h e r e  i s  a  s u p p l y  p r e s s u r e ,  
+a n d  e v e n t u a l l y  t h e  p e o p l e  w h o  a r e  t r y i n g  t o  s e l l  a t  1 0 5  w i l l  
+f o l d  q u i c k l y ,  a n d  t h e  p r i c e  w i l l  m o v e  t o w a r d s  9 5 ,  u n d e r  
+1 0 0 ,  a n d  t o w a r d s  9 5 ,  a n d  m a y b e  e v e n  b e l o w ,  a n d  t h e n  t h e  
+o r d e r s  w i l l  g e t  ﬁ l l e d .  I s  t h a t  s o ? ”
+Yes, you've got the idea! Essentially, the algorithm is looking at those imbalances
+between supply and demand at diﬀerent price levels. If there’s a lot of selling
+pressure at a higher price, like 105, and not as much buying support until a lower
+price, like 95, the algorithm might predict that the price will move downward to
+where the stronger demand is. This helps the algorithm decide whether to buy, sell,
+or wait, aiming to capitalize on those anticipated price movements.
+“ B u t  w h y  d o e s  t h a t  h a p p e n ?  L i k e ,  w h a t ' s  t h e  p s y c h o l o g y  
+b e h i n d  t h a t ?  W h a t ' s  t h e  i n s i g h t  b e h i n d  t h a t ?  B e c a u s e  
+l o o k i n g  r a t i o n a l l y  o u t  o f  t h a t ,  t h a t  t h e  p r i c e  p e o p l e  a r e  
+17/22
+
+00:33
+t r y i n g  t o  s e l l  a t  1 0 5 ,  n o t  n e c e s s a r i l y  1 0 0  o r  9 5 .  S o  t h e r e  
+s h o u l d  b e  s o m e  p a t t e r n ,  o r  t h e r e  s h o u l d  b e  a  m a r k e t  
+i n s i g h t .  P e o p l e  m i g h t  h a v e  c a m e  u p  w i t h  s o m e  d a t a .  B u t  
+w h a t ' s  t h e  i n s i g h t  l o o k i n g  l i k e ?  H o w  o f t e n  d o  p e o p l e  f o l d ?  
+H o w  q u i c k l y  d o  t h e y  f o l d ?  T h a t ' s  t h e  q u e s t i o n . ”
+The psychology behind it often comes down to the behavior of traders and their
+reaction to supply and demand imbalances. When there’s a large supply at a higher
+price, like 105, and not enough buyers willing to pay that price, sellers might start
+lowering their prices to attract buyers, which can create a downward movement. On
+the ﬂip side, if there's strong demand at a lower price, like 95, buyers might jump in
+quickly to secure that price, creating upward pressure. The speed at which traders
+adjust their prices can vary, but in fast-moving markets, it can happen quickly as
+people try to avoid losses or take advantage of opportunities, which is something
+algorithms are designed to capitalize on.
+00:13
+“ O k a y ,  s o  l e t ' s  c o n s i d e r  t h i s  c a s e  w h e r e  t h e r e ' s  a  g o o d  b i t  
+q u a n t i t y  a t  9 5  a n d  s e l l  q u a n t i t y  a t  1 0 5 ,  t h e  c u r r e n t  t r a d i n g  
+p r i c e  b e i n g  1 0 0 .  W h a t  d o e s  a n  H F T  d o  i n  t h i s  p a r t i c u l a r  
+c a s e ? ”
+In this scenario, an HFT algorithm might look at the order book and notice that
+there’s strong demand at 95 and signiﬁcant supply at 105. With the current price at
+100, the algorithm might anticipate that if the price starts moving down, it will
+quickly ﬁnd buyers at 95, and if it moves up, it will meet sellers at 105. The HFT might
+place very fast, small orders to take advantage of these tiny price movements
+between 100 and those levels, essentially making proﬁts oﬀ these small ﬂuctuations
+and providing liquidity in the process.
+00:08
+“ O k a y ,  s o  i n  t h i s  p a r t i c u l a r  c a s e ,  w h a t  t h e y  w i l l  b e  d o i n g  i s  
+i f  t h e  p r i c e  m o v e s  t o  1 0 1  t h e n  t h e y ,  t h e y ,  w h a t  w i l l  t h e y  
+d o ? ”
+18/22
+
+If the price moves up to 101, the HFT might consider that there’s still that selling
+pressure up at 105. So, it might quickly sell some shares at 101 to take advantage of
+that slight upward movement, and then it could try to buy again if the price dips back
+down. Essentially, the algorithm is looking to make small, quick proﬁts from these
+tiny price changes while being mindful of those larger support and resistance levels.
+00:29
+“ O k ,  s o  j u s t  t o  g i v e  m e  a n  i d e a ,  l e t ' s  s a y ,  a t  t h e  m a r k e t  
+p r i c e  a u c t i o n  o f  N i f t y ,  h o w  m u c h  v o l u m e  i s  b e i n g  t r a d e d  
+b y  a n  H F T  l i k e  i n  t h a t  p a r t i c u l a r  w a y  a t  t h a t  p a r t i c u l a r  
+t i m e  l i k e  a s s u m i n g  i s  i t  i n  1 0 0 s ,  i s  i t  i n  1 0 0 0 s ,  i s  i t  i n  l a k h s ,  
+i s  i t  i n  1 0  l a k h s ,  h o w  m u c h  o f  s t o c k s  a r e  t h e y  m o v i n g  l i k e  
+i n  t h a t  p a r t i c u l a r  s e c o n d  w h e n  t h e  p r i c e  i s  1 0 1 . ”
+High-frequency trading ﬁrms can indeed execute thousands of orders per second
+when it comes to Nifty options. The actual volume they move in a single second can
+vary widely depending on market conditions, liquidity, and their speciﬁc strategies.
+Generally, it can range from hundreds to thousands of contracts in a very short span,
+and when market activity is high, it can be even more. These trades are typically
+small and fast, adding up to signiﬁcant volumes over time.
+S o u r c e s
+S o u r c e s
+00:31
+“ O k a y ,  s o  l e t ' s  s a y  i f  I  w e r e  t o  p u t  a n  o r d e r  u s i n g  m y  
+E L E G O  a t  1 . 0 . 1 ,  s h o u l d  I ,  l i k e ,  b r e a k  t h a t ,  l e t ' s  s a y ,  i f  I  w a n t  
+t o  b u y  a  t h o u s a n d  s h a r e s ,  o r ,  s a y ,  1 5  l o t s  o r  s o m e t h i n g  l i k e  
+t h a t ,  w h a t e v e r  t h a t  c o v e r s  i t ,  l i k e  1 5  l o t s ,  t h e n  s h o u l d  I  
+b r e a k  m y  o r d e r  i n t o  2  s e c o n d s ,  3  s e c o n d s ,  1  s e c o n d ,  o r  
+j u s t  I  c a n  s h o o t  i t  r i g h t  a w a y  a n d  i t ' s  ﬁ n e  b e c a u s e  t h a t ' s  
+n o t  a  v o l u m e  t h a t  w i l l  c r e a t e  a n  e ﬀ e c t ,  h o w  s h o u l d  I  g o  
+a b o u t  t h a t ? ”
+If you're placing an order for something like 15 lots, which is a relatively modest size
+compared to what HFTs handle, you likely won't create a signiﬁcant market impact,
+especially if the market is liquid and active. However, breaking your order into
+smaller chunks and spreading them out over a few seconds can help you avoid any
+sudden price changes and ensure that you get a more stable average price. It’s
+19/22
+
+generally a good practice to be a little cautious and minimize any potential slippage,
+especially in fast-moving markets.
+00:00
+“ O K . ”
+Got it! If you
+00:20
+“ I n  w h a t  s i t u a t i o n  w i l l  a n  i n d i v i d u a l  t r a d e r  b e a t  a n  H F T  
+l i k e  i n  w h a t  s c e n a r i o  e v e n  i f  i t ' s  f o r  a  s m a l l  t i m e  l e t ' s  s a y  o r  
+w h e n  t h e  m o m e n t u m  i s  t o o  h i g h  o r  s o m e t h i n g  l i k e  t h a t  
+b u t  i s  t h e r e  a n y  p a r t i c u l a r  s i t u a t i o n  w h e r e  t h e  r e t a i l  
+t r a d e r s  u s u a l l y  w i n  o v e r  H F T s ? ”
+One scenario where individual traders can sometimes have an edge over HFTs is
+when there’s a signiﬁcant event or a major shift in market sentiment that HFT
+algorithms aren’t immediately programmed to recognize. For instance, during
+unexpected news events, earnings surprises, or geopolitical developments, human
+traders who can quickly interpret the context might act faster than algorithms that
+need time to adjust. Also, in cases of extreme volatility, HFTs might pull back
+temporarily to manage their risk, and that can create opportunities for individual
+traders to step in and take advantage of price movements.
+00:27
+“ O k a y ,  l e t ' s  s a y  i f  I  h a v e  s o m e  A I  r e s o u r c e s  a c c e s s ,  h o w  c a n  
+I  i m m e d i a t e l y  k n o w  w h e n  a  n e w s  b r e a k s ,  l i k e  a t  t h e  v e r y  
+s e c o n d ?  L i k e ,  a r e  t h e r e  a n y  t r i g g e r s  t h a t  I  c a n  s e t ,  l i k e  i n  
+R S S  f e e d  e a r l i e r  w e  h a d ?  L i k e ,  d o  w e  h a v e  s o m e t h i n g  l i k e  
+t h a t  f o r  e c o n o m i c  t i m e s  o r  ﬁ n a n c i a l  t i m e s . c o m  o r  
+s o m e t h i n g  l i k e  t h a t ?  A n d  t h e n  c a n  I  h o p e f u l l y  a n a l y z e  t h a t  
+w i t h  a n  A I  a n d  i m m e d i a t e l y  m a k e  m y  t r a d e ? ”
+Yes, you can deﬁnitely
+20/22
+
+00:07
+“ Y e a h ,  a n d  a r e  p e o p l e  d o i n g  i t ?  I s  t h e r e  s o m e  s y s t e m  
+a r o u n d  t h a t  h a p p e n i n g  a l r e a d y  o n  I n t e r n e t ? ”
+Absolutely, there are already systems and services that do this. Many traders and
+ﬁnancial institutions use tools that monitor news feeds, social media, and economic
+data in real-time. These tools can trigger alerts the moment a signiﬁcant piece of
+news breaks. Some advanced trading platforms also integrate AI that can analyze the
+sentiment or potential market impact of the news and then automatically execute
+trades based on that analysis. This kind of setup helps traders act quickly and
+eﬃciently when important information hits the market.
+00:03
+“ S o  w h a t  i s  t h e  w a y  t o  g o  a b o u t  t h i s ,  l i k e  R S S  f e e d s  o r  
+w h a t ? ”
+RSS feeds are deﬁnitely a classic and reliable way to get real-time news updates.
+Many ﬁnancial news sites still support RSS, and you can set up alerts to notify you the
+moment new articles are published. Besides RSS, there are specialized platforms and
+APIs that oﬀer real-time news feeds speciﬁcally for traders. You can integrate these
+with your AI to quickly analyze and act on the data. This combination of real-time
+news feeds and AI analysis can give you a solid edge in reacting quickly to market-
+moving events.
+00:05
+“ l i k e  w h a t  o t h e r  A P I s  a r e  a v a i l a b l e ,  w h i c h  i s  t h e  b e s t  o n e  
+f o r  t h e  I n d i a n  m a r k e t . ”
+To access real-time ﬁnancial news and data for the Indian market, you can explore
+APIs like the Share Market News API, which provides timely updates on Indian stock
+markets. Another great option is the Indian Stock Market API, which oﬀers
+comprehensive ﬁnancial data for companies listed on the NSE and BSE. These APIs
+can be integrated with your AI tools to help you analyze news and market data in
+real-time, giving you a better chance to act quickly on new information.
+21/22
+
+S o u r c e s
+S o u r c e s
+00:12
+“ A n d  h o w  w o u l d  t h e  A I  k n o w  l i k e  i f  t h e  s t o p  w i l l  m o v e  u p  o r  
+d o w n ,  l i k e  w h a t  a r e  t h e  l i k e l i h o o d  o f  i t  g e t t i n g  r i g h t  o r  
+m a y b e  i f  t h e  p r i c e  h a s  a l r e a d y  m o v e d  o r  i f  n o t ,  a n d  h o w  
+w o u l d  I  i d e n t i f y  i t ,  l i k e  w h a t ' s  t h e  p l a y  t h e r e ? ”
+AI models can analyze a combination of historical data, real-time market signals, and
+news sentiment to predict the likelihood of a stock moving up or down. They look for
+patterns that have historically led to certain price movements. While AI can be quite
+eﬀective, it's not always perfect. Sometimes the price might have already moved by
+the time the AI processes the data, especially in fast markets. To improve accuracy,
+traders often combine AI insights with their own judgment and other tools. The key
+is to continuously reﬁne the AI model with new data and learn from its predictions to
+improve future performance.
+22/22

@@ -1,0 +1,653 @@
+/Users/abhishek/workspace/NFOopsLab/NFOpsLab-gpt-optimized/backtests/run_all_strategies.py:74: PerformanceWarning: Resolving the schema of a LazyFrame is a potentially expensive operation. Use `LazyFrame.collect_schema()` to get the schema without this warning.
+  schema = lf.schema
+/Users/abhishek/workspace/NFOopsLab/NFOpsLab-gpt-optimized/backtests/run_all_strategies.py:90: PerformanceWarning: Resolving the schema of a LazyFrame is a potentially expensive operation. Use `LazyFrame.collect_schema()` to get the schema without this warning.
+  schema = lf.schema
+Wrote schema audit: /Users/abhishek/workspace/NFOopsLab/NFOpsLab-gpt-optimized/backtests/logs/schema_audit_BANKNIFTY_2019-01-01_2025-07-31.log
+Scheduled 323 tasks: ['gamma_scalp', 'gamma_scalp', 'gamma_scalp', 'gamma_scalp', 'gamma_scalp', 'gamma_scalp', 'gamma_scalp', 'gamma_scalp', 'gamma_scalp', 'gamma_scalp']...
+[OK] gamma_scalp in 10.2s
+[OK] gamma_scalp in 10.3s
+[OK] gamma_scalp in 10.4s
+[OK] gamma_scalp in 10.4s
+[OK] gamma_scalp in 10.4s
+[OK] gamma_scalp in 10.5s
+[OK] gamma_scalp in 10.2s
+[OK] gamma_scalp in 10.2s
+[OK] gamma_scalp in 10.3s
+[OK] gamma_scalp in 10.3s
+[OK] gamma_scalp in 10.4s
+[OK] gamma_scalp in 10.4s
+[OK] gamma_scalp in 10.8s
+[OK] gamma_scalp in 10.9s
+[OK] gamma_scalp in 17.7s
+[OK] gamma_scalp in 19.7s
+[OK] gamma_scalp in 20.6s
+[OK] gamma_scalp in 20.9s
+[OK] gamma_scalp in 24.5s
+[OK] gamma_scalp in 27.6s
+[OK] gamma_scalp in 32.6s
+[OK] gamma_scalp in 30.9s
+[OK] gamma_scalp in 31.7s
+[OK] gamma_scalp in 33.3s
+[OK] gamma_scalp in 29.8s
+[OK] gamma_scalp in 28.5s
+[OK] gamma_scalp in 29.5s
+[OK] gamma_scalp in 28.9s
+[OK] gamma_scalp in 29.4s
+[OK] gamma_scalp in 30.9s
+[OK] gamma_scalp in 22.4s
+[OK] gamma_scalp in 25.2s
+[OK] gamma_scalp in 21.5s
+[OK] gamma_scalp in 20.8s
+[OK] gamma_scalp in 23.1s
+[OK] gamma_scalp in 23.3s
+[OK] gamma_scalp in 19.7s
+[OK] gamma_scalp in 21.3s
+[OK] gamma_scalp in 22.5s
+[OK] gamma_scalp in 23.2s
+[OK] gamma_scalp in 31.6s
+[OK] gamma_scalp in 33.8s
+[OK] gamma_scalp in 28.8s
+[OK] gamma_scalp in 32.1s
+[OK] gamma_scalp in 32.3s
+[OK] gamma_scalp in 33.9s
+[OK] gamma_scalp in 36.7s
+[OK] gamma_scalp in 37.5s
+[OK] gamma_scalp in 35.8s
+[OK] gamma_scalp in 37.8s
+[OK] gamma_scalp in 34.7s
+[OK] gamma_scalp in 37.9s
+[OK] gamma_scalp in 38.4s
+[OK] gamma_scalp in 37.9s
+[OK] gamma_scalp in 39.6s
+[OK] gamma_scalp in 37.5s
+[OK] gamma_scalp in 42.1s
+[OK] gamma_scalp in 44.2s
+[OK] gamma_scalp in 41.6s
+[OK] gamma_scalp in 39.5s
+[OK] gamma_scalp in 41.7s
+[OK] gamma_scalp in 38.7s
+[OK] gamma_scalp in 31.7s
+[OK] gamma_scalp in 35.1s
+[OK] gamma_scalp in 32.8s
+[OK] gamma_scalp in 31.7s
+[OK] gamma_scalp in 33.5s
+[OK] gamma_scalp in 31.4s
+[OK] gamma_scalp in 34.0s
+[OK] gamma_scalp in 34.2s
+[OK] gamma_scalp in 29.6s
+[OK] gamma_scalp in 30.5s
+[OK] gamma_scalp in 32.4s
+[OK] gamma_scalp in 29.0s
+[OK] gamma_scalp in 32.6s
+[OK] gamma_scalp in 32.6s
+[OK] gamma_scalp in 31.7s
+[OK] gamma_scalp in 32.0s
+[OK] gamma_scalp in 31.1s
+[OK] gamma_scalp in 30.9s
+[OK] gamma_scalp in 31.3s
+[OK] gamma_scalp in 30.3s
+[OK] gamma_scalp in 30.2s
+[OK] gamma_scalp in 31.0s
+[OK] gamma_scalp in 29.4s
+[OK] gamma_scalp in 30.9s
+[OK] gamma_scalp in 29.7s
+[OK] gamma_scalp in 28.3s
+[OK] gamma_scalp in 29.3s
+[OK] gamma_scalp in 28.9s
+[OK] gamma_scalp in 29.4s
+[OK] gamma_scalp in 29.1s
+[OK] gamma_scalp in 28.0s
+[OK] gamma_scalp in 27.1s
+[OK] gamma_scalp in 26.4s
+[OK] gamma_scalp in 26.1s
+[OK] gamma_scalp in 27.2s
+[OK] gamma_scalp in 31.4s
+[OK] gamma_scalp in 33.8s
+[OK] gamma_scalp in 35.5s
+[OK] gamma_scalp in 33.9s
+[OK] gamma_scalp in 35.8s
+[OK] gamma_scalp in 36.2s
+[OK] gamma_scalp in 36.2s
+[OK] gamma_scalp in 35.9s
+[OK] gamma_scalp in 36.1s
+[OK] gamma_scalp in 38.6s
+[OK] gamma_scalp in 37.3s
+[OK] gamma_scalp in 36.8s
+[OK] gamma_scalp in 44.4s
+[OK] gamma_scalp in 35.5s
+[OK] gamma_scalp in 37.3s
+[OK] gamma_scalp in 34.6s
+[OK] gamma_scalp in 38.1s
+[OK] gamma_scalp in 36.3s
+[OK] gamma_scalp in 39.7s
+[OK] gamma_scalp in 39.0s
+[OK] gamma_scalp in 35.7s
+[OK] gamma_scalp in 35.4s
+[OK] gamma_scalp in 36.9s
+[OK] gamma_scalp in 36.6s
+[OK] gamma_scalp in 39.6s
+[OK] gamma_scalp in 37.2s
+[OK] gamma_scalp in 34.4s
+[OK] gamma_scalp in 34.1s
+[OK] gamma_scalp in 36.3s
+[OK] gamma_scalp in 36.6s
+[OK] gamma_scalp in 35.2s
+[OK] gamma_scalp in 34.9s
+[OK] gamma_scalp in 34.8s
+[OK] gamma_scalp in 35.7s
+[OK] gamma_scalp in 34.9s
+[OK] gamma_scalp in 34.0s
+[OK] gamma_scalp in 35.0s
+[OK] gamma_scalp in 34.1s
+[OK] gamma_scalp in 34.6s
+[OK] gamma_scalp in 33.1s
+[OK] gamma_scalp in 34.5s
+[OK] gamma_scalp in 35.0s
+[OK] gamma_scalp in 35.7s
+[OK] gamma_scalp in 34.2s
+[OK] gamma_scalp in 34.2s
+[OK] gamma_scalp in 33.9s
+[OK] gamma_scalp in 34.4s
+[OK] gamma_scalp in 35.1s
+[OK] gamma_scalp in 34.1s
+[OK] gamma_scalp in 30.8s
+[OK] gamma_scalp in 30.4s
+[OK] gamma_scalp in 34.3s
+[OK] gamma_scalp in 30.9s
+[OK] gamma_scalp in 33.2s
+[OK] gamma_scalp in 34.7s
+[OK] gamma_scalp in 34.2s
+[OK] gamma_scalp in 34.6s
+[OK] gamma_scalp in 34.3s
+[OK] gamma_scalp in 35.6s
+[OK] gamma_scalp in 33.3s
+[OK] gamma_scalp in 33.4s
+[OK] gamma_scalp in 36.2s
+[OK] gamma_scalp in 33.1s
+[OK] gamma_scalp in 34.0s
+[OK] gamma_scalp in 33.1s
+[OK] gamma_scalp in 34.2s
+[OK] gamma_scalp in 35.3s
+[OK] gamma_scalp in 36.9s
+[OK] gamma_scalp in 33.9s
+[OK] gamma_scalp in 36.2s
+[OK] gamma_scalp in 35.3s
+[OK] gamma_scalp in 33.0s
+[OK] gamma_scalp in 34.4s
+[OK] gamma_scalp in 30.7s
+[OK] gamma_scalp in 33.5s
+[OK] gamma_scalp in 31.4s
+[OK] gamma_scalp in 32.0s
+[OK] gamma_scalp in 33.2s
+[OK] gamma_scalp in 32.6s
+[OK] gamma_scalp in 32.6s
+[OK] gamma_scalp in 33.2s
+[OK] gamma_scalp in 30.6s
+[OK] gamma_scalp in 30.3s
+[OK] gamma_scalp in 34.8s
+[OK] gamma_scalp in 34.4s
+[OK] gamma_scalp in 34.8s
+[OK] gamma_scalp in 32.7s
+[OK] gamma_scalp in 35.7s
+[OK] gamma_scalp in 34.3s
+[OK] gamma_scalp in 34.1s
+[OK] gamma_scalp in 29.2s
+[OK] gamma_scalp in 30.9s
+[OK] gamma_scalp in 32.9s
+[OK] gamma_scalp in 31.1s
+[OK] gamma_scalp in 32.8s
+[OK] gamma_scalp in 29.6s
+[OK] gamma_scalp in 29.7s
+[OK] gamma_scalp in 29.5s
+[OK] gamma_scalp in 32.7s
+[OK] gamma_scalp in 31.6s
+[OK] gamma_scalp in 30.7s
+[OK] gamma_scalp in 30.3s
+[OK] gamma_scalp in 29.2s
+[OK] gamma_scalp in 30.2s
+[OK] gamma_scalp in 28.5s
+[OK] gamma_scalp in 29.6s
+[OK] gamma_scalp in 29.7s
+[OK] gamma_scalp in 30.1s
+[OK] gamma_scalp in 30.1s
+[OK] gamma_scalp in 29.6s
+[OK] gamma_scalp in 30.9s
+[OK] gamma_scalp in 31.7s
+[OK] gamma_scalp in 31.4s
+[OK] gamma_scalp in 30.4s
+[OK] gamma_scalp in 31.7s
+[OK] gamma_scalp in 31.2s
+[OK] gamma_scalp in 32.2s
+[OK] gamma_scalp in 30.8s
+[OK] gamma_scalp in 31.4s
+[OK] gamma_scalp in 32.5s
+[OK] gamma_scalp in 29.2s
+[OK] gamma_scalp in 29.9s
+[OK] gamma_scalp in 30.0s
+[OK] gamma_scalp in 30.7s
+[OK] gamma_scalp in 32.5s
+[OK] gamma_scalp in 30.2s
+[OK] gamma_scalp in 27.8s
+[OK] gamma_scalp in 27.6s
+[OK] gamma_scalp in 28.1s
+[OK] gamma_scalp in 27.4s
+[OK] gamma_scalp in 27.4s
+[OK] gamma_scalp in 28.4s
+[OK] gamma_scalp in 25.8s
+[OK] gamma_scalp in 27.1s
+[OK] gamma_scalp in 25.8s
+[OK] gamma_scalp in 26.2s
+[OK] gamma_scalp in 25.3s
+[OK] gamma_scalp in 26.3s
+[OK] gamma_scalp in 25.6s
+[OK] gamma_scalp in 25.5s
+[OK] gamma_scalp in 26.3s
+[OK] gamma_scalp in 25.6s
+[OK] gamma_scalp in 24.7s
+[OK] gamma_scalp in 26.6s
+[OK] gamma_scalp in 24.7s
+[OK] gamma_scalp in 26.0s
+[OK] gamma_scalp in 16.7s
+[OK] gamma_scalp in 23.1s
+[OK] gamma_scalp in 25.5s
+[OK] gamma_scalp in 24.8s
+[OK] gamma_scalp in 22.9s
+[OK] gamma_scalp in 26.0s
+[OK] gamma_scalp in 24.2s
+[OK] gamma_scalp in 25.6s
+[OK] gamma_scalp in 25.5s
+[OK] gamma_scalp in 25.7s
+[OK] gamma_scalp in 23.5s
+[OK] gamma_scalp in 24.2s
+[OK] gamma_scalp in 25.0s
+[OK] gamma_scalp in 26.2s
+[OK] gamma_scalp in 26.5s
+[OK] gamma_scalp in 26.8s
+[OK] gamma_scalp in 24.1s
+[OK] gamma_scalp in 27.8s
+[OK] gamma_scalp in 26.7s
+[OK] gamma_scalp in 25.9s
+[OK] gamma_scalp in 25.7s
+[OK] gamma_scalp in 23.6s
+[OK] gamma_scalp in 26.5s
+[OK] gamma_scalp in 27.6s
+[OK] gamma_scalp in 29.5s
+[OK] gamma_scalp in 25.1s
+[OK] gamma_scalp in 29.4s
+[OK] gamma_scalp in 28.0s
+[OK] gamma_scalp in 30.0s
+[OK] gamma_scalp in 28.9s
+[OK] gamma_scalp in 30.2s
+[OK] gamma_scalp in 30.1s
+[OK] gamma_scalp in 26.7s
+[OK] gamma_scalp in 29.9s
+[OK] gamma_scalp in 28.2s
+[OK] gamma_scalp in 29.1s
+[OK] gamma_scalp in 28.0s
+[OK] gamma_scalp in 27.8s
+[OK] gamma_scalp in 38.0s
+[OK] gamma_scalp in 39.0s
+[OK] gamma_scalp in 43.1s
+[OK] gamma_scalp in 39.9s
+[OK] gamma_scalp in 41.9s
+[OK] gamma_scalp in 41.0s
+[OK] gamma_scalp in 40.6s
+[OK] gamma_scalp in 43.7s
+[OK] gamma_scalp in 40.5s
+[OK] gamma_scalp in 41.4s
+[OK] gamma_scalp in 39.3s
+[OK] gamma_scalp in 43.2s
+[OK] gamma_scalp in 41.6s
+[OK] gamma_scalp in 38.6s
+[OK] gamma_scalp in 36.6s
+[OK] gamma_scalp in 39.9s
+[OK] gamma_scalp in 37.6s
+[OK] gamma_scalp in 43.9s
+[OK] gamma_scalp in 37.9s
+[OK] gamma_scalp in 39.5s
+[OK] gamma_scalp in 42.3s
+[OK] gamma_scalp in 36.1s
+[OK] gamma_scalp in 36.2s
+[OK] gamma_scalp in 37.4s
+[OK] gamma_scalp in 36.2s
+[OK] gamma_scalp in 35.8s
+[OK] gamma_scalp in 38.0s
+[OK] gamma_scalp in 39.0s
+[OK] gamma_scalp in 39.3s
+[OK] gamma_scalp in 40.0s
+[OK] gamma_scalp in 35.5s
+[OK] gamma_scalp in 35.8s
+[OK] gamma_scalp in 17.4s
+[OK] gamma_scalp in 17.6s
+No trades.
+No trades.
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2019-04-25.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2019-05-30.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2019-07-25.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2019-08-22.parquet
+No trades.
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2019-11-14.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2019-12-19.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2020-02-06.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2020-03-19.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2020-04-30.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2020-06-11.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2020-07-23.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2020-09-03.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2020-10-15.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2020-11-26.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2021-01-07.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2021-02-25.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2021-04-15.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2021-06-03.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2021-07-01.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2021-08-12.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2021-09-30.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2021-11-11.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2021-12-23.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2022-02-03.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2022-03-17.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2022-04-28.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2022-06-16.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2022-07-28.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2022-09-08.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2022-10-20.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2022-12-01.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2023-01-12.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2023-02-23.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2023-04-06.parquet
+No trades.
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2023-06-22.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2023-08-10.parquet
+No trades.
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2023-10-04.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2023-11-08.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2023-12-13.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2024-01-17.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2024-02-21.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2024-03-27.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2024-05-08.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2024-06-19.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2024-07-31.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2024-09-18.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2024-10-30.parquet
+No trades.
+No trades.
+No trades.
+No trades.
+No trades.
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2019-05-16.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2019-06-20.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2019-08-01.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2019-09-19.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2019-10-31.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2019-12-12.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2020-01-23.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2020-03-05.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2020-04-16.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2020-05-28.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2020-07-09.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2020-08-20.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2020-09-24.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2020-10-29.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2020-12-10.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2021-01-21.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2021-03-04.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2021-04-22.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2021-05-20.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2021-07-08.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2021-08-18.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2021-09-23.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2021-11-03.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2021-12-09.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2022-01-20.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2022-03-03.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2022-04-13.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2022-05-19.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2022-06-30.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2022-08-04.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2022-09-29.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2022-11-10.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2022-12-22.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2023-02-02.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2023-03-16.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2023-04-27.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2023-06-08.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2023-07-20.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2023-08-31.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2023-10-18.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2023-11-22.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2023-12-27.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2024-01-25.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2024-02-28.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2024-04-03.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2024-05-15.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2024-06-26.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2024-08-07.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2024-09-11.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2024-10-23.parquet
+No trades.
+No trades.
+No trades.
+No trades.
+No trades.
+No trades.
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2019-05-09.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2019-06-27.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2019-08-08.parquet
+No trades.
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2019-10-24.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2019-12-05.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2020-01-16.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2020-02-20.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2020-04-09.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2020-05-14.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2020-06-25.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2020-07-30.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2020-09-10.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2020-10-22.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2020-12-03.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2021-01-14.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2021-02-18.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2021-04-01.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2021-05-12.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2021-06-24.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2021-08-05.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2021-09-16.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2021-10-28.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2021-12-16.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2022-01-27.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2022-03-10.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2022-04-21.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2022-06-02.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2022-07-14.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2022-08-18.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2022-09-15.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2022-10-27.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2022-12-08.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2023-01-19.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2023-03-02.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2023-04-20.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2023-06-01.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2023-07-06.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2023-08-17.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2023-09-27.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2023-11-01.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2023-12-06.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2024-01-10.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2024-02-14.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2024-03-20.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2024-04-30.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2024-06-12.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2024-07-24.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2024-09-04.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2024-10-16.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2024-11-27.parquet
+No trades.
+No trades.
+No trades.
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2019-04-18.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2019-06-13.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2019-07-18.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2019-08-29.parquet
+No trades.
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2019-11-07.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2019-12-26.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2020-01-30.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2020-03-12.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2020-04-23.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2020-06-04.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2020-07-16.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2020-08-27.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2020-10-08.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2020-11-19.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2020-12-31.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2021-02-11.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2021-03-25.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2021-05-06.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2021-06-17.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2021-07-29.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2021-09-09.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2021-10-21.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2021-12-02.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2022-01-13.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2022-02-17.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2022-03-31.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2022-05-12.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2022-06-23.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2022-08-11.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2022-09-22.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2022-11-03.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2022-12-15.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2023-01-25.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2023-03-09.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2023-04-13.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2023-05-25.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2023-07-13.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2023-08-24.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2023-09-28.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2023-10-26.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2023-11-30.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2024-01-03.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2024-02-07.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2024-03-13.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2024-04-24.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2024-06-05.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2024-07-16.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2024-08-28.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2024-10-09.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2024-12-24.parquet
+No trades.
+No trades.
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2019-04-11.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2019-06-06.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2019-07-11.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2019-09-05.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2019-10-03.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2019-11-21.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2020-01-02.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2020-02-13.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2020-03-26.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2020-05-07.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2020-07-02.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2020-08-13.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2020-10-01.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2020-11-12.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2020-12-24.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2021-02-04.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2021-03-18.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2021-04-29.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2021-06-10.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2021-07-22.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2021-09-02.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2021-10-14.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2021-11-25.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2022-01-06.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2022-02-24.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2022-04-07.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2022-05-26.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2022-07-07.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2022-08-25.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2022-10-13.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2022-11-24.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2023-01-05.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2023-02-16.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2023-03-23.parquet
+No trades.
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2023-06-29.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2023-08-03.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2023-09-20.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2023-10-25.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2023-11-29.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2023-12-28.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2024-01-31.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2024-03-06.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2024-04-16.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2024-05-29.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2024-07-10.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2024-08-21.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2024-10-01.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2024-11-13.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2025-04-30.parquet
+No trades.
+No trades.
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2019-05-02.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2019-05-23.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2019-07-04.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2019-08-14.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2019-09-26.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2019-11-28.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2020-01-09.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2020-02-27.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2020-04-01.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2020-05-21.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2020-06-18.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2020-08-06.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2020-09-17.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2020-11-05.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2020-12-17.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2021-01-28.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2021-03-10.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2021-04-08.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2021-05-27.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2021-07-15.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2021-08-26.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2021-10-07.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2021-11-18.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2021-12-30.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2022-02-10.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2022-03-24.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2022-05-05.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2022-06-09.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2022-07-21.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2022-09-01.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2022-10-06.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2022-11-17.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2022-12-29.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2023-02-09.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2023-03-29.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2023-05-04.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2023-06-15.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2023-07-27.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2023-09-06.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2023-10-11.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2023-11-15.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2023-12-20.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2024-01-24.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2024-02-29.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2024-04-10.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2024-05-22.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2024-07-03.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2024-08-14.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2024-09-25.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2024-11-06.parquet
+Wrote backtests/results/gamma_scalp_BANKNIFTY_2019-01-01_2025-07-31_2025-03-26.parquet
+[OK] gamma_scalp in 39.5s
+[OK] gamma_scalp in 17.4s
+[OK] gamma_scalp in 17.6s
+[OK] gamma_scalp in 16.8s
+[OK] gamma_scalp in 16.6s
+[OK] gamma_scalp in 60.6s
+[OK] gamma_scalp in 48.5s
+[OK] gamma_scalp in 54.4s
+Wrote status: /Users/abhishek/workspace/NFOopsLab/NFOpsLab-gpt-optimized/backtests/results/run_all_status_BANKNIFTY_2019-01-01_2025-07-31.parquet

@@ -1,0 +1,9623 @@
+/Users/abhishek/workspace/NFOopsLab/NFOpsLab-gpt-optimized/backtests/run_all_strategies.py:75: PerformanceWarning: Resolving the schema of a LazyFrame is a potentially expensive operation. Use `LazyFrame.collect_schema()` to get the schema without this warning.
+  schema = lf.schema
+/Users/abhishek/workspace/NFOopsLab/NFOpsLab-gpt-optimized/backtests/run_all_strategies.py:91: PerformanceWarning: Resolving the schema of a LazyFrame is a potentially expensive operation. Use `LazyFrame.collect_schema()` to get the schema without this warning.
+  schema = lf.schema
+Wrote schema audit: /Users/abhishek/workspace/NFOopsLab/NFOpsLab-gpt-optimized/backtests/logs/schema_audit_NIFTY_2019-01-01_2025-07-31.log
+Scheduled 4808 tasks: ['momentum_scalp', 'momentum_scalp', 'momentum_scalp', 'momentum_scalp', 'momentum_scalp', 'momentum_scalp', 'momentum_scalp', 'momentum_scalp', 'momentum_scalp', 'momentum_scalp']...
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+No trades
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.0s
+[OK] momentum_scalp in 0.1s
+[OK] momentum_scalp in 0.0s
+Wrote status: /Users/abhishek/workspace/NFOopsLab/NFOpsLab-gpt-optimized/backtests/results/run_all_status_NIFTY_2019-01-01_2025-07-31.parquet

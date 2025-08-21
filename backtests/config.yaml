@@ -1,0 +1,37 @@
+# Paths
+raw_options_dir: "./data/packed/options"
+spot_glob: "./data/packed/spot/{symbol}/**/*.parquet"
+calendar_csv: "./meta/expiry_calendar.csv"
+cache_dir: "./cache/seconds"
+
+# Trading session (IST)
+session:
+  open: "09:15:00"
+  close: "15:30:00"
+  anchors: ["10:00","11:00","12:00","13:00","14:00","15:00"]
+
+# Strike steps
+strike_step:
+  BANKNIFTY: 100
+  NIFTY: 50
+
+# Delta heuristic
+delta:
+  ATM: 0.50
+  NEAR: 0.40
+
+# Volume-burst signal
+signal:
+  burst_secs: 30     # 30-second burst window
+  avg_secs: 300      # 5-minute baseline in seconds
+  multiplier: 1.5    # threshold multiplier
+
+# Risk & PnL
+risk:
+  side: "sell"       # "sell" or "long"
+  target_pct: 0.15
+  stop_pct: 0.15
+  trail_pct: 0.10
+  max_hold_secs: 3600
+
+pnl_mode: "delta_proxy"  # or "option_close"
