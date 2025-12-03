@@ -9,19 +9,19 @@ import streamlit as st
 st.set_page_config(page_title="NFO Options Data Viewer", layout="wide")
 st.title("NFO Options Data Viewer")
 
-# Data folder configurations - using absolute paths
-_DATA_ROOT = Path("/workspace/newer data stocks")
-_YESTERDAY_DATA = _DATA_ROOT / "new stocks yesterday data"
+# Data folder configurations - default relative to this file, but allow override
+_DATA_ROOT = Path(os.environ.get("NFO_DATA_ROOT", Path(__file__).resolve().parent.parent))
+_NEW_DATA = _DATA_ROOT / "new 2025 data"
 
 DATA_FOLDERS = {
-    "main (nov+)": _DATA_ROOT / "processed_output/packed_options",
-    "oct-nov": _YESTERDAY_DATA / "oct-nov new stocks data/processed_output/packed_options",
-    "oct 7-20": _YESTERDAY_DATA / "oct 7-20 new stocks data/processed_output/packed_options",
-    "sep 23-oct 6": _YESTERDAY_DATA / "sep 23 to oct 6 new stocks data/processed_output/packed_options",
-    "aug 29-sep 23": _YESTERDAY_DATA / "aug 29 to sep 23 new stocks data/processed_output/packed_options",
-    "till 10 sep": _YESTERDAY_DATA / "till 10 sep new stocks data/processed_output/packed_options",
-    "aug 13-29": _YESTERDAY_DATA / "aug 13 to aug 29 new stocks data/processed_output/packed_options",
-    "till 13 august": _YESTERDAY_DATA / "till 13 august new stocks data/processed_output/packed_options",
+    "main (nov+)": _NEW_DATA / "nov 4 to nov 18 new stocks data/processed_output/packed_options",
+    "oct 20 to nov 3": _NEW_DATA / "oct 20 to nov 3 new stocks data/processed_output/packed_options",
+    "oct 7 to oct 20": _NEW_DATA / "oct 7 to oct 20 new stocks data/processed_output/packed_options",
+    "sep 23-oct 6": _NEW_DATA / "sep 23 to oct 6 new stocks data/processed_output/packed_options",
+    "aug 29-sep 23": _NEW_DATA / "aug 29 to sep 23 new stocks data/processed_output/packed_options",
+    "aug 14 to 10 sep": _NEW_DATA / "aug 14 to 10 sep new stocks data/processed_output/packed_options",
+    "aug 13-29": _NEW_DATA / "aug 13 to aug 29 new stocks data/processed_output/packed_options",
+    "aug 1 to aug 13": _NEW_DATA / "aug 1 to aug 13 new stocks data/processed_output/packed_options",
 }
 
 # Check which folders exist

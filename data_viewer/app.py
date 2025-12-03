@@ -22,17 +22,17 @@ import os
 # Data folder configurations - relative to this script's parent directory
 _BASE = Path(__file__).resolve().parent.parent  # /Users/abhishek/workspace/nfo
 _DATA_ROOT = _BASE / "newer data stocks"
-_YESTERDAY_DATA = _DATA_ROOT / "new stocks yesterday data"
+_NEW_DATA = _DATA_ROOT / "new 2025 data"
 
 DATA_FOLDERS = {
-    "main (nov+)": _DATA_ROOT,
-    "oct-nov": _YESTERDAY_DATA / "oct-nov new stocks data",
-    "oct 7-20": _YESTERDAY_DATA / "oct 7-20 new stocks data",
-    "sep 23-oct 6": _YESTERDAY_DATA / "sep 23 to oct 6 new stocks data",
-    "aug 29-sep 23": _YESTERDAY_DATA / "aug 29 to sep 23 new stocks data",
-    "till 10 sep": _YESTERDAY_DATA / "till 10 sep new stocks data",
-    "aug 13-29": _YESTERDAY_DATA / "aug 13 to aug 29 new stocks data",
-    "till 13 august": _YESTERDAY_DATA / "till 13 august new stocks data",
+    "main (nov+)": _NEW_DATA / "nov 4 to nov 18 new stocks data",
+    "oct 20 to nov 3": _NEW_DATA / "oct 20 to nov 3 new stocks data",
+    "oct 7 to oct 20": _NEW_DATA / "oct 7 to oct 20 new stocks data",
+    "sep 23-oct 6": _NEW_DATA / "sep 23 to oct 6 new stocks data",
+    "aug 29-sep 23": _NEW_DATA / "aug 29 to sep 23 new stocks data",
+    "aug 14 to 10 sep": _NEW_DATA / "aug 14 to 10 sep new stocks data",
+    "aug 13-29": _NEW_DATA / "aug 13 to aug 29 new stocks data",
+    "aug 1 to aug 13": _NEW_DATA / "aug 1 to aug 13 new stocks data",
 }
 
 MONTH_MAP = {

@@ -5,8 +5,9 @@
 set -e
 
 BASE_DIR="/Users/abhishek/workspace/nfo/newer data stocks"
-INPUT_DIR="$BASE_DIR/new data to process"
-OUTPUT_DIR="$BASE_DIR/processed_output"
+NEW_DATA_DIR="$BASE_DIR/new 2025 data/nov 4 to nov 18 new stocks data"
+INPUT_DIR="$NEW_DATA_DIR"
+OUTPUT_DIR="$NEW_DATA_DIR/processed_output"
 RAW_DIR="$OUTPUT_DIR/raw_options"
 PACKED_DIR="$OUTPUT_DIR/packed_options"
 CALENDAR="/workspace/meta/expiry_calendar.csv"
@@ -48,7 +49,7 @@ echo ""
 echo "[STEP 4/4] Verifying output..."
 python3 "$BASE_DIR/verify_output.py" \
     --packed-dir "$PACKED_DIR" \
-    --sample-dir "$BASE_DIR/Banknifty packed samples"
+    --sample-dir "$BASE_DIR/new 2025 data/Processed Samples/Banknifty packed samples"
 
 echo ""
 echo "=============================================="

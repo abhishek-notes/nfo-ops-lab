@@ -16,34 +16,34 @@ MARKET_CLOSE = time(15, 30)
 
 # Data root paths
 DATA_ROOT = Path("/workspace/newer data stocks")
-YESTERDAY_DATA = DATA_ROOT / "new stocks yesterday data"
+NEW_2025_DATA = DATA_ROOT / "new 2025 data"
 
 # All packed options data folders (in chronological order)
 PACKED_OPTIONS_FOLDERS = {
-    "till 13 august": YESTERDAY_DATA / "till 13 august new stocks data/processed_output/packed_options",
-    "aug 13-29": YESTERDAY_DATA / "aug 13 to aug 29 new stocks data/processed_output/packed_options",
-    "aug 29-sep 23": YESTERDAY_DATA / "aug 29 to sep 23 new stocks data/processed_output/packed_options",
-    "till 10 sep": YESTERDAY_DATA / "till 10 sep new stocks data/processed_output/packed_options",
-    "sep 23-oct 6": YESTERDAY_DATA / "sep 23 to oct 6 new stocks data/processed_output/packed_options",
-    "oct 7-20": YESTERDAY_DATA / "oct 7-20 new stocks data/processed_output/packed_options",
-    "oct-nov": YESTERDAY_DATA / "oct-nov new stocks data/processed_output/packed_options",
-    "main (nov+)": DATA_ROOT / "processed_output/packed_options",
+    "aug 1 to aug 13": NEW_2025_DATA / "aug 1 to aug 13 new stocks data/processed_output/packed_options",
+    "aug 13-29": NEW_2025_DATA / "aug 13 to aug 29 new stocks data/processed_output/packed_options",
+    "aug 29-sep 23": NEW_2025_DATA / "aug 29 to sep 23 new stocks data/processed_output/packed_options",
+    "aug 14 to 10 sep": NEW_2025_DATA / "aug 14 to 10 sep new stocks data/processed_output/packed_options",
+    "sep 23-oct 6": NEW_2025_DATA / "sep 23 to oct 6 new stocks data/processed_output/packed_options",
+    "oct 7 to oct 20": NEW_2025_DATA / "oct 7 to oct 20 new stocks data/processed_output/packed_options",
+    "oct 20 to nov 3": NEW_2025_DATA / "oct 20 to nov 3 new stocks data/processed_output/packed_options",
+    "main (nov+)": NEW_2025_DATA / "nov 4 to nov 18 new stocks data/processed_output/packed_options",
 }
 
 # Raw options data folders
 RAW_OPTIONS_FOLDERS = {
-    "till 13 august": YESTERDAY_DATA / "till 13 august new stocks data/processed_output/raw_options",
-    "aug 13-29": YESTERDAY_DATA / "aug 13 to aug 29 new stocks data/processed_output/raw_options",
-    "aug 29-sep 23": YESTERDAY_DATA / "aug 29 to sep 23 new stocks data/processed_output/raw_options",
-    "till 10 sep": YESTERDAY_DATA / "till 10 sep new stocks data/processed_output/raw_options",
-    "sep 23-oct 6": YESTERDAY_DATA / "sep 23 to oct 6 new stocks data/processed_output/raw_options",
-    "oct 7-20": YESTERDAY_DATA / "oct 7-20 new stocks data/processed_output/raw_options",
-    "oct-nov": YESTERDAY_DATA / "oct-nov new stocks data/processed_output/raw_options",
-    "main (nov+)": DATA_ROOT / "processed_output/raw_options",
+    "aug 1 to aug 13": NEW_2025_DATA / "aug 1 to aug 13 new stocks data/processed_output/raw_options",
+    "aug 13-29": NEW_2025_DATA / "aug 13 to aug 29 new stocks data/processed_output/raw_options",
+    "aug 29-sep 23": NEW_2025_DATA / "aug 29 to sep 23 new stocks data/processed_output/raw_options",
+    "aug 14 to 10 sep": NEW_2025_DATA / "aug 14 to 10 sep new stocks data/processed_output/raw_options",
+    "sep 23-oct 6": NEW_2025_DATA / "sep 23 to oct 6 new stocks data/processed_output/raw_options",
+    "oct 7 to oct 20": NEW_2025_DATA / "oct 7 to oct 20 new stocks data/processed_output/raw_options",
+    "oct 20 to nov 3": NEW_2025_DATA / "oct 20 to nov 3 new stocks data/processed_output/raw_options",
+    "main (nov+)": NEW_2025_DATA / "nov 4 to nov 18 new stocks data/processed_output/raw_options",
 }
 
 # Sample packed data (older BANKNIFTY samples from 2019)
-SAMPLE_PACKED_OPTIONS = DATA_ROOT / "Banknifty packed samples"
+SAMPLE_PACKED_OPTIONS = NEW_2025_DATA / "Processed Samples/Banknifty packed samples"
 
 # Strike step sizes
 STRIKE_STEP = {

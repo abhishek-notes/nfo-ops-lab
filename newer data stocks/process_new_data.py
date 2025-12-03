@@ -566,10 +566,10 @@ def flush_buckets(out_dir: Path, buckets: dict):
 def main():
     parser = argparse.ArgumentParser(description='Process NFO SQL.gz files to packed parquet')
     parser.add_argument('--input-dir', type=str,
-                        default='/Users/abhishek/workspace/nfo/newer data stocks/new data to process',
+                        default='/Users/abhishek/workspace/nfo/newer data stocks/new 2025 data/nov 4 to nov 18 new stocks data',
                         help='Directory containing SQL.gz files')
     parser.add_argument('--output-dir', type=str,
-                        default='/Users/abhishek/workspace/nfo/newer data stocks/processed_output',
+                        default='/Users/abhishek/workspace/nfo/newer data stocks/new 2025 data/nov 4 to nov 18 new stocks data/processed_output',
                         help='Output directory for processed data')
     parser.add_argument('--calendar', type=str,
                         default='/workspace/meta/expiry_calendar.csv',

@@ -97,11 +97,12 @@ comprehensive_analysis_output.log
 backtests/cache/
 backtests/logs/
 
-newer data stocks/raw spot data samples/
-newer data stocks/raw options data samples parquet/
-newer data stocks/Nifty packed samples/
-newer data stocks/Banknifty packed samples/
-newer data stocks/processed_output/
-newer data stocks/raw futures data samples copy/
-newer data stocks/new data to process/
-newer data stocks/new stocks yesterday data/
+newer data stocks/new 2025 data/Processed Samples/
+newer data stocks/new 2025 data/aug 1 to aug 13 new stocks data/
+newer data stocks/new 2025 data/aug 13 to aug 29 new stocks data/
+newer data stocks/new 2025 data/aug 14 to 10 sep new stocks data/
+newer data stocks/new 2025 data/aug 29 to sep 23 new stocks data/
+newer data stocks/new 2025 data/sep 23 to oct 6 new stocks data/
+newer data stocks/new 2025 data/oct 7 to oct 20 new stocks data/
+newer data stocks/new 2025 data/oct 20 to nov 3 new stocks data/
+newer data stocks/new 2025 data/nov 4 to nov 18 new stocks data/

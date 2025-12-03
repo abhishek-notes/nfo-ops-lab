@@ -15,6 +15,7 @@ Usage:
 
 import argparse
 import gzip
+import os
 import re
 import sys
 from pathlib import Path
@@ -22,14 +23,17 @@ from datetime import datetime
 import polars as pl
 
 # Data folder configurations
+DATA_ROOT = Path(os.environ.get("NFO_DATA_ROOT", Path(__file__).resolve().parent.parent / "newer data stocks"))
+NEW_DATA = DATA_ROOT / "new 2025 data"
 DATA_FOLDERS = {
-    "till 13 august": "/Users/abhishek/workspace/nfo/till 13 august new stocks data",
-    "aug 13-29": "/Users/abhishek/workspace/nfo/aug 13 to aug 29 new stocks data",
-    "aug 29-sep 23": "/Users/abhishek/workspace/nfo/aug 29 to sep 23 new stocks data",
-    "sep 23-oct 6": "/Users/abhishek/workspace/nfo/sep 23 to oct 6 new stocks data",
-    "oct 7-20": "/Users/abhishek/workspace/nfo/oct 7-20 new stocks data",
-    "oct-nov": "/Users/abhishek/workspace/nfo/oct-nov new stocks data",
-    "till 10 sep": "/Users/abhishek/workspace/nfo/till 10 sep new stocks data",
+    "aug 1 to aug 13": NEW_DATA / "aug 1 to aug 13 new stocks data",
+    "aug 13-29": NEW_DATA / "aug 13 to aug 29 new stocks data",
+    "aug 29-sep 23": NEW_DATA / "aug 29 to sep 23 new stocks data",
+    "aug 14 to 10 sep": NEW_DATA / "aug 14 to 10 sep new stocks data",
+    "sep 23-oct 6": NEW_DATA / "sep 23 to oct 6 new stocks data",
+    "oct 7 to oct 20": NEW_DATA / "oct 7 to oct 20 new stocks data",
+    "oct 20 to nov 3": NEW_DATA / "oct 20 to nov 3 new stocks data",
+    "main (nov+)": NEW_DATA / "nov 4 to nov 18 new stocks data",
 }
 
 MONTH_MAP = {

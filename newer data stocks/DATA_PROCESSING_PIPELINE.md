@@ -332,13 +332,13 @@ ls "$DATA_FOLDER/processed_output/spot/"
 | Folder | Date Range | Status |
 |--------|------------|--------|
 | `nov 4-18 new stocks data` | Nov 4-18, 2025 | ✅ Processed |
-| `oct-nov new stocks data` | Oct-Nov 2025 | ✅ Processed |
-| `oct 7-20 new stocks data` | Oct 7-20, 2025 | ✅ Processed |
+| `oct 20 to nov 3 new stocks data` | Oct 20 - Nov 3, 2025 | ✅ Processed |
+| `oct 7 to oct 20 new stocks data` | Oct 7-20, 2025 | ✅ Processed |
 | `sep 23 to oct 6 new stocks data` | Sep 23 - Oct 6, 2025 | ✅ Processed |
 | `aug 29 to sep 23 new stocks data` | Aug 29 - Sep 23, 2025 | ✅ Processed |
 | `aug 13 to aug 29 new stocks data` | Aug 13-29, 2025 | ⏳ Pending |
-| `till 13 august new stocks data` | Until Aug 13, 2025 | ⏳ Pending |
-| `till 10 sep new stocks data` | Until Sep 10, 2025 | ⏳ Pending |
+| `aug 1 to aug 13 new stocks data` | Until Aug 13, 2025 | ⏳ Pending |
+| `aug 14 to 10 sep new stocks data` | Until Sep 10, 2025 | ⏳ Pending |
 
 ---
 
