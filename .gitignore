@@ -90,3 +90,18 @@ private
 
 # Large analysis output files
 comprehensive_analysis_output.log
+
+
+
+# Ignore big files and folders
+backtests/cache/
+backtests/logs/
+
+newer data stocks/raw spot data samples/
+newer data stocks/raw options data samples parquet/
+newer data stocks/Nifty packed samples/
+newer data stocks/Banknifty packed samples/
+newer data stocks/processed_output/
+newer data stocks/raw futures data samples copy/
+newer data stocks/new data to process/
+newer data stocks/new stocks yesterday data/

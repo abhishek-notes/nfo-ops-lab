@@ -20,6 +20,13 @@ delta:
   ATM: 0.50
   NEAR: 0.40
 
+# Ladder cache parameters (v1)
+ladder_v1:
+  anchors: ["10:00","11:00","12:00","13:00","14:00","15:00"]
+  points: [0,50,100,150,200,300]
+  session_open: "09:15:00"
+  session_close: "15:30:00"
+
 # Volume-burst signal
 signal:
   burst_secs: 30     # 30-second burst window
