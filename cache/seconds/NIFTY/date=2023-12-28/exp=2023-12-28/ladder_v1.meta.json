@@ -1,0 +1,62 @@
+{
+  "symbol": "NIFTY",
+  "date": "2023-12-28",
+  "expiry": "2023-12-28",
+  "prev_expiry": "2023-12-21",
+  "anchors": [
+    "10:00",
+    "11:00",
+    "12:00",
+    "13:00",
+    "14:00",
+    "15:00"
+  ],
+  "ladder_points": [
+    0,
+    50,
+    100,
+    150,
+    200,
+    300
+  ],
+  "strike_step": 50,
+  "strikes": [
+    21400,
+    21500,
+    21600,
+    21700,
+    21800,
+    21900,
+    22000
+  ],
+  "columns": [
+    "close_CE_21400",
+    "vol_CE_21400",
+    "close_PE_21400",
+    "vol_PE_21400",
+    "close_CE_21500",
+    "vol_CE_21500",
+    "close_PE_21500",
+    "vol_PE_21500",
+    "close_CE_21600",
+    "vol_CE_21600",
+    "close_PE_21600",
+    "vol_PE_21600",
+    "close_CE_21700",
+    "vol_CE_21700",
+    "close_PE_21700",
+    "vol_PE_21700",
+    "close_CE_21800",
+    "vol_CE_21800",
+    "close_PE_21800",
+    "vol_PE_21800",
+    "close_CE_21900",
+    "vol_CE_21900",
+    "close_PE_21900",
+    "vol_PE_21900",
+    "close_CE_22000",
+    "vol_CE_22000",
+    "close_PE_22000",
+    "vol_PE_22000"
+  ]
+}

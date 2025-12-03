@@ -1,0 +1,52 @@
+{
+  "symbol": "NIFTY",
+  "date": "2020-06-10",
+  "expiry": "2020-06-11",
+  "prev_expiry": "2020-06-04",
+  "anchors": [
+    "10:00",
+    "11:00",
+    "12:00",
+    "13:00",
+    "14:00",
+    "15:00"
+  ],
+  "ladder_points": [
+    0,
+    50,
+    100,
+    150,
+    200,
+    300
+  ],
+  "strike_step": 50,
+  "strikes": [
+    10000,
+    10100,
+    10200,
+    10300,
+    10400
+  ],
+  "columns": [
+    "close_CE_10000",
+    "vol_CE_10000",
+    "close_PE_10000",
+    "vol_PE_10000",
+    "close_CE_10100",
+    "vol_CE_10100",
+    "close_PE_10100",
+    "vol_PE_10100",
+    "close_CE_10200",
+    "vol_CE_10200",
+    "close_PE_10200",
+    "vol_PE_10200",
+    "close_CE_10300",
+    "vol_CE_10300",
+    "close_PE_10300",
+    "vol_PE_10300",
+    "close_CE_10400",
+    "vol_CE_10400",
+    "close_PE_10400",
+    "vol_PE_10400"
+  ]
+}

@@ -15,6 +15,7 @@ from pathlib import Path
 import argparse
 import polars as pl
 from dateutil import tz
+from backtests.utils.raw_opts import load_option_seconds_raw
 
 IST = "Asia/Kolkata"
 SPOT_ROOT = Path("data/packed/spot")
@@ -87,29 +88,8 @@ def list_common_strikes(symbol: str, expiry: date) -> list[int]:
 
 
 def load_option_seconds(symbol: str, expiry: date, strike: int, opt_type: str, d: date) -> pl.DataFrame | None:
-    yyyymm = f"{expiry.year:04d}{expiry.month:02d}"
-    f = OPT_ROOT / symbol / yyyymm / f"exp={expiry:%Y-%m-%d}" / f"type={opt_type}" / f"strike={strike}.parquet"
-    if not f.exists():
-        return None
-    lf = pl.scan_parquet(str(f)).select("timestamp", "close", "vol_delta")
-    if lf.schema.get("timestamp") == pl.Utf8:
-        lf = lf.with_columns(pl.col("timestamp").str.strptime(pl.Datetime, strict=False))
-    lf = lf.with_columns(pl.col("timestamp").dt.replace_time_zone(IST).dt.cast_time_unit("ns"))
-    t0, t1 = dt_ist(d, time(9, 15)), dt_ist(d, time(15, 30))
-    s_l = pl.lit(t0).cast(pl.Datetime("ns", time_zone=IST))
-    e_l = pl.lit(t1).cast(pl.Datetime("ns", time_zone=IST))
-    df = lf.filter((pl.col("timestamp") >= s_l) & (pl.col("timestamp") <= e_l)).collect()
-    if df.is_empty():
-        return None
-    sec = (
-        df.with_columns(pl.col("timestamp").dt.truncate("1s").alias("ts"))
-        .group_by("ts")
-        .agg([
-            pl.col("close").last().alias("close"),
-            pl.col("vol_delta").sum().alias("vol"),
-        ])
-        .sort("ts")
-    )
+    # Prefer raw options per-second series using trade price and qty
+    sec = load_option_seconds_raw(symbol, d, expiry, strike, opt_type)
     return sec
 
 
@@ -248,21 +228,13 @@ def run(
             exit_reason = "eod"
             hard_end = dt_ist(d, time(15, 30))
             time_limit = hard_end
-            # use spot-path proxy for option valuations to avoid vendor close artifacts
-            entry_spot = float(px_now)
-            # build spot path over the window
-            sp_path = spot.filter(
+            # Use option per-second price directly (from raw)
+            op_path = sec_leg.filter(
                 (pl.col("ts") >= pl.lit(entry_ts).cast(pl.Datetime("ns", time_zone=IST)))
                 & (pl.col("ts") <= pl.lit(time_limit).cast(pl.Datetime("ns", time_zone=IST)))
             ).select(["ts", "close"]).sort("ts")
-            delta = 0.5
-            for ts2, sp2 in zip(sp_path["ts"].to_list(), sp_path["close"].to_list()):
-                spot_now = float(sp2)
-                # proxy: CE value ~ entry_opt + 0.5*(spot_now-entry_spot); PE ~ entry_opt + 0.5*(entry_spot-spot_now)
-                if opt_type == "CE":
-                    val = float(entry_opt + delta * (spot_now - entry_spot))
-                else:
-                    val = float(entry_opt + delta * (entry_spot - spot_now))
+            for ts2, opv in zip(op_path["ts"].to_list(), op_path["close"].to_list()):
+                val = float(opv)
                 if val < best:
                     best = val
                 if val <= tgt:

@@ -296,3 +296,92 @@ This document is generated from the current workspace state; if the data layout 
   - Spot day files: `data/packed/spot/{SYMBOL}/**/date=*/ticks.parquet`.
   - Option strikes for an expiry: `data/packed/options/{SYMBOL}/{YYYYMM}/exp={YYYY-MM-DD}/type=*/strike=*.parquet`.
   - Futures contract path: `data/packed/futures/{SYMBOL}/{YYYYMM}/exp={YYYY-MM-DD}/ticks.parquet`.
+
+## Data Dictionary (packed schemas)
+
+These are the canonical packed schemas used across the repo. All timestamps are `datetime[ns, Asia/Kolkata]` unless noted.
+
+- Options ticks (packed): `data/packed/options/{SYMBOL}/{YYYYMM}/exp={YYYY-MM-DD}/type={CE|PE}/strike={K}.parquet`
+  - timestamp: ns, IST; second-level ticks (deduped)
+  - symbol: string; e.g., BANKNIFTY, NIFTY
+  - opt_type: string; CE or PE
+  - strike: int; strike price for the series
+  - open, high, low, close: float; vendor OHLC (see caveat below)
+  - vol_delta: int; per-tick volume delta (derived from cumulative volume)
+  - expiry: date; mapped via calendar to next weekly/monthly expiry
+  - expiry_type: string; weekly or monthly
+  - is_monthly, is_weekly: int8; 0/1 convenience flags
+
+- Spot ticks (packed): `data/packed/spot/{SYMBOL}/{YYYYMM}/date={YYYY-MM-DD}/ticks.parquet`
+  - timestamp: ns, IST; second-level grid for the trading day
+  - symbol: string
+  - open, high, low, close: float; spot price
+  - vol_delta: int; 0 for spot (no true volume in raw)
+  - trade_date: date; trading session date
+
+- Futures ticks (packed): `data/packed/futures/{SYMBOL}/{YYYYMM}/exp={YYYY-MM-DD}/ticks.parquet`
+  - timestamp: ns, IST; second-level ticks for the contract window
+  - symbol: string
+  - open, high, low, close: float
+  - vol_delta: int; per-tick volume delta (derived)
+  - trade_date: date
+  - symbol_right: string; preserved when present in raw
+  - expiry: date; mapped via monthly expiries in calendar
+
+- Bars 1-minute (derived):
+  - Spot bars: `data/bars/spot/{SYMBOL}/{YYYYMM}/date={YYYY-MM-DD}/bars_1m.parquet`
+    - timestamp, symbol, trade_date, open, high, low, close, volume
+  - Futures bars: `data/bars/futures/{SYMBOL}/{YYYYMM}/exp={YYYY-MM-DD}/bars_1m.parquet`
+    - timestamp, symbol, expiry, open, high, low, close, volume
+  - Options bars: skipped intentionally due to vendor OHLC artifact (see caveats).
+
+Field semantics and constraints:
+- Timestamps are attached to IST without shifting wall time during packing.
+- Trading hours filter: 09:15:00 to 15:30:00 IST inclusive of endpoints where present.
+- OHLC invariant repairs applied in packers; where vendor provides only `close`, `open/high/low` may be filled conservatively.
+- `vol_delta = diff(cumulative_volume).clip(lower=0).fill_null(0)` in packers for options/futures.
+
+## NIFTY Focus — Paths, Samples, Sanity Checks
+
+This section highlights NIFTY-specific locations present in this workspace for quick use.
+
+- Packed NIFTY spot (daily):
+  - Example path: `data/packed/spot/NIFTY/202311/date=2023-11-16/ticks.parquet`
+  - Sanity: ~11–22k rows per trading day; dense 1s grid 09:15–15:30.
+
+- Packed NIFTY options (by expiry/strike):
+  - Example root: `data/packed/options/NIFTY/202311/exp=2023-11-23/type=CE/`
+  - Example file: `.../strike=17400.parquet` (CE); corresponding PE under `type=PE`.
+  - Sanity: one file per (expiry, type, strike) with second-level ticks; includes `vol_delta`.
+
+- Packed NIFTY futures (by monthly expiry):
+  - Example path: `data/packed/futures/NIFTY/202311/exp=2023-11-30/ticks.parquet`
+  - Sanity: full contract window across the month; hundreds of thousands of rows.
+
+Quick validation commands (Polars):
+- `python -c "import polars as pl; print(pl.read_parquet('data/packed/spot/NIFTY/202311/date=2023-11-16/ticks.parquet').select(['timestamp','close']).head())"`
+- `python -c "import polars as pl; print(pl.read_parquet('data/packed/options/NIFTY/202311/exp=2023-11-23/type=CE/strike=17400.parquet').select(['timestamp','close','vol_delta']).head())"`
+
+Notes:
+- Calendar mapping already contains NIFTY weekly/monthly Final_Expiry dates; packers used this to set `expiry`.
+- For strategies that need ATM selection on NIFTY, derive ATM from spot close at anchors, then search CE/PE strikes nearest to that level under the mapped `exp=...` directory.
+- Strike spacing and available strikes are data-driven per expiry; avoid hardcoding steps and prefer nearest-available lookup.
+
+## NIFTY Backtesting Prep
+
+- Orchestrator (all strategies):
+  - `python3 backtests/run_all_strategies.py --symbol NIFTY --start YYYY-MM-DD --end YYYY-MM-DD --max-workers 2`
+- ATM volume-burst (minute, example):
+  - `python3 backtests/strategies/volume_spike_minute.py --symbol NIFTY --start 2023-11-15 --end 2023-11-21`
+- Ultra fast ATM burst path (spot-routed):
+  - `python3 backtests/atm_volume_ultra.py --symbol NIFTY --start 2023-11-15 --end 2023-11-21`
+
+Inputs expected:
+- Spot ticks: `data/packed/spot/NIFTY/**/date=*/ticks.parquet`
+- Options ticks: `data/packed/options/NIFTY/{YYYYMM}/exp=*/type=*/strike=*.parquet`
+- Expiry calendar: `meta/expiry_calendar.csv`
+
+Recommended guardrails for NIFTY runs:
+- Keep all joins/filters in IST ns dtype; cast literals appropriately.
+- Use packed manifest (if present) to avoid missing-strike path probes.
+- Pre-aggregate per-second for CE/PE strikes once per day and cache to disk during sweeps.
