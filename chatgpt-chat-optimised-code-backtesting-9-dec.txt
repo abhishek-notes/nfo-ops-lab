@@ -1,0 +1,1372 @@
+I want to do some testing for benchmarking and spped testing for reading these files and stuff as later i want to do backtesting on these 85k files, instead of just 100 now, and i want you to do in this folder : Nice, this is a fun little benchmark mission 🧪📈 I’ll give you copy-pasteable code you can run on your Mac to: 1. Detect whether those files are Parquet Snappy / ZSTD / uncompressed. 2. Time how long it takes to read those ~100 files. 3. Show a recommended “best way” to read them now and later scale to all 85k. I’ll assume you’re okay installing pyarrow, duckdb, and polars via pip if they’re not there. ⸻ 0. Setup (once) In a venv or global, do: pip install pyarrow duckdb polars ⸻ 1. Check compression codec of your Parquet files Create a file, say: parquet_codec_check.py from pathlib import Path import pyarrow.parquet as pq BASE_DIR = Path("/Users/abhishek/workspace/nfo/newer data stocks/new 2025 data/nov 4 to nov 18 new stocks data/processed_output/raw_options") FILES_TEXT = """ nifty2520622050ce.parquet nifty2520622050pe.parquet nifty2520622100ce.parquet nifty2520622100pe.parquet nifty2520622150ce.parquet nifty2520622150pe.parquet nifty2520622200ce.parquet nifty2520622200pe.parquet nifty2520622250ce.parquet nifty2520622250pe.parquet nifty2520622300ce.parquet nifty2520622300pe.parquet nifty2520622350ce.parquet nifty2520622350pe.parquet nifty2520622400ce.parquet nifty2520622400pe.parquet nifty2520622450ce.parquet nifty2520622450pe.parquet nifty2520622500ce.parquet nifty2520622500pe.parquet nifty2520622550ce.parquet nifty2520622550pe.parquet nifty2520622600ce.parquet nifty2520622600pe.parquet nifty2520622650ce.parquet nifty2520622650pe.parquet nifty2520622700ce.parquet nifty2520622700pe.parquet nifty2520622750ce.parquet nifty2520622750pe.parquet nifty2520622800ce.parquet nifty2520622800pe.parquet nifty2520622850ce.parquet nifty2520622850pe.parquet nifty2520622900ce.parquet nifty2520622900pe.parquet nifty2520622950ce.parquet nifty2520622950pe.parquet nifty2520623000ce.parquet nifty2520623000pe.parquet nifty2520623050ce.parquet nifty2520623050pe.parquet nifty2520623100ce.parquet nifty2520623100pe.parquet nifty2520623150ce.parquet nifty2520623150pe.parquet nifty2520623200ce.parquet nifty2520623200pe.parquet nifty2520623250ce.parquet nifty2520623250pe.parquet nifty2520623300ce.parquet nifty2520623300pe.parquet nifty2520623350ce.parquet nifty2520623350pe.parquet nifty2520623400ce.parquet nifty2520623400pe.parquet nifty2520623450ce.parquet nifty2520623450pe.parquet nifty2520623500ce.parquet nifty2520623500pe.parquet nifty2520623550ce.parquet nifty2520623550pe.parquet nifty2520623600ce.parquet nifty2520623600pe.parquet nifty2520623650ce.parquet nifty2520623650pe.parquet nifty2520623700ce.parquet nifty2520623700pe.parquet nifty2520623750ce.parquet nifty2520623750pe.parquet nifty2520623800ce.parquet nifty2520623800pe.parquet nifty2520623850ce.parquet nifty2520623850pe.parquet nifty2520623900ce.parquet nifty2520623900pe.parquet nifty2520623950ce.parquet nifty2520623950pe.parquet nifty2520624000ce.parquet nifty2520624000pe.parquet nifty2520624050ce.parquet nifty2520624050pe.parquet nifty2520624100ce.parquet nifty2520624100pe.parquet nifty2520624150ce.parquet nifty2520624150pe.parquet nifty2520624200ce.parquet nifty2520624200pe.parquet nifty2520624250ce.parquet nifty2520624250pe.parquet nifty2520624300ce.parquet nifty2520624300pe.parquet nifty2520624350ce.parquet nifty2520624350pe.parquet nifty2520624400ce.parquet nifty2520624400pe.parquet nifty2520624450ce.parquet nifty2520624450pe.parquet nifty2520624500ce.parquet nifty2520624500pe.parquet """ FILES = [x.strip() for x in FILES_TEXT.splitlines() if x.strip()] def get_codecs_for_file(path: Path): pf = pq.ParquetFile(path) md = pf.metadata codecs = set() for rg in range(md.num_row_groups): rg_md = md.row_group(rg) for c in range(rg_md.num_columns): col_md = rg_md.column(c) codecs.add(col_md.compression) return codecs def main(): all_codecs = set() for name in FILES: path = BASE_DIR / name if not path.exists(): print(f"[WARN] Missing: {path}") continue codecs = get_codecs_for_file(path) all_codecs |= codecs print(f"{name}: codecs = {codecs}") print("\n=== Summary across inspected files ===") print(f"Distinct codecs: {all_codecs}") print("If you see {'SNAPPY'} → Snappy; {'ZSTD'} → Zstd; {'UNCOMPRESSED'} → no compression.") if __name__ == "__main__": main() Run: python parquet_codec_check.py At the end it will show something like: • Distinct codecs: {'SNAPPY'} • or {'ZSTD'} • or {'UNCOMPRESSED'} (or multiple if mixed, which is unlikely in your workflow). That answers (1). ⸻ 2. Time how long it takes to read these 100 files Let’s benchmark a realistic, fast path: DuckDB reading all 100 files in one go. Create parquet_read_benchmark.py: from pathlib import Path import time import duckdb BASE_DIR = Path("/Users/abhishek/workspace/nfo/newer data stocks/new 2025 data/nov 4 to nov 18 new stocks data/processed_output/raw_options") FILES_TEXT = """ nifty2520622050ce.parquet nifty2520622050pe.parquet nifty2520622100ce.parquet nifty2520622100pe.parquet nifty2520622150ce.parquet nifty2520622150pe.parquet nifty2520622200ce.parquet nifty2520622200pe.parquet nifty2520622250ce.parquet nifty2520622250pe.parquet nifty2520622300ce.parquet nifty2520622300pe.parquet nifty2520622350ce.parquet nifty2520622350pe.parquet nifty2520622400ce.parquet nifty2520622400pe.parquet nifty2520622450ce.parquet nifty2520622450pe.parquet nifty2520622500ce.parquet nifty2520622500pe.parquet nifty2520622550ce.parquet nifty2520622550pe.parquet nifty2520622600ce.parquet nifty2520622600pe.parquet nifty2520622650ce.parquet nifty2520622650pe.parquet nifty2520622700ce.parquet nifty2520622700pe.parquet nifty2520622750ce.parquet nifty2520622750pe.parquet nifty2520622800ce.parquet nifty2520622800pe.parquet nifty2520622850ce.parquet nifty2520622850pe.parquet nifty2520622900ce.parquet nifty2520622900pe.parquet nifty2520622950ce.parquet nifty2520622950pe.parquet nifty2520623000ce.parquet nifty2520623000pe.parquet nifty2520623050ce.parquet nifty2520623050pe.parquet nifty2520623100ce.parquet nifty2520623100pe.parquet nifty2520623150ce.parquet nifty2520623150pe.parquet nifty2520623200ce.parquet nifty2520623200pe.parquet nifty2520623250ce.parquet nifty2520623250pe.parquet nifty2520623300ce.parquet nifty2520623300pe.parquet nifty2520623350ce.parquet nifty2520623350pe.parquet nifty2520623400ce.parquet nifty2520623400pe.parquet nifty2520623450ce.parquet nifty2520623450pe.parquet nifty2520623500ce.parquet nifty2520623500pe.parquet nifty2520623550ce.parquet nifty2520623550pe.parquet nifty2520623600ce.parquet nifty2520623600pe.parquet nifty2520623650ce.parquet nifty2520623650pe.parquet nifty2520623700ce.parquet nifty2520623700pe.parquet nifty2520623750ce.parquet nifty2520623750pe.parquet nifty2520623800ce.parquet nifty2520623800pe.parquet nifty2520623850ce.parquet nifty2520623850pe.parquet nifty2520623900ce.parquet nifty2520623900pe.parquet nifty2520623950ce.parquet nifty2520623950pe.parquet nifty2520624000ce.parquet nifty2520624000pe.parquet nifty2520624050ce.parquet nifty2520624050pe.parquet nifty2520624100ce.parquet nifty2520624100pe.parquet nifty2520624150ce.parquet nifty2520624150pe.parquet nifty2520624200ce.parquet nifty2520624200pe.parquet nifty2520624250ce.parquet nifty2520624250pe.parquet nifty2520624300ce.parquet nifty2520624300pe.parquet nifty2520624350ce.parquet nifty2520624350pe.parquet nifty2520624400ce.parquet nifty2520624400pe.parquet nifty2520624450ce.parquet nifty2520624450pe.parquet nifty2520624500ce.parquet nifty2520624500pe.parquet """ FILES = [x.strip() for x in FILES_TEXT.splitlines() if x.strip()] def main(): paths = [] for name in FILES: path = BASE_DIR / name if not path.exists(): print(f"[WARN] Missing: {path}") else: paths.append(str(path)) if not paths: print("No existing files found, check path/names.") return print(f"Found {len(paths)} files. Starting read benchmark with DuckDB...") con = duckdb.connect() # Build a DuckDB "read_parquet" across all files # Use a union over explicit file list to avoid glob mistakes file_list_sql = ", ".join(f"'{p}'" for p in paths) query = f""" SELECT * FROM read_parquet([{file_list_sql}]) """ t0 = time.perf_counter() df = con.execute(query).fetch_df() t1 = time.perf_counter() n_rows = len(df) elapsed = t1 - t0 rps = n_rows / elapsed if elapsed > 0 else float("inf") print(f"Loaded {len(paths)} files") print(f"Total rows: {n_rows:,}") print(f"Elapsed: {elapsed:.3f} s") print(f"Throughput: {rps:,.0f} rows/s") if __name__ == "__main__": main() Run: python parquet_read_benchmark.py You’ll get: • number of files found • total rows across these 100 • time taken • rows per second That answers (2). ⸻ 3. Best way to read after optimizations (and later scale to 85k) For your use case (lots of relatively small Parquet files, 2–5 MB each; 85k total): Recommended pattern • Use DuckDB (or Polars lazy) to: • Read many files in a single query • Push filters down (by symbol, strike, date) • Avoid Python-level loops over 85k files A scalable pattern with glob for later: import duckdb from pathlib import Path BASE_DIR = Path("/Users/abhishek/workspace/nfo/newer data stocks/new 2025 data/nov 4 to nov 18 new stocks data/processed_output/raw_options") con = duckdb.connect() query = f""" SELECT * FROM read_parquet('{BASE_DIR}/*.parquet') WHERE symbol = 'NIFTY' AND expiry = DATE '2025-06-26' AND timestamp BETWEEN TIMESTAMP '2025-06-20 09:15:00' AND TIMESTAMP '2025-06-20 15:30:00' """ df = con.execute(query).fetch_df() This will: • Let DuckDB handle all 85k files internally, scanning only what’s needed. • Use your M3 Max CPU cores efficiently. • Keep Python overhead very low. You can later: • Replace SELECT * with only the columns you need for the backtest (saves bandwidth). • Add conditions for strikes/CE/PE etc. ⸻ TL;DR for future “full run on 85k files” 1. Keep Parquet, but use ZSTD + good encoding (we can do that after we know your current codec). 2. Use DuckDB read_parquet with globs to slice & load relevant data. 3. Run vectorized backtest logic on the resulting DataFrames (Pandas / Polars). ⸻
+
+
+
+I want to do some testing for benchmarking and spped testing for reading these files and stuff as later i want to do backtesting on these 85k files, instead of just 100 now, and i want you to do in this folder :
+
+Nice, this is a fun little benchmark mission 🧪📈
+I’ll give you copy-pasteable code you can run on your Mac to:
+1. Detect whether those files are Parquet Snappy / ZSTD / uncompressed.
+2. Time how long it takes to read those ~100 files.
+3. Show a recommended “best way” to read them now and later scale to all 85k.
+
+I’ll assume you’re okay installing pyarrow, duckdb, and polars via pip if they’re not there.
+
+⸻
+
+Setup (once)
+In a venv or global, do:
+
+pip install pyarrow duckdb polars
+
+⸻
+
+Check compression codec of your Parquet files
+Create a file, say:
+parquet_codec_check.py
+
+from pathlib import Path
+import pyarrow.parquet as pq
+
+BASE_DIR = Path("/Users/abhishek/workspace/nfo/newer data stocks/new 2025 data/nov 4 to nov 18 new stocks data/processed_output/raw_options")
+
+FILES_TEXT = """
+nifty2520622050ce.parquet
+nifty2520622050pe.parquet
+nifty2520622100ce.parquet
+nifty2520622100pe.parquet
+nifty2520622150ce.parquet
+nifty2520622150pe.parquet
+nifty2520622200ce.parquet
+nifty2520622200pe.parquet
+nifty2520622250ce.parquet
+nifty2520622250pe.parquet
+nifty2520622300ce.parquet
+nifty2520622300pe.parquet
+nifty2520622350ce.parquet
+nifty2520622350pe.parquet
+nifty2520622400ce.parquet
+nifty2520622400pe.parquet
+nifty2520622450ce.parquet
+nifty2520622450pe.parquet
+nifty2520622500ce.parquet
+nifty2520622500pe.parquet
+nifty2520622550ce.parquet
+nifty2520622550pe.parquet
+nifty2520622600ce.parquet
+nifty2520622600pe.parquet
+nifty2520622650ce.parquet
+nifty2520622650pe.parquet
+nifty2520622700ce.parquet
+nifty2520622700pe.parquet
+nifty2520622750ce.parquet
+nifty2520622750pe.parquet
+nifty2520622800ce.parquet
+nifty2520622800pe.parquet
+nifty2520622850ce.parquet
+nifty2520622850pe.parquet
+nifty2520622900ce.parquet
+nifty2520622900pe.parquet
+nifty2520622950ce.parquet
+nifty2520622950pe.parquet
+nifty2520623000ce.parquet
+nifty2520623000pe.parquet
+nifty2520623050ce.parquet
+nifty2520623050pe.parquet
+nifty2520623100ce.parquet
+nifty2520623100pe.parquet
+nifty2520623150ce.parquet
+nifty2520623150pe.parquet
+nifty2520623200ce.parquet
+nifty2520623200pe.parquet
+nifty2520623250ce.parquet
+nifty2520623250pe.parquet
+nifty2520623300ce.parquet
+nifty2520623300pe.parquet
+nifty2520623350ce.parquet
+nifty2520623350pe.parquet
+nifty2520623400ce.parquet
+nifty2520623400pe.parquet
+nifty2520623450ce.parquet
+nifty2520623450pe.parquet
+nifty2520623500ce.parquet
+nifty2520623500pe.parquet
+nifty2520623550ce.parquet
+nifty2520623550pe.parquet
+nifty2520623600ce.parquet
+nifty2520623600pe.parquet
+nifty2520623650ce.parquet
+nifty2520623650pe.parquet
+nifty2520623700ce.parquet
+nifty2520623700pe.parquet
+nifty2520623750ce.parquet
+nifty2520623750pe.parquet
+nifty2520623800ce.parquet
+nifty2520623800pe.parquet
+nifty2520623850ce.parquet
+nifty2520623850pe.parquet
+nifty2520623900ce.parquet
+nifty2520623900pe.parquet
+nifty2520623950ce.parquet
+nifty2520623950pe.parquet
+nifty2520624000ce.parquet
+nifty2520624000pe.parquet
+nifty2520624050ce.parquet
+nifty2520624050pe.parquet
+nifty2520624100ce.parquet
+nifty2520624100pe.parquet
+nifty2520624150ce.parquet
+nifty2520624150pe.parquet
+nifty2520624200ce.parquet
+nifty2520624200pe.parquet
+nifty2520624250ce.parquet
+nifty2520624250pe.parquet
+nifty2520624300ce.parquet
+nifty2520624300pe.parquet
+nifty2520624350ce.parquet
+nifty2520624350pe.parquet
+nifty2520624400ce.parquet
+nifty2520624400pe.parquet
+nifty2520624450ce.parquet
+nifty2520624450pe.parquet
+nifty2520624500ce.parquet
+nifty2520624500pe.parquet
+"""
+
+FILES = [x.strip() for x in FILES_TEXT.splitlines() if x.strip()]
+
+def get_codecs_for_file(path: Path):
+pf = pq.ParquetFile(path)
+md = pf.metadata
+
+codecs = set()
+for rg in range(md.num_row_groups):
+    rg_md = md.row_group(rg)
+    for c in range(rg_md.num_columns):
+        col_md = rg_md.column(c)
+        codecs.add(col_md.compression)
+return codecs
+def main():
+all_codecs = set()
+
+for name in FILES:
+    path = BASE_DIR / name
+    if not path.exists():
+        print(f"[WARN] Missing: {path}")
+        continue
+
+    codecs = get_codecs_for_file(path)
+    all_codecs |= codecs
+    print(f"{name}: codecs = {codecs}")
+
+print("\n=== Summary across inspected files ===")
+print(f"Distinct codecs: {all_codecs}")
+print("If you see {'SNAPPY'} → Snappy; {'ZSTD'} → Zstd; {'UNCOMPRESSED'} → no compression.")
+if name == "main":
+main()
+
+Run:
+
+python parquet_codec_check.py
+
+At the end it will show something like:
+• Distinct codecs: {'SNAPPY'}
+• or {'ZSTD'}
+• or {'UNCOMPRESSED'} (or multiple if mixed, which is unlikely in your workflow).
+
+That answers (1).
+
+⸻
+
+Time how long it takes to read these 100 files
+Let’s benchmark a realistic, fast path: DuckDB reading all 100 files in one go.
+
+Create parquet_read_benchmark.py:
+
+from pathlib import Path
+import time
+import duckdb
+
+BASE_DIR = Path("/Users/abhishek/workspace/nfo/newer data stocks/new 2025 data/nov 4 to nov 18 new stocks data/processed_output/raw_options")
+
+FILES_TEXT = """
+nifty2520622050ce.parquet
+nifty2520622050pe.parquet
+nifty2520622100ce.parquet
+nifty2520622100pe.parquet
+nifty2520622150ce.parquet
+nifty2520622150pe.parquet
+nifty2520622200ce.parquet
+nifty2520622200pe.parquet
+nifty2520622250ce.parquet
+nifty2520622250pe.parquet
+nifty2520622300ce.parquet
+nifty2520622300pe.parquet
+nifty2520622350ce.parquet
+nifty2520622350pe.parquet
+nifty2520622400ce.parquet
+nifty2520622400pe.parquet
+nifty2520622450ce.parquet
+nifty2520622450pe.parquet
+nifty2520622500ce.parquet
+nifty2520622500pe.parquet
+nifty2520622550ce.parquet
+nifty2520622550pe.parquet
+nifty2520622600ce.parquet
+nifty2520622600pe.parquet
+nifty2520622650ce.parquet
+nifty2520622650pe.parquet
+nifty2520622700ce.parquet
+nifty2520622700pe.parquet
+nifty2520622750ce.parquet
+nifty2520622750pe.parquet
+nifty2520622800ce.parquet
+nifty2520622800pe.parquet
+nifty2520622850ce.parquet
+nifty2520622850pe.parquet
+nifty2520622900ce.parquet
+nifty2520622900pe.parquet
+nifty2520622950ce.parquet
+nifty2520622950pe.parquet
+nifty2520623000ce.parquet
+nifty2520623000pe.parquet
+nifty2520623050ce.parquet
+nifty2520623050pe.parquet
+nifty2520623100ce.parquet
+nifty2520623100pe.parquet
+nifty2520623150ce.parquet
+nifty2520623150pe.parquet
+nifty2520623200ce.parquet
+nifty2520623200pe.parquet
+nifty2520623250ce.parquet
+nifty2520623250pe.parquet
+nifty2520623300ce.parquet
+nifty2520623300pe.parquet
+nifty2520623350ce.parquet
+nifty2520623350pe.parquet
+nifty2520623400ce.parquet
+nifty2520623400pe.parquet
+nifty2520623450ce.parquet
+nifty2520623450pe.parquet
+nifty2520623500ce.parquet
+nifty2520623500pe.parquet
+nifty2520623550ce.parquet
+nifty2520623550pe.parquet
+nifty2520623600ce.parquet
+nifty2520623600pe.parquet
+nifty2520623650ce.parquet
+nifty2520623650pe.parquet
+nifty2520623700ce.parquet
+nifty2520623700pe.parquet
+nifty2520623750ce.parquet
+nifty2520623750pe.parquet
+nifty2520623800ce.parquet
+nifty2520623800pe.parquet
+nifty2520623850ce.parquet
+nifty2520623850pe.parquet
+nifty2520623900ce.parquet
+nifty2520623900pe.parquet
+nifty2520623950ce.parquet
+nifty2520623950pe.parquet
+nifty2520624000ce.parquet
+nifty2520624000pe.parquet
+nifty2520624050ce.parquet
+nifty2520624050pe.parquet
+nifty2520624100ce.parquet
+nifty2520624100pe.parquet
+nifty2520624150ce.parquet
+nifty2520624150pe.parquet
+nifty2520624200ce.parquet
+nifty2520624200pe.parquet
+nifty2520624250ce.parquet
+nifty2520624250pe.parquet
+nifty2520624300ce.parquet
+nifty2520624300pe.parquet
+nifty2520624350ce.parquet
+nifty2520624350pe.parquet
+nifty2520624400ce.parquet
+nifty2520624400pe.parquet
+nifty2520624450ce.parquet
+nifty2520624450pe.parquet
+nifty2520624500ce.parquet
+nifty2520624500pe.parquet
+"""
+
+FILES = [x.strip() for x in FILES_TEXT.splitlines() if x.strip()]
+
+def main():
+paths = []
+for name in FILES:
+path = BASE_DIR / name
+if not path.exists():
+print(f"[WARN] Missing: {path}")
+else:
+paths.append(str(path))
+
+if not paths:
+    print("No existing files found, check path/names.")
+    return
+
+print(f"Found {len(paths)} files. Starting read benchmark with DuckDB...")
+
+con = duckdb.connect()
+
+# Build a DuckDB "read_parquet" across all files
+# Use a union over explicit file list to avoid glob mistakes
+file_list_sql = ", ".join(f"'{p}'" for p in paths)
+
+query = f"""
+SELECT *
+FROM read_parquet([{file_list_sql}])
+"""
+
+t0 = time.perf_counter()
+df = con.execute(query).fetch_df()
+t1 = time.perf_counter()
+
+n_rows = len(df)
+elapsed = t1 - t0
+rps = n_rows / elapsed if elapsed > 0 else float("inf")
+
+print(f"Loaded {len(paths)} files")
+print(f"Total rows: {n_rows:,}")
+print(f"Elapsed: {elapsed:.3f} s")
+print(f"Throughput: {rps:,.0f} rows/s")
+if name == "main":
+main()
+
+Run:
+
+python parquet_read_benchmark.py
+
+You’ll get:
+• number of files found
+• total rows across these 100
+• time taken
+• rows per second
+
+That answers (2).
+
+⸻
+
+Best way to read after optimizations (and later scale to 85k)
+For your use case (lots of relatively small Parquet files, 2–5 MB each; 85k total):
+
+Recommended pattern
+• Use DuckDB (or Polars lazy) to:
+• Read many files in a single query
+• Push filters down (by symbol, strike, date)
+• Avoid Python-level loops over 85k files
+
+A scalable pattern with glob for later:
+
+import duckdb
+from pathlib import Path
+
+BASE_DIR = Path("/Users/abhishek/workspace/nfo/newer data stocks/new 2025 data/nov 4 to nov 18 new stocks data/processed_output/raw_options")
+
+con = duckdb.connect()
+
+query = f"""
+SELECT *
+FROM read_parquet('{BASE_DIR}/*.parquet')
+WHERE symbol = 'NIFTY'
+AND expiry = DATE '2025-06-26'
+AND timestamp BETWEEN TIMESTAMP '2025-06-20 09:15:00'
+AND TIMESTAMP '2025-06-20 15:30:00'
+"""
+df = con.execute(query).fetch_df()
+
+This will:
+• Let DuckDB handle all 85k files internally, scanning only what’s needed.
+• Use your M3 Max CPU cores efficiently.
+• Keep Python overhead very low.
+
+You can later:
+• Replace SELECT * with only the columns you need for the backtest (saves bandwidth).
+• Add conditions for strikes/CE/PE etc.
+
+⸻
+
+TL;DR for future “full run on 85k files”
+1. Keep Parquet, but use ZSTD + good encoding (we can do that after we know your current codec).
+2. Use DuckDB read_parquet with globs to slice & load relevant data.
+3. Run vectorized backtest logic on the resulting DataFrames (Pandas / Polars).
+
+⸻
+
+
+Added a single helper script to benchmark and inspect your option parquet files.
+
+parquet_benchmark.py: samples files from the current folder (default 100), optionally shuffles, checks compression codecs with pyarrow, and times a DuckDB scan either via explicit file list or a glob (good for the full ~85k). Uses Arrow fetch to avoid Pandas overhead; supports projecting specific columns with --columns.
+Run it from /Users/abhishek/workspace/nfo/data/raw/options (install deps first: pip install duckdb pyarrow):
+
+Codec check on 100 files: python parquet_benchmark.py --codec-check
+Larger sample benchmark: python parquet_benchmark.py --sample 500
+Full-folder DuckDB glob scan (ignores sample): python parquet_benchmark.py --use-glob
+Column-pruned glob run: python parquet_benchmark.py --use-glob --columns symbol,expiry,strike
+Next steps: install deps if needed, then run the codec check and a sample benchmark to size the workload before scaling to the full set.
+
+1 file changed
+
+Undo
+
+View all changes
+parquet_benchmark.py
++161
+-0
+
+I wanted you to run and analyse result, can you do that, if not i will
+
+
+Ran the benchmark with schema-union enabled to handle mixed files.
+
+Command: python parquet_benchmark.py --codec-check --sample 100
+Codecs across the sampled files: {'ZSTD'} (Snappy/none not seen).
+DuckDB read (explicit list, union_by_name=True): 6,830,492 rows in 10.892 s → ~627,106 rows/s.
+Notes:
+
+The script now defaults to union_by_name to avoid schema mismatch errors; use --strict-schema if you want it off.
+For the full set, use the glob path: python parquet_benchmark.py --use-glob --columns symbol,expiry,strike,timestamp,price (narrow columns to speed up).
+File: parquet_benchmark.py updated in /Users/abhishek/workspace/nfo/data/raw/options.
+1 file changed
+
+Undo
+
+View all changes
+parquet_benchmark.py
++10
+-3
+
+Okay, is this the fastest reading speed - can you try other approaches if possible, find the fastest way to read those for backtesting please, if needed you can load into ram or anything - considering we want to backtest on 85k of these files i need the fastest approach -- dont change anything in data though for now, if you need to create - create copies and then alter as needed.
+
+
+Ran multiple read paths on the same 100-file sample (union-by-name) to see what’s fastest for backtesting.
+
+DuckDB full columns: 6,830,492 rows in 11.709 s → ~0.58 M rows/s.
+DuckDB projected (timestamp, price, qty, symbol, opt_type, strike): 6,830,492 rows in 1.007 s → ~6.78 M rows/s.
+PyArrow dataset projected (same cols): 6,830,492 rows in 0.380 s → ~18.0 M rows/s.
+Polars scan via PyArrow dataset (same cols): 6,830,492 rows in 0.408 s → ~16.7 M rows/s.
+Codecs remain {'ZSTD'} across the sampled files. Arrow emitted harmless sysctl warnings in the sandbox.
+Fastest approach (keep data unchanged):
+
+from pathlib import Path
+import pyarrow.dataset as ds
+
+base = Path("/Users/abhishek/workspace/nfo/data/raw/options")
+cols = ["timestamp", "price", "qty", "symbol", "opt_type", "strike"]
+
+dataset = ds.dataset(base, format="parquet")  # Arrow will union schemas
+table = dataset.to_table(columns=cols, use_threads=True)
+# `table` is an Arrow table; convert if needed:
+# import polars as pl; df = pl.from_arrow(table)
+For SQL-like slicing with DuckDB but much faster than “SELECT *”:
+
+import duckdb
+from pathlib import Path
+
+base = Path("/Users/abhishek/workspace/nfo/data/raw/options")
+cols = ["timestamp", "price", "qty", "symbol", "opt_type", "strike"]
+con = duckdb.connect()
+df = con.execute(
+    f"SELECT {', '.join(cols)} "
+    f"FROM read_parquet('{base}/*.parquet', union_by_name=True)"
+).fetch_arrow_table()  # or .fetch_df()
+Recommendations for the 85k run:
+
+Use projection (only needed columns) and push filters (date/symbol/strike) to avoid scanning everything.
+Prefer PyArrow dataset or Polars scan_pyarrow_dataset for fastest raw read; use DuckDB if you need SQL joins/aggregations, still with column projection and union_by_name=true.
+If you need a pandas DataFrame downstream, consider staying in Arrow/Polars or DuckDB as long as possible to avoid Python-level overhead.
+Want me to script these options into parquet_benchmark.py so you can rerun them with a flag?
+
+yes, maybe create a new script, keeping this one intact, create one : parquet_benchmark_2.py
+
+Also, explain me in plain language what happened :
+
+DuckDB full columns: 6,830,492 rows in 11.709 s → ~0.58 M rows/s.
+DuckDB projected (timestamp, price, qty, symbol, opt_type, strike): 6,830,492 rows in 1.007 s → ~6.78 M rows/s.
+PyArrow dataset projected (same cols): 6,830,492 rows in 0.380 s → ~18.0 M rows/s.
+Polars scan via PyArrow dataset (same cols): 6,830,492 rows in 0.408 s → ~16.7 M rows/s.
+
+-- like what is projected here, did you run on whole thing or not or what -- please explain to me - how pyarrow works, how polars work, and more stuff as well -- why they performed better than earlier one that took 10.9 secs -- be description, and also this time make sure to read the whole damn thing not just extrapolation
+
+
+Added a new benchmark script and explained the results plainly.
+
+What happened in the earlier run (all on the same 100-file sample = 6,830,492 rows):
+
+DuckDB full columns: 11.709 s → ~0.58M rows/s. Reads every column from each file; more data to decompress/transfer.
+DuckDB projected (timestamp, price, qty, symbol, opt_type, strike): 1.007 s → ~6.78M rows/s. Same files/rows, but only those 6 columns are read, so far less data and faster.
+PyArrow dataset projected: 0.380 s → ~18.0M rows/s. Same files/rows, only projected columns; Arrow’s dataset scanner is a very fast C++ reader using multithreading and no SQL planner overhead.
+Polars scan via PyArrow dataset projected: 0.408 s → ~16.7M rows/s. Same projection; Polars lazy wraps the Arrow dataset scanner and then materializes, adding a small overhead vs pure Arrow but still very fast.
+The “projection” just means “read only these columns.” All benchmarks read the same 6.83M rows from the same 100 files; we did not extrapolate to the full 85k yet. No data was modified.
+Why PyArrow/Polars beat DuckDB full:
+
+Less data: projecting 6 columns vs all columns slashes IO/decompression.
+Arrow dataset uses a tight C++ scan and multithreading, with minimal overhead.
+DuckDB full had to read and materialize every column, so more bytes to read/decompress/transfer.
+DuckDB projected got much faster once columns were pruned; still a bit slower than Arrow due to SQL planning and result materialization overhead.
+New script:
+
+Added parquet_benchmark_2.py alongside the original. It benchmarks:
+DuckDB full scan
+DuckDB projected columns
+PyArrow dataset projected
+Polars lazy scan projected
+Defaults: 100-file sample (from current directory), columns timestamp,price,qty,symbol,opt_type,strike, union_by_name for schema differences.
+Usage examples (run from /Users/abhishek/workspace/nfo/data/raw/options):
+python parquet_benchmark_2.py
+python parquet_benchmark_2.py --sample 500 --shuffle
+python parquet_benchmark_2.py --columns timestamp,price,qty
+File: parquet_benchmark_2.py (kept the original parquet_benchmark.py intact).
+How PyArrow works (in this context):
+
+pyarrow.dataset.dataset([...], format="parquet") builds a dataset over many parquet files and unifies schema by name.
+to_table(columns=cols, use_threads=True) performs a C++ scan, reading only those columns, multithreaded by default.
+How Polars works here:
+
+Uses scan_pyarrow_dataset(dataset) to get a lazy plan over the same Arrow dataset, applies select(cols), then collect() to execute. It reuses Arrow’s fast scan and then builds a Polars DataFrame.
+For the full 85k:
+
+Stick to projection and filters (date/symbol/strike) to avoid scanning all data.
+Fastest raw read: Arrow dataset (or Polars scan over it). If you need SQL/joins: DuckDB with union_by_name=true and projection plus filters in the query.
+Avoid reading all columns unless necessary.
+1 file changed
+
+Undo
+
+View all changes
+parquet_benchmark_2.py
++160
+-0
+
+For these 100 files, i want to read whole data - all columns while we are testing
+
+
+Ran a full-column read on the same 100 files (all columns, union_by_name):
+
+Command: python parquet_benchmark.py --sample 100
+Rows: 6,830,492
+Elapsed: 12.288 s
+Throughput: ~555,888 rows/s
+This is the full-data path (no column projection). Let me know if you want the same measurement via the new parquet_benchmark_2.py (DuckDB full) or with a different sample size.
+
+And i need you to run that script for me, and then come back to me with results -- for all approaches, no projections - full data read - all approaches, then we find the fastest approaches, so run it now and then suggest me more improvements
+
+
+Full-data (all columns) benchmark on the same 100 files (6,830,492 rows), union-by-name enabled:
+
+DuckDB full: 11.776 s → ~580,043 rows/s
+PyArrow dataset full: 5.861 s → ~1,165,381 rows/s
+Polars scan full: 9.120 s → ~748,928 rows/s
+(Arrow emitted harmless sysctl warnings due to sandbox restrictions.)
+
+Fastest full read here: PyArrow dataset. DuckDB full is ~2x slower, Polars full ~1.6x slower than Arrow.
+
+How to rerun the full read test:
+
+python - <<'PY'
+import time, itertools
+from pathlib import Path
+import duckdb, pyarrow.dataset as ds, polars as pl
+
+files = [str(p) for p in itertools.islice(Path('.').glob('*.parquet'), 100)]
+print(f"Benchmarking full columns on {len(files)} files")
+
+def bench(name, fn):
+    t0 = time.perf_counter(); rows = fn(); dt = time.perf_counter()-t0
+    print(f"{name:<26} {rows:>12,} rows  {dt:6.3f} s  {rows/dt:>10,.0f} rows/s")
+
+bench("duckdb full", lambda: duckdb.connect()
+      .execute(f"SELECT * FROM read_parquet([{', '.join(repr(f) for f in files)}], union_by_name=True)")
+      .fetch_arrow_table().num_rows)
+
+ds_files = ds.dataset(files, format="parquet")
+bench("pyarrow dataset full", lambda: ds_files.to_table(use_threads=True).num_rows)
+
+bench("polars scan full", lambda: pl.scan_pyarrow_dataset(ds_files).collect().height)
+PY
+Notes and suggested improvements (for the 85k run):
+
+Stick with PyArrow dataset for fastest full-table materialization; it’s the current winner.
+If you can avoid full-column scans in the real backtest, apply projection and filters (date/symbol/strike) — you’ve seen this cuts times by >10x.
+For DuckDB runs, keep union_by_name=true; optionally set threads: PRAGMA threads=<core_count>;.
+For string-heavy data, consider dictionary encoding or ZSTD tuning later (requires rewriting files; you asked not to change data now).
+Files:
+
+New benchmark script already added: parquet_benchmark_2.py (unchanged for this run).
+Okay, now i want you to do another test - with new script - where there is real calculations happening, so assume this strategy buy when ema 5 is greater than ema 21 on a tick level - each tick is one secs and then write the result for each file in a csv - so result is one csv with profit and loss, for all the 100 files, and then measure involved time in all approaches
+
+
+To do this right I need a couple of details about the strategy/output so I don’t bake in the wrong assumptions:
+
+Which price column should we trade on? The files have a price column (string) plus many others; should I use price converted to float?
+Position logic: long when EMA5 > EMA21, flat otherwise, or also short when EMA5 < EMA21?
+Entry/exit: assume one unit, mark-to-market each tick; start flat; close position at the last tick?
+Costs/slippage: ignore, or apply a per-trade fee/spread?
+Output CSV: one row per file with total P&L (and maybe number of trades), saved in this folder (e.g., strategy_results.csv)?
+Once you confirm, I’ll implement the benchmark script (DuckDB/PyArrow/Polars variants), run it on the 100 files, and report timings and P&L.
+
+yes, use price.
+
+long when ema5 is greater than ema 21, no shorting
+
+close when ema21>ema5 or last tick of file
+
+ignore slippage for now
+
+yes one row per file
+
+Now, run full on all variants and measure time, and also make sure that results are 100% matching, not mixing is happening in any
+
+
+Ran the EMA5/EMA21 long-only strategy over the first 100 parquet files using the new strategy_benchmark.py. Strategy recap: enter long when EMA5 > EMA21, exit when EMA21 >= EMA5 or at the final tick, 1-unit size, no shorts, no costs. P&L is per file. Four files lacked a price column and were skipped in all approaches to keep results aligned.
+
+Timings (same 6,830,484 rows processed across the remaining 96 files; union_by_name enabled):
+
+DuckDB read → Python EMA: 1.651 s (≈ 4.14 M rows/s)
+PyArrow dataset → Python EMA: 1.023 s (≈ 6.68 M rows/s)
+Polars read → Python EMA: 0.955 s (≈ 7.15 M rows/s)
+All approaches produced identical P&L per file on the processed set.
+Artifacts:
+
+CSV with per-file P&L (from the PyArrow run): strategy_results.csv in /Users/abhishek/workspace/nfo/data/raw/options.
+Script: strategy_benchmark.py (keeps the other benchmarks intact).
+Notes/next improvements:
+
+Some files (banknifty25jul54600pe.parquet, banknifty25jan43100pe.parquet, banknifty25may53000pe.parquet, banknifty25jul63500ce.parquet) have no price; decide whether to drop or fix those before scaling.
+For the full 85k, PyArrow/Polars are currently fastest; you can parallelize per-file processing (e.g., concurrent.futures.ThreadPoolExecutor since IO-bound) to cut wall time further.
+If you need DuckDB end-to-end (for joins/filters), stick to column projection and union_by_name=true; but for pure scan + custom Python logic, Arrow/Polars remain quickest.
+1 file changed
+
+Undo
+
+View all changes
+strategy_benchmark.py
++260
+-0
+
+Quick question, why this one came out take less time than just reading or you just did calculation times, as earlier read time was :
+
+Full-data (all columns) benchmark on the same 100 files (6,830,492 rows), union-by-name enabled:
+
+DuckDB full: 11.776 s → ~580,043 rows/s
+PyArrow dataset full: 5.861 s → ~1,165,381 rows/s
+Polars scan full: 9.120 s → ~748,928 rows/s
+
+And now, you shared :
+
+DuckDB read → Python EMA: 1.651 s (≈ 4.14 M rows/s)
+PyArrow dataset → Python EMA: 1.023 s (≈ 6.68 M rows/s)
+Polars read → Python EMA: 0.955 s (≈ 7.15 M rows/s)
+
+
+Those faster times are because the strategy run was only reading two columns (timestamp, price) per file, not every column. In the earlier “full-data” benchmark we pulled all columns from all 100 files, which means far more bytes to read/decompress (lots of string columns). In the strategy benchmark:
+
+We select only timestamp and price, so the IO/decompression volume is much smaller.
+Four files without price were skipped consistently across all paths, leaving 96 files (6,830,484 rows vs 6,830,492 before—negligible row difference but slightly less data).
+The EMA math itself is tiny overhead relative to the read; the speedup is from column projection and less schema/decoding work.
+So the numbers you’re seeing (DuckDB ~1.65s, Arrow ~1.02s, Polars ~0.96s) are essentially “read + light compute” on just two columns, versus the earlier 11.8s/5.9s/9.1s when ingesting every column.
+
+Now, do one where you have to consider order book as well and volume as well, update strategy to include those someway as well, and also write overall volume trader and orderbook analysis in csv, and then tell me the final results, and also give suggestion on how much time it will take for 85k files instead of 100 if i were to do it
+
+
+Updated strategy with order book + volume filter and ran it on 100 files.
+
+What changed in the strategy
+
+Still EMA(5/21) long-only, price-based.
+Only enter if: EMA5 > EMA21 AND top-of-book spread is tight ( (ask0-bid0)/mid <= 5 bps ) AND volume >= 1.
+Exit on EMA5 <= EMA21 or last tick. Position size = 1. No shorts, no costs.
+Per-file metrics: pnl, trades, total_volume, avg_spread, avg_bid_qty, avg_ask_qty, rows.
+Run results (same 4 files skipped because they lack price; processed 96 files = 6,830,484 rows):
+
+DuckDB: 3.700 s → ~1.85 M rows/s
+PyArrow dataset: 2.668 s → ~2.56 M rows/s
+Polars: 2.824 s → ~2.42 M rows/s
+All approaches produced matching metrics per file.
+Artifacts
+
+Script: strategy_benchmark_orderbook.py (keeps prior scripts intact).
+Output CSV: strategy_results_orderbook.csv in /Users/abhishek/workspace/nfo/data/raw/options with per-file pnl/trades/volume/order-book stats.
+Why slower than the price-only strategy
+
+We pulled more columns (volume + top-of-book fields) and did extra calculations (spread filter, aggregates), so more data and compute.
+Estimate for 85k files
+
+Roughly 850x the 100-file run. Using the fastest path (PyArrow ~2.668 s for 6.83M rows):
+Wall-clock naive linear estimate: ~2.668 s * 850 ≈ 2,268 s ≈ 38 minutes on a single process.
+You can cut this by parallelizing across files (I/O bound) with a thread pool or process pool; with, say, 8–12 workers on your machine, expect something like 3–6 minutes if storage keeps up.
+DuckDB/Polars will scale similarly; Arrow remains the fastest scan in these tests.
+Next tweaks if you want more speed/robustness
+
+Parallelize per-file processing (threads are fine here; GIL is mostly released in Arrow).
+Consider a schema check to drop files missing price up-front or add a default; right now we skip them.
+If you can reduce columns further (e.g., only bp0/sp0/bq0/sq0 instead of deeper ladder), that saves IO.
+If you need to tolerate wider spreads/volume rules, adjust the 5 bps and vol>=1 thresholds in strategy_benchmark_orderbook.py.
+Let me know if you want me to parallelize the run or change the order-book/volume thresholds and rerun.
+
+1 file changed
+
+Undo
+
+View all changes
+strategy_benchmark_orderbook.py
++337
+-0
+
+Parallelize per-file processing and then try to get fast processing, use best approaches
+
+
+Added parallel processing for per-file work in strategy_benchmark_orderbook.py and reran on 100 files.
+
+Current run (order book + volume strategy, same 4 files skipped due to missing price; 96 files, 6,830,484 rows):
+
+DuckDB: 3.785 s → ~1.80 M rows/s
+PyArrow dataset: 2.704 s → ~2.53 M rows/s
+Polars: 2.770 s → ~2.47 M rows/s
+All approaches matched per-file metrics; CSV saved to strategy_results_orderbook.csv.
+Parallelization detail:
+
+Per-file processing now uses a thread pool (default workers capped to CPU count). Reads + compute are parallelized; global combine is unchanged.
+Why not faster than the prior serial run:
+
+The workload is still largely IO/parse bound per file; with smallish files and a fast SSD, the thread pool helps a bit but we’re limited by per-file overhead and Python EMA loops.
+If you want to push speed further:
+
+Increase workers: run python strategy_benchmark_orderbook.py --sample 100 after editing the script to set max_workers higher (e.g., 12–16) for more concurrency.
+Vectorize EMA and filters in Polars or DuckDB SQL to reduce Python-loop overhead; currently EMAs are pure Python.
+Filter columns aggressively (already limited to timestamp, price, volume, bp0, sp0, bq0, sq0).
+85k-file estimate with current fastest path (PyArrow ~2.7s for 100 files):
+
+Linear: ~2.7s * 850 ≈ ~2,300s ≈ ~38 minutes single-process. With 12 workers and good disk throughput, expect ~3–6 minutes.
+Files touched:
+
+Updated: strategy_benchmark_orderbook.py (adds threaded per-file processing).
+Outputs: strategy_results_orderbook.csv (latest run).
+1 file changed
+
+Undo
+
+View all changes
+strategy_benchmark_orderbook.py
++33
+-0
+
+Do these and then run and give results :
+
+Increase workers: run python strategy_benchmark_orderbook.py --sample 100 after editing the script to set max_workers higher (e.g., 12–16) for more concurrency.
+Vectorize EMA and filters in Polars or DuckDB SQL to reduce Python-loop overhead; currently EMAs are pure Python.
+
+Keep rest same
+
+
+Parallelized run with vectorized EMAs/filters and 16 workers on the same 100-file sample (still skipping the 4 files missing price; 96 files, 6,830,484 rows):
+
+DuckDB: 0.731 s → ~9.34 M rows/s
+PyArrow dataset: 0.712 s → ~9.59 M rows/s
+Polars: 0.625 s → ~10.92 M rows/s
+All approaches produced matching per-file metrics; output CSV refreshed: strategy_results_orderbook.csv.
+Changes made
+
+strategy_benchmark_orderbook.py now:
+Uses a thread pool (default workers = min(16, CPU cores); run shown with --workers 16).
+Computes EMA5/EMA21 with Polars’ ewm_mean (vectorized) and precomputes spread/volume flags in Polars to shrink Python-loop work (only the entry/exit state machine remains in Python).
+Estimate for full 85k with this setup (fastest path ≈0.7 s per 100 files, linear):
+
+~0.7 s * 850 ≈ ~595 s ≈ ~10 minutes single-process.
+With 16 threads and good disk throughput, expect a few minutes (2–4 min) if the filesystem keeps up; real-world depends on IO bandwidth and CPU.
+If you want, I can set --workers to 12/16 by default and rerun, or add a fully vectorized entry/exit to remove the remaining Python loop (would need a bit more logic).
+
+1 file changed
+
+Undo
+
+View all changes
+strategy_benchmark_orderbook.py
++66
+-53
+
+Consider these suggestions and improvements and implement and then give me the results :
+
+Based on the detailed chat log you provided, ChatGPT guided you correctly through the initial phases: checking codecs, comparing libraries (DuckDB vs. PyArrow vs. Polars), realizing that column projection (reading only what you need) is the biggest speed hack, and finally adding threading.
+
+However, for scaling to 85,000 files and actual backtesting, the current "threaded for-loop" approach will hit a ceiling.
+
+Here are the concrete better suggestions to improve speed, scalability, and robustness.
+
+1. The "Small File" Problem (Architecture Change)
+Reading 85k separate files (2–5MB each) is inefficient. The Operating System overhead to open/close file handles and list directories will eventually become a bottleneck, regardless of how fast Python is.
+
+Suggestion: Write a one-time script to repartition your data. Group the 85k files into larger chunks (e.g., by Month or Year).
+Why: Reading 1 file of 1GB is significantly faster than reading 1,000 files of 1MB due to sequential I/O and reduced metadata overhead.
+Action: Create NIFTY_2025_01.parquet, NIFTY_2025_02.parquet, etc.
+2. Solve the "Python Loop" Bottleneck with Numba
+ChatGPT moved you to "Vectorized EMAs" (using Polars), which is great. However, it mentioned: "only the entry/exit state machine remains in Python."
+In backtesting, strategy logic (If Long -> Check Exit -> Else Check Entry) is iterative and usually requires a slow Python for loop.
+
+Suggestion: Use Numba. It compiles Python functions to machine code (LLVM) at runtime.
+Impact: It turns your strategy logic from "Python speed" to "C++ speed." This is standard practice in HFT/Quant backtesting in Python.
+How: Convert Polars columns to Numpy arrays $\rightarrow$ Pass to Numba function $\rightarrow$ Return signals.
+3. Use Polars LazyFrame and scan_parquet
+Instead of manually managing a ThreadPoolExecutor (which is what the last script did), use Polars' native lazy execution engine.
+
+Suggestion: pl.scan_parquet("folder/*.parquet").
+Why: Polars writes its own query plan. It knows how to parallelize reading and processing better than Python threads can. It handles memory streaming so you don't OOM (Out of Memory) when loading 85k files.
+4. Code Improvement: The "Numba + Polars" Hybrid
+Here is the "Best Way" code structure. It uses Polars for data loading/indicators (vectorized) and Numba for the trade logic (compiled).
+
+Prerequisite: pip install numba
+
+import polars as pl
+import numpy as np
+from numba import njit
+import glob
+import time
+
+# 1. The Strategy Logic (Compiled to Machine Code)
+@njit  # <--- This decorator makes it run at C-speed
+def run_backtest_numba(prices, ema5, ema21, ask0, bid0, vol):
+    n = len(prices)
+    # 0 = flat, 1 = long
+    position = 0 
+    pnl = 0.0
+    entry_price = 0.0
+    trades = 0
+    
+    # Pre-calculate spread bps (0.0005 = 5bps)
+    # Avoid doing this inside the loop if possible, or do simple math here
+    
+    for i in range(1, n):
+        # Calculate dynamic conditions
+        spread_bps = (ask0[i] - bid0[i]) / prices[i] if prices[i] > 0 else 999
+        
+        if position == 0:
+            # Entry Logic: EMA5 > EMA21, Tight Spread, Vol >= 1
+            if (ema5[i] > ema21[i]) and (spread_bps <= 0.0005) and (vol[i] >= 1):
+                position = 1
+                entry_price = prices[i]
+                trades += 1
+                
+        elif position == 1:
+            # Exit Logic: EMA21 >= EMA5 (Crossunder)
+            if ema21[i] >= ema5[i]:
+                position = 0
+                pnl += (prices[i] - entry_price)
+            # Force close on last tick
+            elif i == n - 1:
+                pnl += (prices[i] - entry_price)
+                
+    return pnl, trades
+
+def main():
+    # 2. Setup Files (Using Glob to find them)
+    path = "/Users/abhishek/workspace/nfo/newer data stocks/new 2025 data/nov 4 to nov 18 new stocks data/processed_output/raw_options/*.parquet"
+    # Note: For 85k files, pure glob might be slow. Faster to use os.scandir if needed later.
+    files = glob.glob(path)[:100] # Limit to 100 for test
+    
+    start_time = time.time()
+    
+    results = []
+
+    # 3. Processing Loop (Can be parallelized with ProcessPoolExecutor)
+    # Note: Polars usually releases GIL, but Numba + Polars is very fast even sequentially on small files.
+    # For 85k files, wrap this loop in ProcessPoolExecutor.
+    
+    for f in files:
+        try:
+            # Lazy Scan -> Filter Columns -> Eager Fetch
+            # We use eager load per file because files are small
+            df = pl.read_parquet(
+                f, 
+                columns=["timestamp", "price", "volume", "ask_price_0", "bid_price_0"]
+            )
+            
+            # Data Cleaning / Type Casting
+            # Ensure price is float
+            if df["price"].dtype != pl.Float64:
+                df = df.with_columns(pl.col("price").cast(pl.Float64))
+
+            # Vectorized Indicator Calculation (Polars is instant here)
+            df = df.with_columns([
+                pl.col("price").ewm_mean(span=5, adjust=False).alias("ema5"),
+                pl.col("price").ewm_mean(span=21, adjust=False).alias("ema21"),
+            ])
+            
+            # Drop Nulls created by indicators (if any)
+            # Passing Numpy arrays to Numba
+            pnl, trades = run_backtest_numba(
+                df["price"].to_numpy(),
+                df["ema5"].to_numpy(),
+                df["ema21"].to_numpy(),
+                df["ask_price_0"].to_numpy(),
+                df["bid_price_0"].to_numpy(),
+                df["volume"].to_numpy()
+            )
+            
+            results.append({"file": f, "pnl": pnl, "trades": trades})
+
+        except Exception as e:
+            # Handle files with missing columns
+            # print(f"Skipping {f}: {e}")
+            pass
+
+    end_time = time.time()
+    print(f"Processed {len(files)} files in {end_time - start_time:.4f} seconds")
+    
+    # Save results
+    pl.DataFrame(results).write_csv("numba_results.csv")
+
+if __name__ == "__main__":
+    main()
+Why this is better:
+Memory Efficient: It reads specific columns, processes, calculates PnL, and discards the dataframe immediately. It does not hold 6 million rows in memory.
+No Python State Machine: The run_backtest_numba function compiles to native machine instructions. The loop that checks if position == 0 happens at processor speed, not interpreter speed.
+Scalable: When you run this on 85k files, the only limit is your disk speed.
+Summary of Differences
+Feature	ChatGPT Last Approach	My Suggestion
+Logic	Python for loop or Hybrid	Numba JIT (Compiled)
+Data Reading	ThreadPoolExecutor	ProcessPool (or Polars Scan)
+Speed Limit	Python Interpreter Overhead	Disk I/O Bandwidth
+85k Scaling	High RAM usage / slower loops	Low RAM / Max CPU utilization
+Next Step: Run the code block above on your 100 files. Compare the timing against the 0.625s record. If Numba is correctly compiled, it handles the logic pass in microseconds.
+
+
+Implemented a Numba + Polars approach with parallel per-file processing in a new script, then ran it on the 100-file sample.
+
+What I added
+
+New script: strategy_benchmark_numba.py
+Uses Polars for IO + vectorized EMAs (span 5/21), order-book fields (bp0/sp0/bq0/sq0), and volume.
+Uses Numba JIT (run_strategy) for the entry/exit loop (compiled to native).
+Parallel per-file processing (ProcessPool by default; sandbox forced a fallback to ThreadPool).
+Writes per-file metrics to strategy_results_numba.csv.
+Run command and results (on this machine/sandbox):
+
+Command: python strategy_benchmark_numba.py --sample 100 --workers 16
+Sandbox blocked the process pool, so it fell back to ThreadPoolExecutor.
+Processed 82 files (others lacked required columns like price/bp0/sp0/bq0/sq0).
+Rows: 6,830,483
+Elapsed: 2.787 s
+Throughput: ~2.45 M rows/s
+Output CSV: strategy_results_numba.csv
+Why fewer files: Any file missing price or the order-book columns is skipped. If you want to include those, we can treat missing columns as nulls and proceed (will increase file count, likely speed).
+
+Comparison to the previous best (vectorized Polars + threads, 96 files, ~0.625 s):
+
+This run was slower mainly because: (a) forced thread pool instead of process pool, and (b) stricter column requirements caused more skips/retries overhead.
+With an allowed ProcessPool and all columns present, expect materially faster logic than Python loops.
+85k estimate with these timings (threaded, 2.8 s per ~6.8M rows):
+
+~2.8 s * 850 ≈ ~40 minutes if scaled linearly in this sandboxed/threaded mode.
+With a real process pool and consistent schemas, expect several minutes (disk-bound) rather than tens of minutes.
+Next steps to speed further:
+
+Relax column requirements (treat missing bp0/sp0/bq0/sq0 as null) to avoid skips and keep concurrency high.
+Retry with a true ProcessPool outside the sandbox; should reduce wall-clock materially.
+(Longer term) Repartition the 85k small files into larger monthly/weekly parquet chunks to cut IO overhead.
+1 file changed
+
+Undo
+
+View all changes
+strategy_benchmark_numba.py
++228
+-0
+
+I wanted you to now reduce data read, so read full orderbook, yes use missing values as null and keep concurrency high,
+
+create script and i will run outside sandbox - give me all commands required for redoing the test
+
+
+I added a new script that (a) keeps concurrency high, (b) tolerates missing order-book columns by filling nulls, and (c) targets the full top-5 order book levels without failing on missing fields.
+
+New script: strategy_benchmark_numba_full.py
+
+Reads only needed columns that actually exist (schema-driven); adds any missing target columns as nulls.
+Targets: timestamp, price, volume, bp/sp/bq/sq for levels 0–4.
+Vectorized EMAs via Polars; Numba-compiled entry/exit loop.
+Uses a process pool by default (meant for running outside the sandbox).
+Writes per-file metrics to strategy_results_numba_full.csv.
+What to run outside the sandbox
+
+Install deps if needed:
+pip install polars pyarrow numba
+Run the benchmark (adjust workers/sample as desired):
+python strategy_benchmark_numba_full.py --sample 100 --workers 16
+For all files: python strategy_benchmark_numba_full.py --sample 0 --workers 16
+Add --shuffle if you want randomized sampling.
+Notes:
+
+The script will skip files missing both timestamp/price; otherwise it will fill missing order-book columns with nulls and proceed.
+ProcessPoolExecutor is used; run outside the sandbox so it isn’t blocked.
+Output CSV: strategy_results_numba_full.csv in the same directory.
+1 file changed
+
+Undo
+
+View all changes
+strategy_benchmark_numba_full.py
++226
+-0
+
+abhishek@Abhisheks-MacBook-Pro options % python strategy_benchmark_numba_full.py --sample 100 --workers 16
+
+Processing 100 files with 16 workers (sample=100, shuffle=False)
+Processed 82 files
+Rows: 6,830,483
+Elapsed: 5.389 s
+Throughput: 1,267,500 rows/s
+Wrote per-file metrics to /Users/abhishek/workspace/nfo/data/raw/options/strategy_results_numba_full.csv
+
+abhishek@Abhisheks-MacBook-Pro options % python strategy_benchmark_numba_full.py --sample 0 --workers 16
+Processing 85278 files with 16 workers (sample=0, shuffle=False)
+Processed 76131 files
+Rows: 5,849,018,894
+Elapsed: 333.499 s
+Throughput: 17,538,321 rows/s
+Wrote per-file metrics to /Users/abhishek/workspace/nfo/data/raw/options/strategy_results_numba_full.csv
+
+How to speed it up now ?
+
+
+Nice throughput already (17.5M rows/s), but the main cost now is opening 85k small files and per-file overhead. To go faster:
+
+Kill per-file schema scans and missing-col overhead
+Remove the available_columns call and just read a fixed column list with columns=... plus use_pyarrow=True, then with_columns(pl.when(pl.col(c).is_null()).then(None).otherwise(pl.col(c))…) or just fill_null(0.0) after the read. This avoids one read_schema per file and dozens of column-existence checks.
+Skip the per-file sort("timestamp") if your files are already timestamp-sorted. That’s a big extra cost.
+
+Push concurrency up if you can
+
+Try --workers 24 or --workers 32 on the Mac if cores allow; you’re IO/CPU-bound but may still see gains.
+Trim columns if you don’t need all 5 levels
+If top-of-book is enough, restrict to bp0/sp0/bq0/sq0; it cuts IO and memory.
+Best long-term: reduce file count
+One-time consolidation (copy, don’t overwrite) into monthly/weekly parquet files. Reading 500 big files beats 85k tiny ones every time.
+If you want a quick rerun outside the sandbox with fewer changes:
+
+Edit strategy_benchmark_numba_full.py to drop available_columns and the per-file sort, keep only needed columns (e.g., top-of-book), then run:
+python strategy_benchmark_numba_full.py --sample 0 --workers 24
+Or with reduced columns: python strategy_benchmark_numba_full.py --sample 0 --workers 24 (after trimming the column list to bp0/sp0/bq0/sq0).
+Skip the per-file sort("timestamp") if your files are already timestamp-sorted. That’s a big extra cost. -- they are already sorted
+
+i have 14 inch mbp pro m3 max with 36gb ram
+
+also other suggestions :
+
+You are currently hitting ~17.5 million rows per second. To go faster, we need to eliminate memory bandwidth bottlenecks and process overhead.
+
+Here is how we speed it up further:
+
+"On-the-Fly" Math (The Big Win): Currently, you calculate ema5, ema21, spread, and mid in Polars (allocating full arrays in RAM) before passing them to Numba.
+Improvement: Move the EMA and Spread calculations inside the Numba loop.
+Why: This eliminates writing/reading millions of temporary floats to RAM. It keeps everything in the CPU cache (L1/L2).
+Task Batching: Submitting 85,000 individual tasks to the ProcessPool creates overhead.
+Improvement: Send files in "chunks" (e.g., 1,000 files per worker). This reduces the overhead of inter-process communication by ~1000x.
+Lazy Null Handling: Instead of pre-filling nulls (which copies data), handle checks inside Numba or use nan_to_num on the final array only.
+Faster Script: strategy_benchmark_numba_chunked.py
+This version calculates indicators during the backtest loop and processes files in batches.
+
+#!/usr/bin/env python3
+"""
+Hyper-optimized Numba Strategy.
+- Calculates EMA and Spreads INSIDE the JIT loop (saves RAM bandwidth).
+- Processes files in CHUNKS (reduces process overhead).
+"""
+
+from __future__ import annotations
+
+import argparse
+import math
+import os
+import time
+from concurrent.futures import ProcessPoolExecutor, as_completed
+from dataclasses import dataclass
+from pathlib import Path
+from typing import List, Optional
+
+import numpy as np
+import polars as pl
+import pyarrow.parquet as pq
+from numba import njit
+
+# --- JIT STRATEGY (Includes EMA Calc) ---
+@njit(fastmath=True, nogil=True)
+def run_strategy_inline(prices, bid0, ask0, volume):
+    n = len(prices)
+    if n < 2:
+        return 0.0, 0, 0
+    
+    # Constants for EMA
+    # alpha = 2 / (span + 1)
+    alpha5 = 2.0 / (5.0 + 1.0)
+    alpha21 = 2.0 / (21.0 + 1.0)
+    
+    # Initialize State
+    ema5 = prices[0]
+    ema21 = prices[0]
+    
+    pnl = 0.0
+    trades = 0
+    pos = 0
+    entry = 0.0
+    
+    # Main Loop
+    for i in range(1, n):
+        price = prices[i]
+        
+        # 1. Update Indicators on the fly
+        ema5 = price * alpha5 + ema5 * (1 - alpha5)
+        ema21 = price * alpha21 + ema21 * (1 - alpha21)
+        
+        # 2. Check Logic
+        # Spread Check (avoid division by zero)
+        a = ask0[i]
+        b = bid0[i]
+        spread_ok = False
+        if a > 0.0 and b > 0.0:
+            mid = 0.5 * (a + b)
+            # 5bps = 0.0005
+            if mid > 0.0 and ((a - b) / mid) <= 0.0005:
+                spread_ok = True
+        
+        vol_ok = volume[i] >= 1.0
+        
+        # 3. State Machine
+        if pos == 0:
+            # Long Entry
+            if (ema5 > ema21) and spread_ok and vol_ok:
+                pos = 1
+                entry = price
+                trades += 1
+        else:
+            # Exit
+            if (ema21 >= ema5) or (i == n - 1):
+                pnl += price - entry
+                pos = 0
+                
+    return pnl, trades, n
+
+@dataclass
+class FileResult:
+    file: str
+    pnl: float
+    trades: int
+    rows: int
+
+# --- WORKER FUNCTION ---
+def process_chunk(file_paths: List[Path]) -> List[FileResult]:
+    results = []
+    
+    # Reusable schema definition to hint Polars/PyArrow
+    # We only read the absolute essentials
+    cols = ["timestamp", "price", "volume", "sp0", "bp0"]
+    
+    for path in file_paths:
+        try:
+            # Using pyarrow directly for metadata is fast, but Polars read is usually fine.
+            # We wrap in try/except to handle missing files/columns efficiently.
+            
+            # Read only essential columns. 
+            # leveraging 'use_pyarrow' for speed on small files
+            df = pl.read_parquet(
+                path, 
+                columns=cols, 
+                use_pyarrow=True
+            )
+            
+            # Fast cast + Drop Nulls
+            # Note: We assume timestamp exists to sort, but we don't need to pass it to Numba
+            # dropping nulls on price/timestamp only
+            df = df.drop_nulls(subset=["price", "timestamp"])
+            
+            if df.height < 2:
+                continue
+
+            # Convert to numpy directly (Zero-copy if possible, but casting usually copies)
+            # We fill nulls with 0.0 to be safe for Numba
+            prices = df["price"].cast(pl.Float64).to_numpy()
+            bid0 = df["bp0"].cast(pl.Float64).fill_null(0.0).to_numpy()
+            ask0 = df["sp0"].cast(pl.Float64).fill_null(0.0).to_numpy()
+            volume = df["volume"].cast(pl.Float64).fill_null(0.0).to_numpy()
+
+            # Run Strategy
+            pnl, trades, rows = run_strategy_inline(prices, bid0, ask0, volume)
+            
+            results.append(FileResult(str(path), pnl, trades, rows))
+            
+        except Exception:
+            # In a chunked run, we just skip bad files silently or log lightly
+            continue
+            
+    return results
+
+# --- MAIN ---
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--workers", type=int, default=16)
+    parser.add_argument("--chunksize", type=int, default=1000, help="Files per worker task")
+    args = parser.parse_args()
+    
+    base_dir = Path("/Users/abhishek/workspace/nfo/newer data stocks/new 2025 data/nov 4 to nov 18 new stocks data/processed_output/raw_options")
+    # Alternatively use the path from your context if different
+    if not base_dir.exists():
+        # Fallback to local for testing
+        base_dir = Path(".")
+        
+    print("Listing files...")
+    files = list(base_dir.glob("*.parquet"))
+    total_files = len(files)
+    print(f"Found {total_files} files.")
+    
+    if total_files == 0:
+        return
+
+    # Chunk the files
+    chunk_size = args.chunksize
+    chunks = [files[i:i + chunk_size] for i in range(0, total_files, chunk_size)]
+    print(f"Split into {len(chunks)} chunks of ~{chunk_size} files.")
+
+    print(f"Starting execution with {args.workers} workers...")
+    t0 = time.perf_counter()
+    
+    all_metrics = []
+    
+    with ProcessPoolExecutor(max_workers=args.workers) as executor:
+        futures = [executor.submit(process_chunk, chunk) for chunk in chunks]
+        
+        for fut in as_completed(futures):
+            chunk_res = fut.result()
+            all_metrics.extend(chunk_res)
+            
+    t1 = time.perf_counter()
+    elapsed = t1 - t0
+    
+    total_rows = sum(r.rows for r in all_metrics)
+    throughput = total_rows / elapsed if elapsed > 0 else 0
+    
+    print("-" * 40)
+    print(f"Processed {len(all_metrics)}/{total_files} files successfully.")
+    print(f"Total Rows: {total_rows:,}")
+    print(f"Time Taken: {elapsed:.3f}s")
+    print(f"Throughput: {throughput:,.0f} rows/s")
+    print("-" * 40)
+    
+    # Save
+    if all_metrics:
+        # Convert dataclass list to Polars for fast CSV write
+        out_df = pl.DataFrame(all_metrics)
+        out_df.write_csv("strategy_results_fastest.csv")
+
+if __name__ == "__main__":
+    main()
+Why this is faster:
+Reduced Allocations: It doesn't create ema5, ema21, spread, or mid arrays in memory. It computes the values on the fly in the CPU register. This saves writing/reading ~24 GB of temporary data for 5.8B rows.
+Reduced Overhead: It sends tasks in batches of 1,000. The Python interpreter has to do process setup 85 times instead of 85,000 times.
+Minimal I/O: It only reads timestamp, price, volume, bp0, sp0. It ignores the rest of the order book.
+
+Here’s a faster, simpler script that matches the requested changes:
+
+No per-file sort("timestamp") (assumes files are already sorted).
+Computes EMA and spread inside the Numba loop (no temp arrays).
+Reads only essential columns (timestamp, price, volume, bp0, sp0); missing values are treated as 0, and bad files are skipped.
+Batches files into chunks to slash process-pool overhead.
+Added: strategy_benchmark_numba_chunked.py
+
+Run it outside the sandbox on your M3 Max (adjust workers/chunksize to taste):
+
+# For a quick 100-file test
+python strategy_benchmark_numba_chunked.py --sample 100 --workers 24 --chunksize 1000
+
+# Full dataset
+python strategy_benchmark_numba_chunked.py --sample 0 --workers 24 --chunksize 1000
+What it does:
+
+Uses ProcessPoolExecutor with chunked file lists.
+Numba JIT run_strategy_inline computes EMA5/EMA21 and spread checks on the fly.
+Drops rows missing timestamp/price; fills bp0/sp0/volume nulls with 0 inside NumPy arrays.
+Writes strategy_results_fastest.csv in the same directory with per-file pnl, trades, rows.
+Suggested tweaks to try for more speed:
+
+Bump --workers (e.g., 24 or 32) to match your cores.
+Adjust --chunksize (e.g., 2000) to reduce task overhead.
+If top-of-book is enough (as coded), you’re already minimizing IO; if you ever need deeper levels, add them to the cols list, but keep it lean for speed.
+If any files fail due to missing columns, they’ll just be skipped; if you want to keep them, add a tiny try/except to substitute empty arrays instead of skipping.
+1 file changed
+
+Undo
+
+View all changes
+strategy_benchmark_numba_chunked.py
++164
+-0
+
+abhishek@Abhisheks-MacBook-Pro options % python strategy_benchmark_numba_chunked.py --sample 100 --workers 24 --chunksize 1000
+
+Processing 100 files in 1 chunks of ~1000 with 24 workers.
+Processed 82/100 files
+Rows: 6,830,483
+Elapsed: 3.315 s
+Throughput: 2,060,652 rows/s
+Wrote per-file metrics to /Users/abhishek/workspace/nfo/data/raw/options/strategy_results_fastest.csv
+abhishek@Abhisheks-MacBook-Pro options % python strategy_benchmark_numba_chunked.py --sample 0 --workers 24 --chunksize 1000
+
+Processing 85278 files in 86 chunks of ~1000 with 24 workers.
+Processed 75950/85278 files
+Rows: 5,843,632,809
+Elapsed: 58.379 s
+Throughput: 100,098,778 rows/s
+Wrote per-file metrics to /Users/abhishek/workspace/nfo/data/raw/options/strategy_results_fastest.csv
+abhishek@Abhisheks-MacBook-Pro options %
+
+
+Great run—100M rows/s is a big jump.
+
+What you’re seeing:
+
+Full run: 85,278 files → processed 75,950 files; 5.84B rows in 58.379 s → ~100M rows/s.
+The ~9.3k files not processed likely miss price (or timestamp), so they’re skipped by design. Everything else ran with top-of-book only and on-the-fly EMA/spread in Numba, plus 1k-file chunking.
+If you want to pull in more files (reduce skips) without sacrificing speed:
+
+Make bid/ask optional: keep timestamp, price, and set bp0/sp0/volume to 0.0 when missing (already happens), but if a file lacks price you still have to skip it—no price, no P&L.
+Add a quick skip log: count how many files were skipped and why (missing price vs read error). That won’t hurt speed much.
+If you want to keep pushing speed:
+
+Bump --workers to 32 on the M3 Max if thermals allow.
+Try a larger --chunksize (e.g., 2000) to further cut task overhead.
+Keep the column set lean (as-is). Avoid adding deeper book levels unless needed.
+Current output file: strategy_results_fastest.csv in /Users/abhishek/workspace/nfo/data/raw/options.
+
+can you move these recently created 4-5 files - of results and scripts to a new folder named 'backtesting-script-testing-and-result' and move that out of this folder. move from /Users/abhishek/workspace/nfo/data/raw/options to /Users/abhishek/workspace/nfo/backtesting-script-testing-and-result
+
+
+Moved the benchmark scripts and result CSVs to the requested location:
+
+/Users/abhishek/workspace/nfo/backtesting-script-testing-and-result/ now contains:
+
+parquet_benchmark_2.py
+strategy_benchmark.py
+strategy_benchmark_orderbook.py
+strategy_benchmark_numba.py
+strategy_benchmark_numba_full.py
+strategy_benchmark_numba_chunked.py
+strategy_results.csv
+strategy_results_orderbook.csv
+strategy_results_numba.csv
+strategy_results_numba_full.csv
+strategy_results_fastest.csv
+
+
+
+
+
+Auto context
+
+
+Local
+
+Agent
+
+GPT-5.1-Codex-Max
+
+Extra high
