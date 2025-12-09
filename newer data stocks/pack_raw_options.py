@@ -120,17 +120,21 @@ def ensure_ohlc(df: pl.DataFrame) -> pl.DataFrame:
 
     df = df.with_columns([pl.col(c).cast(pl.Float64, strict=False) for c in ("open", "high", "low", "close")])
 
-    # Repair zeros/nulls
+    # Repair zeros/nulls (use close as fallback)
     df = df.with_columns([
         pl.when((pl.col("open") <= 0) | pl.col("open").is_null()).then(pl.col("close")).otherwise(pl.col("open")).alias("open"),
-        pl.when((pl.col("high") <= 0) | pl.col("high").is_null()).then(pl.max_horizontal("open", "close")).otherwise(pl.col("high")).alias("high"),
-        pl.when((pl.col("low") <= 0) | pl.col("low").is_null()).then(pl.min_horizontal("open", "close")).otherwise(pl.col("low")).alias("low"),
+        pl.when((pl.col("high") <= 0) | pl.col("high").is_null()).then(pl.col("close")).otherwise(pl.col("high")).alias("high"),
+        pl.when((pl.col("low") <= 0) | pl.col("low").is_null()).then(pl.col("close")).otherwise(pl.col("low")).alias("low"),
     ])
-    # Enforce bounds
-    df = df.with_columns([
-        pl.min_horizontal("low", "open", "close").alias("low"),
-        pl.max_horizontal("high", "open", "close").alias("high"),
-    ])
+    return df
+
+
+def ensure_price(df: pl.DataFrame) -> pl.DataFrame:
+    """Ensure a price column exists (float)."""
+    if "price" in df.columns:
+        df = df.with_columns(pl.col("price").cast(pl.Float64, strict=False))
+    else:
+        df = df.with_columns(pl.col("close").alias("price"))
     return df
 
 
@@ -166,7 +170,19 @@ def process_raw_file(path: str, cal: pl.DataFrame) -> pl.DataFrame | None:
         print(f"Error {path}: no timestamp")
         return None
 
+    # Keep only rows for the contract month (filters out future-series duplicates)
+    if "month" in df.columns:
+        df = df.filter(pl.col("timestamp").dt.month() == pl.col("month"))
+
     df = ensure_ohlc(df)
+    df = ensure_price(df)
+
+    # Drop rows with no volume/qty signal (prewarm artifacts)
+    if "volume" in df.columns:
+        df = df.filter(pl.col("volume").is_null() | (pl.col("volume") > 0))
+    if "qty" in df.columns:
+        df = df.filter(pl.col("qty").is_null() | (pl.col("qty") > 0))
+
     df = compute_vol_delta(df)
 
     # Keep one row per timestamp
@@ -205,7 +221,7 @@ def process_raw_file(path: str, cal: pl.DataFrame) -> pl.DataFrame | None:
     # Final columns only
     dfj = dfj.select([
         "timestamp", "symbol", "opt_type", "strike",
-        "open", "high", "low", "close", "vol_delta",
+        "price", "open", "high", "low", "close", "vol_delta",
         "expiry", "expiry_type", "is_monthly", "is_weekly",
     ])
     return dfj
@@ -224,13 +240,13 @@ def write_partition(out_dir: Path, g: pl.DataFrame):
     out_path.parent.mkdir(parents=True, exist_ok=True)
 
     # Final safety: keep only expected columns
-    keep = {
+    keep = [
         "timestamp", "symbol", "opt_type", "strike",
-        "open", "high", "low", "close", "vol_delta",
+        "price", "open", "high", "low", "close", "vol_delta",
         "expiry", "expiry_type", "is_monthly", "is_weekly",
-    }
-    if any(c not in keep for c in g.columns):
-        g = g.select(sorted(list(keep), key=list(keep).index))
+    ]
+    if any(c not in keep for c in g.columns) or any(c not in g.columns for c in keep):
+        g = g.select(keep)
 
     try:
         if out_path.exists():

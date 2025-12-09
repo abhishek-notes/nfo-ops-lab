@@ -268,6 +268,9 @@ with tab1:
     st.markdown(f"**Rows:** {raw_df.height:,}")
     st.markdown(f"**Columns:** {len(raw_df.columns)}")
 
+    raw_start = st.number_input("Start row (raw)", min_value=0, value=0, step=100)
+    raw_rows = st.number_input("Rows to show (raw)", min_value=10, value=500, step=100)
+
     # Show schema
     with st.expander("Schema"):
         schema_df = pl.DataFrame({
@@ -277,7 +280,7 @@ with tab1:
         st.dataframe(schema_df, use_container_width=True)
 
     # Show data
-    st.dataframe(raw_df.head(500).to_pandas(), use_container_width=True)
+    st.dataframe(raw_df.slice(raw_start, raw_rows).to_pandas(), use_container_width=True)
 
 with tab2:
     st.header("Packed Parquet Data")
@@ -315,6 +318,9 @@ with tab2:
             if 'selected_date' in dir() and selected_date != "All Dates":
                 packed_df = packed_df.filter(pl.col('timestamp').dt.date() == selected_date)
 
+            packed_start = st.number_input("Start row (packed)", min_value=0, value=0, step=100)
+            packed_rows = st.number_input("Rows to show (packed)", min_value=10, value=500, step=100)
+
             st.markdown(f"**Source:** `{packed_path}`")
             st.markdown(f"**Rows:** {packed_df.height:,}")
             st.markdown(f"**Columns:** {len(packed_df.columns)}")
@@ -326,7 +332,7 @@ with tab2:
                 })
                 st.dataframe(schema_df, use_container_width=True)
 
-            st.dataframe(packed_df.head(500).to_pandas(), use_container_width=True)
+            st.dataframe(packed_df.slice(packed_start, packed_rows).to_pandas(), use_container_width=True)
         else:
             st.warning(f"No packed data found for {selected_symbol} {selected_strike} {selected_opt_type}")
     else:
@@ -353,14 +359,22 @@ with tab3:
         st.markdown(f"**SQL File:** `{sql_file}`")
         st.markdown(f"**Table Name:** `{table_name}`")
 
-        num_rows = st.slider("Rows to extract", 10, 500, 50)
+        sql_start = st.number_input("Start row (SQL extract)", min_value=0, value=0, step=50)
+        sql_rows = st.number_input("Rows to show (SQL extract)", min_value=10, value=100, step=50)
 
         if st.button("Extract SQL Rows"):
             with st.spinner("Extracting from SQL.gz..."):
-                sql_rows = extract_sql_rows(str(sql_file), table_name, limit=num_rows)
-                if sql_rows:
-                    sql_df = pl.DataFrame(sql_rows)
-                    st.success(f"Extracted {len(sql_rows)} rows")
+                sql_records = extract_sql_rows(str(sql_file), table_name, limit=sql_start + sql_rows)
+                if sql_records:
+                    sql_df = pl.DataFrame(sql_records)
+                    if "timestamp" in sql_df.columns:
+                        sql_df = sql_df.with_columns(
+                            pl.col("timestamp").cast(pl.Utf8).str.slice(0, 19).alias("_ts_norm")
+                        )
+                    if sql_start > 0:
+                        sql_df = sql_df.slice(sql_start, sql_rows)
+                    st.session_state["sql_df"] = sql_df
+                    st.success(f"Extracted {len(sql_records)} rows (showing {len(sql_df)})")
                     st.dataframe(sql_df.to_pandas(), use_container_width=True)
                 else:
                     st.warning(f"No data found for table `{table_name}`")
@@ -369,6 +383,8 @@ with tab3:
 
 with tab4:
     st.header("Compare Raw vs Packed")
+
+    sql_df = st.session_state.get("sql_df")
 
     if 'packed_df' in dir() and packed_df is not None:
         col1, col2 = st.columns(2)
@@ -403,64 +419,75 @@ with tab4:
         st.subheader("Column Comparison")
         raw_cols = set(raw_df.columns)
         packed_cols = set(packed_df.columns)
+        sql_cols = set(sql_df.columns) if sql_df is not None else set()
 
-        common = raw_cols & packed_cols
-        raw_only = raw_cols - packed_cols
-        packed_only = packed_cols - raw_cols
-
-        col1, col2, col3 = st.columns(3)
-        with col1:
-            st.markdown("**Common Columns**")
-            st.write(sorted(list(common)))
-        with col2:
-            st.markdown("**Raw Only**")
-            st.write(sorted(list(raw_only)))
-        with col3:
-            st.markdown("**Packed Only**")
-            st.write(sorted(list(packed_only)))
+        union_cols = sorted(raw_cols | packed_cols | sql_cols)
+        presence = []
+        for c in union_cols:
+            presence.append({
+                "Column": c,
+                "Raw": c in raw_cols,
+                "Packed": c in packed_cols,
+                "SQL": c in sql_cols
+            })
+        st.dataframe(pl.DataFrame(presence).to_pandas(), use_container_width=True)
 
         # Sample row comparison
         st.markdown("---")
         st.subheader("Sample Row Comparison")
 
-        if raw_df.height > 0 and packed_df.height > 0:
-            # Find matching timestamps
-            if 'timestamp' in raw_df.columns and 'timestamp' in packed_df.columns:
-                raw_ts = raw_df.select('timestamp').to_series().to_list()
-                packed_ts = packed_df.select('timestamp').to_series().to_list()
+        def ts_strings(df):
+            """Normalize timestamps to second-level strings for matching."""
+            if df is None:
+                return set()
+            if "_ts_norm" in df.columns:
+                return set(df["_ts_norm"].to_list())
+            if "timestamp" not in df.columns:
+                return set()
+            return set(
+                df.select(
+                    pl.col("timestamp")
+                    .cast(pl.Utf8)
+                    .str.slice(0, 19)  # trim tz/offset if present
+                    .alias("ts")
+                )["ts"].to_list()
+            )
 
-                # Find first matching timestamp
-                matching_ts = None
-                for ts in raw_ts[:100]:
-                    if ts in packed_ts:
-                        matching_ts = ts
-                        break
+        common_ts = ts_strings(raw_df) & ts_strings(packed_df)
+        if sql_df is not None:
+            common_ts = common_ts & ts_strings(sql_df)
 
-                if matching_ts:
-                    st.markdown(f"**Comparing row at timestamp:** `{matching_ts}`")
+        if common_ts:
+            ts_choices = sorted(list(common_ts))[:200]
+            chosen_ts = st.selectbox("Choose common timestamp", ts_choices)
 
-                    raw_row = raw_df.filter(pl.col('timestamp') == matching_ts).head(1)
-                    packed_row = packed_df.filter(pl.col('timestamp') == matching_ts).head(1)
+            raw_row = raw_df.filter(pl.col('timestamp').cast(pl.Utf8).str.slice(0, 19) == chosen_ts).head(1)
+            packed_row = packed_df.filter(pl.col('timestamp').cast(pl.Utf8).str.slice(0, 19) == chosen_ts).head(1)
+            sql_row = None
+            if sql_df is not None:
+                ts_col = "_ts_norm" if "_ts_norm" in sql_df.columns else "timestamp"
+                sql_row = sql_df.filter(pl.col(ts_col).cast(pl.Utf8).str.slice(0, 19) == chosen_ts).head(1)
 
-                    # Compare OHLC
-                    ohlc_cols = ['open', 'high', 'low', 'close']
-                    comparison = []
-                    for col in ohlc_cols:
-                        if col in raw_row.columns and col in packed_row.columns:
-                            raw_val = raw_row[col][0] if raw_row.height > 0 else None
-                            packed_val = packed_row[col][0] if packed_row.height > 0 else None
-                            match = "Yes" if raw_val == packed_val else "No"
-                            comparison.append({
-                                'Column': col,
-                                'Raw': raw_val,
-                                'Packed': packed_val,
-                                'Match': match
-                            })
+            col_sections = []
+            if raw_row.height > 0:
+                col_sections.append(("Raw", raw_row))
+            if packed_row.height > 0:
+                col_sections.append(("Packed", packed_row))
+            if sql_row is not None and sql_row.height > 0:
+                col_sections.append(("SQL", sql_row))
 
-                    if comparison:
-                        st.dataframe(pl.DataFrame(comparison).to_pandas(), use_container_width=True)
-                else:
-                    st.info("No matching timestamps found between raw and packed data")
+            for name, df_ in col_sections:
+                display_df = df_.drop("_ts_norm") if "_ts_norm" in df_.columns else df_
+                st.subheader(f"{name} row @ {chosen_ts}")
+                st.dataframe(display_df.to_pandas(), use_container_width=True)
+                json_text = display_df.head(1).to_pandas().to_json(orient="records", date_format="iso")
+                st.text_area(f"{name} row (copyable JSON)", json_text, height=120)
+        else:
+            raw_count = len(ts_strings(raw_df))
+            packed_count = len(ts_strings(packed_df))
+            sql_count = len(ts_strings(sql_df)) if sql_df is not None else 0
+            st.info(f"No common timestamps across raw/packed/SQL for comparison "
+                    f"(raw={raw_count}, packed={packed_count}, sql={sql_count})")
     else:
         st.info("Load packed data in the 'Packed Parquet' tab first")
 
