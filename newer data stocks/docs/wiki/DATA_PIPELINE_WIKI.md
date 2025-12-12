@@ -121,15 +121,24 @@ REPLACE INTO `BANKNIFTY25DEC48000CE` VALUES
 
 ## 3. Stage 1: SQL Extraction to Raw Parquet
 
-### Script
+### Overview
 
-**Location**: `scripts/sql_extraction/extract_sql_fast.py`
+There are **two approaches** for SQL dump processing, both available:
 
-### Purpose
+1. **Fast Extraction** (`extract_sql_fast.py`) - Quick conversion to raw parquet
+2. **Comprehensive Pipeline** (`process_new_data.py`) - Extraction + packing in one script
 
-Extract individual option contracts from SQL dumps and convert to Parquet files.
+Both produce compatible raw parquet files.
 
-### Process
+---
+
+### Approach A: Fast Extraction (extract_sql_fast.py)
+
+**Script Location**: `scripts/sql_extraction/extract_sql_fast.py`
+
+**Purpose**: Fast, simple extraction from SQL.gz to raw parquet format.
+
+#### Process
 
 ```python
 # High-level algorithm
@@ -143,7 +152,7 @@ for each SQL dump file:
             5. Write to parquet: "banknifty25dec48000ce.parquet"
 ```
 
-### Key Functions
+#### Key Functions
 
 ```python
 def parse_table_name(name: str) -> dict:
@@ -172,13 +181,130 @@ def rows_to_dataframe(rows: list, meta: dict) -> pl.DataFrame:
     """
 ```
 
-### Output
+#### Usage
 
-**Directory**: One parquet file per contract  
-**Naming**: `{underlying}{yy}{mon}{strike}{type}.parquet`  
-**Example**: `banknifty25dec48000ce.parquet`
+```bash
+cd scripts/sql_extraction
 
-**Schema** (46 base + 6 metadata = **52 columns**):
+# Extract BANKNIFTY
+python extract_sql_fast.py \
+    ../../data/new\ 2025\ data/das_bankopt_mod.sql.gz \
+    --output ../../temp/raw_parquet/ \
+    --symbol BANKNIFTY
+
+# Extract NIFTY
+python extract_sql_fast.py \
+    ../../data/new\ 2025\ data/das_niftyopt_mod.sql.gz \
+    --output ../../temp/raw_parquet/ \
+    --symbol NIFTY
+```
+
+**Performance**: ~1-2 minutes per 1 GB SQL.gz file
+
+---
+
+### Approach B: Comprehensive Pipeline (process_new_data.py)
+
+**Script Location**: `scripts/sql_extraction/process_new_data.py`
+
+**Purpose**: All-in-one script that extracts from SQL.gz AND packs to final format.
+
+#### Features
+
+1. **SQL Extraction** (same as Approach A)
+2. **Automatic Packing** (includes repacking logic)
+3. **Expiry Mapping** (uses expiry calendar)
+4. **1970 Bug Handling** (fixes timestamp issues)
+5. **OHLC Normalization** (ensures complete OHLC)
+6. **Volume Delta** (computes incremental volume)
+
+#### Two-Step Process
+
+```bash
+cd scripts/sql_extraction
+
+# Step 1: Extract SQL.gz to raw parquet
+python process_new_data.py \
+    --input-dir ../../data/new\ 2025\ data/ \
+    --output-dir ../../temp/processed_output/ \
+    --calendar ../../config/expiry_calendar.csv \
+    --step extract
+
+# Step 2: Pack raw parquet to final format
+python process_new_data.py \
+    --input-dir ../../data/new\ 2025\ data/ \
+    --output-dir ../../temp/processed_output/ \
+    --calendar ../../config/expiry_calendar.csv \
+    --step pack
+
+# Or both steps at once
+python process_new_data.py \
+    --input-dir ../../data/new\ 2025\ data/ \
+    --output-dir ../../temp/processed_output/ \
+    --calendar ../../config/expiry_calendar.csv \
+    --step all
+```
+
+#### Output Structure (Approach B)
+
+```
+processed_output/
+├── raw_options/                      # Stage 1 output
+│   ├── banknifty25dec48000ce.parquet
+│   └── ...
+│
+└── packed_options/                   # Stage 2 output
+    ├── BANKNIFTY/
+    │   └── 202512/                   # YYYYMM
+    │       └── exp=2025-12-25/       # Expiry partition
+    │           ├── type=CE/          # Option type partition
+    │           │   ├── strike=48000.parquet
+    │           │   └── strike=48100.parquet
+    │           └── type=PE/
+    │               └── strike=48000.parquet
+    └── NIFTY/
+        └── 202512/
+            └── ...
+```
+
+**Note**: This creates a different directory structure than our main v3 pipeline (which uses `{date}/{underlying}/part-*.parquet`). This is an alternative organization scheme.
+
+#### Key Differences from Approach A
+
+| Feature | extract_sql_fast.py | process_new_data.py |
+|---------|---------------------|---------------------|
+| SQL Parsing | ✅ | ✅ |
+| Raw Parquet Output | ✅ | ✅ |
+| Auto Packing | ❌ | ✅ |
+| Expiry Mapping | ❌ | ✅ |
+| 1970 Bug Fix | ❌ | ✅ |
+| Output Structure | Flat (one file per contract) | Nested (YYYYMM/exp/type/strike) |
+| Use Case | Quick extraction, then manual repacking | End-to-end automated processing |
+
+---
+
+### Which Approach to Use?
+
+**Use `extract_sql_fast.py` when**:
+- You want quick SQL → parquet conversion
+- You'll use separate repacking scripts (v1/v2/v3)
+- You need flat file structure for processing
+
+**Use `process_new_data.py` when**:
+- You want end-to-end processing in one command
+- You prefer YYYYMM/expiry/type/strike directory structure
+- You need auto expiry mapping and 1970 bug fixes
+
+**Current Project State**: 
+- Both scripts exist and work
+- Main data pipeline uses `extract_sql_fast.py` → `repack_v3_SPOT_ENRICHED.py`
+- `process_new_data.py` is alternative/legacy approach
+
+---
+
+### Common Output Schema (Both Approaches)
+
+**Raw Parquet Schema** (52 columns):
 
 Original 46 SQL columns +
 - `symbol` (String): BANKNIFTY, NIFTY
@@ -187,22 +313,6 @@ Original 46 SQL columns +
 - `year` (Int32): 2025, 2024, etc.
 - `month` (Int32): 1-12
 - `ts` (Datetime): Copy of timestamp (for 1970 bug handling)
-
-### Performance
-
-- **Speed**: ~1-2 minutes per SQL.gz file (1 GB)
-- **Output**: ~200-300 parquet files per dump
-- **Memory**: Streaming parser, low memory footprint
-
-### Command
-
-```bash
-cd scripts/sql_extraction
-python extract_sql_fast.py \
-    /path/to/das_bankopt_mod.sql.gz \
-    --output /path/to/raw_parquet/ \
-    --symbol BANKNIFTY
-```
 
 ---
 
