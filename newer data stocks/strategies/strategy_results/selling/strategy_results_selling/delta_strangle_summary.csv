@@ -1,0 +1,3 @@
+underlying,trades,wins,win_rate_%,total_pnl_after_costs,avg_pnl,avg_hold_minutes
+BANKNIFTY,81,39,48.1,-2440.75,-30.13,360.0
+NIFTY,32,11,34.4,-584.10,-18.25,360.0

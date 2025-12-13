@@ -141,19 +141,30 @@ This ensures:
 │   └── new 2025 data/
 │
 ├── strategies/                                  # STRATEGY CODE
-│   ├── original/                                # 12 original basic strategies
-│   │   └── run_ORIGINAL_12_strategies_numba.py
-│   ├── advanced/                                # 10 advanced strategies
-│   │   ├── run_ALL_strategies_numba.py
-│   │   └── run_advanced_strategies.py
-│   ├── theta/                                   # 3 theta strategies
-│   │   └── run_3_THETA_strategies.py
-│   ├── ai/                                      # AI-suggested strategies
-│   │   ├── run_strategy2_orderbook.py
-│   │   ├── run_strategies_3_and_5.py
-│   │   ├── run_AI_strategy4_test.py
-│   │   └── run_5_AI_strategies_COMPLETE.py
-│   └── legacy/                                  # Legacy/deprecated
+│   ├── buying/                                  # Option buying strategies
+│   │   └── run_momentum_burst_buying.py
+│   ├── selling/                                 # Option selling strategies
+│   │   ├── original/                            # 12 original basic strategies
+│   │   │   └── run_ORIGINAL_12_strategies_numba.py
+│   │   ├── advanced/                            # 10 advanced strategies
+│   │   │   ├── run_ALL_strategies_numba.py
+│   │   │   └── run_advanced_strategies.py
+│   │   ├── theta/                               # 3 theta strategies
+│   │   │   └── run_3_THETA_strategies.py
+│   │   ├── ai/                                  # AI-suggested strategies
+│   │   │   ├── run_strategy2_orderbook.py
+│   │   │   ├── run_strategies_3_and_5.py
+│   │   │   ├── run_AI_strategy4_test.py
+│   │   │   └── run_5_AI_strategies_COMPLETE.py
+│   │   └── legacy/                              # Legacy/deprecated
+│   └── strategy_results/                        # RESULTS (moved from root)
+│       ├── buying/
+│       │   └── strategy_results_buying/
+│       └── selling/
+│           ├── strategy_results_original_optimized/
+│           ├── strategy_results_all_advanced/
+│           ├── strategy_results_theta/
+│           └── ... (12 total)
 │
 ├── scripts/                                     # DATA PROCESSING
 │   ├── data_processing/                         # Main ETL pipeline
@@ -172,7 +183,8 @@ This ensures:
 ├── docs/                                        # DOCUMENTATION
 │   ├── wiki/                                     # Technical wikis
 │   │   ├── OPTIONS_BACKTESTING_FRAMEWORK_WIKI.md (this file)
-│   │   └── THETA_STRATEGIES_SYSTEMATIC.md
+│   │   ├── THETA_STRATEGIES_SYSTEMATIC.md
+│   │   └── DATA_PIPELINE_WIKI.md
 │   ├── guides/                                   # Implementation guides
 │   │   ├── BACKTESTING_GUIDE.md
 │   │   ├── HIGH_PERFORMANCE_BACKTESTING_GUIDE.md
@@ -181,10 +193,7 @@ This ensures:
 │   │   └── PROJECT_IMPLEMENTATION_JOURNEY.md
 │   └── activity_logs/                            # Activity logs
 │
-├── results/                                     # RESULTS OUTPUT
-│   ├── strategy_results_ai_strat1/
-│   ├── strategy_results_theta/
-│   └── ...
+├── results/                                     # Deprecated - moved to strategies/strategy_results/
 │
 ├── logs/                                        # EXECUTION LOGS
 │
