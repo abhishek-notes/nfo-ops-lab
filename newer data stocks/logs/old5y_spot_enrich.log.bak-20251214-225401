@@ -1,0 +1,60 @@
+Started: Sun Dec 14 22:37:33 IST 2025
+Input:   /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v2_SORTED_NO_SPOT
+Output:  /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED
+Spot:    newer data stocks/data/spot_data_OLD5Y
+
+PID: 91292
+================================================================================
+Enrich BANKNIFTY 2019-07-02
+================================================================================
+
+thread 'tokio-runtime-worker' panicked at crates/polars-utils/src/mem.rs:101:17:
+Invalid argument (os error 22)
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+thread 'tokio-runtime-worker' panicked at crates/polars-stream/src/nodes/io_sources/parquet/init.rs:155:53:
+called `Result::unwrap()` on an `Err` value: JoinError::Panic(Id(345), "Invalid argument (os error 22)", ...)
+
+thread 'tokio-runtime-worker' panicked at crates/polars-stream/src/nodes/io_sources/parquet/init.rs:225:31:
+called `Result::unwrap()` on an `Err` value: JoinError::Panic(Id(301), "called `Result::unwrap()` on an `Err` value: JoinError::Panic(Id(345), \"Invalid argument (os error 22)\", ...)", ...)
+
+thread 'async-executor-9' panicked at crates/polars-stream/src/nodes/io_sources/parquet/mod.rs:257:80:
+called `Result::unwrap()` on an `Err` value: JoinError::Panic(Id(302), "called `Result::unwrap()` on an `Err` value: JoinError::Panic(Id(301), \"called `Result::unwrap()` on an `Err` value: JoinError::Panic(Id(345), \\\"Invalid argument (os error 22)\\\", ...)\", ...)", ...)
+
+thread 'tokio-runtime-worker' panicked at crates/polars-mem-engine/src/executors/cache.rs:132:22:
+called `Result::unwrap()` on an `Err` value: JoinError::Panic(Id(297), "called `Result::unwrap()` on an `Err` value: JoinError::Panic(Id(302), \"called `Result::unwrap()` on an `Err` value: JoinError::Panic(Id(301), \\\"called `Result::unwrap()` on an `Err` value: JoinError::Panic(Id(345), \\\\\\\"Invalid argument (os error 22)\\\\\\\", ...)\\\", ...)\", ...)", ...)
+
+thread '<unnamed>' panicked at crates/polars-mem-engine/src/executors/cache.rs:167:54:
+called `Result::unwrap()` on an `Err` value: JoinError::Panic(Id(296), "called `Result::unwrap()` on an `Err` value: JoinError::Panic(Id(297), \"called `Result::unwrap()` on an `Err` value: JoinError::Panic(Id(302), \\\"called `Result::unwrap()` on an `Err` value: JoinError::Panic(Id(301), \\\\\\\"called `Result::unwrap()` on an `Err` value: JoinError::Panic(Id(345), \\\\\\\\\\\\\\\"Invalid argument (os error 22)\\\\\\\\\\\\\\\", ...)\\\\\\\", ...)\\\", ...)\", ...)", ...)
+Traceback (most recent call last):
+  File "/Users/abhishek/workspace/nfo/newer data stocks/scripts/data_processing/enrich_old5y_packed_with_spot.py", line 271, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/Users/abhishek/workspace/nfo/newer data stocks/scripts/data_processing/enrich_old5y_packed_with_spot.py", line 247, in main
+    enriched, stats = enrich_one_file(in_path, spot)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/abhishek/workspace/nfo/newer data stocks/scripts/data_processing/enrich_old5y_packed_with_spot.py", line 73, in enrich_one_file
+    options = read_parquet_safe(options_path)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/abhishek/workspace/nfo/newer data stocks/scripts/data_processing/enrich_old5y_packed_with_spot.py", line 63, in read_parquet_safe
+    return pl.read_parquet(path, memory_map=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+    return function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+    return function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/polars/io/parquet/functions.py", line 289, in read_parquet
+    return lf.collect()
+           ^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/polars/_utils/deprecation.py", line 97, in wrapper
+    return function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/polars/lazyframe/opt_flags.py", line 330, in wrapper
+    return function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/polars/lazyframe/frame.py", line 2335, in collect
+    return wrap_df(ldf.collect(engine, callback))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pyo3_runtime.PanicException: called `Result::unwrap()` on an `Err` value: JoinError::Panic(Id(296), "called `Result::unwrap()` on an `Err` value: JoinError::Panic(Id(297), \"called `Result::unwrap()` on an `Err` value: JoinError::Panic(Id(302), \\\"called `Result::unwrap()` on an `Err` value: JoinError::Panic(Id(301), \\\\\\\"called `Result::unwrap()` on an `Err` value: JoinError::Panic(Id(345), \\\\\\\\\\\\\\\"Invalid argument (os error 22)\\\\\\\\\\\\\\\", ...)\\\\\\\", ...)\\\", ...)\", ...)", ...)

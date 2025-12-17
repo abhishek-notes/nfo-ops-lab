@@ -7,8 +7,18 @@ Adding logging to see why no trades are being generated
 import polars as pl
 from pathlib import Path
 
+
+def _project_root() -> Path:
+    here = Path(__file__).resolve()
+    for parent in here.parents:
+        if (parent / "data").is_dir() and (parent / "strategies").is_dir():
+            return parent
+    raise RuntimeError("Could not locate project root (expected 'data/' and 'strategies/' directories).")
+
+
 # Test on single date
-data_dir = Path("../../data/options_date_packed_FULL_v3_SPOT_ENRICHED")
+root = _project_root()
+data_dir = root / "data" / "options_date_packed_FULL_v3_SPOT_ENRICHED"
 sample_dates = sorted([d for d in data_dir.glob("*") if d.is_dir() and "1970" not in d.name])[:5]
 
 print("="*80)
@@ -23,15 +33,26 @@ for date_dir in sample_dates:
         print("  No BANKNIFTY data")
         continue
     
-    files = list(underlying_dir.glob("*.parquet"))
-    if not files:
-        print("  No files")
-        continue
-    
-    df = pl.read_parquet(files[0], columns=[
-        'timestamp', 'strike', 'distance_from_spot', 'opt_type', 
-        'price', 'bp0', 'sp0', 'bq0', 'sq0', 'expiry', 'spot_price'
-    ]).filter(pl.col('timestamp').dt.year() > 1970)
+    df = (
+        pl.scan_parquet(str(underlying_dir / "*.parquet"))
+        .select(
+            [
+                "timestamp",
+                "strike",
+                "distance_from_spot",
+                "opt_type",
+                "price",
+                "bp0",
+                "sp0",
+                "bq0",
+                "sq0",
+                "expiry",
+                "spot_price",
+            ]
+        )
+        .filter(pl.col("timestamp").dt.year() > 1970)
+        .collect()
+    )
     
     print(f"  Total rows: {len(df):,}")
     

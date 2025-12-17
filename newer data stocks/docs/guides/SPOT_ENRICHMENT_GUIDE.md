@@ -4,28 +4,28 @@
 
 ### 1. Extract Spot Data (One-Time)
 ```bash
-cd "/Users/abhishek/workspace/nfo/newer data stocks"
+cd "newer data stocks"
 
 # Extract NIFTY and BANKNIFTY spot from all SQL dumps
-python3 extract_spot_data.py \
-  --data-dirs "new 2025 data" \
-  --output-dir "spot_data" \
+python3 scripts/spot_extraction/extract_spot_data.py \
+  --data-dirs "data/new 2025 data" \
+  --output-dir "data/spot_data" \
   --symbols NIFTY BANKNIFTY
 ```
 
 **Output**:
-- `spot_data/NIFTY_all.parquet` - Consolidated NIFTY spot (all dates)
-- `spot_data/BANKNIFTY_all.parquet` - Consolidated BANKNIFTY spot (all dates)
-- Per-folder files: `spot_data/NIFTY_aug_1_to_aug_13_new_stocks_data.parquet`, etc.
+- `data/spot_data/NIFTY_all.parquet` - Consolidated NIFTY spot (all dates)
+- `data/spot_data/BANKNIFTY_all.parquet` - Consolidated BANKNIFTY spot (all dates)
+- Per-folder files: `data/spot_data/NIFTY_aug_1_to_aug_13_new_stocks_data.parquet`, etc.
 
 ### 2. Repack One Folder (Test)
 ```bash
 # Test on one folder first
-python3 repack_raw_to_date_v3_SPOT_ENRICHED.py \
-  --input-dir "new 2025 data/nov 4 to nov 18 new stocks data" \
+python3 scripts/data_processing/repack_raw_to_date_v3_SPOT_ENRICHED.py \
+  --input-dir "data/new 2025 data/nov 4 to nov 18 new stocks data/processed_output/raw_options" \
   --output-dir "data/options_date_packed_FULL_v3_SPOT_ENRICHED" \
-  --expiry-calendar "expiry_calendar.csv" \
-  --spot-dir "spot_data"
+  --expiry-calendar "config/expiry_calendar.csv" \
+  --spot-dir "data/spot_data"
 ```
 
 **Verify output**:
@@ -47,7 +47,7 @@ print(f"Spot price nulls: {df['spot_price'].is_null().sum()}")  # Should be low 
 ### 3. Batch Process All Folders
 ```bash
 # Process all 9 folders automatically
-./batch_repack_with_spot.sh
+bash scripts/batch/batch_repack_with_spot.sh
 ```
 
 **Time**: ~45-60 minutes for all folders
@@ -107,16 +107,16 @@ print(f"Spot price nulls: {df['spot_price'].is_null().sum()}")  # Should be low 
 ### Issue 1: "No spot data found"
 **Symptoms**:
 ```
-WARNING: Spot data not found at spot_data/NIFTY_all.parquet
+WARNING: Spot data not found at data/spot_data/NIFTY_all.parquet
 Will pack without spot enrichment (columns will be null)
 ```
 
 **Solution**:
 ```bash
 # Run spot extraction first
-python3 extract_spot_data.py \
-  --data-dirs "new 2025 data" \
-  --output-dir "spot_data"
+python3 scripts/spot_extraction/extract_spot_data.py \
+  --data-dirs "data/new 2025 data" \
+  --output-dir "data/spot_data"
 ```
 
 ### Issue 2: Low spot join success rate
@@ -134,7 +134,7 @@ WARNING: Low join success rate! Check timestamp alignment.
 **Solutions**:
 1. Check spot data coverage:
 ```python
-spot = pl.read_parquet('spot_data/NIFTY_all.parquet')
+spot = pl.read_parquet('data/spot_data/NIFTY_all.parquet')
 print(f"Spot date range: {spot['timestamp'].min()} to {spot['timestamp'].max()}")
 ```
 
@@ -184,7 +184,7 @@ Warning: Skipping row due to parse error: invalid literal for float()
 
 ## Next Steps
 
-1. **Run spot extraction** → Creates `spot_data/`
+1. **Run spot extraction** → Creates `data/spot_data/`
 2. **Test on one folder** → Verify schema
 3. **Run batch script** → Process all data
 4. **Update benchmark** → Test ATM straddle strategy
@@ -196,11 +196,11 @@ Warning: Skipping row due to parse error: invalid literal for float()
 
 | File | Purpose | Status |
 |------|---------|--------|
-| `extract_spot_data.py` | Parse SQL dumps for NIFTY/BANKNIFTY | ✓ Ready |
-| `repack_raw_to_date_v3_SPOT_ENRICHED.py` | Pack with spot enrichment | ✓ Ready |
-| `batch_repack_with_spot.sh` | Automate all folders | ✓ Ready |
+| `scripts/spot_extraction/extract_spot_data.py` | Parse SQL dumps for NIFTY/BANKNIFTY | ✓ Ready |
+| `scripts/data_processing/repack_raw_to_date_v3_SPOT_ENRICHED.py` | Pack with spot enrichment | ✓ Ready |
+| `scripts/batch/batch_repack_with_spot.sh` | Automate all folders | ⚠️ Uses absolute paths (edit if needed) |
 | `GREEKS_STORAGE_STRATEGY.md` | Greeks recommendations | ✓ Documented |
-| `spot_data/` | Spot parquet files | Run extraction |
+| `data/spot_data/` | Spot parquet files | Run extraction |
 | `data/options_date_packed_FULL_v3_SPOT_ENRICHED/` | Output directory | Run packing |
 
-**Ready to execute!** Start with `python3 extract_spot_data.py ...`
+**Ready to execute!** Start with `python3 scripts/spot_extraction/extract_spot_data.py ...`

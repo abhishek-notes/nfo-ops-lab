@@ -1,6 +1,19 @@
 #!/bin/bash
 # Watch batch processing progress
 
+INPUT_DIR="../data/options_date_packed_FULL_v3_SPOT_ENRICHED"
+
+# Compute expected outputs once (counts <date>/<underlying> folders with parquet files).
+if [ -d "$INPUT_DIR" ]; then
+  expected_total=$(
+    find "$INPUT_DIR" -maxdepth 2 -mindepth 2 -type d \( -name "BANKNIFTY" -o -name "NIFTY" \) \
+      -exec sh -c 'ls -1 "$1"/*.parquet >/dev/null 2>&1' _ {} \; -print \
+      | wc -l | tr -d ' '
+  )
+else
+  expected_total=0
+fi
+
 while true; do
   clear
   echo "================================================================================"
@@ -13,13 +26,21 @@ while true; do
   bursts_count=$(ls -1 market_truth_data/bursts/*.parquet 2>/dev/null | wc -l | tr -d ' ')
   
   echo "📊 Progress:"
-  echo "  Features files: $features_count / 162 (BANKNIFTY + NIFTY = 81×2)"
+  if [ "$expected_total" -gt 0 ]; then
+    echo "  Features files: $features_count / $expected_total"
+  else
+    echo "  Features files: $features_count"
+  fi
   echo "  Bursts files:   $bursts_count"
   echo ""
   
   # Calculate percentage
-  total_expected=162
-  percent=$((features_count * 100 / total_expected))
+  total_expected=$expected_total
+  if [ "$total_expected" -gt 0 ]; then
+    percent=$((features_count * 100 / total_expected))
+  else
+    percent=0
+  fi
   
   # Progress bar
   filled=$((percent / 2))

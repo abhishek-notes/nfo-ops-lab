@@ -24,9 +24,11 @@ app.add_middleware(
 )
 
 # Data directories
-DATA_DIR = Path("../market_truth_data")
+BASE_DIR = Path(__file__).resolve().parent.parent
+DATA_DIR = BASE_DIR / "market_truth_data"
 FEATURES_DIR = DATA_DIR / "features"
 BURSTS_DIR = DATA_DIR / "bursts"
+REGIMES_DIR = DATA_DIR / "regimes"
 STATS_DIR = DATA_DIR / "statistics"
 
 # Simple in-memory cache
@@ -41,8 +43,10 @@ def root():
         "version": "1.0.0",
         "endpoints": [
             "/days",
-            "/day/{date}/features",
-            "/day/{date}/bursts",
+            "/day/{underlying}/{date}/features",
+            "/day/{underlying}/{date}/bursts",
+            "/day/{underlying}/{date}/regimes",
+            "/day/{underlying}/{date}/summary",
             "/statistics",
         ]
     }
@@ -51,45 +55,55 @@ def root():
 @app.get("/days")
 def list_days():
     """
-    List all available trading days
+    List all available trading days (across both underlyings)
     
     Returns:
-        {"days": ["2025-08-01", "2025-08-04", ...]}
+        {"days": {"BANKNIFTY": [...], "NIFTY": [...]}}
     """
-    days = sorted([
-        f.stem.replace("features_", "") 
-        for f in FEATURES_DIR.glob("features_*.parquet")
-    ])
+    days_by_underlying = {"BANKNIFTY": set(), "NIFTY": set()}
     
-    return {"days": days, "count": len(days)}
+    for f in sorted(FEATURES_DIR.glob("features_*.parquet")):
+        name_parts = f.stem.split('_')  # features_BANKNIFTY_2025-08-01
+        if len(name_parts) >= 3:
+            underlying = name_parts[1]
+            date = name_parts[2]
+            if underlying in days_by_underlying:
+                days_by_underlying[underlying].add(date)
+    
+    return {
+        "days_by_underlying": {k: sorted(v) for k, v in days_by_underlying.items()},
+        "total": sum(len(v) for v in days_by_underlying.values()),
+    }
 
 
-@app.get("/day/{date}/features")
+@app.get("/day/{underlying}/{date}/features")
 def get_features(
+    underlying: str,
     date: str,
     start_sec: Optional[int] = None,
     end_sec: Optional[int] = None,
     columns: Optional[str] = None
 ):
     """
-    Get feature data for a specific day
+    Get feature data for a specific day and underlying
     
     Args:
+        underlying: 'BANKNIFTY' or 'NIFTY'
         date: Trading date (YYYY-MM-DD)
-        start_sec: Optional start time (seconds since 9:15 AM)
-        end_sec: Optional end time (seconds since 9:15 AM)
+        start_sec: Optional start time (seconds since start)
+        end_sec: Optional end time (seconds since start)
         columns: Optional comma-separated list of columns
     
     Returns:
         Feature data as JSON
     """
-    features_file = FEATURES_DIR / f"features_{date}.parquet"
+    features_file = FEATURES_DIR / f"features_{underlying}_{date}.parquet"
     
     if not features_file.exists():
-        raise HTTPException(status_code=404, detail=f"Data not found for date: {date}")
+        raise HTTPException(status_code=404, detail=f"Data not found for {underlying} on {date}")
     
     # Check cache
-    cache_key = f"features_{date}"
+    cache_key = f"features_{underlying}_{date}"
     
     if cache_key not in _cache:
         df = pl.read_parquet(features_file)
@@ -120,14 +134,15 @@ def get_features(
     
     # Convert to dict and return
     return {
+        "underlying": underlying,
         "date": date,
         "rows": len(df),
         "data": df.to_dicts()
     }
 
 
-@app.get("/day/{date}/bursts")
-def get_bursts(date: str):
+@app.get("/day/{underlying}/{date}/bursts")
+def get_bursts(underlying: str, date: str):
     """
     Get burst events for a specific day
     
@@ -137,18 +152,44 @@ def get_bursts(date: str):
     Returns:
         Burst events as JSON
     """
-    bursts_file = BURSTS_DIR / f"bursts_{date}.parquet"
+    bursts_file = BURSTS_DIR / f"bursts_{underlying}_{date}.parquet"
     
     if not bursts_file.exists():
         # Return empty if no bursts file (might be a quiet day)
-        return {"date": date, "bursts": [], "count": 0}
+        return {"underlying": underlying, "date": date, "bursts": [], "count": 0}
     
     df = pl.read_parquet(bursts_file)
     
     return {
+        "underlying": underlying,
         "date": date,
         "bursts": df.to_dicts(),
         "count": len(df)
+    }
+
+
+@app.get("/day/{underlying}/{date}/regimes")
+def get_regimes(underlying: str, date: str):
+    """
+    Get regime labels for a specific day (one row per second).
+    """
+    regimes_file = REGIMES_DIR / f"regimes_{underlying}_{date}.parquet"
+
+    if not regimes_file.exists():
+        return {"underlying": underlying, "date": date, "regimes": [], "count": 0}
+
+    cache_key = f"regimes_{underlying}_{date}"
+    if cache_key not in _cache:
+        df = pl.read_parquet(regimes_file)
+        _cache[cache_key] = df
+    else:
+        df = _cache[cache_key]
+
+    return {
+        "underlying": underlying,
+        "date": date,
+        "regimes": df.to_dicts(),
+        "count": len(df),
     }
 
 
@@ -171,15 +212,15 @@ def get_statistics():
     return stats
 
 
-@app.get("/day/{date}/summary")
-def get_day_summary(date: str):
+@app.get("/day/{underlying}/{date}/summary")
+def get_day_summary(underlying: str, date: str):
     """
     Get quick summary for a trading day
     
     Returns:
         Summary statistics for the day
     """
-    features_file = FEATURES_DIR / f"features_{date}.parquet"
+    features_file = FEATURES_DIR / f"features_{underlying}_{date}.parquet"
     
     if not features_file.exists():
         raise HTTPException(status_code=404, detail=f"Data not found for date: {date}")
@@ -188,6 +229,7 @@ def get_day_summary(date: str):
     
     # Compute summary
     summary = {
+        "underlying": underlying,
         "date": date,
         "total_seconds": len(df),
         "spot_range": {
@@ -204,7 +246,7 @@ def get_day_summary(date: str):
     }
     
     # Add burst count if available
-    bursts_file = BURSTS_DIR / f"bursts_{date}.parquet"
+    bursts_file = BURSTS_DIR / f"bursts_{underlying}_{date}.parquet"
     if bursts_file.exists():
         bursts_df = pl.read_parquet(bursts_file)
         summary['burst_count'] = len(bursts_df)

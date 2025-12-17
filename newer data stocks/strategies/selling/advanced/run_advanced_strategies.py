@@ -15,6 +15,14 @@ import csv
 import gc
 
 
+def _project_root() -> Path:
+    here = Path(__file__).resolve()
+    for parent in here.parents:
+        if (parent / "data").is_dir() and (parent / "strategies").is_dir():
+            return parent
+    raise RuntimeError("Could not locate project root (expected 'data/' and 'strategies/' directories).")
+
+
 @dataclass
 class Trade:
     """Individual trade record"""
@@ -521,9 +529,10 @@ def main():
     print("ADVANCED SCALPING STRATEGIES - DYNAMIC EXITS")
     print("=" * 80)
     
-    data_dir = Path("../../data/options_date_packed_FULL_v3_SPOT_ENRICHED")
-    results_dir = Path("../strategy_results/selling/strategy_results_advanced")
-    results_dir.mkdir(exist_ok=True)
+    root = _project_root()
+    data_dir = root / "data" / "options_date_packed_FULL_v3_SPOT_ENRICHED"
+    results_dir = root / "strategies" / "strategy_results" / "selling" / "strategy_results_advanced"
+    results_dir.mkdir(parents=True, exist_ok=True)
     
     all_results = []
     
@@ -537,9 +546,9 @@ def main():
                 continue
             underlying_dir = date_dir / underlying
             if underlying_dir.exists():
-                files = list(underlying_dir.glob("*.parquet"))
+                files = sorted(underlying_dir.glob("*.parquet"))
                 if files:
-                    date_files.append(files[0])
+                    date_files.append(files)
         
         print(f"Found {len(date_files)} date files")
         
@@ -549,12 +558,17 @@ def main():
             
             all_trades = []
             
-            for idx, file_path in enumerate(date_files):
+            for idx, file_paths in enumerate(date_files):
                 if idx % 20 == 0:
                     print(f"  Progress: {idx}/{len(date_files)} ({idx/len(date_files)*100:.0f}%)")
                 
-                df = pl.read_parquet(file_path)
+                df = pl.read_parquet(file_paths)
                 df = df.filter(pl.col('timestamp').dt.year() > 1970)
+
+                # Always backtest nearest expiry only (avoid mixing multiple expiries in one file).
+                if not df.is_empty():
+                    nearest_expiry = df["expiry"].min()
+                    df = df.filter(pl.col("expiry") == nearest_expiry)
                 
                 if not df.is_empty():
                     trades = strategy['func'](df, **strategy['params'])

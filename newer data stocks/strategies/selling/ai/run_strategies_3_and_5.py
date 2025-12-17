@@ -15,6 +15,14 @@ import gc
 import time as time_mod
 
 
+def _project_root() -> Path:
+    here = Path(__file__).resolve()
+    for parent in here.parents:
+        if (parent / "data").is_dir() and (parent / "strategies").is_dir():
+            return parent
+    raise RuntimeError("Could not locate project root (expected 'data/' and 'strategies/' directories).")
+
+
 @dataclass
 class Trade:
     entry_date: str
@@ -545,7 +553,8 @@ def main():
     print("TESTING STRATEGIES 3 & 5")
     print("="*80)
     
-    data_dir = Path("../../data/options_date_packed_FULL_v3_SPOT_ENRICHED")
+    root = _project_root()
+    data_dir = root / "data" / "options_date_packed_FULL_v3_SPOT_ENRICHED"
     
     strategies = [
         (strategy3_trend_pause_simple, "AI_STRAT3_Trend_Pause", True),
@@ -553,8 +562,15 @@ def main():
     ]
     
     for strat_func, strat_name, use_ema in strategies:
-        results_dir = Path(f"../results/strategy_results_{strat_name.lower()}")
-        results_dir.mkdir(exist_ok=True)
+        if strat_name == "AI_STRAT3_Trend_Pause":
+            results_subdir = "strategy_results_ai_strat3_trend_pause"
+        elif strat_name == "AI_STRAT5_Expiry_Gamma":
+            results_subdir = "strategy_results_ai_strat5_expiry_gamma"
+        else:
+            results_subdir = f"strategy_results_{strat_name.lower()}"
+
+        results_dir = root / "strategies" / "strategy_results" / "selling" / results_subdir
+        results_dir.mkdir(parents=True, exist_ok=True)
         
         print(f"\n{'='*80}")
         print(f"RUNNING: {strat_name}")
@@ -575,11 +591,11 @@ def main():
                 if not underlying_dir.exists():
                     continue
                 
-                files = list(underlying_dir.glob("*.parquet"))
+                files = sorted(underlying_dir.glob("*.parquet"))
                 if not files:
                     continue
                 
-                df = pl.read_parquet(files[0], columns=[
+                df = pl.read_parquet(files, columns=[
                     'timestamp', 'strike', 'distance_from_spot',
                     'opt_type', 'price', 'expiry', 'spot_price', 'oi'
                 ]).filter(pl.col('timestamp').dt.year() > 1970)

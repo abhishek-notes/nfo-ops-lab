@@ -48,7 +48,7 @@ Speedup:                  53.9x just from removing one line!
 
 **How to Verify Sort Order**:
 ```python
-df = pl.read_parquet('options_date_packed_FULL/2025-11-18/BANKNIFTY/part-banknifty-0.parquet')
+df = pl.read_parquet('data/options_date_packed_FULL_v3_SPOT_ENRICHED/2025-11-18/BANKNIFTY/part-banknifty-0.parquet')
 print(f"Sorted by expiry: {df['expiry'].is_sorted()}")  # Should be True
 ```
 
@@ -646,7 +646,7 @@ def process_file_presorted(file_path):
 ```bash
 # Create test directory with single file
 mkdir -p test_data/2025-11-18/BANKNIFTY
-cp options_date_packed_FULL/2025-11-18/BANKNIFTY/*.parquet test_data/2025-11-18/BANKNIFTY/
+cp data/options_date_packed_FULL_v3_SPOT_ENRICHED/2025-11-18/BANKNIFTY/*.parquet test_data/2025-11-18/BANKNIFTY/
 
 # Run strategy
 python my_new_strategy.py --data-dir test_data --workers 1
@@ -814,7 +814,7 @@ combined = pl.concat(dfs)
 ```python
 def backtest_atm_strategy(date: str):
     # Load options data
-    options = pl.read_parquet(f'options_date_packed_FULL/{date}/BANKNIFTY/*.parquet')
+    options = pl.read_parquet(f'data/options_date_packed_FULL_v3_SPOT_ENRICHED/{date}/BANKNIFTY/*.parquet')
     
     # Load spot data (hypothetical - you need to create this)
     spot = pl.read_parquet(f'spot_data/{date}.parquet')

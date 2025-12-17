@@ -14,6 +14,14 @@ import csv
 import time as time_module
 
 
+def _project_root() -> Path:
+    here = Path(__file__).resolve()
+    for parent in here.parents:
+        if (parent / "data").is_dir() and (parent / "strategies").is_dir():
+            return parent
+    raise RuntimeError("Could not locate project root (expected 'data/' and 'strategies/' directories).")
+
+
 @dataclass
 class Trade:
     entry_date: str
@@ -221,9 +229,9 @@ def load_and_filter_nearest_expiry(data_dir: Path, underlying: str):
             continue
         underlying_dir = date_dir / underlying
         if underlying_dir.exists():
-            files = list(underlying_dir.glob("*.parquet"))
+            files = sorted(underlying_dir.glob("*.parquet"))
             if files:
-                df = pl.scan_parquet(files[0]).select([
+                df = pl.scan_parquet([str(f) for f in files]).select([
                     'timestamp', 'strike', 'distance_from_spot',
                     'opt_type', 'price', 'expiry'
                 ]).filter(
@@ -254,9 +262,10 @@ def main():
     print("CORRECTED NUMBA STRATEGY (Nearest Expiry + Fixed P&L)")
     print("=" * 80)
     
-    data_dir = Path("../../data/options_date_packed_FULL_v3_SPOT_ENRICHED")
-    results_dir = Path("../strategy_results/selling/strategy_results_numba_corrected")
-    results_dir.mkdir(exist_ok=True)
+    root = _project_root()
+    data_dir = root / "data" / "options_date_packed_FULL_v3_SPOT_ENRICHED"
+    results_dir = root / "strategies" / "strategy_results" / "selling" / "strategy_results_numba_corrected"
+    results_dir.mkdir(parents=True, exist_ok=True)
     
     for underlying in ['BANKNIFTY']:
         print(f"\n{'='*80}")

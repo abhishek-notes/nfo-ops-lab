@@ -21,14 +21,28 @@ cd preprocessing
 python core_preprocessor.py --date 2025-08-01 --underlying BANKNIFTY
 ```
 
+Readable outputs (defaults shown):
+```bash
+python core_preprocessor.py \
+  --date 2025-08-01 --underlying BANKNIFTY \
+  --round-output \
+  --price-decimals 2 --ratio-decimals 3 --small-decimals 6
+```
+
 Process all available days:
 ```bash
-python batch_processor.py
+python batch_processor.py --workers 4
+```
+
+Recommended for faster multi-process runs (avoid thread oversubscription):
+```bash
+python batch_processor.py --workers 8 --polars-threads 1
 ```
 
 This generates:
-- `market_truth_data/features/features_{date}.parquet` - Per-second state vectors
-- `market_truth_data/bursts/bursts_{date}.parquet` - Burst events
+- `market_truth_data/features/features_{UNDERLYING}_{date}.parquet` - Per-second state vectors
+- `market_truth_data/bursts/bursts_{UNDERLYING}_{date}.parquet` - Burst events (file is written even if 0 events)
+- `market_truth_data/regimes/regimes_{UNDERLYING}_{date}.parquet` - Per-second regime labels (normal/chop/flicker/burst/fear)
 
 ### 2. Generate Statistics
 
@@ -49,16 +63,24 @@ python market_truth_api.py
 
 Access API at: `http://localhost:8000/docs`
 
+### 4. Playback App (Streamlit)
+
+```bash
+streamlit run app/playback_app.py
+```
+
 ## Data Schema
 
 ### Features (Per-Second State Vector)
 
 ```python
-{
-    'timestamp': datetime,
-    'spot_price': float,
-    'atm_strike': int,
-    'dte_days': int,
+	{
+	    'underlying': str,
+	    'timestamp': datetime,
+	    'spot_price': float,
+	    'atm_strike': int,
+	    'dte_days': int,
+	    'spot_observed': int,      # 1 if raw data present for this second
     
     # Spot dynamics
     'ret_1s': float,           # Log return
@@ -67,28 +89,43 @@ Access API at: `http://localhost:8000/docs`
     'rv_120s': float,
     'accel_10s': float,        # Acceleration metric
     
-    # CE (Call) microstructure
-    'ce_mid': float,
-    'ce_spread': float,
-    'ce_bid_depth_5': int,
-    'ce_ask_depth_5': int,
-    'ce_obi_5': float,         # Order book imbalance
-    'ce_depth_slope_bid': float,
-    'ce_depth_slope_ask': float,
-    'ce_volume': int,
-    'dOptCE_1s': float,        # 1s price change
+	    # CE (Call) microstructure
+	    'ce_mid': float,
+	    'ce_spread': float,
+	    'ce_bid_depth_5': int,
+	    'ce_ask_depth_5': int,
+	    'ce_obi_5': float,         # Order book imbalance
+	    'ce_depth_slope_bid': float,
+	    'ce_depth_slope_ask': float,
+	    'ce_volume': int,
+	    'ce_vol_delta': int,       # Non-negative 1-step volume delta
+	    'ce_observed': int,        # 1 if ATM CE snapshot present this second
+	    'dOptCE_1s': float,        # 1s price change
     
-    # PE (Put) microstructure 
-    'pe_mid': float,
-    'pe_spread': float,
-    'pe_bid_depth_5': int,
-    'pe_ask_depth_5': int,
-    'pe_obi_5': float,
-    'pe_depth_slope_bid': float,
-    'pe_depth_slope_ask': float,
-    'pe_volume': int,
-    'dOptPE_1s': float,
-}
+	    # PE (Put) microstructure 
+	    'pe_mid': float,
+	    'pe_spread': float,
+	    'pe_bid_depth_5': int,
+	    'pe_ask_depth_5': int,
+	    'pe_obi_5': float,
+	    'pe_depth_slope_bid': float,
+	    'pe_depth_slope_ask': float,
+	    'pe_volume': int,
+	    'pe_vol_delta': int,
+	    'pe_observed': int,
+	    'dOptPE_1s': float,
+
+	    # Liquidity + regimes (ATM-based)
+	    'ce_pull_rate_30s': float,
+	    'ce_replenish_rate_30s': float,
+	    'ce_net_liquidity_30s': float,
+	    'pe_pull_rate_30s': float,
+	    'pe_replenish_rate_30s': float,
+	    'pe_net_liquidity_30s': float,
+	    'flicker_30s': int,
+	    'regime': str,
+	    'regime_code': int,
+	}
 ```
 
 ### Burst Events
@@ -119,12 +156,17 @@ GET /days
 
 ### Get Day Features
 ```
-GET /day/{date}/features?start_sec=0&end_sec=1800&columns=spot_price,rv_10s
+GET /day/{underlying}/{date}/features?start_sec=0&end_sec=1800&columns=spot_price,rv_10s
 ```
 
 ### Get Day Bursts
 ```
-GET /day/{date}/bursts
+GET /day/{underlying}/{date}/bursts
+```
+
+### Get Day Regimes
+```
+GET /day/{underlying}/{date}/regimes
 ```
 
 ### Get Statistics
@@ -134,7 +176,7 @@ GET /statistics
 
 ### Get Day Summary
 ```
-GET /day/{date}/summary
+GET /day/{underlying}/{date}/summary
 ```
 
 ## File Structure
@@ -148,12 +190,17 @@ market_truth_framework/
 │   └── statistics_generator.py       # Truth tables generator
 │
 ├── market_truth_data/
-│   ├── features/                     # Per-second state vectors
-│   │   └── features_{YYYY-MM-DD}.parquet
-│   ├── bursts/                       # Burst events
-│   │   └── bursts_{YYYY-MM-DD}.parquet
-│   └── statistics/                   # Truth tables
-│       └── truth_tables.json
+	│   ├── features/                     # Per-second state vectors
+	│   │   └── features_{UNDERLYING}_{YYYY-MM-DD}.parquet
+	│   ├── bursts/                       # Burst events
+	│   │   └── bursts_{UNDERLYING}_{YYYY-MM-DD}.parquet
+	│   ├── regimes/                      # Per-second regimes
+	│   │   └── regimes_{UNDERLYING}_{YYYY-MM-DD}.parquet
+	│   └── statistics/                   # Truth tables
+	│       └── truth_tables.json
+│
+├── app/
+│   └── playback_app.py                # Streamlit playback UI
 │
 └── api/
     ├── market_truth_api.py           # FastAPI server
@@ -174,8 +221,8 @@ market_truth_framework/
 ```python
 import polars as pl
 
-# Load features for analysis
-df = pl.read_parquet("market_truth_data/features/features_2025-08-01.parquet")
+	# Load features for analysis
+	df = pl.read_parquet("market_truth_data/features/features_BANKNIFTY_2025-08-01.parquet")
 
 # Find high-acceleration moments
 bursts = df.filter(pl.col('accel_10s') > 3.0)
@@ -207,6 +254,10 @@ print(f"P90 burst size: {dte_0_stats['p90_burst_size']} points")
 
 ## Burst Detection Algorithm
 
+RV windows use RMS volatility:
+
+`RV_w = sqrt(mean(r_i^2) over last w seconds)`
+
 Burst starts when ALL conditions are met:
 1. **Displacement**: `|spot_t - spot_t-10| >= B_points`
 2. **Volatility expansion**: `RV_10 > k1 × RV_120`
@@ -230,11 +281,10 @@ Burst ends when BOTH are met:
 
 ## Next Steps
 
-1. **Tune thresholds**: Adjust burst detection based on actual market data
-2. **Add IV calculation**: Black-Scholes IV for each option
-3. **Regime classification**: Implement fear/chop/normal regime detector
-4. **Visualization**: Build React frontend with playback controls
-5. **Greeks**: Add Delta, Gamma, Vega, Theta calculation
+1. **±1/±2 strikes canonical set**: add around-ATM streams (shape/skew/gamma proxies)
+2. **IV + Greeks**: compute IV and derive delta/gamma/vega/theta per second for canonical strikes
+3. **Fear edge stats**: quantify fear frequency + decay time; add post-fear “sell” setup stats
+4. **Better playback UX**: crosshair sync, regime ribbon overlays, cached window endpoints
 
 ## Dependencies
 
@@ -244,6 +294,8 @@ Burst ends when BOTH are met:
 - numba
 - fastapi
 - uvicorn
+- streamlit
+- plotly
 
 ## License
 
@@ -251,4 +303,4 @@ Internal research tool.
 
 ---
 
-**Built for deep market understanding and strategy research** 🚀
+**Built for deep market understanding and strategy research**

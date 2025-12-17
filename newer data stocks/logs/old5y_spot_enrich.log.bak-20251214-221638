@@ -1,0 +1,326 @@
+================================================================================
+Enrich BANKNIFTY 2019-04-09
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-04-09/BANKNIFTY/part-banknifty-0.parquet rows=2,033,829 spot_joined=2,033,829 rate=1.0000
+================================================================================
+Enrich BANKNIFTY 2019-04-10
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-04-10/BANKNIFTY/part-banknifty-0.parquet rows=2,103,294 spot_joined=2,103,294 rate=1.0000
+================================================================================
+Enrich BANKNIFTY 2019-04-11
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-04-11/BANKNIFTY/part-banknifty-0.parquet rows=2,097,114 spot_joined=2,097,114 rate=1.0000
+================================================================================
+Enrich BANKNIFTY 2019-04-12
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-04-12/BANKNIFTY/part-banknifty-0.parquet rows=2,185,321 spot_joined=2,185,321 rate=1.0000
+================================================================================
+Enrich BANKNIFTY 2019-04-15
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-04-15/BANKNIFTY/part-banknifty-0.parquet rows=2,208,907 spot_joined=2,208,907 rate=1.0000
+================================================================================
+Enrich BANKNIFTY 2019-04-16
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-04-16/BANKNIFTY/part-banknifty-0.parquet rows=2,000,274 spot_joined=2,000,274 rate=1.0000
+================================================================================
+Enrich BANKNIFTY 2019-04-18
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-04-18/BANKNIFTY/part-banknifty-0.parquet rows=1,955,776 spot_joined=1,955,776 rate=1.0000
+================================================================================
+Enrich BANKNIFTY 2019-04-22
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-04-22/BANKNIFTY/part-banknifty-0.parquet rows=1,022,248 spot_joined=1,022,248 rate=1.0000
+================================================================================
+Enrich BANKNIFTY 2019-04-23
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-04-23/BANKNIFTY/part-banknifty-0.parquet rows=942,816 spot_joined=942,816 rate=1.0000
+================================================================================
+Enrich BANKNIFTY 2019-04-24
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-04-24/BANKNIFTY/part-banknifty-0.parquet rows=946,653 spot_joined=946,653 rate=1.0000
+================================================================================
+Enrich BANKNIFTY 2019-04-25
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-04-25/BANKNIFTY/part-banknifty-0.parquet rows=843,194 spot_joined=843,194 rate=1.0000
+================================================================================
+Enrich BANKNIFTY 2019-04-30
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-04-30/BANKNIFTY/part-banknifty-0.parquet rows=1,961,833 spot_joined=1,961,833 rate=1.0000
+================================================================================
+Enrich BANKNIFTY 2019-05-02
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-05-02/BANKNIFTY/part-banknifty-0.parquet rows=1,755,718 spot_joined=1,755,718 rate=1.0000
+================================================================================
+Enrich BANKNIFTY 2019-05-03
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-05-03/BANKNIFTY/part-banknifty-0.parquet rows=1,120,994 spot_joined=1,120,994 rate=1.0000
+================================================================================
+Enrich BANKNIFTY 2019-05-06
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-05-06/BANKNIFTY/part-banknifty-0.parquet rows=1,228,791 spot_joined=1,228,791 rate=1.0000
+================================================================================
+Enrich BANKNIFTY 2019-05-07
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-05-07/BANKNIFTY/part-banknifty-0.parquet rows=1,157,717 spot_joined=1,157,717 rate=1.0000
+================================================================================
+Enrich BANKNIFTY 2019-05-08
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-05-08/BANKNIFTY/part-banknifty-0.parquet rows=685,617 spot_joined=685,617 rate=1.0000
+================================================================================
+Enrich BANKNIFTY 2019-05-09
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-05-09/BANKNIFTY/part-banknifty-0.parquet rows=1,297,031 spot_joined=1,297,031 rate=1.0000
+================================================================================
+Enrich BANKNIFTY 2019-05-10
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-05-10/BANKNIFTY/part-banknifty-0.parquet rows=1,232,619 spot_joined=1,232,619 rate=1.0000
+================================================================================
+Enrich BANKNIFTY 2019-05-13
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-05-13/BANKNIFTY/part-banknifty-0.parquet rows=1,229,311 spot_joined=1,229,311 rate=1.0000
+================================================================================
+Enrich BANKNIFTY 2019-05-14
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-05-14/BANKNIFTY/part-banknifty-0.parquet rows=1,229,421 spot_joined=1,229,421 rate=1.0000
+================================================================================
+Enrich BANKNIFTY 2019-05-15
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-05-15/BANKNIFTY/part-banknifty-0.parquet rows=1,172,608 spot_joined=1,172,608 rate=1.0000
+================================================================================
+Enrich BANKNIFTY 2019-05-16
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-05-16/BANKNIFTY/part-banknifty-0.parquet rows=1,146,758 spot_joined=1,146,758 rate=1.0000
+================================================================================
+Enrich BANKNIFTY 2019-05-17
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-05-17/BANKNIFTY/part-banknifty-0.parquet rows=1,163,823 spot_joined=1,163,823 rate=1.0000
+================================================================================
+Enrich BANKNIFTY 2019-05-20
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-05-20/BANKNIFTY/part-banknifty-0.parquet rows=1,744,907 spot_joined=1,744,907 rate=1.0000
+================================================================================
+Enrich BANKNIFTY 2019-05-21
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-05-21/BANKNIFTY/part-banknifty-0.parquet rows=1,820,848 spot_joined=1,820,848 rate=1.0000
+================================================================================
+Enrich BANKNIFTY 2019-05-22
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-05-22/BANKNIFTY/part-banknifty-0.parquet rows=1,787,780 spot_joined=1,787,780 rate=1.0000
+================================================================================
+Enrich BANKNIFTY 2019-05-23
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-05-23/BANKNIFTY/part-banknifty-0.parquet rows=1,923,896 spot_joined=1,923,896 rate=1.0000
+================================================================================
+Enrich BANKNIFTY 2019-05-24
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-05-24/BANKNIFTY/part-banknifty-0.parquet rows=1,416,853 spot_joined=1,416,853 rate=1.0000
+================================================================================
+Enrich BANKNIFTY 2019-05-27
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-05-27/BANKNIFTY/part-banknifty-0.parquet rows=1,512,477 spot_joined=1,512,477 rate=1.0000
+================================================================================
+Enrich BANKNIFTY 2019-05-28
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-05-28/BANKNIFTY/part-banknifty-0.parquet rows=1,511,773 spot_joined=1,511,752 rate=1.0000
+================================================================================
+Enrich BANKNIFTY 2019-05-29
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-05-29/BANKNIFTY/part-banknifty-0.parquet rows=1,453,973 spot_joined=1,453,973 rate=1.0000
+================================================================================
+Enrich BANKNIFTY 2019-05-30
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-05-30/BANKNIFTY/part-banknifty-0.parquet rows=1,360,620 spot_joined=1,360,620 rate=1.0000
+================================================================================
+Enrich BANKNIFTY 2019-05-31
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-05-31/BANKNIFTY/part-banknifty-0.parquet rows=1,296,455 spot_joined=1,296,455 rate=1.0000
+================================================================================
+Enrich BANKNIFTY 2019-06-03
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-06-03/BANKNIFTY/part-banknifty-0.parquet rows=1,254,324 spot_joined=1,254,324 rate=1.0000
+================================================================================
+Enrich BANKNIFTY 2019-06-04
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-06-04/BANKNIFTY/part-banknifty-0.parquet rows=1,242,078 spot_joined=1,242,078 rate=1.0000
+================================================================================
+Enrich BANKNIFTY 2019-06-06
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-06-06/BANKNIFTY/part-banknifty-0.parquet rows=1,233,846 spot_joined=1,233,846 rate=1.0000
+================================================================================
+Enrich NIFTY 2019-06-06
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-06-06/NIFTY/part-nifty-0.parquet rows=458,198 spot_joined=458,198 rate=1.0000
+================================================================================
+Enrich BANKNIFTY 2019-06-07
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-06-07/BANKNIFTY/part-banknifty-0.parquet rows=830,294 spot_joined=830,294 rate=1.0000
+================================================================================
+Enrich NIFTY 2019-06-07
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-06-07/NIFTY/part-nifty-0.parquet rows=503,667 spot_joined=503,667 rate=1.0000
+================================================================================
+Enrich BANKNIFTY 2019-06-10
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-06-10/BANKNIFTY/part-banknifty-0.parquet rows=1,206,378 spot_joined=1,206,378 rate=1.0000
+================================================================================
+Enrich NIFTY 2019-06-10
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-06-10/NIFTY/part-nifty-0.parquet rows=535,362 spot_joined=535,362 rate=1.0000
+================================================================================
+Enrich BANKNIFTY 2019-06-11
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-06-11/BANKNIFTY/part-banknifty-0.parquet rows=1,273,325 spot_joined=1,273,325 rate=1.0000
+================================================================================
+Enrich NIFTY 2019-06-11
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-06-11/NIFTY/part-nifty-0.parquet rows=466,372 spot_joined=466,372 rate=1.0000
+================================================================================
+Enrich BANKNIFTY 2019-06-13
+
+thread 'tokio-runtime-worker' panicked at crates/polars-utils/src/mem.rs:101:17:
+Invalid argument (os error 22)
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+thread 'tokio-runtime-worker' panicked at crates/polars-stream/src/nodes/io_sources/parquet/init.rs:155:53:
+called `Result::unwrap()` on an `Err` value: JoinError::Panic(Id(24700), "Invalid argument (os error 22)", ...)
+
+thread 'tokio-runtime-worker' panicked at crates/polars-stream/src/nodes/io_sources/parquet/init.rs:225:31:
+called `Result::unwrap()` on an `Err` value: JoinError::Panic(Id(24655), "called `Result::unwrap()` on an `Err` value: JoinError::Panic(Id(24700), \"Invalid argument (os error 22)\", ...)", ...)
+
+thread 'async-executor-13' panicked at crates/polars-stream/src/nodes/io_sources/parquet/mod.rs:257:80:
+called `Result::unwrap()` on an `Err` value: JoinError::Panic(Id(24656), "called `Result::unwrap()` on an `Err` value: JoinError::Panic(Id(24655), \"called `Result::unwrap()` on an `Err` value: JoinError::Panic(Id(24700), \\\"Invalid argument (os error 22)\\\", ...)\", ...)", ...)
+
+thread 'tokio-runtime-worker' panicked at crates/polars-mem-engine/src/executors/cache.rs:132:22:
+called `Result::unwrap()` on an `Err` value: JoinError::Panic(Id(24651), "called `Result::unwrap()` on an `Err` value: JoinError::Panic(Id(24656), \"called `Result::unwrap()` on an `Err` value: JoinError::Panic(Id(24655), \\\"called `Result::unwrap()` on an `Err` value: JoinError::Panic(Id(24700), \\\\\\\"Invalid argument (os error 22)\\\\\\\", ...)\\\", ...)\", ...)", ...)
+
+thread '<unnamed>' panicked at crates/polars-mem-engine/src/executors/cache.rs:167:54:
+called `Result::unwrap()` on an `Err` value: JoinError::Panic(Id(24650), "called `Result::unwrap()` on an `Err` value: JoinError::Panic(Id(24651), \"called `Result::unwrap()` on an `Err` value: JoinError::Panic(Id(24656), \\\"called `Result::unwrap()` on an `Err` value: JoinError::Panic(Id(24655), \\\\\\\"called `Result::unwrap()` on an `Err` value: JoinError::Panic(Id(24700), \\\\\\\\\\\\\\\"Invalid argument (os error 22)\\\\\\\\\\\\\\\", ...)\\\\\\\", ...)\\\", ...)\", ...)", ...)
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-06-13/BANKNIFTY/part-banknifty-0.parquet rows=1,079,412 spot_joined=1,079,412 rate=1.0000
+================================================================================
+Enrich NIFTY 2019-06-13
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-06-13/NIFTY/part-nifty-0.parquet rows=334,245 spot_joined=334,245 rate=1.0000
+================================================================================
+Enrich BANKNIFTY 2019-06-14
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-06-14/BANKNIFTY/part-banknifty-0.parquet rows=1,168,285 spot_joined=1,168,285 rate=1.0000
+================================================================================
+Enrich NIFTY 2019-06-14
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-06-14/NIFTY/part-nifty-0.parquet rows=355,645 spot_joined=355,645 rate=1.0000
+================================================================================
+Enrich BANKNIFTY 2019-06-17
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-06-17/BANKNIFTY/part-banknifty-0.parquet rows=1,170,101 spot_joined=1,170,099 rate=1.0000
+================================================================================
+Enrich NIFTY 2019-06-17
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-06-17/NIFTY/part-nifty-0.parquet rows=369,098 spot_joined=368,683 rate=0.9989
+================================================================================
+Enrich BANKNIFTY 2019-06-18
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-06-18/BANKNIFTY/part-banknifty-0.parquet rows=1,141,145 spot_joined=1,141,029 rate=0.9999
+================================================================================
+Enrich NIFTY 2019-06-18
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-06-18/NIFTY/part-nifty-0.parquet rows=363,782 spot_joined=363,762 rate=0.9999
+================================================================================
+Enrich BANKNIFTY 2019-06-19
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-06-19/BANKNIFTY/part-banknifty-0.parquet rows=1,115,503 spot_joined=1,115,447 rate=0.9999
+================================================================================
+Enrich NIFTY 2019-06-19
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-06-19/NIFTY/part-nifty-0.parquet rows=353,120 spot_joined=353,100 rate=0.9999
+================================================================================
+Enrich BANKNIFTY 2019-06-20
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-06-20/BANKNIFTY/part-banknifty-0.parquet rows=1,037,039 spot_joined=1,036,990 rate=1.0000
+================================================================================
+Enrich NIFTY 2019-06-20
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-06-20/NIFTY/part-nifty-0.parquet rows=310,961 spot_joined=310,961 rate=1.0000
+================================================================================
+Enrich BANKNIFTY 2019-06-21
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-06-21/BANKNIFTY/part-banknifty-0.parquet rows=60 spot_joined=60 rate=1.0000
+================================================================================
+Enrich NIFTY 2019-06-21
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-06-21/NIFTY/part-nifty-0.parquet rows=386,639 spot_joined=386,603 rate=0.9999
+================================================================================
+Enrich BANKNIFTY 2019-06-24
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-06-24/BANKNIFTY/part-banknifty-0.parquet rows=1,149,032 spot_joined=1,148,972 rate=0.9999
+================================================================================
+Enrich NIFTY 2019-06-24
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-06-24/NIFTY/part-nifty-0.parquet rows=384,390 spot_joined=384,368 rate=0.9999
+================================================================================
+Enrich BANKNIFTY 2019-06-25
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-06-25/BANKNIFTY/part-banknifty-0.parquet rows=1,182,657 spot_joined=1,182,600 rate=1.0000
+================================================================================
+Enrich NIFTY 2019-06-25
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-06-25/NIFTY/part-nifty-0.parquet rows=385,316 spot_joined=385,297 rate=1.0000
+================================================================================
+Enrich BANKNIFTY 2019-06-27
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-06-27/BANKNIFTY/part-banknifty-0.parquet rows=991,438 spot_joined=991,376 rate=0.9999
+================================================================================
+Enrich NIFTY 2019-06-27
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-06-27/NIFTY/part-nifty-0.parquet rows=311,331 spot_joined=311,331 rate=1.0000
+================================================================================
+Enrich BANKNIFTY 2019-06-28
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-06-28/BANKNIFTY/part-banknifty-0.parquet rows=1,130,651 spot_joined=1,130,537 rate=0.9999
+================================================================================
+Enrich NIFTY 2019-06-28
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-06-28/NIFTY/part-nifty-0.parquet rows=459,566 spot_joined=459,534 rate=0.9999
+================================================================================
+Enrich BANKNIFTY 2019-07-01
+================================================================================
+Traceback (most recent call last):
+  File "/Users/abhishek/workspace/nfo/newer data stocks/scripts/data_processing/enrich_old5y_packed_with_spot.py", line 208, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/Users/abhishek/workspace/nfo/newer data stocks/scripts/data_processing/enrich_old5y_packed_with_spot.py", line 198, in main
+    enriched, stats = enrich_one_file(in_path, spot)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/abhishek/workspace/nfo/newer data stocks/scripts/data_processing/enrich_old5y_packed_with_spot.py", line 53, in enrich_one_file
+    options = pl.read_parquet(options_path)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+    return function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/polars/_utils/deprecation.py", line 128, in wrapper
+    return function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/polars/io/parquet/functions.py", line 289, in read_parquet
+    return lf.collect()
+           ^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/polars/_utils/deprecation.py", line 97, in wrapper
+    return function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/polars/lazyframe/opt_flags.py", line 330, in wrapper
+    return function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/polars/lazyframe/frame.py", line 2335, in collect
+    return wrap_df(ldf.collect(engine, callback))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pyo3_runtime.PanicException: called `Result::unwrap()` on an `Err` value: JoinError::Panic(Id(24650), "called `Result::unwrap()` on an `Err` value: JoinError::Panic(Id(24651), \"called `Result::unwrap()` on an `Err` value: JoinError::Panic(Id(24656), \\\"called `Result::unwrap()` on an `Err` value: JoinError::Panic(Id(24655), \\\\\\\"called `Result::unwrap()` on an `Err` value: JoinError::Panic(Id(24700), \\\\\\\\\\\\\\\"Invalid argument (os error 22)\\\\\\\\\\\\\\\", ...)\\\\\\\", ...)\\\", ...)\", ...)", ...)
+================================================================================
+Enrich BANKNIFTY 2019-07-01
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-07-01/BANKNIFTY/part-banknifty-0.parquet rows=1,086,008 spot_joined=1,085,954 rate=1.0000
+================================================================================
+Enrich NIFTY 2019-07-01
+================================================================================
+✓ Wrote /Volumes/Abhishek 5T/nfo_packed/options_date_packed_OLD5Y_v3_SPOT_ENRICHED/2019-07-01/NIFTY/part-nifty-0.parquet rows=458,244 spot_joined=458,244 rate=1.0000
+================================================================================
+Enrich BANKNIFTY 2019-07-02
+================================================================================

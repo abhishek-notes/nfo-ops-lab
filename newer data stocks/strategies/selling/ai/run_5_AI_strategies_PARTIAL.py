@@ -47,7 +47,7 @@ def find_atm_strikes(distances: np.ndarray, opt_types: np.ndarray):
         abs_dist = abs(distances[i])
         if opt_types[i] == 0:  # CE
             if abs_dist < min_ce_dist:
-                min_ce_dist abs_dist
+                min_ce_dist = abs_dist
                 ce_idx = i
         else:  # PE
             if abs_dist < min_pe_dist:

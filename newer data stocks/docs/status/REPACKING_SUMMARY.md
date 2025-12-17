@@ -4,6 +4,16 @@
 
 I've created a comprehensive data repacking solution based on the detailed requirements from your reference chat. The scripts transform your current per-contract option files into a **date-partitioned format optimized for backtesting**.
 
+## Current Production Output (recommended)
+
+If you are working with the **current v3 dataset**, the canonical packed layout is:
+
+`data/options_date_packed_FULL_v3_SPOT_ENRICHED/<YYYY-MM-DD>/<UNDERLYING>/part-*.parquet`
+
+Use:
+- `scripts/data_processing/repack_raw_to_date_v3_SPOT_ENRICHED.py` (current repacker)
+- `docs/wiki/DATA_PIPELINE_WIKI.md` (full pipeline reference)
+
 ## What Was Created
 
 ### 1. **`repack_options_by_date.py`** - Main Repacking Script
@@ -44,15 +54,15 @@ New:     /repacked/
 cd "/Users/abhishek/workspace/nfo/newer data stocks"
 
 # Test on sample data
-python repack_options_by_date.py \
-  --input-dir "new 2025 data/Processed Samples/raw options data samples parquet" \
+python scripts/data_processing/repack_options_by_date.py \
+  --input-dir "data/new 2025 data/Processed Samples/raw options data samples parquet" \
   --output-dir "test_repacked_output" \
   --sample 10 \
   --workers 4
 
 # Verify the test output
-python verify_repacked_data.py \
-  --input-dir "new 2025 data/Processed Samples/raw options data samples parquet" \
+python scripts/verification/verify_repacked_data.py \
+  --input-dir "data/new 2025 data/Processed Samples/raw options data samples parquet" \
   --output-dir "test_repacked_output" \
   --sample-files 10
 ```
@@ -60,14 +70,14 @@ python verify_repacked_data.py \
 ### Full Production Run (After Test Validation)
 ```bash
 # Full repack on all files
-python repack_options_by_date.py \
+python scripts/data_processing/repack_options_by_date.py \
   --input-dir /path/to/all/85k/option/files \
   --output-dir /path/to/repacked/output \
   --workers 16 \
   --batch-size 2000
 
 # Verify complete dataset  
-python verify_repacked_data.py \
+python scripts/verification/verify_repacked_data.py \
   --output-dir /path/to/repacked/output
 ```
 

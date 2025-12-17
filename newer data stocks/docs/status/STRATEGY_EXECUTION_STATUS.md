@@ -33,6 +33,10 @@
 **Per Strategy**: CSV file with trade-by-trade results
 **Summary**: all_strategies_summary.csv with aggregated metrics
 
+**Current locations**:
+- Canonical: `strategies/strategy_results/**`
+- Exported/flattened: `results/*.csv`
+
 ## Progress
 
 Processing ~81 dates × 2 underlyings × 12 strategies = ~1,944 individual date/strategy combinations

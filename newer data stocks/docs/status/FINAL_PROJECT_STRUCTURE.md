@@ -1,24 +1,25 @@
 # Complete Final Project Structure
 
 **After Comprehensive Reorganization - Round 2**  
-**Date**: December 12, 2025 14:25 IST
+**Last Verified**: December 13, 2025
 
 ---
 
-## ROOT DIRECTORY (Clean - 11 Folders Only)
+## ROOT DIRECTORY (Current)
 
 ```
 /Users/abhishek/workspace/nfo/newer data stocks/
-├── benchmarks/            (3 files)
-├── config/                (1 file)
-├── data/                  (5 subdirectories)
-├── docs/                  (4 subdirectories, 15 files)
-├── logs/                  (14 files)
-├── results/               (38 subdirectories + 1 CSV)
-├── scripts/               (5 subdirectories, 26 files)
-├── strategies/            (5 subdirectories, 16 files)
-├── temp/                  (4 subdirectories)
-├── utils/                 (2 items)
+├── benchmarks/
+├── config/
+├── data/
+├── docs/
+├── logs/
+├── market_truth_framework/
+├── results/               (flat CSV exports)
+├── scripts/
+├── strategies/
+├── temp/
+├── utils/
 └── __pycache__/           (Python cache)
 ```
 
@@ -26,61 +27,35 @@
 
 ## DETAILED BREAKDOWN
 
-### 1. DATA/ (All Data Files - 5 Items)
+### 1. DATA/ (Primary datasets)
 
 ```
 data/
-├── options_date_packed_FULL_v3_SPOT_ENRICHED/   ← CURRENT (spot-enriched, sorted)
-│   └── 2025-08-01/ ... 2025-12-xx/
-│       ├── BANKNIFTY/
-│       │   └── part-banknifty-0.parquet
-│       └── NIFTY/
-│           └── part-nifty-0.parquet
-│
-├── options_date_packed_FULL/                    ← LEGACY (no spot enrichment)
-│
-├── realized_volatility_cache/                   ← Computed volatility
-│   ├── BANKNIFTY_realized_vol.csv
-│   └── NIFTY_realized_vol.csv
-│
-├── spot_data/                                    ← Spot price CSVs
-│   └── (spot price time series)
-│
-└── new 2025 data/                                ← Raw incoming data
-    └── (new SQL dumps, unprocessed)
+├── options_date_packed_FULL_v3_SPOT_ENRICHED/   ← CURRENT (sorted + spot-enriched)
+│   └── <YYYY-MM-DD>/
+│       ├── BANKNIFTY/part-*.parquet
+│       └── NIFTY/part-*.parquet
+├── spot_data/                                   ← Spot series (parquet)
+├── realized_volatility_cache/                   ← Derived volatility CSVs
+└── new 2025 data/                               ← Raw incoming folders / SQL dumps
 ```
 
 ---
 
-### 2. STRATEGIES/ (All Strategy Code - 16 Files in 5 Subdirs)
+### 2. STRATEGIES/ (Runners + outputs)
 
 ```
 strategies/
-├── original/                    (1 file)
-│   └── run_ORIGINAL_12_strategies_numba.py          ← 12 basic strategies
-│
-├── advanced/                    (2 files)
-│   ├── run_ALL_strategies_numba.py                  ← 10 advanced variations
-│   └── run_advanced_strategies.py                   ← Alternative runner
-│
-├── theta/                       (1 file)
-│   └── run_3_THETA_strategies.py                    ← 3 theta-positive strategies
-│
-├── ai/                          (7 files)
-│   ├── run_strategy2_orderbook.py                   ← AI Strat 2 (microstructure)
-│   ├── run_strategies_3_and_5.py                    ← AI Strats 3 & 5
-│   ├── run_AI_strategy4_test.py                     ← AI Strat 4 (lunchtime)
-│   ├── run_5_AI_strategies_COMPLETE.py              ← AI Strat 1 (premium balancer)
-│   ├── run_5_AI_strategies_PARTIAL.py               ← Partial implementation
-│   ├── run_5_AI_strategies_infrastructure.py        ← Infrastructure code
-│   └── run_ALL_5_AI_strategies_CORE.py              ← Core Numba functions
-│
-└── legacy/                      (5 files - deprecated)
-    ├── run_all_strategies.py
-    ├── run_strategies_numba_CORRECTED.py
-    ├── run_strategies_numba_FINAL.py
-    ├── run_strategies_numba_optimized.py
-    └── run_strategies_simple.py
+├── buying/                                  ← Intraday buying strategies
+├── selling/
+│   ├── original/                            ← “original 12” suite
+│   ├── advanced/                            ← advanced suites
+│   ├── theta/                               ← theta designs
+│   ├── ai/                                  ← AI-labeled experiments
+│   └── legacy/                              ← older/alternate runners
+└── strategy_results/                         ← Canonical output location
+    ├── buying/strategy_results_buying/*.csv
+    └── selling/strategy_results_*/ *.csv
 ```
 
 ---
@@ -129,32 +104,26 @@ scripts/
 
 ```
 results/
-├── strategy_results/                                ← Original legacy results
-├── strategy_results_original_optimized/             ← Original 12 (Numba)
-├── strategy_results_all_advanced/                   ← Advanced 10
-├── strategy_results_advanced/                       ← Advanced (alternative)
-├── strategy_results_theta/                          ← Theta 3
-├── strategy_results_ai_strat1/                      ← AI Strat 1 (Premium Balancer)
-├── strategy_results_ai_strat2/                      ← AI Strat 2 (Orderbook)
-├── strategy_results_ai_strat3_trend_pause/          ← AI Strat 3 (Trend-Pause)
-├── strategy_results_ai_strat4/                      ← AI Strat 4 (Lunchtime)
-├── strategy_results_ai_strat5_expiry_gamma/         ← AI Strat 5 (Gamma Surfer)
-├── strategy_results_numba_corrected/                ← Numba corrected versions
-├── strategy_results_numba_final/                    ← Numba final
-├── strategy_results_optimized/                      ← Optimized runs
-├── ...                                              ← (25 more result directories)
-└── strategy_results_date_partitioned.csv            ← Date-partitioned results
+├── BANKNIFTY_*_trades.csv
+├── NIFTY_*_trades.csv
+├── all_strategies_summary.csv
+└── strategy_results_date_partitioned.csv
 ```
+
+Note: most runners write into `strategies/strategy_results/**`. The root `results/` folder is primarily for exported/flattened CSVs.
 
 ---
 
-### 5. DOCS/ (Documentation - 15 Files in 4 Subdirs)
+### 5. DOCS/ (Documentation - current)
 
 ```
 docs/
-├── wiki/                        (2 files)
+├── README.md                    ← Documentation index
+│
+├── wiki/                        (3 files)
 │   ├── OPTIONS_BACKTESTING_FRAMEWORK_WIKI.md        ← Main technical wiki (48KB)
 │   └── THETA_STRATEGIES_SYSTEMATIC.md               ← Theta strategy designs
+│   └── DATA_PIPELINE_WIKI.md                        ← Full data pipeline wiki
 │
 ├── guides/                      (5 files)
 │   ├── BACKTESTING_GUIDE.md                         ← Basic backtesting
@@ -163,7 +132,7 @@ docs/
 │   ├── SPOT_ENRICHMENT_GUIDE.md                     ← Spot join details
 │   └── GREEKS_STORAGE_STRATEGY.md                   ← Greeks handling
 │
-├── status/                      (7 files)
+├── status/                      (9 files)
 │   ├── PROJECT_IMPLEMENTATION_JOURNEY.md            ← Chronological log
 │   ├── COMPLETE_SESSION_DOCUMENTATION.md            ← Session summaries
 │   ├── STRATEGY_EXECUTION_STATUS.md                 ← Current execution status
@@ -171,6 +140,8 @@ docs/
 │   ├── SORTING_FIX_SUMMARY.md                       ← Sorting fix documentation
 │   ├── OUTPUT_LOCATION_GUIDE.md                     ← Output locations
 │   └── gemini-chat-temp.md                          ← Chat temp file
+│   ├── PATH_VERIFICATION_REPORT.md                  ← Path checks / validation
+│   └── FINAL_PROJECT_STRUCTURE.md                   ← This file
 │
 └── activity_logs/               (1 file)
     └── 5DAY_ACTIVITY_LOG_DEC8-12.md                 ← 5-day activity (18KB)
@@ -246,9 +217,11 @@ temp/
 
 ### Strategy Files → Data
 ```python
-# All strategy files use:
+# Data input (packed):
 data_dir = Path("../data/options_date_packed_FULL_v3_SPOT_ENRICHED")
-results_dir = Path("../results/strategy_results_{name}")
+
+# Canonical outputs (relative to strategies/* scripts):
+results_dir = Path("../strategy_results/...")
 ```
 
 ### Script Files → Data
@@ -263,7 +236,6 @@ vol_cache = Path("../data/realized_volatility_cache")
 
 ## CLEAN ROOT VERIFICATION
 
-**Files in root**: 0 Python files, 0 Markdown files, 0 CSV files  
-**Directories in root**: 11 organized folders (+ __pycache__)
+The root contains a few large reference files (e.g., `Market Truth Framework Fixes.md`, `test-verify-sql.txt`) plus the organized folders above.
 
 ✅ **Complete reorganization successful**

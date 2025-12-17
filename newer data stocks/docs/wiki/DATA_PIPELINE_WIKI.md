@@ -28,7 +28,7 @@ Raw SQL Dumps (.sql.gz)
     ↓
 [extract_sql_fast.py] → Raw Parquet Files (by symbol/strike/expiry)
     ↓                    46 columns (base option data + order book)
-[extract_spot_data.py] → Spot Price CSVs
+[extract_spot_data.py] → Spot Price Parquet (consolidated)
     ↓
 [repack_raw_to_date_v1.py] → Date-partitioned (unsorted)
     ↓                         52 columns (added expiry metadata, timestamps)
@@ -44,7 +44,7 @@ Final Data: data/options_date_packed_FULL_v3_SPOT_ENRICHED/
 | Stage | Script | Input | Output | Columns Added |
 |-------|--------|-------|--------|---------------|
 | 1 | `extract_sql_fast.py` | SQL dumps | Raw Parquet | 46 (base data) |
-| 2 | `extract_spot_data.py` | Raw Parquet | Spot CSVs | - (separate file) |
+| 2 | `extract_spot_data.py` | SQL dumps (`das_nse_mod.sql.gz`) | Spot Parquet | - (separate file) |
 | 3 | `repack_v1` | Raw Parquet | Date-partitioned | +6 (expiry, timestamps) |
 | 4 | `repack_v2` | Raw Parquet | Sorted date-partitioned | +6 (vol_delta, optimizations) |
 | 5 | `repack_v3` | Raw Parquet + Spot | **FINAL** enriched | +6 (spot-derived) |
@@ -186,17 +186,24 @@ def rows_to_dataframe(rows: list, meta: dict) -> pl.DataFrame:
 ```bash
 cd scripts/sql_extraction
 
+# Recommended: keep raw outputs inside the same source folder (avoids mixing multiple raw folders).
+FOLDER="../../data/new 2025 data/nov 4 to nov 18 new stocks data"
+mkdir -p "$FOLDER/processed_output/raw_options"
+
 # Extract BANKNIFTY
 python extract_sql_fast.py \
-    ../../data/new\ 2025\ data/das_bankopt_mod.sql.gz \
-    --output ../../temp/raw_parquet/ \
+    "$FOLDER/das_bankopt_mod.sql.gz" \
+    --output "$FOLDER/processed_output/raw_options" \
     --symbol BANKNIFTY
 
 # Extract NIFTY
 python extract_sql_fast.py \
-    ../../data/new\ 2025\ data/das_niftyopt_mod.sql.gz \
-    --output ../../temp/raw_parquet/ \
+    "$FOLDER/das_niftyopt_mod.sql.gz" \
+    --output "$FOLDER/processed_output/raw_options" \
     --symbol NIFTY
+
+# (Alternative) You can write to a global scratch dir:
+#   --output ../../temp/raw_parquet/
 ```
 
 **Performance**: ~1-2 minutes per 1 GB SQL.gz file
@@ -324,28 +331,26 @@ Original 46 SQL columns +
 
 ### Purpose
 
-Extract underlying spot/index prices from the options data itself (no separate spot feed).
+Extract NIFTY and BANKNIFTY spot/index prices from `das_nse_mod.sql.gz` dumps and write **consolidated Parquet** for the v3 repacker.
 
 ### Process
 
 ```python
-# Algorithm
-for each date in options data:
-    for each underlying (BANKNIFTY/NIFTY):
-        1. Load all option files for this date/underlying
-        2. Extract unique (timestamp, underlying_price) pairs
-           # Note: Spot price often stored as separate column in raw data
-        3. Deduplicate and sort by timestamp
-        4. Aggregate to 1-second intervals
-        5. Forward-fill missing values (up to 10 seconds)
-        6. Write to CSV: "BANKNIFTY_2025-12-01.csv"
+# Algorithm (high-level)
+for each folder under data-dirs:
+    find das_nse_mod.sql.gz
+    parse INSERT rows for NIFTY and BANKNIFTY tables
+    normalize timestamps (timezone-naive)
+    resample to 1-second grid and forward-fill small gaps
+    append into a single consolidated series per symbol
+    write Parquet: NIFTY_all.parquet, BANKNIFTY_all.parquet
 ```
 
 ### Output
 
 **Directory**: `data/spot_data/`  
-**Format**: CSV files  
-**Naming**: `{UNDERLYING}_{YYYY-MM-DD}.csv` or `{UNDERLYING}_all.parquet` (consolidated)
+**Format**: Parquet  
+**Naming**: `{UNDERLYING}_all.parquet` (e.g., `NIFTY_all.parquet`, `BANKNIFTY_all.parquet`)
 
 **Schema** (2 columns):
 - `timestamp` (Datetime): 1-second intervals
@@ -353,10 +358,7 @@ for each date in options data:
 
 ### Why Extract Spot?
 
-Options data comes with spot references but they're:
-- Duplicated across every option row
-- May have inconsistencies
-- Need to be cleaned and resampled
+The v3 options dataset needs a clean, 1-second-aligned spot series to join with options ticks via `join_asof`.
 
 Extracting to separate file allows:
 - Clean 1-second time series
@@ -745,20 +747,28 @@ Result: spot_price from 09:30:05.000 joined to option tick
 ```bash
 cd scripts/sql_extraction
 
+# Recommended: keep raw outputs inside the same source folder (avoids mixing multiple raw folders).
+# Example folder:
+FOLDER="../../data/new 2025 data/nov 4 to nov 18 new stocks data"
+mkdir -p "$FOLDER/processed_output/raw_options"
+
 # Extract BANKNIFTY
 python extract_sql_fast.py \
-    ../../data/new\ 2025\ data/das_bankopt_mod.sql.gz \
-    --output ../../temp/raw_parquet/ \
+    "$FOLDER/das_bankopt_mod.sql.gz" \
+    --output "$FOLDER/processed_output/raw_options" \
     --symbol BANKNIFTY
 
 # Extract NIFTY
 python extract_sql_fast.py \
-    ../../data/new\ 2025\ data/das_niftyopt_mod.sql.gz \
-    --output ../../temp/raw_parquet/ \
+    "$FOLDER/das_niftyopt_mod.sql.gz" \
+    --output "$FOLDER/processed_output/raw_options" \
     --symbol NIFTY
+
+# (Legacy alternative) You can also write raw parquet to a global scratch dir:
+#   --output ../../temp/raw_parquet/
 ```
 
-**Output**: ~200-300 parquet files in `temp/raw_parquet/`
+**Output**: ~200-300 parquet files in `$FOLDER/processed_output/raw_options/` (one parquet per contract)
 
 #### Step 2: Extract Spot Data
 
@@ -766,14 +776,9 @@ python extract_sql_fast.py \
 cd scripts/spot_extraction
 
 python extract_spot_data.py \
-    --input-dir ../../temp/raw_parquet/ \
+    --data-dirs "../../data/new 2025 data" \
     --output-dir ../../data/spot_data/ \
-    --underlying BANKNIFTY
-
-python extract_spot_data.py \
-    --input-dir ../../temp/raw_parquet/ \
-    --output-dir ../../data/spot_data/ \
-    --underlying NIFTY
+    --symbols NIFTY BANKNIFTY
 ```
 
 **Output**: 
@@ -785,8 +790,10 @@ python extract_spot_data.py \
 ```bash
 cd scripts/data_processing
 
+FOLDER="../../data/new 2025 data/nov 4 to nov 18 new stocks data"
+
 python repack_raw_to_date_v3_SPOT_ENRICHED.py \
-    --input-dir ../../temp/raw_parquet/ \
+    --input-dir "$FOLDER/processed_output/raw_options" \
     --output-dir ../../data/options_date_packed_FULL_v3_SPOT_ENRICHED/ \
     --spot-dir ../../data/spot_data/ \
     --expiry-calendar ../../config/expiry_calendar.csv
@@ -802,8 +809,10 @@ python repack_raw_to_date_v3_SPOT_ENRICHED.py \
 
 ```bash
 # Process only one date
+FOLDER="../../data/new 2025 data/nov 4 to nov 18 new stocks data"
+
 python repack_raw_to_date_v3_SPOT_ENRICHED.py \
-    --input-dir ../../temp/raw_parquet/ \
+    --input-dir "$FOLDER/processed_output/raw_options" \
     --output-dir ../../temp/test_output/ \
     --spot-dir ../../data/spot_data/ \
     --sample-date 2025-12-01

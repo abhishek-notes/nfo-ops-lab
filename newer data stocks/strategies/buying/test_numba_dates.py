@@ -7,14 +7,27 @@ import numpy as np
 from numba import njit
 from pathlib import Path
 
-# Load minimal data
-data_dir = Path("../../data/options_date_packed_FULL_v3_SPOT_ENRICHED")
-sample_date = sorted([d for d in data_dir.glob("*") if d.is_dir() and "1970" not in d.name])[5]
-files = list((sample_date / "BANKNIFTY").glob("*.parquet"))
 
-df = pl.read_parquet(files[0], columns=[
-    'timestamp', 'strike', 'opt_type', 'price'
-]).filter(pl.col('timestamp').dt.year() > 1970).head(1000)
+def _project_root() -> Path:
+    here = Path(__file__).resolve()
+    for parent in here.parents:
+        if (parent / "data").is_dir() and (parent / "strategies").is_dir():
+            return parent
+    raise RuntimeError("Could not locate project root (expected 'data/' and 'strategies/' directories).")
+
+
+# Load minimal data
+root = _project_root()
+data_dir = root / "data" / "options_date_packed_FULL_v3_SPOT_ENRICHED"
+sample_date = sorted([d for d in data_dir.glob("*") if d.is_dir() and "1970" not in d.name])[5]
+
+df = (
+    pl.scan_parquet(str(sample_date / "BANKNIFTY" / "*.parquet"))
+    .select(["timestamp", "strike", "opt_type", "price"])
+    .filter(pl.col("timestamp").dt.year() > 1970)
+    .collect()
+    .head(1000)
+)
 
 print(f"Loaded {len(df)} rows from {sample_date.name}")
 

@@ -4,6 +4,8 @@
 **Generated**: December 12, 2025 14:15 IST  
 **Status**: Post-reorganization (new folder structure in place)
 
+**Note (current)**: The packed v3 dataset is sorted on disk by `expiry → opt_type → strike → timestamp` and lives at `data/options_date_packed_FULL_v3_SPOT_ENRICHED/`.
+
 ---
 
 ## 1. High-Level Activity Summary
@@ -634,4 +636,3 @@ Path("../data/realized_volatility_cache")
 **Document End**
 
 *This activity log reflects the complete state as of Dec 12, 2025 14:30 IST after comprehensive round 2 reorganization. For exact structure details, see `docs/status/FINAL_PROJECT_STRUCTURE.md`. For real-time status, see latest execution logs in `logs/` and strategy results in `results/`.*
-

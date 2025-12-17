@@ -16,6 +16,14 @@ import gc
 import time as time_mod
 
 
+def _project_root() -> Path:
+    here = Path(__file__).resolve()
+    for parent in here.parents:
+        if (parent / "data").is_dir() and (parent / "strategies").is_dir():
+            return parent
+    raise RuntimeError("Could not locate project root (expected 'data/' and 'strategies/' directories).")
+
+
 @dataclass
 class Trade:
     entry_date: str
@@ -344,12 +352,12 @@ def run_one_strategy(data_dir: Path, underlying: str, strategy: StrategyConfig) 
         if not underlying_dir.exists():
             continue
         
-        files = list(underlying_dir.glob("*.parquet"))
+        files = sorted(underlying_dir.glob("*.parquet"))
         if not files:
             continue
         
         # Load date data
-        df = pl.read_parquet(files[0], columns=[
+        df = pl.read_parquet(files, columns=[
             'timestamp', 'strike', 'distance_from_spot',
             'opt_type', 'price', 'expiry', 'spot_price'
         ]).filter(pl.col('timestamp').dt.year() > 1970)
@@ -442,9 +450,10 @@ def main():
     print("ALL 10 ADVANCED STRATEGIES - Numba Optimized")
     print("="*80)
     
-    data_dir = Path("../../data/options_date_packed_FULL_v3_SPOT_ENRICHED")
-    results_dir = Path("../strategy_results/selling/strategy_results_all_advanced")
-    results_dir.mkdir(exist_ok=True)
+    root = _project_root()
+    data_dir = root / "data" / "options_date_packed_FULL_v3_SPOT_ENRICHED"
+    results_dir = root / "strategies" / "strategy_results" / "selling" / "strategy_results_all_advanced"
+    results_dir.mkdir(parents=True, exist_ok=True)
     
     all_results = []
     

@@ -1,5 +1,7 @@
 # Complete Session Documentation: Options Data Repacking & Performance Optimization
 
+**Note (current)**: The production dataset is `data/options_date_packed_FULL_v3_SPOT_ENRICHED/` (sorted + spot-enriched). This document is historical session context.
+
 ## Table of Contents
 1. [Session Overview](#session-overview)
 2. [User Objectives](#user-objectives)

@@ -148,7 +148,7 @@ def add_liquidity_events_to_features(features_file: Path, opt_type: str):
     Add liquidity event columns to features file
     
     Args:
-        features_file: Path to features_{date}.parquet
+        features_file: Path to features_{UNDERLYING}_{date}.parquet
         opt_type: 'CE' or 'PE'
     """
     # Load features

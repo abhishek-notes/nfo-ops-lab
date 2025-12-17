@@ -5,13 +5,15 @@ The packing script (`repack_raw_to_date_FINAL.py`) sorts data correctly in memor
 
 Result: Data appears unsorted on disk, causing every benchmark run to re-sort 475M rows.
 
+**Note**: This was the root cause for v1/FINAL. The current pipeline uses v3 (spot-enriched) and writes per `(date, underlying)` with Polars, which preserves sort order.
+
 ## Solution
 
 ### 1. Fix Existing Data (One-Time)
 **Command:**
 ```bash
 cd "/Users/abhishek/workspace/nfo/newer data stocks"
-python resort_packed_data.py
+python scripts/data_processing/resort_packed_data.py
 ```
 
 **What it does:**
@@ -22,12 +24,12 @@ python resort_packed_data.py
 
 **Time:** ~5-10 minutes
 
-### 2. Future Packing (Use New Script)
-**Script:** `repack_raw_to_date_v2_SORTED.py`
+### 2. Future Packing (Use Current Script)
+**Script:** `scripts/data_processing/repack_raw_to_date_v3_SPOT_ENRICHED.py`
 
-**Key Improvement:** Writes files **per date/underlying** using Polars directly instead of PyArrow dataset API. This preserves the sort order.
+**Key Improvement:** Writes files **per date/underlying** using Polars directly instead of PyArrow dataset API. This preserves sort order and adds spot-enrichment columns.
 
-**Changes from v1:**
+**What changed vs v1 (`write_dataset`)**:
 ```python
 # OLD (v1): Uses PyArrow write_dataset - LOSES sort order
 ds.write_dataset(
@@ -35,7 +37,7 @@ ds.write_dataset(
     partitioning=["date", "underlying"]
 )
 
-# NEW (v2): Writes per partition with Polars - PRESERVES sort order  
+# NEW (v3): Writes per partition with Polars - PRESERVES sort order
 for date_val in unique_dates:
     date_df = combined.filter(pl.col("date") == date_val)
     date_df.write_parquet(
@@ -63,14 +65,16 @@ for date_val in unique_dates:
 
 **1. Fix existing data:**
 ```bash
-python resort_packed_data.py
+python scripts/data_processing/resort_packed_data.py
 ```
 
-**2. For future data packing, use:**
+**2. For future data packing (v3 current), use:**
 ```bash
-python repack_raw_to_date_v2_SORTED.py \
-  --input-dir "path/to/raw_options" \
-  --output-dir "options_date_packed_FULL"
+python scripts/data_processing/repack_raw_to_date_v3_SPOT_ENRICHED.py \
+  --input-dir "data/new 2025 data/<folder>" \
+  --output-dir "data/options_date_packed_FULL_v3_SPOT_ENRICHED" \
+  --expiry-calendar "config/expiry_calendar.csv" \
+  --spot-dir "data/spot_data"
 ```
 
 **3. Run benchmark after sorting:**

@@ -15,6 +15,14 @@ import csv
 import gc
 
 
+def _project_root() -> Path:
+    here = Path(__file__).resolve()
+    for parent in here.parents:
+        if (parent / "data").is_dir() and (parent / "strategies").is_dir():
+            return parent
+    raise RuntimeError("Could not locate project root (expected 'data/' and 'strategies/' directories).")
+
+
 @dataclass
 class Trade:
     entry_date: str
@@ -232,9 +240,10 @@ def main():
     print("FINAL NUMBA VERSION - Memory Efficient")
     print("="*80)
     
-    data_dir = Path("../../data/options_date_packed_FULL_v3_SPOT_ENRICHED")
-    results_dir = Path("../strategy_results/selling/strategy_results_numba_final")
-    results_dir.mkdir(exist_ok=True)
+    root = _project_root()
+    data_dir = root / "data" / "options_date_packed_FULL_v3_SPOT_ENRICHED"
+    results_dir = root / "strategies" / "strategy_results" / "selling" / "strategy_results_numba_final"
+    results_dir.mkdir(parents=True, exist_ok=True)
     
     underlying = 'BANKNIFTY'
     all_trades = []
@@ -253,12 +262,12 @@ def main():
         if not underlying_dir.exists():
             continue
         
-        files = list(underlying_dir.glob("*.parquet"))
+        files = sorted(underlying_dir.glob("*.parquet"))
         if not files:
             continue
         
         # Load this date's data
-        df = pl.read_parquet(files[0], columns=[
+        df = pl.read_parquet(files, columns=[
             'timestamp', 'strike', 'distance_from_spot',
             'opt_type', 'price', 'expiry'
         ]).filter(pl.col('timestamp').dt.year() > 1970)

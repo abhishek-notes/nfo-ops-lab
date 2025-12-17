@@ -341,7 +341,7 @@ def strategy_delta_strangle_v2(
         block_start = i
         while i < n and timestamps_ns[i] == timestamps_ns[block_start]:
             i += 1
-    block_end = i
+        block_end = i
         
         # ====================================================================
         # PHASE 1: ENTRY LOGIC

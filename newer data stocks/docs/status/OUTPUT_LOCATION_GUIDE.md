@@ -4,9 +4,11 @@
 
 When you run:
 ```bash
-python repack_raw_to_date.py \
-  --input-dir "new 2025 data/nov 4 to nov 18 new stocks data/processed_output/raw_options" \
-  --output-dir "date_packed_raw_test"
+python scripts/data_processing/repack_raw_to_date_v3_SPOT_ENRICHED.py \
+  --input-dir "data/new 2025 data/nov 4 to nov 18 new stocks data/processed_output/raw_options" \
+  --output-dir "data/options_date_packed_FULL_v3_SPOT_ENRICHED" \
+  --expiry-calendar "config/expiry_calendar.csv" \
+  --spot-dir "data/spot_data"
 ```
 
 **Output goes to the `--output-dir` path you specify**.
@@ -14,43 +16,27 @@ python repack_raw_to_date.py \
 ## Directory Structure Created
 
 ```
-date_packed_raw_test/                    ← Your --output-dir
-├── 2025-11-18/                          ← Date partition (date=YYYY-MM-DD format)
-│   ├── BANKNIFTY/                       ← Underlying partition
-│   │   └── part-banknifty-0.parquet    ← Single file with ALL strikes for this day
+data/options_date_packed_FULL_v3_SPOT_ENRICHED/     ← Your --output-dir
+├── 2025-11-18/                                    ← Date partition (YYYY-MM-DD)
+│   ├── BANKNIFTY/
+│   │   └── part-banknifty-0.parquet               ← ALL strikes for this day
 │   └── NIFTY/
 │       └── part-nifty-0.parquet
 ├── 2025-11-19/
-│   ├── BANKNIFTY/
-│   │   └── part-banknifty-0.parquet
-│   └── NIFTY/
-│       └── part-nifty-0.parquet
+│   ├── BANKNIFTY/part-banknifty-0.parquet
+│   └── NIFTY/part-nifty-0.parquet
 └── ... (one folder per date)
 ```
 
-## How PyArrow Creates Partitions
+## How Partitions Are Written (current)
 
-The script uses:
-```python
-ds.write_dataset(
-    df.to_arrow(),
-    base_dir=str(output_dir),           # Your --output-dir
-    format="parquet",
-    partitioning=["date", "underlying"],  # Creates nested folders
-    ...
-)
-```
-
-PyArrow automatically:
-1. Creates `date=YYYY-MM-DD/` folders for each unique date in the data
-2. Within each date, creates `underlying=BANKNIFTY/` and `underlying=NIFTY/` subfolders
-3. Writes `part-*.parquet` files inside
+The v3 repacker writes one file per `(date, underlying)` partition explicitly (via Polars). This preserves the on-disk sort order required for high-performance backtests.
 
 ## File Naming
 
 - Files are named: `part-{underlying}-{i}.parquet`
 - Example: `part-banknifty-0.parquet`, `part-nifty-0.parquet`
-- The `{i}` is a counter from PyArrow if files are split (usually stays 0)
+- The `{i}` is a counter if the writer splits files (usually stays `0`)
 
 ## Expiry Date Logic - CORRECTED
 

@@ -53,33 +53,28 @@ Our data is organized in **Parquet files** (columnar format, like a binary CSV b
 **Critical**: Data is sorted before strategies process it. The sort order is:
 
 ```python
-df.sort(['expiry', 'timestamp', 'opt_type', 'strike'])
+df.sort(['expiry', 'opt_type', 'strike', 'timestamp'])
 ```
 
 **Why this matters**:
 1. **Expiry first**: All contracts for nearest expiry appear first
-2. **Timestamp second**: Within one expiry, time flows forward
-3. **Opt_type third**: At each timestamp, all CEs grouped, then all PEs
-4. **Strike last**: Strikes ordered low to high
+2. **Opt_type second**: CE and PE are separated (no mixing inside a contract scan)
+3. **Strike third**: Each strike is a contiguous block (fast state-machine resets)
+4. **Timestamp last**: Within each (expiry, opt_type, strike) block, time flows forward
 
 **Example sorted data** (simplified):
 
-| timestamp | expiry | opt_type | strike | price | spot_price | distance_from_spot | oi |
-|-----------|--------|----------|--------|-------|------------|-------------------|-----|
-| 2025-08-01 09:30:00 | 2025-08-01 | CE | 47500 | 680 | 48125 | -625 | 15000 |
-| 2025-08-01 09:30:00 | 2025-08-01 | CE | 47600 | 600 | 48125 | -525 | 18500 |
-| 2025-08-01 09:30:00 | 2025-08-01 | CE | 47700 | 520 | 48125 | -425 | 22000 |
-| 2025-08-01 09:30:00 | 2025-08-01 | CE | 48000 | 280 | 48125 | -125 | 45000 |
-| 2025-08-01 09:30:00 | 2025-08-01 | CE | 48100 | 230 | 48125 | -25 | 60000 |
-| 2025-08-01 09:30:00 | 2025-08-01 | CE | 48200 | 180 | 48125 | +75 | 42000 |
-| 2025-08-01 09:30:00 | 2025-08-01 | PE | 47800 | 100 | 48125 | -325 | 25000 |
-| 2025-08-01 09:30:00 | 2025-08-01 | PE | 47900 | 135 | 48125 | -225 | 30000 |
-| 2025-08-01 09:30:00 | 2025-08-01 | PE | 48000 | 175 | 48125 | -125 | 55000 |
-| 2025-08-01 09:30:00 | 2025-08-01 | PE | 48100 | 225 | 48125 | -25 | 70000 |
-| 2025-08-01 09:30:01 | 2025-08-01 | CE | 47500 | 682 | 48126 | -626 | 15000 |
-| ... | ... | ... | ... | ... | ... | ... | ... |
+| expiry | opt_type | strike | timestamp | price |
+|--------|----------|--------|-----------|-------|
+| 2025-08-26 | CE | 48000 | 2025-08-01 09:15:00 | ... |
+| 2025-08-26 | CE | 48000 | 2025-08-01 09:15:01 | ... |
+| ... | ... | ... | ... | ... |
+| 2025-08-26 | CE | 48100 | 2025-08-01 09:15:00 | ... |  ← strike changed (new contract block)
+| ... | ... | ... | ... | ... |
+| 2025-08-26 | PE | 48000 | 2025-08-01 09:15:00 | ... |  ← opt_type changed (new contract block)
+| ... | ... | ... | ... | ... |
 
-Notice: At timestamp 09:30:00, all strikes appear once for CE, then once for PE. Then time advances.
+Notice: the file is **grouped by contract**, not “one timestamp across all strikes”. This is what enables the single-pass Numba state-machine pattern (no per-contract `.filter()` loops).
 
 ### 1.3 Data Partitioning on Disk
 
@@ -88,12 +83,12 @@ Notice: At timestamp 09:30:00, all strikes appear once for CE, then once for PE.
 data/options_date_packed_FULL_v3_SPOT_ENRICHED/
   2025-08-01/
     BANKNIFTY/
-      2025-08-01_BANKNIFTY_options.parquet
+      part-banknifty-0.parquet
     NIFTY/
-      2025-08-01_NIFTY_options.parquet
+      part-nifty-0.parquet
   2025-08-04/
     BANKNIFTY/
-      2025-08-04_BANKNIFTY_options.parquet
+      part-banknifty-0.parquet
     NIFTY/
       ...
 ```
@@ -131,82 +126,35 @@ This ensures:
 ### 2.1 Repository Structure
 
 ```
-/Users/abhishek/workspace/nfo/newer data stocks/
+newer data stocks/
 │
-├── data/                                        # DATA (Parquet files)
-│   ├── options_date_packed_FULL_v3_SPOT_ENRICHED/
-│   ├── options_date_packed_FULL/
+├── data/                                        # DATA (Parquet + raw folders)
+│   ├── options_date_packed_FULL_v3_SPOT_ENRICHED/  # current packed input (sorted + spot)
+│   ├── spot_data/                                 # consolidated spot series
 │   ├── realized_volatility_cache/
-│   ├── spot_data/
-│   └── new 2025 data/
+│   └── new 2025 data/                             # raw SQL folders + processed_output/*
 │
-├── strategies/                                  # STRATEGY CODE
-│   ├── buying/                                  # Option buying strategies
-│   │   └── run_momentum_burst_buying.py
-│   ├── selling/                                 # Option selling strategies
-│   │   ├── original/                            # 12 original basic strategies
-│   │   │   └── run_ORIGINAL_12_strategies_numba.py
-│   │   ├── advanced/                            # 10 advanced strategies
-│   │   │   ├── run_ALL_strategies_numba.py
-│   │   │   └── run_advanced_strategies.py
-│   │   ├── theta/                               # 3 theta strategies
-│   │   │   └── run_3_THETA_strategies.py
-│   │   ├── ai/                                  # AI-suggested strategies
-│   │   │   ├── run_strategy2_orderbook.py
-│   │   │   ├── run_strategies_3_and_5.py
-│   │   │   ├── run_AI_strategy4_test.py
-│   │   │   └── run_5_AI_strategies_COMPLETE.py
-│   │   └── legacy/                              # Legacy/deprecated
-│   └── strategy_results/                        # RESULTS (moved from root)
-│       ├── buying/
-│       │   └── strategy_results_buying/
-│       └── selling/
-│           ├── strategy_results_original_optimized/
-│           ├── strategy_results_all_advanced/
-│           ├── strategy_results_theta/
-│           └── ... (12 total)
+├── strategies/                                  # STRATEGY RUNNERS + OUTPUTS
+│   ├── buying/
+│   ├── selling/
+│   └── strategy_results/                          # canonical output location
+│
+├── market_truth_framework/                       # per-second features/events + API
 │
 ├── scripts/                                     # DATA PROCESSING
-│   ├── data_processing/                         # Main ETL pipeline
-│   │   ├── repack_raw_to_date_v3_SPOT_ENRICHED.py (current)
-│   │   ├── pack_raw_options.py
-│   │   └── ...
-│   ├── spot_extraction/                         # Spot & volatility
-│   │   ├── extract_spot_data.py
-│   │   └── calculate_realized_volatility.py
-│   ├── sql_extraction/                          # SQL dumps processing
-│   ├── verification/                            # Data validation
-│   └── batch/                                   # Batch scripts
+│   ├── data_processing/                          # ETL (v3 repacker lives here)
+│   ├── spot_extraction/
+│   ├── sql_extraction/
+│   ├── verification/
+│   └── batch/
 │
-├── benchmarks/                                  # Performance benchmarks
-│
-├── docs/                                        # DOCUMENTATION
-│   ├── wiki/                                     # Technical wikis
-│   │   ├── OPTIONS_BACKTESTING_FRAMEWORK_WIKI.md (this file)
-│   │   ├── THETA_STRATEGIES_SYSTEMATIC.md
-│   │   └── DATA_PIPELINE_WIKI.md
-│   ├── guides/                                   # Implementation guides
-│   │   ├── BACKTESTING_GUIDE.md
-│   │   ├── HIGH_PERFORMANCE_BACKTESTING_GUIDE.md
-│   │   └── ...
-│   ├── status/                                   # Project status docs
-│   │   └── PROJECT_IMPLEMENTATION_JOURNEY.md
-│   └── activity_logs/                            # Activity logs
-│
-├── results/                                     # Deprecated - moved to strategies/strategy_results/
-│
-├── logs/                                        # EXECUTION LOGS
-│
-├── config/                                      # CONFIGURATION
-│   └── expiry_calendar.csv
-│
-├── utils/                                       # UTILITIES
-│   ├── strategy_framework.py
-│   └── data_viewer/
-│
-└── temp/                                        # TEMPORARY/TEST
-    ├── date_packed_raw_test/
-    └── ...
+├── benchmarks/
+├── docs/
+├── results/                                     # exported/flattened CSVs
+├── logs/
+├── config/
+├── utils/
+└── temp/
 ```
 
 
@@ -408,14 +356,14 @@ Here's the standard pipeline (mix of shared patterns and strategy-specific code)
 ```python
 # STEP 1: Load data (SHARED PATTERN, not shared code)
 data_dir = Path("data/options_date_packed_FULL_v3_SPOT_ENRICHED")
-df = pl.read_parquet(f"{data_dir}/2025-08-01/BANKNIFTY/2025-08-01_BANKNIFTY_options.parquet")
+df = pl.read_parquet(f"{data_dir}/2025-08-01/BANKNIFTY/part-banknifty-0.parquet")
 
 # STEP 2: Filter to nearest expiry (SHARED LOGIC)
 nearest_expiry = df['expiry'].min()
 df = df.filter(pl.col('expiry') == nearest_expiry)
 
-# STEP 3: Sort (SHARED LOGIC, critical for strategies)
-df = df.sort(['timestamp', 'opt_type', 'strike'])
+# STEP 3: Do NOT sort in strategy code (data is already sorted on disk)
+# On-disk order: expiry → opt_type → strike → timestamp
 
 # STEP 4: Convert to NumPy arrays (SHARED PATTERN)
 timestamps = df['timestamp'].dt.epoch(time_unit='ns').to_numpy()  # int64 nanoseconds
@@ -437,7 +385,7 @@ results_df = pl.DataFrame({
     'timestamp': timestamps,
     'pnl': pnls
 })
-results_df.write_csv("results/my_strategy.csv")
+results_df.write_csv("strategies/strategy_results/selling/my_strategy.csv")
 ```
 
 **Which parts are reusable**:
@@ -1250,10 +1198,10 @@ from numba import njit
 def load_and_prep_data(date_str, underlying):
     """
     SHARED PATTERN: Load one date's data for one underlying.
-    Returns Polars DataFrame, filtered and sorted.
+    Returns Polars DataFrame (already sorted on disk).
     """
     data_dir = Path("data/options_date_packed_FULL_v3_SPOT_ENRICHED")
-    file_path = data_dir / date_str / underlying / f"{date_str}_{underlying}_options.parquet"
+    file_path = data_dir / date_str / underlying / f"part-{underlying.lower()}-0.parquet"
     
     # Load with Polars (fast, columnar)
     df = pl.read_parquet(file_path)
@@ -1265,8 +1213,8 @@ def load_and_prep_data(date_str, underlying):
     nearest_expiry = df['expiry'].min()
     df = df.filter(pl.col('expiry') == nearest_expiry)
     
-    # Sort (CRITICAL for Numba loops)
-    df = df.sort(['timestamp', 'opt_type', 'strike'])
+    # Data is already sorted on disk by:
+    # expiry → opt_type → strike → timestamp
     
     return df
 ```
@@ -1453,7 +1401,7 @@ while j < n:
 
 **Gotcha 1: Sorting**
 - **Problem**: If data not sorted correctly, strategies fail silently
-- **Solution**: Always `df.sort(['timestamp', 'opt_type', 'strike'])` after loading
+- **Solution**: Use the v3 packed dataset (already sorted on disk) and **do not sort** inside strategies; if you suspect unsorted data, verify sort order and fix upstream (e.g., `scripts/data_processing/resort_packed_data.py` for legacy outputs).
 
 **Gotcha 2: Expiry Boundaries**
 - **Problem**: Mixing multiple expiries causes incorrect ATM detection

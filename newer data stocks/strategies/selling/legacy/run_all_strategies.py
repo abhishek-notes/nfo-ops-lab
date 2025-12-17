@@ -4,15 +4,31 @@ Memory-Optimized Strategy Runner
 Processes one date at a time to avoid OOM issues
 """
 
+from __future__ import annotations
+
 from pathlib import Path
 from datetime import time, date as date_type
+import sys
 import polars as pl
-from strategy_framework import *
 import gc
 
 
+def _project_root() -> Path:
+    here = Path(__file__).resolve()
+    for parent in here.parents:
+        if (parent / "data").is_dir() and (parent / "strategies").is_dir():
+            return parent
+    raise RuntimeError("Could not locate project root (expected 'data/' and 'strategies/' directories).")
+
+
+ROOT = _project_root()
+sys.path.insert(0, str(ROOT / "utils"))
+
+from strategy_framework import *  # noqa: F403
+
+
 def run_strategy_on_single_date(
-    data_file: Path,
+    data_file: list[Path],
     underlying: str,
     strategy_func: Callable,
     strategy_params: dict
@@ -24,6 +40,11 @@ def run_strategy_on_single_date(
     
     # Filter out 1970 dates
     df = df.filter(pl.col('timestamp').dt.year() > 1970)
+
+    # Always backtest nearest expiry only (avoid mixing multiple expiries in one file).
+    if not df.is_empty():
+        nearest_expiry = df["expiry"].min()
+        df = df.filter(pl.col("expiry") == nearest_expiry)
     
     if df.is_empty():
         return []
@@ -65,9 +86,9 @@ def run_strategy_batch(
         
         underlying_dir = date_dir / underlying
         if underlying_dir.exists():
-            parquet_files = list(underlying_dir.glob("*.parquet"))
+            parquet_files = sorted(underlying_dir.glob("*.parquet"))
             if parquet_files:
-                date_dirs.append((date_dir.name, parquet_files[0]))
+                date_dirs.append((date_dir.name, parquet_files))
     
     print(f"  Processing {len(date_dirs)} dates...")
     
@@ -159,9 +180,9 @@ def main():
     print("RUNNING 12 OPTIONS STRATEGIES (MEMORY-OPTIMIZED)")
     print("=" * 80)
     
-    data_dir = Path("../../data/options_date_packed_FULL_v3_SPOT_ENRICHED")
-    results_dir = Path("../strategy_results/selling/strategy_results")
-    results_dir.mkdir(exist_ok=True)
+    data_dir = ROOT / "data" / "options_date_packed_FULL_v3_SPOT_ENRICHED"
+    results_dir = ROOT / "strategies" / "strategy_results" / "selling" / "strategy_results"
+    results_dir.mkdir(parents=True, exist_ok=True)
     
     underlyings = ['BANKNIFTY', 'NIFTY']
     all_results = []

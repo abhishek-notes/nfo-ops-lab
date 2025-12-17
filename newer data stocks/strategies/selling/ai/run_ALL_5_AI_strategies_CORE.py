@@ -500,7 +500,7 @@ def strategy3_trend_pause(
                         break
                     if strikes[k] == pe_strike and opt_types[k] == 1:
                         pe_exit = prices[k]
-                       exit_idx = k
+                        exit_idx = k
                         exit_reason = 1
                         break
                 break
@@ -579,7 +579,7 @@ def strategy3_trend_pause(
 
 # STRATEGY 4: Lunchtime Iron Fly (already validated)
 @njit
-def strategy4 _lunchtime_iron_fly(
+def strategy4_lunchtime_iron_fly(
     timestamps_ns: np.ndarray,
     dates_int: np.ndarray,
     times_sec: np.ndarray,

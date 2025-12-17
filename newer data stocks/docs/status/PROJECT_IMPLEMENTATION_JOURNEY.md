@@ -1,6 +1,8 @@
 # PROJECT IMPLEMENTATION JOURNEY
 ## Options Data Optimization & Backtesting Performance Enhancement
 
+**Note (current)**: The production dataset is `data/options_date_packed_FULL_v3_SPOT_ENRICHED/` (sorted + spot-enriched). This document is historical project narrative.
+
 **Technical Documentation**  
 **Lead Quant Developer & Documentation Specialist**  
 **Project Duration**: Multiple sessions across December 2025  

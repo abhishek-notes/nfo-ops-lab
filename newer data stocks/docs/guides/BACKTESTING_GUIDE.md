@@ -1,4 +1,4 @@
-# Backtesting Guide for Date-Partitioned Options Data
+# Backtesting Guide for Date-Partitioned Options Data (v3)
 
 ## Table of Contents
 1. [Data Structure Overview](#data-structure-overview)
@@ -14,7 +14,7 @@
 
 ### Directory Layout
 ```
-options_date_packed_FULL/
+data/options_date_packed_FULL_v3_SPOT_ENRICHED/
 ├── 2025-08-01/
 │   ├── BANKNIFTY/part-banknifty-0.parquet
 │   └── NIFTY/part-nifty-0.parquet
@@ -28,13 +28,14 @@ options_date_packed_FULL/
 
 Each file contains **ALL strikes and expiries** for that day/underlying:
 
-**Columns** (58 total):
+**Columns** (64 total):
 - **Identifiers**: `strike`, `opt_type`, `expiry`, `symbol`, `underlying`
 - **Timestamps**: `timestamp`, `timestamp_ns`, `date`
 - **Prices**: `price`, `open`, `high`, `low`, `close`, `avgPrice`
 - **Quantities**: `volume`, `qty`, `oi`, `oiHigh`, `oiLow`
 - **Order Book**: `bp0-4`, `sp0-4`, `bq0-4`, `sq0-4`, `bo0-4`, `so0-4` (bid/ask prices, quantities, orders for top 5 levels)
 - **Computed**: `changeper`, `vol_delta`, `expiry_type`, `is_monthly`, `is_weekly`
+- **Spot-enriched**: `spot_price`, `distance_from_spot`, `moneyness_pct`, `intrinsic_value`, `time_value`, `mid_price`
 
 ### Sort Order (CRITICAL!)
 
@@ -101,7 +102,7 @@ def load_date_range(start_date: str, end_date: str, underlying: str = "BANKNIFTY
         end_date: 'YYYY-MM-DD'
         underlying: 'BANKNIFTY' or 'NIFTY'
     """
-    base_dir = Path("options_date_packed_FULL")
+    base_dir = Path("data/options_date_packed_FULL_v3_SPOT_ENRICHED")
     
     # Find all matching files
     pattern = f"*/{ underlying}/part-{underlying.lower()}-0.parquet"
@@ -113,7 +114,7 @@ def load_date_range(start_date: str, end_date: str, underlying: str = "BANKNIFTY
     
     selected_files = []
     for f in files:
-        # Extract date from path: options_date_packed_FULL/2025-11-18/BANKNIFTY/...
+        # Extract date from path: data/options_date_packed_FULL_v3_SPOT_ENRICHED/2025-11-18/BANKNIFTY/...
         date_str = f.parts[-3]
         file_date = pl.lit(date_str).str.strptime(pl.Date, "%Y-%m-%d")
         
@@ -131,7 +132,7 @@ def load_date_range(start_date: str, end_date: str, underlying: str = "BANKNIFTY
 
 ```python
 # Scan all files lazily (doesn't load into memory)
-df = pl.scan_parquet('options_date_packed_FULL/**/BANKNIFTY/*.parquet')
+df = pl.scan_parquet('data/options_date_packed_FULL_v3_SPOT_ENRICHED/**/BANKNIFTY/*.parquet')
 
 # Apply filters (pushed down to file reading)
 df = (df
@@ -215,7 +216,7 @@ def backtest_day_screening(date: str, underlying: str = "BANKNIFTY"):
     Screen all contracts for a day, pick most liquid one.
     """
     df = pl.read_parquet(
-        f'options_date_packed_FULL/{date}/{underlying}/part-{underlying.lower()}-0.parquet',
+        f'data/options_date_packed_FULL_v3_SPOT_ENRICHED/{date}/{underlying}/part-{underlying.lower()}-0.parquet',
         columns=['strike', 'expiry', 'opt_type', 'volume', 'price', 'timestamp']
     )
     
@@ -246,10 +247,7 @@ def backtest_day_screening(date: str, underlying: str = "BANKNIFTY"):
 
 **Use Case**: Trade ATM strike dynamically (requires spot price data)
 
-**Note**: Current data doesn't include spot price. You need to either:
-1. Add spot data during packing
-2. Calculate approximate spot from options chain
-3. Load spot from separate file
+**Note**: v3 data includes `spot_price`, so ATM/ITM/OTM selection can be done directly from the packed file.
 
 **Example with separate spot file**:
 
@@ -260,7 +258,7 @@ def backtest_atm_strategy(date: str):
     """
     # Load options data
     options = pl.read_parquet(
-        f'options_date_packed_FULL/{date}/BANKNIFTY/part-banknifty-0.parquet',
+        f'data/options_date_packed_FULL_v3_SPOT_ENRICHED/{date}/BANKNIFTY/part-banknifty-0.parquet',
         columns=['timestamp', 'strike', 'expiry', 'opt_type', 'price', 'bp0', 'sp0']
     ).filter(
         pl.col('expiry') == pl.date(2025, 11, 25)  # Only Nov expiry
@@ -386,7 +384,7 @@ def process_file(file_path: Path):
     return run_strategy_presorted(strikes, types_int, prices, bid0, ask0, volume)
 
 # Main execution
-files = list(Path('options_date_packed_FULL').rglob('BANKNIFTY/*.parquet'))
+files = list(Path('data/options_date_packed_FULL_v3_SPOT_ENRICHED').rglob('BANKNIFTY/*.parquet'))
 
 with ProcessPoolExecutor(max_workers=24) as executor:
     results = list(executor.map(process_file, files))
@@ -570,7 +568,7 @@ def ema_crossover_strategy(prices, span_fast=5, span_slow=21):
 
 # Load data
 df = pl.read_parquet(
-    'options_date_packed_FULL/2025-11-18/BANKNIFTY/part-banknifty-0.parquet',
+    'data/options_date_packed_FULL_v3_SPOT_ENRICHED/2025-11-18/BANKNIFTY/part-banknifty-0.parquet',
     columns=['timestamp', 'strike', 'expiry', 'opt_type', 'price']
 ).filter(
     (pl.col('strike') == 50000) &
@@ -603,7 +601,7 @@ def backtest_date_range(start_date: str, end_date: str):
     """
     Backtest all days in range, only liquid contracts.
     """
-    base_dir = Path('options_date_packed_FULL')
+    base_dir = Path('data/options_date_packed_FULL_v3_SPOT_ENRICHED')
     dates = [d.name for d in sorted(base_dir.iterdir()) if d.is_dir()]
     
     # Filter dates
@@ -664,7 +662,7 @@ import polars as pl
 
 # Load data
 df = pl.read_parquet(
-    'options_date_packed_FULL/2025-11-18/BANKNIFTY/part-banknifty-0.parquet',
+    'data/options_date_packed_FULL_v3_SPOT_ENRICHED/2025-11-18/BANKNIFTY/part-banknifty-0.parquet',
     columns=['timestamp', 'strike', 'expiry', 'opt_type', 'price']
 ).filter(
     (pl.col('strike') == 50000) &
